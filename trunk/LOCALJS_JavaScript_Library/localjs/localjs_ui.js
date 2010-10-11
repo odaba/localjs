@@ -1,3 +1,11 @@
+/*
+	This code is part of LocalJS Open source.
+
+	http://localjs.org/
+
+	It's free to use this code anywhere, provided that this declaration is included
+*/
+
 // This script initializes namespace LOCALJS.UI
 (function ()
 {
@@ -5,7 +13,11 @@
         LOCALJS = {};
 
     var localjs_namespace = LOCALJS;
-    localjs_namespace.UI = {};
+
+	if ("undefined" != typeof (localjs_namespace.UI))
+		return;
+
+	localjs_namespace.UI = {};
 
     // common variables of this closure
     var win = window,
@@ -13,6 +25,7 @@
 
 		local_js = localJS,
 		hostWnd = local_js.hostWnd,
+		webBrowser = local_js.webBrowser,
 
 		com = local_js.COM,
 		createObject = com.createObject,
@@ -27,8 +40,47 @@
 
 		fnCreateRect = function () // creation of complex structures can be wrapped up in functions to hide detail
 		{
+			//  typedef struct _RECT {
+			//    LONG left;
+			//    LONG top;
+			//    LONG right;
+			//    LONG bottom;
+			//  }RECT, *PRECT;
+
 		    // now you can refer to fields of structure rect by rect.left, rect.top, rect.right and rect.bottom, exactly like how you do it in C++!
 		    return newStruct().addLong("left").addLong("top").addLong("right").addLong("bottom");
+		},
+
+		fnCreatePoint = function ()
+		{
+			//  typedef struct tagPOINT {
+			//    LONG x;
+			//    LONG y;
+			//  }POINT, *PPOINT;
+
+			return newStruct().addLong('x').addLong('y');
+		},
+
+		fnCreateWindowPlacement = function()
+		{
+			//  typedef struct _WINDOWPLACEMENT {
+			//  	UINT length;
+			//  	UINT flags;
+			//  	UINT showCmd;
+			//  	POINT ptMinPosition;
+			//  	POINT ptMaxPosition;
+			//  	RECT rcNormalPosition;
+			//  } WINDOWPLACEMENT;
+
+			var placement = newStruct().addLong('length')
+							   .addLong('flags')
+							   .addLong('showCmd')
+							   .add(fnCreatePoint(), 'ptMinPosition')
+							   .add(fnCreatePoint(), 'ptMaxPosition')
+							   .add(fnCreateRect(), 'rcNormalPosition');
+
+			placement.length = placement.size;
+			return placement;
 		},
 
 		fnCreateMsg = function ()
@@ -56,9 +108,17 @@
     addFunc("user32.dll", "LRESULT DispatchMessage(const MSG *lpmsg);");
     addFunc("user32.dll", "void PostQuitMessage(int nExitCode);");
     addFunc("LocalJS.dll", "BOOL __stdcall translateBrowserAccelerator(LPMSG lpmsg);");
+	addFunc("user32.dll", "LRESULT SendMessage(HWND hWnd,UINT Msg,WPARAM wParam,LPARAM lParam);");
 
+	addFunc("user32.dll", "int WINAPI MessageBox(HWND hWnd,LPCTSTR lpText,LPCTSTR lpCaption,UINT uType);");
+	addFunc("user32.dll", "LONG SetWindowLong(HWND hWnd, int nIndex, LONG dwNewLong);");
+	addFunc("user32.dll", "BOOL SetWindowPos(HWND hWnd, HWND hWndInsertAfter, int X, int Y, int cx, int cy, UINT uFlags);");
+	addFunc("user32.dll", "BOOL SetForegroundWindow(HWND hWnd);");
     addFunc("user32.dll", "BOOL MoveWindow(HWND hWnd,int X,int Y,int nWidth,int nHeight,BOOL bRepaint);");
     addFunc("user32.dll", "BOOL GetWindowRect(HWND hWnd,LPRECT lpRect);");
+
+	addFunc('user32.dll', 'BOOL GetWindowPlacement(HWND hWnd,WINDOWPLACEMENT *lpwndpl);');
+	addFunc('user32.dll', 'BOOL SetWindowPlacement(HWND hWnd,WINDOWPLACEMENT *lpwndpl);');
 
 	addFunc("LocalJS.dll", "void * __stdcall createBrowser(DWORD dwStyle, int x, int y, int nWidth, int nHeight, HWND hWndParent, LPCWSTR url, LPCWSTR url_pattern, VARIANT * const pVarResult);");
 	addFunc("LocalJS.dll", "void __stdcall deleteBrowser(void * browser)");
@@ -74,9 +134,17 @@
 		dispatchMessage = dllCall.DispatchMessage,
 		postQuitMessage = dllCall.PostQuitMessage,
 		translateBrowserAccelerator = dllCall.translateBrowserAccelerator,
+		sendMessage = dllCall.SendMessage,
 
+		messageBox = dllCall.MessageBox,
+		setWindowLong = dllCall.SetWindowLong,
+		setWindowPos = dllCall.SetWindowPos,
+		setForegroundWindow = dllCall.SetForegroundWindow,
 		moveWindow = dllCall.MoveWindow,
 		getWindowRect = dllCall.GetWindowRect,
+
+		getWindowPlacement = dllCall.GetWindowPlacement,
+		setWindowPlacement = dllCall.SetWindowPlacement,
 
 		createBrowser = dllCall.createBrowser,
 		deleteBrowser = dllCall.deleteBrowser,
@@ -90,7 +158,60 @@
 		BROWSER_TYPE_BROWSER_CONTROL = 1,
 		BROWSER_TYPE_IE = 2,
 
-		WM_DESTROY = 2;
+		GWL_STYLE = -16,
+
+		WS_OVERLAPPED = 0x00000000,
+		WS_POPUP = 0x80000000,
+		WS_CAPTION = 0x00C00000,
+		WS_SYSMENU = 0x00080000,
+		WS_MINIMIZEBOX = 0x00020000,
+		WS_MAXIMIZEBOX = 0x00010000,
+		WS_VISIBLE = 0x10000000,
+		WS_THICKFRAME = 0x00040000,
+		WS_BORDER = 0x00800000,
+		WS_OVERLAPPEDWINDOW = WS_OVERLAPPED | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME | WS_MINIMIZEBOX | WS_MAXIMIZEBOX,
+
+		SWP_FRAMECHANGED = 0x0020,
+		SWP_SHOWWINDOW = 0x0040,
+		SWP_NOMOVE = 0x0002,
+		SWP_NOSIZE = 0x0001,
+
+		HWND_TOP = 0,
+
+		WM_CLOSE = 0x0010,
+		WM_SETTEXT = 0xC,
+		WM_DESTROY = 2,
+
+		MB_ICONERROR = 0x00000010,
+		MB_ICONQUESTION = 0x00000020,
+		MB_ICONEXCLAMATION = 0x00000030,
+		MB_ICONINFORMATION = 0x00000040,
+
+		MB_SETFOREGROUND = 0x00010000,
+		MB_TASKMODAL = 0x00002000,
+		MB_TOPMOST = 0x00040000,
+
+		MB_OKCANCEL = 0x00000001,
+		MB_YESNO = 0x00000004,
+
+		MB_DEFBUTTON2 = 0x00000100,
+		MB_DEFBUTTON3 = 0x00000200,
+
+		MB_ERR = MB_ICONERROR | MB_SETFOREGROUND | MB_TOPMOST | MB_TASKMODAL,
+		MB_INFO = MB_ICONINFORMATION | MB_SETFOREGROUND | MB_TOPMOST | MB_TASKMODAL,
+		MB_CONFIRM_YES_NO = MB_ICONQUESTION | MB_SETFOREGROUND | MB_TOPMOST | MB_TASKMODAL | MB_YESNO,
+		MB_CONFIRM_OK_CANCEL = MB_ICONQUESTION | MB_SETFOREGROUND | MB_TOPMOST | MB_TASKMODAL | MB_OKCANCEL,
+
+		IDOK = 1,
+		IDYES = 6,
+
+		NULL = 0;
+
+
+	// predefine typical window styles
+	localjs_ui.WS_CLOSE_ONLY = WS_POPUP | WS_THICKFRAME | WS_CAPTION | WS_SYSMENU | WS_VISIBLE;
+	localjs_ui.WS_NO_TITLE_BAR = WS_POPUP | WS_VISIBLE | WS_SYSMENU;
+	localjs_ui.WS_NORMAL = WS_OVERLAPPEDWINDOW | WS_VISIBLE;
 
     // initialize function doEvents
     (function ()
@@ -361,12 +482,6 @@
 	// initialize new browser window functions
 	(function()
 	{
-
-
-		// predefine typical window styles
-		//localjs_ui.WND_STYLE_CLOSE_ONLY = ;
-		//localjs_ui.WND_STYLE_NO_TITLE_BAR;
-		//localjs_ui.WND_STYLE_NORMAL;
 		localjs_ui.createBrowser = function(ie, url, left, top, width, height, window_style, parent_window, initFunction, leave_alone)
 		{
 			var browser;
@@ -394,5 +509,145 @@
 
 			return browser;
 		};
+	})();
+
+	// initialize message box functions
+	(function()
+	{
+		localjs_ui.msgBox = function(msg, error)
+		{
+			messageBox(hostWnd, msg, document.title, error ? MB_ERR : MB_INFO);
+		};
+
+		// replace default alert function
+		win.alert = function(msg)
+		{
+			localjs_ui.msgBox(msg, true);
+		}
+
+		localjs_ui.confirm = function(msg, default_yes, ok_cancel)
+		{
+			var ret = messageBox(hostWnd, msg, document.title, (ok_cancel ? MB_CONFIRM_OK_CANCEL : MB_CONFIRM_YES_NO) | (default_yes ? 0 : MB_DEFBUTTON2));
+			return ok_cancel ? (ret == IDOK) : (ret == IDYES);
+		};
+
+		// replace default confirm function
+		win.confirm = function(msg)
+		{
+			return localjs_ui.confirm(msg);
+		}
+	})();
+
+	// set window title to doc title, show / hide title bar, bring window to top, get / set window position, center window
+	(function()
+	{
+		localjs_ui.showTitleBar = function(hide)
+		{
+			dllCall.SetWindowLong(hostWnd, GWL_STYLE, hide ? localjs_ui.WS_NO_TITLE_BAR : localjs_ui.WS_NORMAL);
+			dllCall.SetWindowPos(hostWnd, HWND_TOP, 0, 0, 0, 0, SWP_FRAMECHANGED | SWP_SHOWWINDOW | SWP_NOMOVE | SWP_NOSIZE);
+		}
+
+		localjs_ui.updateWindowTitle = function()
+		{
+			sendMessage(hostWnd, WM_SETTEXT, 0, document.title);
+		}
+
+		localjs_ui.bring2Top = function()
+		{
+			setForegroundWindow(hostWnd);
+		}
+
+		localjs_ui.centerWindow = function(cx, cy) // cx, cy are window width
+		{
+			var scr = screen,
+				scrWidth = scr.availWidth,
+				scrHeight = scr.availHeight;
+			if (cx > scrWidth)
+				cx = scrWidth;
+			cy += local_js.btmBarHeight;
+			if (cy > scrHeight)
+				cy = scrHeight;
+			moveWindow(hostWnd, (scrWidth - cx) / 2, (scrHeight - cy) / 2, cx, cy, 1);
+			setForegroundWindow(hostWnd);
+		};
+
+		localjs_ui.getWindowRect = function()
+		{
+			var rect = fnCreateRect();
+			getWindowRect(hostWnd, rect);
+			return rect;
+		}
+		
+		localjs_ui.moveWindow = function(left, top, width, height)
+		{
+			moveWindow(hostWnd, left, top, width, height, 1);
+		}
+
+		localjs_ui.getWindowPlacement = function()
+		{
+			var placement = fnCreateWindowPlacement();
+			getWindowPlacement(hostWnd, placement);
+			return placement;
+		}
+
+		localjs_ui.setWindowPlacement = function(placement)
+		{
+			setWindowPlacement(hostWnd, placement);
+		}
+	})();
+
+	// exitCallback: confirm exit
+	(function()
+	{
+		localjs_ui.exitCallback = null;
+
+		var exitConfirm = function()
+		{
+			return localjs_ui.exitCallback ? localjs_ui.exitCallback() : true;
+		};
+
+		var windowHook = createObject('WindowHook', hostWnd);
+		windowHook.hookMessage(WM_CLOSE, function(hwnd, message, wparam, lparam)
+		{
+			return exitConfirm() ? windowHook.CallOriginalWndProc(hwnd, message, wparam, lparam) : 0;
+		});
+
+		var eventHook = connectEvents(webBrowser, {'WindowClosing': function(IsChildWindow, cancel)
+		{
+			// let's always cancel the close event since otherwise it will popup an unwanted confirm dialog
+			cancel.returnValue = true;
+
+			if (exitConfirm())
+				local_js.closeWindow(); // the way close the window from within javascript
+		}});
+
+		win.attachEvent("onunload", function()
+		{
+			windowHook.unhook();
+			eventHook.disconnect();
+		});
+	})();
+
+	// newWindowCallback
+	(function()
+	{
+		localjs_ui.newWindowCallback = null;
+
+		var eventHook = connectEvents(webBrowser, {'NewWindow3' : function(disp, cancel, flags, url_context, url)
+		{
+			var newWindowCallback = localjs_ui.newWindowCallback;
+			if (newWindowCallback && newWindowCallback(disp, cancel, flags, url_context, url))
+				return;
+
+			// use our default process
+			// make the new window start from center of window
+			var scr = screen;
+			disp.returnValue = LOCALJS.UI.createBrowser(0, url, scr.availWidth / 2 - 10, scr.availHeight / 2 - 10, 10, 10, LOCALJS.UI.WS_NO_TITLE_BAR, 0);
+		}});
+
+		win.attachEvent("onunload", function()
+		{
+			eventHook.disconnect();
+		});
 	})();
 })();
