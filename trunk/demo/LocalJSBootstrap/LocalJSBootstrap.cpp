@@ -1,4 +1,4 @@
-// LocalJSDemo.cpp : Defines the entry point for the application.
+// LocalJSBootstrap.cpp : Defines the entry point for the application.
 //
 
 #include "stdafx.h"
@@ -10,7 +10,7 @@ using namespace GroundBase::LocalBrowser;
 
 int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPSTR /*lpCmdLine*/, int /*nCmdShow*/)
 {
-	// Usage: LocalJSDemo.exe start_html_file_name
+	// Usage: LocalJSBootstrap.exe start_html_file_name
 	// Check command line parameter first
 	WCHAR start_html_file_name[MAX_PATH];
 	start_html_file_name[0] = L'\0';

@@ -3,7 +3,7 @@ Microsoft Developer Studio Workspace File, Format Version 6.00
 
 ###############################################################################
 
-Project: "LocalJSDemo"=.\LocalJSDemo\LocalJSDemo.dsp - Package Owner=<4>
+Project: "LocalJSBootstrap"=.\LocalJSBootstrap\LocalJSBootstrap.dsp - Package Owner=<4>
 
 Package=<5>
 {{{
