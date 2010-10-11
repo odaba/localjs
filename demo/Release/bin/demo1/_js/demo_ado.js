@@ -1,0 +1,1 @@
+(function(){window.attachEvent("onload",function(){var c=document,b=LOCALJS.FILE.normalizeUrl("./data_table.html"),a;c.getElementById("demoADO").attachEvent("onclick",function(){if(a&&a.isRunning()){a.webBrowser.Navigate2(b)}else{a=LOCALJS.UI.createBrowser(0,b,-100,-100,10,10,LOCALJS.UI.WS_NORMAL,0)}})})})();
