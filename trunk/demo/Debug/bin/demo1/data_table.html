@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://www.w3.org/2005/10/profile">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>LocalJS 演示：用ADO打開Excel文件</title>
+<link rel="stylesheet" type="text/css" href="yui/reset-fonts-grids/reset-fonts-grids.css"/>
+<link rel="stylesheet" type="text/css" href="yui/base/base-min.css"/>
+<link rel="stylesheet" type="text/css" href="yui/assets/skins/sam/button.css"/>
+<link rel="stylesheet" type="text/css" href="yui/assets/skins/sam/datatable.css"/>
+<link rel="stylesheet" type="text/css" href="yui/assets/skins/sam/menu.css"/>
+<link rel="stylesheet" type="text/css" href="yui/assets/skins/sam/calendar.css"/>
+<style>
+body
+{
+	margin:2px;
+	padding:10px;
+	font-size:110%;
+}
+</style>
+<script type="text/javascript" src="localjs/localjs_ui.js" charset="UTF-8"></script>
+<script type="text/javascript" src="localjs/localjs_file.js" charset="UTF-8"></script>
+<script type="text/javascript">
+LOCALJS.UI.centerWindow(780, 710); // this function is defined in global_functions.js
+//localJS.enableF5 = false; // enable F5 refresh make debug easy, but we can disable F5 when release since F5 causes page reinitialize.
+openUrl = LOCALJS.FILE.exec;
+</script>
+</head>
+<!-- to hide scrollbar, set scroll="no" -->
+<body scroll="auto" class="yui-skin-sam" id="body" scroll="auto">
+<div style="text-align:left">用ADO打開Excel文件需要Microsoft OLE DB Provider for ODBC Drivers。如果您的機器上沒有安裝MDAC(Microsoft Data Access Components)，則本示例可能不會正常運行。<br/>參見相關微軟知識庫網頁：<a href="#" onclick="openUrl('http://support.microsoft.com/kb/257819'); return false">How To Use ADO with Excel Data from Visual Basic or VBA</a>
+<br/><br/>
+本例使用了<a href="#" onclick="openUrl('http://developer.yahoo.com/yui/'); return false">Yahoo YUI Library</a>的<a href="#" onclick="openUrl('http://developer.yahoo.com/yui/datatable/'); return false">DataTable</a>控件，它不僅免費而且提供了基本的表格功能如編輯、排序等。<a href="#" onclick="openUrl('http://developer.yahoo.com/yui/datatable/'); return false">DataTable</a>需要和YUI的<a href="#" onclick="openUrl('http://developer.yahoo.com/yui/datasource/'); return false">DataSource</a>類聯合使用。<br/>
+參見：<a href="#" onclick="openUrl('http://developer.yahoo.com/yui/datatable/'); return false">YUI 2: DataTable</a>&nbsp;&nbsp;<a href="#" onclick="openUrl('http://developer.yahoo.com/yui/examples/datatable/dt_cellediting.html'); return false">Inline Cell Editing</a>&nbsp;&nbsp;<a href="#" onclick="openUrl('http://developer.yahoo.com/yui/datasource/'); return false">YUI 2: DataSource</a>
+<br/><br/>
+對應源文件：demo_datatable.js。
+</div>
+<br/>
+<div id="dataTable" style="text-align:left"></div><br/>
+<input type="button" value="用ADO打開Excel文件" id="btnADO" disabled /><div style="display:block;padding-top:10px;visibility:hidden"><input type="button" id="btnOpenExcel" disabled /></div>
+</body>
+</html>
+<script type="text/javascript" src="yui/yahoo-dom-event/yahoo-dom-event.js"></script>
+<script type="text/javascript" src="yui/container/container_core-min.js"></script>
+<script type="text/javascript" src="yui/element/element-min.js"></script>
+<script type="text/javascript" src="yui/button/button-min.js"></script>
+<script type="text/javascript" src="yui/json/json-min.js"></script>
+<script type="text/javascript" src="yui/menu/menu-min.js"></script>
+<script type="text/javascript" src="yui/calendar/calendar-min.js"></script>
+<script type="text/javascript" src="yui/datasource/datasource-min.js"></script>
+<script type="text/javascript" src="yui/dragdrop/dragdrop-min.js"></script>
+<script type="text/javascript" src="yui/datatable/datatable-min.js"></script>
+<script type="text/javascript" src="_js/demo_datatable.js" charset="UTF-8"></script>
