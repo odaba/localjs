@@ -1,24 +1,24 @@
-# Microsoft Developer Studio Project File - Name="LocalJSDemo" - Package Owner=<4>
+# Microsoft Developer Studio Project File - Name="LocalJSBootstrap" - Package Owner=<4>
 # Microsoft Developer Studio Generated Build File, Format Version 6.00
 # ** DO NOT EDIT **
 
 # TARGTYPE "Win32 (x86) Application" 0x0101
 
-CFG=LocalJSDemo - Win32 Debug
+CFG=LocalJSBootstrap - Win32 Debug
 !MESSAGE This is not a valid makefile. To build this project using NMAKE,
 !MESSAGE use the Export Makefile command and run
 !MESSAGE 
-!MESSAGE NMAKE /f "LocalJSDemo.mak".
+!MESSAGE NMAKE /f "LocalJSBootstrap.mak".
 !MESSAGE 
 !MESSAGE You can specify a configuration when running NMAKE
 !MESSAGE by defining the macro CFG on the command line. For example:
 !MESSAGE 
-!MESSAGE NMAKE /f "LocalJSDemo.mak" CFG="LocalJSDemo - Win32 Debug"
+!MESSAGE NMAKE /f "LocalJSBootstrap.mak" CFG="LocalJSBootstrap - Win32 Debug"
 !MESSAGE 
 !MESSAGE Possible choices for configuration are:
 !MESSAGE 
-!MESSAGE "LocalJSDemo - Win32 Release" (based on "Win32 (x86) Application")
-!MESSAGE "LocalJSDemo - Win32 Debug" (based on "Win32 (x86) Application")
+!MESSAGE "LocalJSBootstrap - Win32 Release" (based on "Win32 (x86) Application")
+!MESSAGE "LocalJSBootstrap - Win32 Debug" (based on "Win32 (x86) Application")
 !MESSAGE 
 
 # Begin Project
@@ -29,7 +29,7 @@ CPP=cl.exe
 MTL=midl.exe
 RSC=rc.exe
 
-!IF  "$(CFG)" == "LocalJSDemo - Win32 Release"
+!IF  "$(CFG)" == "LocalJSBootstrap - Win32 Release"
 
 # PROP BASE Use_MFC 0
 # PROP BASE Use_Debug_Libraries 0
@@ -53,10 +53,10 @@ BSC32=bscmake.exe
 # ADD BSC32 /nologo
 LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /machine:I386
-# ADD LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib shlwapi.lib ../Release/bin/LocalJS.lib /nologo /subsystem:windows /pdb:"../Release/bin/LocalJSDemo.pdb" /machine:I386 /out:"../Release/bin/LocalJSDemo.exe"
+# ADD LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib shlwapi.lib ../Release/bin/LocalJS.lib /nologo /subsystem:windows /pdb:"../Release/bin/LocalJSBootstrap.pdb" /machine:I386 /out:"../Release/bin/LocalJSBootstrap.exe"
 # SUBTRACT LINK32 /pdb:none
 
-!ELSEIF  "$(CFG)" == "LocalJSDemo - Win32 Debug"
+!ELSEIF  "$(CFG)" == "LocalJSBootstrap - Win32 Debug"
 
 # PROP BASE Use_MFC 0
 # PROP BASE Use_Debug_Libraries 1
@@ -80,21 +80,21 @@ BSC32=bscmake.exe
 # ADD BSC32 /nologo
 LINK32=link.exe
 # ADD BASE LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:windows /debug /machine:I386 /pdbtype:sept
-# ADD LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib shlwapi.lib ../Debug/bin/LocalJS.lib /nologo /subsystem:windows /pdb:"../Debug/bin/LocalJSDemo.pdb" /debug /machine:I386 /out:"../Debug/bin/LocalJSDemo.exe" /pdbtype:sept
+# ADD LINK32 kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib shlwapi.lib ../Debug/bin/LocalJS.lib /nologo /subsystem:windows /pdb:"../Debug/bin/LocalJSBootstrap.pdb" /debug /machine:I386 /out:"../Debug/bin/LocalJSBootstrap.exe" /pdbtype:sept
 # SUBTRACT LINK32 /pdb:none
 
 !ENDIF 
 
 # Begin Target
 
-# Name "LocalJSDemo - Win32 Release"
-# Name "LocalJSDemo - Win32 Debug"
+# Name "LocalJSBootstrap - Win32 Release"
+# Name "LocalJSBootstrap - Win32 Debug"
 # Begin Group "Source Files"
 
 # PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
 # Begin Source File
 
-SOURCE=.\LocalJSDemo.cpp
+SOURCE=.\LocalJSBootstrap.cpp
 # End Source File
 # Begin Source File
 
@@ -131,7 +131,7 @@ SOURCE=.\Butterfly.ico
 # End Source File
 # Begin Source File
 
-SOURCE=.\LocalJSDemo.rc
+SOURCE=.\LocalJSBootstrap.rc
 # End Source File
 # End Group
 # End Target
