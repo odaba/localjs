@@ -1,10 +1,10 @@
-// this files load data_table.html to demostrate database access
+// this files load data_table_zh.html to demostrate database access
 (function()
 {
 	window.attachEvent("onload", function()
 	{
 		var doc = document,
-			data_table_url = LOCALJS.FILE.normalizeUrl("./data_table.html"),
+			data_table_url = LOCALJS.FILE.normalizeUrl("./data_table_zh.html"),
 			new_page;
 
 		doc.getElementById("demoADO").attachEvent("onclick", function()

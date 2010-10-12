@@ -1,7 +1,33 @@
-<html>
-<head>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://www.w3.org/2005/10/profile">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>LocalJS Demo Application</title>
+
+<!-- add LOCALJS Library -->
+<script type="text/javascript" src="demo1/localjs/localjs_ui.js" charset="UTF-8"></script>
+
+<!-- some initialization -->
 <script type="text/javascript">
-window.location="demo1/index.html"
+var localjs_ui = LOCALJS.UI;
+localjs_ui.centerWindow(300, 200); // this function is defined in global_functions.js
+localjs_ui.showTitleBar();
 </script>
-<head>
-<html>
+</head>
+
+<body scroll="auto">
+
+<div align="center">
+<br/>
+<b>LOCALJS Demo Application</b>
+<br/>
+<a href="demo1/index_en.html">English</a>
+<br/><br/>
+<b>LOCALJS 演示程序</b>
+<br/>
+<a href="demo1/index_zh.html">中文版</a>
+</div>
+</body>
+</html>
+
