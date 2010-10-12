@@ -10,6 +10,7 @@
 
 			localjs_ui = LOCALJS.UI,
 			localjs_file = LOCALJS.FILE,
+			localization_get = LOCALJS.LOCALIZATION.get,
 
 			msgBox = localjs_ui.msgBox,
 
@@ -146,12 +147,12 @@
 		// customized cell formatters
 		var ageFormatter = function(elCell, oRecord, oColumn, oData)
 		{
-			elCell.innerHTML = oRecord.getData(oColumn.key) + " 歲";
+			elCell.innerHTML = oRecord.getData(oColumn.key) + localization_get("years_old");
 		};
 
 		var genderFormatter = function(elCell, oRecord, oColumn, oData)
 		{
-			elCell.innerHTML = oRecord.getData(oColumn.key) ? "男" : "女";
+			elCell.innerHTML = oRecord.getData(oColumn.key) ? localization_get("Male") : localization_get("Female");
 		};
 
 		var dateFormatter = function(elCell, oRecord, oColumn, oData)
