@@ -4,7 +4,7 @@
 	window.attachEvent("onload", function()
 	{
 		var doc = document,
-			new_window_url = LOCALJS.FILE.normalizeUrl("./new_window_zh.html"),
+			new_window_url = LOCALJS.FILE.normalizeUrl("./new_window_hk.html"),
 
 			elDialog = $('<div>大多數情況下，使用HTML的Dialog已經足夠好。<br/>可以用CSS為HTML Dialog定制不同的樣式，用JavaScript實現Dialog彈出的動態效果。<br/>HTML Dialog和主體HTML頁面共享全局的數據和函數。<br/><br/>然而如果確實要打開另外的窗口，也很簡單：<div style="text-align:center;padding-top:10px"><a href="#">點擊這裡打開新窗口</a></div></div>');
 
