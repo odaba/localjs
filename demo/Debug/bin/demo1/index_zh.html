@@ -20,6 +20,7 @@
 LOCALJS.UI.centerWindow(850, 800); // this function is defined in global_functions.js
 //localJS.enableF5 = false; // enable F5 refresh make debug easy, but we can disable F5 when release since F5 causes page reinitialize.
 openUrl = LOCALJS.FILE.exec;
+localJS.globalDict.Item('lang') = 'zh';
 </script>
 </head>
 <!-- to hide scrollbar, set scroll="no" -->
@@ -48,13 +49,13 @@ openUrl = LOCALJS.FILE.exec;
 <ul class="function_intro">
 <li>在註冊表和 INI 文件中保存設置。</li>
 <li>截取來自 COM 事件和窗口函數的退出通知，讓用戶有機會確認退出。</li>
-<li>在頁面消息處理函數中創建新窗口，或者在用戶點擊鏈接的時候打開新窗口。多個窗口之間可以像在同一個頁面裡一樣互操作。</li>
+<li>在頁面事件處理函數中創建新窗口，或者在用戶點擊鏈接的時候打開新窗口。多個窗口之間可以像在同一個頁面裡一樣互操作。</li>
 <li>利用 ADO 對象實現數據庫訪問。結合 <a href="#" onclick="openUrl('http://developer.yahoo.com/yui/'); return false">Yahoo YUI Library</a> 的 <a href="#" onclick="openUrl('http://developer.yahoo.com/yui/datatable/'); return false">DataTable</a> 控件，可以實現常見的數據庫表格功能。</li>
 <li>調用任意 domain 的 web service。</li>
 <li>調用 Windows API，支持指針和結構類型的參數。JavaScript 還能和用戶創建的 DLL 中的函數互相調用。</li>
 <li>創建 native script 線程，主線程和新線程之間可以方便地互相調用。自動同步對共享數據的訪問。</li>
 </ul>
-<a style="padding-left:40px" href="intro.html" target="_blank">點擊查看演示程序文件列表</a>
+<a style="padding-left:40px" href="intro_zh.html" target="_blank">點擊查看演示程序文件列表</a>
 <div class="small_separator"></div>
 </div>
 
@@ -143,7 +144,7 @@ openUrl = LOCALJS.FILE.exec;
 <ul class="function_intro">
 <li><span class="code">LOCALJS.UI.createBrowser</span> 函數：打開新窗口，並可以傳入一個在主窗口中定義的 JavaScript 函數；此函數在新窗口初始化時執行，從而實現窗口之間的互操作。
 <div class="demo_block" style="text-align:center"><a href="#" id="demoNewWindow">點擊打開新窗口</a></div>
-對應源文件：<span class="code">demo_newwindow.js</span> 和 <span class="code">new_window.html</span></li>
+對應源文件：<span class="code">demo_newwindow.js</span> 和 <span class="code">new_window_zh.html</span></li>
 <li><span class="code">LOCALJS.UI.newWindowCallback</span> 回調函數：當用戶點擊鏈接在新窗口中打開頁面時此回調函數將被觸發。在此函數中，可以取消這個新窗口的打開，也可以創建一個新窗口，像上例一樣傳入一個函數，然後在這個新窗口中打開頁面。
 <div class="demo_block" style="text-align:center">點擊下面的鏈接打開Google香港的主頁：<br/><a href="http://www.google.com.hk/" target="_blank" id="demoCOM">Go Google HK</a></div>
 對應源文件：<span class="code">demo_google.js</span></li>
@@ -153,12 +154,12 @@ openUrl = LOCALJS.FILE.exec;
 <div class="big_separator"></div>
 
 <!-- use one more span in this setting title to make dynamic change of the title easier -->
-<div class="setting_title"><img class="title_arrow" src="_image/arrow_up.png"/>&nbsp;數據庫訪問<span class="title_tip">：利用LocalJS創建ADO對象訪問數據庫</span></div>
+<div class="setting_title"><img class="title_arrow" src="_image/arrow_up.png"/>&nbsp;本地數據庫訪問<span class="title_tip">：利用LocalJS創建ADO對象訪問數據庫</span></div>
 <div class="setting_body">
 <ul class="function_intro">
 <li>LocalJS可以創建ADO對象，用於數據庫訪問。
 <div class="demo_block" style="text-align:center"><a href="#" id="demoADO">示例：用ADO打開Excel文件</a></div>
-對應源文件：<span class="code">demo_ado.js</span>、<span class="code">demo_datatable.js</span>和<span class="code">data_table.html</span></li>
+對應源文件：<span class="code">demo_ado.js</span>、<span class="code">demo_datatable.js</span>和<span class="code">data_table_zh.html</span></li>
 </ul>
 </div>
 
@@ -178,10 +179,10 @@ openUrl = LOCALJS.FILE.exec;
 
 <div class="big_separator"></div>
 
-<div class="setting_title"><img class="title_arrow" src="_image/arrow_up.png"/>&nbsp;調用Windows API 及DLL<span class="title_tip">：利用LocalJS調用Windows API 及其他DLL</span></div>
+<div class="setting_title"><img class="title_arrow" src="_image/arrow_up.png"/>&nbsp;調用Windows API 及DLL函數<span class="title_tip">：利用LocalJS調用Windows API 及其他DLL輸出的函數</span></div>
 <div class="setting_body">
 <ul class="function_intro">
-<li>LocalJS支持調用絕大多數 Windows API，包括那些帶有指針參數的。以此為基礎，LOCALJS.UI 和 LOCALJS.FILE 把部分常用的 Windows API 封裝為 JavaScript 函數：
+<li>LocalJS支持調用絕大多數 Windows API，包括那些帶有指針參數的。以此為基礎，模塊 LOCALJS.UI 和 LOCALJS.FILE 把部分常用的 Windows API 封裝為 JavaScript 函數：
 <div class="demo_block">例如：<a href="#" id="demoOpenFile">LOCALJS.FILE.browseFile</a> 調用了 Windows API GetOpenFileName，参數类型OPENFILENAME；</div>
 <div class="demo_block"><a href="#" id="demoWndPlacement">LOCALJS.UI.getWindowPlacement 和 LOCALJS.UI.getWindowPlacement</a> 調用 Windows API GetWindowPlacement 和 SetWindowPlacement，参數类型WINDOWPLACEMENT包含嵌套的結構。</div>
 對應源文件：<span class="code">demo_structure.js</span></li>
@@ -191,7 +192,7 @@ openUrl = LOCALJS.FILE.exec;
 <li><span style="color:black">JavaScript</span>調用<span style="color:black">LocalJSDemoDll</span>中的函數<span style="color:black">callJSFunctionInNewThread</span>。</li>
 <li><span style="color:black">callJSFunctionInNewThread</span>創建一個新線程。</li>
 <li>新線程調用<span style="color:black">JavaScript</span>函數<span style="color:black">funcCalledByDll</span>。</li>
-<li><span style="color:black">JavaScript</span>函數<span style="color:black">funcCalledByDll</span>修改接受的参數，並把另外一個<span style="color:black">JavaScript</span>函數傳回給新線程。</li>
+<li><span style="color:black">JavaScript</span>函數<span style="color:black">funcCalledByDll</span>修改接受的参數，並把另外一個<span style="color:black">JavaScript</span>函數傳回給Dll中的新線程。</li>
 <li>新線程調用这個傳回的<span style="color:black">JavaScript</span>函數。</li>
 <li>新線程結束。</li>
 </ol>
