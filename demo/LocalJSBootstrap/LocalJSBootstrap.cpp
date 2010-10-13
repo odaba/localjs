@@ -55,7 +55,7 @@ int APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE /*hPrevInstance*/, LPSTR /*l
 		{
 			// make sure dlgInit destructed before LocalJS::UninitializeLocalJS
 			CWebBrowserWindow dlgInit;
-			dlgInit.dialogBox(WS_POPUP | WS_VISIBLE, -100, -100, 0, 0, NULL, start_html_file_name, NULL, NULL, NULL);
+			dlgInit.dialogBox(WS_POPUP | WS_VISIBLE | WS_SYSMENU, -100, -100, 0, 0, NULL, start_html_file_name, NULL, NULL, NULL);
 		}
 		
 		CWebBrowserWindow::uninitializeLocalJS();
