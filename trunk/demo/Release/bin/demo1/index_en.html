@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://www.w3.org/2005/10/profile">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>LocalJS Demo: Desktop Application Developed with HTML+CSS+JavaScript</title>
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="_css/main.css"/>
+
+<!-- add LOCALJS Library -->
+<script type="text/javascript" src="localjs/localjs_ui.js" charset="UTF-8"></script>
+<script type="text/javascript" src="localjs/localjs_file.js" charset="UTF-8"></script>
+<script type="text/javascript" src="localjs/localjs_webservice.js" charset="UTF-8"></script>
+<script type="text/javascript" src="localjs/localjs_localization.js" charset="UTF-8"></script>
+
+<!-- global functions and variables are defined here -->
+<script type="text/javascript" src="_js/global_functions.js" charset="UTF-8"></script>
+
+<!-- some initialization -->
+<script type="text/javascript">
+LOCALJS.UI.centerWindow(850, 800); // this function is defined in global_functions.js
+//localJS.enableF5 = false; // enable F5 refresh make debug easy, but we can disable F5 when release since F5 causes page reinitialize.
+openUrl = LOCALJS.FILE.exec;
+localJS.globalDict.Item('lang') = 'en';
+</script>
+<style>
+div.setting_body
+{
+	font:90% MS Sans Serif;
+}
+
+div.setting_title
+{
+	font-family:Arial;
+}
+
+div#div_app_title
+{
+	font-size:80%;
+}
+</style>
+</head>
+<!-- to hide scrollbar, set scroll="no" -->
+<body scroll="auto">
+
+<!-- this div is floating title -->
+<div id="div_app_title"><b style="color:white">&nbsp;&nbsp;<span class="title_highlight2" style="font-size:200%;">Shining</span>&nbsp;&nbsp;<span style="font-size:120%">as</span>&nbsp;&nbsp;<span class="title_highlight">WPF</span>,&nbsp;&nbsp;&nbsp;<span class="title_highlight2" style="font-size:200%;">Smart</span>&nbsp;&nbsp;<span style="font-size:120%">as</span>&nbsp;&nbsp;<span class="title_highlight">Native C++</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="title_highlight2" style="font-size:200%;">Easy</span>&nbsp;&nbsp;<span style="font-size:120%">with</span>&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:140%">ONLY</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="title_highlight">HTML</span><span class="title_plus">+</span><span class="title_highlight">CSS</span><span class="title_plus">+</span><span class="title_highlight">JavaScript</span></span></b>
+<img id="app_close" src="_image/exit.png"/>
+<hr/>
+</div>
+
+<!-- this div is used to take up the place left by div_app_title because div_app_title has css property position:fixed,
+	 and to meature the width of body area
+	 
+	 Also pass mouse down event to body for dragging
+-->
+<div id="width_marker" class="width_marker"></div>
+<script type="text/javascript">
+	LOCALJS.UI.addDraggable(document.getElementById('width_marker'));
+	LOCALJS.UI.addDraggable(document.getElementById('div_app_title'));
+</script>
+
+<!-- this div is first setting block -->
+<div class="setting_title"><img class="title_arrow" src="_image/arrow_up.png"/><span style="font-family:Arial">&nbsp;This program demostrates&nbsp;<span style="color:red;font-weight:bold">LocalJS</span>, including: </span><span class="title_tip">&nbsp;Click to expand</span></div>
+<div class="setting_body">
+<ul class="function_intro">
+<li>Save settings to registry and INI file.</li>
+<li>Provide JavaScript callback to confirm window close by hooking both COM events and Window messages.</li>
+<li>Create new browser window in JavaScript event handler, or when user click a link. JavaScript in multiple browser windows can interop as in same page.</li>
+<li>Access Database with ADO object. With the help of <a href="#" onclick="openUrl('http://developer.yahoo.com/yui/datatable/'); return false">DataTable</a> from <a href="#" onclick="openUrl('http://developer.yahoo.com/yui/'); return false">Yahoo YUI Library</a>, it's easy to implement a basic database grid.</li>
+<li>Call web service from any domain.</li>
+<li>Call Windows API, including those require parameters in type of pointer to buffer and structures. Interop between JavaScript and user created dll.</li>
+<li>Native multi-threading in script, and easily interop among threads. Automatically synchronize access to data shared by threads.</li>
+</ul>
+<a style="padding-left:40px" href="intro_en.html" target="_blank">Click to see file list of this demo</a>
+<div class="small_separator"></div>
+</div>
+
+<div class="big_separator"></div>
+
+<div class="setting_title"><img class="title_arrow" src="_image/arrow_up.png"/>&nbsp;Program Settings<span class="title_tip">: Usage of basic HTML UI control, write to registry / INI file, and confirm window close</span></div>
+<div class="setting_body">
+<span class="left_settings">
+<input type="checkbox" id="chkAutoStart" />&nbsp;<label for="chkAutoStart"><b>Start this program when Windows starts</b></label>
+<div class="small_separator"></div>
+<input type="checkbox" id="chkConfirmExit" />&nbsp;<label for="chkConfirmExit"><b>Confirm when window is closed</b></label>
+<div class="small_separator"></div>
+<input type="checkbox" id="chkEnableF5" />&nbsp;<label for="chkEnableF5"><b>Enable reload page by pressing F5 key</b></label>
+</span>
+
+<span class="right_settings">
+<input type="radio" name="radioTitle" id="radioTitle_on" value="1" />&nbsp;<label for="radioTitle_on"><b>Show Titlebar</b></label>
+<div class="small_separator"></div>
+<input type="radio" name="radioTitle" id="radioTitle_off" value="0" />&nbsp;<label for="radioTitle_off"><b>Hide Titlebar</b></label>
+</span>
+</br>Source files related: <span class="code">program_settings.js</span>、<span class="code">exit_confirm.js</span>. 
+<div class="small_separator"></div>
+</div>
+
+<div class="big_separator"></div>
+
+<div class="setting_title"><img class="title_arrow" src="_image/arrow_up.png"/>&nbsp;Personal Information<span class="title_tip">: Usage of basic HTML UI control, write to INI file</span></div>
+<div class="setting_body">
+<span class="left_settings" style="min-height:170px">
+<label for="username"><b>Name: </b></label>&nbsp;&nbsp;<input type="text" id="username"/>
+<div class="small_separator"></div>
+<label for="selStar"><b>Constellation: </b></label>
+<select id="selStar" style="width:80px;">
+	<option value="Aries">Aries</option>
+	<option value="Taurus">Taurus</option>
+	<option value="Gemini">Gemini</option>
+	<option value="Cancer">Cancer</option>
+	<option value="Leo">Leo</option>
+	<option value="Virgo">Virgo</option>
+	<option value="Libra">Libra</option>
+	<option value="Scorpio">Scorpio</option>
+	<option value="Sagittarius">Sagittarius</option>
+	<option value="Capricorm">Capricorm</option>
+	<option value="Aquarius">Aquarius</option>
+	<option value="Pisces">Pisces</option>
+</select>
+<div class="small_separator"></div>
+<label for="resume" style="position:relative;top:-145px"><b>C.V.: </b></label>&nbsp;&nbsp;<textarea id="resume" rows="10" cols="20" style="display:inline"></textarea>
+</span>
+
+<span class="right_settings" style="text-align:center;">
+<label for="selCar" style="padding-bottom:4px;position:relative;top:-120px;left:-15px"><b>Favorite Car: </b></label>
+<select id="selCar" multiple style="height:230px;width:150px;position:relative;right:10px">
+	<optgroup label="Volkswagen">
+		<option value="Passat">Passat</option>
+		<option value="Polo">Polo</option>
+		<option value="Bora">Bora</option>
+	</optgroup>
+	<optgroup label="Nissan">
+		<option value="Paladin">Paladin</option>
+		<option value="Qashqai">Qashqai</option>
+		<option value="X-Trail">X-Trail</option>
+	</optgroup>
+	<optgroup label="Ford">
+		<option value="Mustang">Mustang</option>
+		<option value="Mondeo">Mondeo</option>
+		<option value="Focus">Focus</option>
+	</optgroup>
+	<optgroup label="Buick">
+		<option value="EXCELLE-XT">EXCELLE-XT</option>
+		<option value="Regal">Regal</option>
+		<option value="Excelle">Excelle</option>
+	</optgroup>
+</select>
+</span>
+</br>Source file related: <span class="code">personal_settings.js</span>. 
+<div class="small_separator"></div>
+</div>
+
+<div class="big_separator"></div>
+
+<!-- use one more span in this setting title to make dynamic change of the title easier -->
+<div class="setting_title"><img class="title_arrow" src="_image/arrow_up.png"/>&nbsp;Browser Windows Interop<span class="title_tip">: Create multiple browser windows, and interop among JavaScript inside different windows</span></div>
+<div class="setting_body">
+<div>Create multiple browser windows and JavaScript interop involves complex COM event handling, window message hooking and automatic management of browser window object, which are all wrapped up in LOCALJS.UI, with a few simple functions exposed: </div>
+<ul class="function_intro">
+<li>Function <span class="code">LOCALJS.UI.createBrowser</span>: create new browser window, optionally passing a JavaScript function which will be executed when new window is loaded. Based on this function, JavaScript in different windows can call each other as in same page. 
+<div class="demo_block" style="text-align:center"><a href="#" id="demoNewWindow">Click to open a new window</a></div>
+Source files related: <span class="code">demo_newwindow.js</span> and <span class="code">new_window_en.html</span></li>
+<li>Callback function <span class="code">LOCALJS.UI.newWindowCallback</span>: When a link is clicked to open a page in a new window, this callback function will be triggerred. Processing this function can cancel the new window; or create a new window, pass a function in as example above, and open the url inside it.
+<div class="demo_block" style="text-align:center">Click link below to open homepage of Google HongKong: <br/><a href="http://www.google.com.hk/" target="_blank" id="demoCOM">Go Google HK</a></div>
+Source file related: <span class="code">demo_google.js</span></li>
+</ul>
+</div>
+
+<div class="big_separator"></div>
+
+<!-- use one more span in this setting title to make dynamic change of the title easier -->
+<div class="setting_title"><img class="title_arrow" src="_image/arrow_up.png"/>&nbsp;Local Database Access<span class="title_tip">: Access database with ADO objects created by LocalJS</span></div>
+<div class="setting_body">
+<ul class="function_intro">
+<li>LocalJS is able to create ADO object for database access.
+<div class="demo_block" style="text-align:center"><a href="#" id="demoADO">Demo: Open Excel File with ADO</a></div>
+Source files related: <span class="code">demo_ado.js</span>、<span class="code">demo_datatable.js</span> and <span class="code">data_table_en.html</span></li>
+</ul>
+</div>
+
+<div class="big_separator"></div>
+
+<!-- use one more span in this setting title to make dynamic change of the title easier -->
+<div class="setting_title"><img class="title_arrow" src="_image/arrow_up.png"/>&nbsp;Web Service from Any Domain<span class="title_tip">: Call Web Service from any domain with LocalJS</span></div>
+<div class="setting_body">
+<ul class="function_intro">
+<li>LocalJS is able to create XMLHttpRequest object, which is used to call web service similar to Ajax.
+<div class="demo_block">But different from Ajax, there is no cross-domain limitation. </div>
+<div class="demo_block">Moreover, the build in JSON format support of JavaScript makes caling web service even simpler.</div>
+<div class="demo_block" style="text-align:center"><a href="#" id="demoWebService">Click to call Sample Web Service</a></div>
+Source files related: <span class="code">demo_webservice.js</span> and <span class="code">demo_ws.php</span></li>
+</ul>
+</div>
+
+<div class="big_separator"></div>
+
+<div class="setting_title"><img class="title_arrow" src="_image/arrow_up.png"/>&nbsp;Call Windows API and DLL functions<span class="title_tip">: Call Windows API and functions exported by other DLL</span></div>
+<div class="setting_body">
+<ul class="function_intro">
+<li>LocalJS can call most Windows API, including those require parameters in type of pointer to buffer and structures. Based on this ability, Modules LOCALJS.UI and LOCALJS.FILE wrap up some of common Windows API into JavaScript functions: 
+<div class="demo_block">For example: <a href="#" id="demoOpenFile">LOCALJS.FILE.browseFile</a> calls Windows API GetOpenFileName, whose parameter type is OPENFILENAME; </div>
+<div class="demo_block"><a href="#" id="demoWndPlacement">LOCALJS.UI.getWindowPlacement and LOCALJS.UI.getWindowPlacement</a> call Windows API GetWindowPlacement and SetWindowPlacement, whose parameter type is WINDOWPLACEMENT, containing nested structures.</div>
+Source file related: <span class="code">demo_structure.js</span></li>
+<li>LocalJS also supports JavaScript interop with DLL created by user. 
+<div class="demo_block">The detail steps of demo below are: 
+<ol>
+<li><span style="color:black">JavaScript</span> calls function <span style="color:black">callJSFunctionInNewThread</span> exported by <span style="color:black">LocalJSDemoDll</span>.</li>
+<li><span style="color:black">callJSFunctionInNewThread</span> creates a new thread.</li>
+<li>The new thread calls <span style="color:black">JavaScript</span> function <span style="color:black">funcCalledByDll</span>.</li>
+<li><span style="color:black">JavaScript</span> function <span style="color:black">funcCalledByDll</span> modifies parameters passed in, and return another <span style="color:black">JavaScript</span> function back to the new thread in DLL.</li>
+<li>The new thread calls the returned <span style="color:black">JavaScript</span> function.</li>
+<li>The new thread ends.</li>
+</ol>
+</div>
+<div class="demo_block" style="text-align:center"><a href="#" id="demoCallJS">Click to demo</a></div>
+Source files related: <span class="code">demo_dllcalljs.js</span> and source files under folder <span class="code">LocalJSDemoDll</span></li>
+</ul>
+</div>
+
+<div class="big_separator"></div>
+
+<div class="setting_title"><img class="title_arrow" src="_image/arrow_up.png"/>&nbsp;Script Multi-Threading<span class="title_tip">: Native multi-threading with script</span></div>
+<div class="setting_body">
+<ul class="function_intro">
+<li>LocalJS supports native multi-threading running either JavaScript or JScript. Highlight of LocalJS multi-threading is access to threads shared data are synchronized automatically, which makes multi-threading much easier than traditional programming language.<br/>
+<div class="demo_block">When a new thread is created, one or more functions or variables defined at creating thread can be passed to the new thread as parameters. All functions, no matter called by which thread, are always executed at the thread where they are defined. So for most cases, developers DO NOT need to consider thread synchronization.</div>
+<div class="demo_block">The detail steps of demo below are: 
+<ol>
+<li>The main thread creates a new thread, and executes <span style="color:black">script_thread.js</span> within the new thread, passing function <span style="color:black">func_passed_to_thread</span>(defined at main thread) and a string as parameters.</li>
+<li>The new thread calls <span style="color:black">func_passed_to_thread</span>, passing a function <span style="color:black">function_passed_to_main_thread</span>(defined in new thread) as parameter.</li>
+<li><span style="color:black">func_passed_to_thread</span> executes at main thread(where it's defined), and calll function <span style="color:black">function_passed_to_main_thread</span>.</li>
+<li><span style="color:black">function_passed_to_main_thread</span> executes at the new thread(where it's defined).</li>
+<li>The new thread <span style="color:black">sleeps</span> for 10 seconds, while GUI running in main thread works unblocked.</li>
+<li>The new thread displays string passed by main thread and ends.</li>
+</ol>
+</div>
+<div class="demo_block" style="text-align:center"><a href="#" id="demoThread">Click to create a new thread</a></div>
+Source files related: <span class="code">demo_thread.js</span> and <span class="code">script_thread.js</span></li>
+</li>
+</ul>
+</div>
+
+<div class="big_separator"></div>
+
+<div class="setting_title"><img class="title_arrow" src="_image/arrow_up.png"/>&nbsp;Debugging<span class="title_tip">: How to debug script</span></div>
+<div class="setting_body">
+<ul class="function_intro">
+<li>Debugging: alert is not the only debug method. <span class="smile"></span>JavaScript can be debugged in an IDE just like C++ or VB program: <a href="#" onclick="openUrl('http://localjs.org/docs/howto.html#howto_debug'); return false">Click to see how to debug script</a>.
+</li>
+</ul>
+</div>
+
+<div class="big_separator"></div>
+
+</body>
+</html>
+
+<!-- For a page to render fastest, all css should be in header and all javascript should go after html tag.
+	But we also put a little bit javascript code in header to set up the window style and postion so let html window appear as earlier as possible
+-->
+<!-- The sequence of the jsvascript loaded in this case doesn't matter except jquery-1.4.2.min.js should be loaded before any code using jquery 
+-->
+<!-- You can just add the javascript below to be able to drag the window by click anywhere empty, isn't easy to modularize your code? :-) -->
+<!-- If you come from C/C++ background but are new to JavaScript, then you may want to take a look at the comments in drag_anywhere.js -->
+<script type="text/javascript" src="_js/exit_confirm.js" charset="UTF-8"></script>
+<script type="text/javascript" src="_js/program_settings.js" charset="UTF-8"></script>
+<script type="text/javascript" src="_js/personal_settings.js" charset="UTF-8"></script>
+<script type="text/javascript" src="_js/demo_structure.js" charset="UTF-8"></script>
+<script type="text/javascript" src="_js/demo_thread.js" charset="UTF-8"></script>
+<script type="text/javascript" src="_js/demo_webservice.js" charset="UTF-8"></script>
+<script type="text/javascript" src="_js/demo_ado.js" charset="UTF-8"></script>
+<script type="text/javascript" src="_js/demo_calljs.js" charset="UTF-8"></script>
+
+<!-- jQuery is a small javascript library which provides a set of easy methods to access elements in page, it makes javascript coding much easier than the standard way. 
+	 Very worth to learn! 
+	 It's very easy to learn too. I read http://www.w3schools.com/jquery/default.asp and http://jquery.com/ for an hour then started to use it. -->
+<script type="text/javascript" src="_js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="_js/setting_blocks.js" charset="UTF-8"></script>
+<script type="text/javascript" src="_js/float_title.js" charset="UTF-8"></script>
+
+<!-- Let's use jQuery light UI library -->
+<script type="text/javascript" src="_js/jquery-ui-1.8.min.js"></script>
+<script type="text/javascript" src="_js/demo_google.js" charset="UTF-8"></script>
+<script type="text/javascript" src="_js/demo_newwindow.js" charset="UTF-8"></script>
