@@ -30,6 +30,7 @@ localJS.globalDict.Item('lang') = 'zh';
 <!-- this div is floating title -->
 <div id="div_app_title"><b style="color:white">&nbsp;&nbsp;<span class="title_highlight">WPF</span>&nbsp;的<span class="title_highlight2">华丽</span>，<span class="title_highlight">Native C++</span>&nbsp;的<span class="title_highlight2">轻巧</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;只需要&nbsp;<span class="title_highlight">HTML</span><span class="title_plus">+</span><span class="title_highlight">CSS</span><span class="title_plus">+</span><span class="title_highlight">JavaScript</span></span></b>
 <img id="app_close" src="_image/exit.png"/>
+<img id="app_logo" src="_image/localjs.png"/>
 <hr/>
 </div>
 
@@ -45,7 +46,7 @@ localJS.globalDict.Item('lang') = 'zh';
 </script>
 
 <!-- this div is first setting block -->
-<div class="setting_title"><img class="title_arrow" src="_image/arrow_up.png"/><span style="font-family:Arial">&nbsp;This program demostrates&nbsp;<span style="color:red;font-weight:bold">LocalJS</span>。演示内容包括：</span><span class="title_tip">&nbsp;点击查看</span></div>
+<div class="setting_title"><img class="title_arrow" src="_image/arrow_up.png"/><span style="font-family:Arial">&nbsp;This program demostrates&nbsp;<a href="#" onclick="openUrl('http://localjs.org/'); return false"><span style="color:red;font-weight:bold">LocalJS</span></a>。演示内容包括：</span><span class="title_tip">&nbsp;点击查看</span></div>
 <div class="setting_body">
 <ul class="function_intro">
 <li>在注册表和 INI 文件中保存设置。</li>
@@ -53,6 +54,7 @@ localJS.globalDict.Item('lang') = 'zh';
 <li>在页面事件处理函数中创建新窗口，或者在用户点击链接的时候打开新窗口。多个窗口之间可以像在同一个页面里一样互操作。</li>
 <li>利用 ADO 对象实现数据库访问。结合 <a href="#" onclick="openUrl('http://developer.yahoo.com/yui/'); return false">Yahoo YUI Library</a> 的 <a href="#" onclick="openUrl('http://developer.yahoo.com/yui/datatable/'); return false">DataTable</a> 控件，可以实现常见的数据库表格功能。</li>
 <li>调用任意 domain 的 web service。</li>
+<li>LocalJS 独特的多语言支持。</li>
 <li>调用 Windows API，支持指针和结构类型的参数。JavaScript 还能和用户创建的 DLL 中的函数互相调用。</li>
 <li>创建 native script 线程，主线程和新线程之间可以方便地互相调用。自动同步对共享数据的访问。</li>
 </ul>
@@ -175,6 +177,24 @@ localJS.globalDict.Item('lang') = 'zh';
 <div class="demo_block">并且，JavaScript天然地支持JSON数据格式使得调用Web Service更为简单。</div>
 <div class="demo_block" style="text-align:center"><a href="#" id="demoWebService">点击调用示例Web Service</a></div>
 对应源文件：<span class="code">demo_webservice.js</span>和<span class="code">demo_ws.php</span></li>
+</ul>
+</div>
+
+<div class="big_separator"></div>
+
+<div class="setting_title"><img class="title_arrow" src="_image/arrow_up.png"/>&nbsp;多语言支持<span class="title_tip">：LocalJS 独特的多语言支持</span></div>
+<div class="setting_body">
+LOCALJS.LOCALIZATION 封装了 LocalJS 的多语言支持。其独特之处在于：
+<ul class="function_intro">
+<li>利用了 LocalJS 的全局存储能力，界面语言的字符串只需要在任意一个窗口中加载一次，所有窗口都可用，不需要每个窗口都单独加载字符串，又简单又省内存。</li>
+<li>利用了 LocalJS 的本地访问能力，界面字符串可以来自本地文件，也可以来自 web 服务器。</li>
+<li>利用了 JavaScript 的特点，本地化配置文件中可以包含简单的 JavaScript 函数，使得对日期等有特殊要求的多语言支持简单明了。</li>
+</ul>
+对应源文件：
+<ul class="function_intro">
+<li>大多数JavaScript文件都调用了 <span class="code">LOCALJS.LOCALIZATION.get</span> 来得到和当前语言对应的字符串。</li>
+<li><span class="code">LocalJSBootstrap.html</span> 文件中调用 <span class="code">LOCALJS.LOCALIZATION.setPath</span> 设定多语言文件的路径，调用 <span class="code">LOCALJS.LOCALIZATION.setLang</span> 设定当前语言。</li>
+<li>localization 目录下的<span class="code">en.json</span>，<span class="code">cn.json</span> 和 <span class="code">hk.json</span> 包含不同语言的字符串。</li>
 </ul>
 </div>
 
