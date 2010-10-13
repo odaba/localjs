@@ -94,8 +94,8 @@ span.title_highlight2
 <div class="setting_title"><img class="title_arrow" src="_image/arrow_up.png"/><span style="font-weight:bold">&nbsp;創建新窗口及多個窗口之間的互操作</span><span class="title_tip">&nbsp;點擊展開</span></div>
 <div class="setting_body">
 <ul class="function_intro">
-<li><span class="code">Debug \ bin \ demo1 \ _js \ demo_newwindow.js</span>：在 DHTML 消息處理函數中用 <span class="code">LOCALJS.UI.createBrowser</span> 函數創建新窗口，通過 <span class="code">initFunction</span> 參數，將主窗口中定義的一個 JavaScript 函數注入到新窗口中執行，從而實現窗口之間的互操作。</li>
-<li><span class="code">Debug \ bin \ demo1 \ new_window.html</span>：<span class="code">demo_newwindow.js</span>所打開的頁面。</li>
+<li><span class="code">Debug \ bin \ demo1 \ _js \ demo_newwindow.js</span>：在 DHTML 事件處理函數中用 <span class="code">LOCALJS.UI.createBrowser</span> 函數創建新窗口，通過 <span class="code">initFunction</span> 參數，將主窗口中定義的一個 JavaScript 函數注入到新窗口中執行，從而實現窗口之間的互操作。</li>
+<li><span class="code">Debug \ bin \ demo1 \ new_window_hk.html</span>：<span class="code">demo_newwindow.js</span>所打開的頁面。</li>
 <li><span class="code">Debug \ bin \ demo1 \ _js \ demo_google.js</span>：當用戶選擇在新窗口中打開鏈接的時候，可以通過回調函數 <span class="code">LOCALJS.UI.newWindowCallback</span> 來決定是否取消這次點擊；或者創建一個新窗口，在此新窗口中打開此鏈接。</li>
 </ul>
 </div>
@@ -106,7 +106,7 @@ span.title_highlight2
 <div class="setting_body">
 <ul class="function_intro">
 <li><span class="code">Debug \ bin \ demo1 \ _js \ demo_ado.js</span>：打開數據庫演示窗口。如果數據庫演示窗口已經打開，則切換到該窗口。</li>
-<li><span class="code">Debug \ bin \ demo1 \ data_table.html</span>：數據庫演示窗口的頁面文件。</li>
+<li><span class="code">Debug \ bin \ demo1 \ data_table_hk.html</span>：數據庫演示窗口的頁面文件。</li>
 <li><span class="code">Debug \ bin \ demo1 \ _js \ demo_datatable.js</span>：用 ADO 對象打開數據庫並在漢化的 <a href="#" onclick="openUrl('http://developer.yahoo.com/yui/'); return false">Yahoo YUI Library</a> 的 <a href="#" onclick="openUrl('http://developer.yahoo.com/yui/datatable/'); return false">DataTable</a> 控件中排序、編輯。</li>
 <li><span class="code">Debug \ bin \ demo1 \ sample data.xls</span>：作為數據庫的 Excel 文件。</li>
 <li><span class="code">Debug \ bin \ demo1 \ yui</span>：<a href="#" onclick="openUrl('http://developer.yahoo.com/yui/'); return false">Yahoo YUI Library</a> 的一部分。</li>
@@ -129,7 +129,7 @@ span.title_highlight2
 <div class="setting_body">
 <ul class="function_intro">
 <li><span class="code">Debug \ bin \ demo1 \ _js \ demo_structure.js</span>：調用 <span class="code">LOCALJS.UI</span> 中的函數移動窗口和打開文件選擇對話框。</li>
-<li><span class="code">Debug \ bin \ demo1 \ _js \ demo_calljs.js</span>：調用演示程序附帶的 <span class="code">LocalJSDemoDll.dll</span> 所輸出的函數 <span class="code">callJSFunctionInNewThread</span>；<span class="code">callJSFunctionInNewThread</span> 和 JavaScript 中的函數互相調用。</li>
+<li><span class="code">Debug \ bin \ demo1 \ _js \ demo_calljs.js</span>：調用演示程序附帶的 <span class="code">LocalJSDemoDll.dll</span> 所輸出的函數 <span class="code">callJSFunctionInNewThread</span>；<span class="code">callJSFunctionInNewThread</span> 再調用 JavaScript 中的函數。</li>
 <li><span class="code">LocalJSDemoDll \ LocalJSDemoDll.dsp</span>：<span class="code">LocalJSDemoDll</span> 的 Visual C++ 6 項目文件。</li>
 </ul>
 </div>
@@ -161,9 +161,9 @@ span.title_highlight2
 <div class="setting_body">
 <ul class="function_intro">
 <li><span class="code">LocalJSBootstrap \ LocalJSBootstrap.dsp</span>：LocalJS 啟動程序的 Visual C++ 6 項目文件。該程序適用於絕大多數情況。</li>
-<li><span class="code">Debug \ bin \ demo1 \ index.html</span>：演示程序的主頁面。</li>
-<li><span class="code">Debug \ bin \ demo1 \ intro.html</span>：本頁面。</li>
-<li><span class="code">Debug \ bin \ LocalJSBootstrap.html</span>：<span class="code">LocalJSBootstrap.exe</span> 所調用的頁面，直接跳轉到主頁面。</li>
+<li><span class="code">Debug \ bin \ demo1 \ index_hk.html</span>：演示程序的主頁面。</li>
+<li><span class="code">Debug \ bin \ demo1 \ intro_hk.html</span>：本頁面。</li>
+<li><span class="code">Debug \ bin \ LocalJSBootstrap.html</span>：<span class="code">LocalJSBootstrap.exe</span> 所調用的頁面，跳轉到主頁面。</li>
 </ul>
 </div>
 
@@ -183,12 +183,6 @@ span.title_highlight2
 <!-- For a page to render fastest, all css should be in header and all javascript should go after html tag.
 	But we also put a little bit javascript code in header to set up the window style and postion so let html window appear as earlier as possible
 -->
-<!-- The sequence of the jsvascript loaded in this case doesn't matter except jquery-1.4.2.min.js should be loaded before any code using jquery 
--->
-<!-- You can just add the javascript below to be able to drag the window by click anywhere empty, isn't easy to modularize your code? :-) -->
-<!-- If you come from C/C++ background but are new to JavaScript, then you may want to take a look at the comments in drag_anywhere.js -->
-<script type="text/javascript" src="_js/drag_anywhere.js" charset="UTF-8"></script>
-
 <!-- jQuery is a small javascript library which provides a set of easy methods to access elements in page, it makes javascript coding much easier than the standard way. 
 	 Very worth to learn! 
 	 It's very easy to learn too. I read http://www.w3schools.com/jquery/default.asp and http://jquery.com/ for an hour then started to use it. -->

@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head profile="http://www.w3.org/2005/10/profile">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-<title>LocalJS 演示：用ADO打開Excel文件</title>
+<title>LocalJS Demo：Open Excel file with ADO</title>
 <link rel="stylesheet" type="text/css" href="yui/reset-fonts-grids/reset-fonts-grids.css"/>
 <link rel="stylesheet" type="text/css" href="yui/base/base-min.css"/>
 <link rel="stylesheet" type="text/css" href="yui/assets/skins/sam/button.css"/>
@@ -20,6 +20,7 @@ body
 </style>
 <script type="text/javascript" src="localjs/localjs_ui.js" charset="UTF-8"></script>
 <script type="text/javascript" src="localjs/localjs_file.js" charset="UTF-8"></script>
+<script type="text/javascript" src="localjs/localjs_localization.js" charset="UTF-8"></script>
 <script type="text/javascript">
 LOCALJS.UI.centerWindow(780, 710); // this function is defined in global_functions.js
 //localJS.enableF5 = false; // enable F5 refresh make debug easy, but we can disable F5 when release since F5 causes page reinitialize.
@@ -28,16 +29,16 @@ openUrl = LOCALJS.FILE.exec;
 </head>
 <!-- to hide scrollbar, set scroll="no" -->
 <body scroll="auto" class="yui-skin-sam" id="body" scroll="auto">
-<div style="text-align:left">用ADO打開Excel文件需要Microsoft OLE DB Provider for ODBC Drivers。如果您的機器上沒有安裝MDAC(Microsoft Data Access Components)，則本示例可能不會正常運行。<br/>參見相關微軟知識庫網頁：<a href="#" onclick="openUrl('http://support.microsoft.com/kb/257819'); return false">How To Use ADO with Excel Data from Visual Basic or VBA</a>
+<div style="text-align:left">Microsoft OLE DB Provider for ODBC Drivers is required to open Excel file with ADO。If MDAC(Microsoft Data Access Components) is not installed in your system, then this demo may not work.<br/>Refer to Microsoft knowledge base: <a href="#" onclick="openUrl('http://support.microsoft.com/kb/257819'); return false">How To Use ADO with Excel Data from Visual Basic or VBA</a>
 <br/><br/>
-本例使用了<a href="#" onclick="openUrl('http://developer.yahoo.com/yui/'); return false">Yahoo YUI Library</a>的<a href="#" onclick="openUrl('http://developer.yahoo.com/yui/datatable/'); return false">DataTable</a>控件，它不僅免費而且提供了基本的表格功能如編輯、排序等。<a href="#" onclick="openUrl('http://developer.yahoo.com/yui/datatable/'); return false">DataTable</a>需要和YUI的<a href="#" onclick="openUrl('http://developer.yahoo.com/yui/datasource/'); return false">DataSource</a>類聯合使用。<br/>
-參見：<a href="#" onclick="openUrl('http://developer.yahoo.com/yui/datatable/'); return false">YUI 2: DataTable</a>&nbsp;&nbsp;<a href="#" onclick="openUrl('http://developer.yahoo.com/yui/examples/datatable/dt_cellediting.html'); return false">Inline Cell Editing</a>&nbsp;&nbsp;<a href="#" onclick="openUrl('http://developer.yahoo.com/yui/datasource/'); return false">YUI 2: DataSource</a>
+Free JavaScript UI control <a href="#" onclick="openUrl('http://developer.yahoo.com/yui/datatable/'); return false">DataTable</a> from <a href="#" onclick="openUrl('http://developer.yahoo.com/yui/'); return false">Yahoo YUI Library</a> is used to edit and sort data in this demo。<a href="#" onclick="openUrl('http://developer.yahoo.com/yui/datatable/'); return false">DataTable</a> needs to co-work with another free UI control <a href="#" onclick="openUrl('http://developer.yahoo.com/yui/datasource/'); return false">DataSource</a>。<br/>
+Refer to: <a href="#" onclick="openUrl('http://developer.yahoo.com/yui/datatable/'); return false">YUI 2: DataTable</a>&nbsp;&nbsp;<a href="#" onclick="openUrl('http://developer.yahoo.com/yui/examples/datatable/dt_cellediting.html'); return false">Inline Cell Editing</a>&nbsp;&nbsp;<a href="#" onclick="openUrl('http://developer.yahoo.com/yui/datasource/'); return false">YUI 2: DataSource</a>
 <br/><br/>
-對應源文件：demo_datatable.js。
+Source file related: demo_datatable.js。
 </div>
 <br/>
 <div id="dataTable" style="text-align:left"></div><br/>
-<input type="button" value="用ADO打開Excel文件" id="btnADO" disabled /><div style="display:block;padding-top:10px;visibility:hidden"><input type="button" id="btnOpenExcel" disabled /></div>
+<input type="button" value="Open Excel file with ADO" id="btnADO" disabled /><div style="display:block;padding-top:10px;visibility:hidden"><input type="button" id="btnOpenExcel" disabled /></div>
 </body>
 </html>
 <script type="text/javascript" src="yui/yahoo-dom-event/yahoo-dom-event.js"></script>
