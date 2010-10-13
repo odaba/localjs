@@ -25,6 +25,7 @@
 		key_lang = 'lang',
 		key_url = 'url',
 		key_words = 'words',
+		key_funcs_name = 'func_names', // save name of functions member in localization file
 
 		fnCreateDict = function()
 		{
@@ -53,14 +54,30 @@
 					try
 					{
 						var json_lang_words = (new Function("return " + lang_words))(),
-							newDict = fnCreateDict();
+							newDict = fnCreateDict(),
+							newFuncNames;
 
 						for (var prop in json_lang_words)
 						{
-							newDict.Item(prop) = json_lang_words[prop];
+							var item = json_lang_words[prop];
+
+							if ("function" == typeof(item))
+							{
+								item = item.toString();
+
+								if (!newFuncNames)
+									newFuncNames = fnCreateDict();
+								newFuncNames.Item(prop) = 1;
+							}
+
+							newDict.Item(prop) = item;
 						}
 
 						dict_item.Item(key_words) = newDict;
+						if (newFuncNames)
+							dict_item.Item(key_funcs_name) = newFuncNames;
+						else if (dict_item.Exists(key_funcs_name))
+							dict_item.Remove(key_funcs_name);
 						return;
 					}
 					catch (e)
@@ -72,6 +89,8 @@
 
 			if (dict_item.Exists(key_words))
 				dict_item.Remove(key_words);
+			if (dict_item.Exists(key_funcs_name))
+				dict_item.Remove(key_funcs_name);
 		};
 
 	localjs_localization.setPath = function(path)
@@ -111,6 +130,23 @@
 		var dict_item = get_dict_item(),
 			words = dict_item.Exists(key_words) ? dict_item.Item(key_words) : undefined;
 
-		return words && words.Exists(key) ? words.Item(key) : key;
+        if (words && words.Exists(key))
+        {
+            var word = words.Item(key);
+		    if (dict_item.Exists(key_funcs_name))
+		    {
+			    var func_names = dict_item.Item(key_funcs_name);
+			    if (func_names.Exists(key))
+			    {
+				    return (new Function("return " + word))();
+			    }
+		    }
+
+		    return word;
+		}
+		else
+        {
+            return key;   
+        }
 	};
 })();

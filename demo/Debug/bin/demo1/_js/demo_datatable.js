@@ -10,7 +10,8 @@
 
 			localjs_ui = LOCALJS.UI,
 			localjs_file = LOCALJS.FILE,
-			localization_get = LOCALJS.LOCALIZATION.get,
+			localization = LOCALJS.LOCALIZATION,
+			localization_get = localization.get,
 
 			msgBox = localjs_ui.msgBox,
 
@@ -158,7 +159,7 @@
 		var dateFormatter = function(elCell, oRecord, oColumn, oData)
 		{
 			var dt = oRecord.getData(oColumn.key);
-			elCell.innerHTML = dt.getFullYear() + "年" + (dt.getMonth() + 1) + "月" + dt.getDate() + "日";
+			elCell.innerHTML = localization_get('formatDate')(dt);
 		}
 
 		// validate cell value after user edit
@@ -175,7 +176,7 @@
 
 			if (0 == inputValue.length)
 			{
-				alert("姓名不能為空。");
+				alert(localization_get("Name should not be empty."));
 				return undefined;
 			}
 
@@ -195,7 +196,7 @@
 
 			if (inputValue.search(/[^\d]/) >= 0 || 1 * inputValue <= 0)
 			{
-				alert("請填入有效的正整數。");
+				alert(localization_get("Please fill with valid non-negative integer."));
 				return undefined;
 			}
 
@@ -205,9 +206,9 @@
 		var validateGender = function (inputValue, currentValue, editorInstance)
 		{
 			inputValue = YAHOO.lang.trim(inputValue);
-			if ("男" == inputValue)
+			if (localization_get('Male') == inputValue)
 				inputValue = 1;
-			else if ("女" == inputValue)
+			else if (localization_get('Female') == inputValue)
 				inputValue = 0;
 			else
 				return undefined;
@@ -237,24 +238,31 @@
 		}
 
 		// define table columns
-		var months = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
-			weekdays = ["日", "一", "二", "三", "四", "五", "六"];
-			calendar_cfg = {show_week_header:true,
-							"MY_LABEL_YEAR_SUFFIX":"年", "MY_LABEL_MONTH_SUFFIX":"月",
-							"MONTHS_SHORT":months, "MONTHS_LONG":months,
-							"WEEKDAYS_1CHAR":weekdays, "WEEKDAYS_SHORT":weekdays, "WEEKDAYS_MEDIUM":weekdays, "WEEKDAYS_LONG":weekdays,
-							"MY_LABEL_YEAR_POSITION":1, "MY_LABEL_MONTH_POSITION":2,
-							navigator:{strings: {month:"請選擇月份", year:"請輸入年份", submit:"轉到", cancel:"取消", invalidYear:"請輸入有效的年份。"}}};
+		var cfg_DateCellEditor = {validator:validateDate};
+		if ('en' != localization.getLang())
+		{
+			var months = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
+				weekdays = ["日", "一", "二", "三", "四", "五", "六"],
+				calendar_cfg = {show_week_header:true,
+								"MY_LABEL_YEAR_SUFFIX":"年", "MY_LABEL_MONTH_SUFFIX":"月",
+								"MONTHS_SHORT":months, "MONTHS_LONG":months,
+								"WEEKDAYS_1CHAR":weekdays, "WEEKDAYS_SHORT":weekdays, "WEEKDAYS_MEDIUM":weekdays, "WEEKDAYS_LONG":weekdays,
+								"MY_LABEL_YEAR_POSITION":1, "MY_LABEL_MONTH_POSITION":2,
+								navigator:{strings: {month:localization_get("Please choose month"), year:localization_get("Please input year"), submit:localization_get("Goto"), cancel:localization_get("Cancel"), invalidYear:localization_get("Please input valid year")}}};
+			cfg_DateCellEditor[LABEL_SAVE] = LABEL_SAVE:localization_get("Save");
+			cfg_DateCellEditor[LABEL_CANCEL] = localization_get("Cancel");
+			cfg_DateCellEditor[calendarOptions] = calendar_cfg;
+		}
 
 		var columnDef = [{key: "id", label: "ID", resizeable: true, sortable:true},
-						 {key: "name", label: "姓名", resizeable: true, sortable:true,
-							editor: new YAHOO.widget.TextboxCellEditor({validator:validateName, LABEL_SAVE:"保存", LABEL_CANCEL:"取消"})},
-						 {key: "age", label: "年齡", resizeable: true, formatter: ageFormatter, sortable:true,
-							editor: new YAHOO.widget.TextboxCellEditor({validator:validateAge, LABEL_SAVE:"保存", LABEL_CANCEL:"取消"})},
-						 {key: "gender", label: "性别", resizeable: true, sortable:true, formatter: genderFormatter,
-							editor: new YAHOO.widget.RadioCellEditor({radioOptions: ["男","女"], validator:validateGender, disableBtns:true})},
-						 {key: "start_day", label: "入職日期", resizeable: true, sortable:true, formatter: dateFormatter,
-							editor: new YAHOO.widget.DateCellEditor({calendarOptions:calendar_cfg, validator:validateDate, LABEL_SAVE:"保存", LABEL_CANCEL:"取消"})}];
+						 {key: "name", label: localization_get("Name"), resizeable: true, sortable:true,
+							editor: new YAHOO.widget.TextboxCellEditor({validator:validateName, LABEL_SAVE:localization_get("Save"), LABEL_CANCEL:localization_get("Cancel")})},
+						 {key: "age", label: localization_get("Age"), resizeable: true, formatter: ageFormatter, sortable:true,
+							editor: new YAHOO.widget.TextboxCellEditor({validator:validateAge, LABEL_SAVE:localization_get("Save"), LABEL_CANCEL:localization_get("Cancel")})},
+						 {key: "gender", label: localization_get("Gender"), resizeable: true, sortable:true, formatter: genderFormatter,
+							editor: new YAHOO.widget.RadioCellEditor({radioOptions: [localization_get('Male'),localization_get('Female')], validator:validateGender, disableBtns:true})},
+						 {key: "start_day", label: localization_get("Start Day"), resizeable: true, sortable:true, formatter: dateFormatter,
+							editor: new YAHOO.widget.DateCellEditor(cfg_DateCellEditor)}];
 
 		// hook event
 		btnADO.on('click', function()
@@ -267,7 +275,7 @@
 				}
 				else
 				{
-					msgBox("下面將用ADO打開" + excel_file);
+					msgBox(localization_get("Open_with_ADO_1st") + excel_file + localization_get("Open_with_ADO_2nd"));
 					dataTable = new YAHOO.widget.ScrollingDataTable(doc.getElementById("dataTable"), columnDef, dataSource, {width:"740px", height:"280px", dynamicData:true});
 					var highlightEditableCell = function(oArgs)
 					{
@@ -313,17 +321,17 @@
 					dataTable.subscribe("editorShowEvent", onEditorShow);
 
 					btnOpenExcel.setStyle("visibility", "visible");
-					btnOpenExcel.set('label', "在Excel中打開 " + excel_file);
+					btnOpenExcel.set('label', localization_get("Open_with_Excel_1st") + excel_file + localization_get("Open_with_Excel_2nd"));
 					btnOpenExcel.set('disabled', false);
 					btnOpenExcel.focus();
 
 					btnOpenExcel.on('click', function()
 					{
 						localjs_file.exec(excel_file);
-						msgBox("在本窗口內編輯表格內容，Excel 中的內容會實時改變。");
+						msgBox(localization_get("excel_changes"));
 					});
 
-					msgBox("點擊 表頭 可以排序；\n點擊 內容 可以編輯。 \n注意 修改日期時 彈出的對話框 已經本地化了。");
+					msgBox(localization_get("table_reminder"));
 				}
 			}
 			catch (e)

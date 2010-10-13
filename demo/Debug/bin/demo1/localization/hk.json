@@ -2,5 +2,29 @@
 	"./data_table_en.html" : "./data_table_hk.html",
 	"years_old" : " 歲",
 	"Male" : "男",
-	"Female" : "女"
+	"Female" : "女",
+	"formatDate" : function(dt) 
+					{
+						return dt.getFullYear() + "年" + (dt.getMonth() + 1) + "月" + dt.getDate() + "日";
+					},
+	"year" : "年",
+	"month" : "月",
+	"Name should not be empty." : "姓名不能為空。",
+	"Please fill with valid non-negative integer." : "請填入有效的正整數。",
+	"Name" : "姓名",
+	"Save" : "保存",
+	"Cancel" : "取消",
+	"Age" : "年齡",
+	"Gender" : "性别",
+	"Start Day" : "入職日期",
+	"Please choose month" : "請選擇月份",
+	"Please input year" : "請輸入年份",
+	"Goto" : "轉到",
+	"Please input valid year" : "請輸入有效的年份。",
+	"Open_with_ADO_1st" : "下面將用ADO打開 ",
+	"Open_with_ADO_2nd" : "",
+	"Open_with_Excel_1st" : "在Excel中打開 ",
+	"Open_with_Excel_2nd" : "",
+	"excel_changes" : "在本窗口內編輯表格內容，Excel 中的內容會實時改變。",
+	"table_reminder" : "點擊 表頭 可以排序；\n點擊 內容 可以編輯。 \n注意 修改日期時 彈出的對話框 已經本地化了。"
 }
