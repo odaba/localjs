@@ -30,6 +30,7 @@ localJS.globalDict.Item('lang') = 'zh';
 <!-- this div is floating title -->
 <div id="div_app_title"><b style="color:white">&nbsp;&nbsp;<span class="title_highlight">WPF</span>&nbsp;的<span class="title_highlight2">華麗</span>，<span class="title_highlight">Native C++</span>&nbsp;的<span class="title_highlight2">輕巧</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;只需要&nbsp;<span class="title_highlight">HTML</span><span class="title_plus">+</span><span class="title_highlight">CSS</span><span class="title_plus">+</span><span class="title_highlight">JavaScript</span></span></b>
 <img id="app_close" src="_image/exit.png"/>
+<img id="app_logo" src="_image/localjs.png"/>
 <hr/>
 </div>
 
@@ -53,6 +54,7 @@ localJS.globalDict.Item('lang') = 'zh';
 <li>在頁面事件處理函數中創建新窗口，或者在用戶點擊鏈接的時候打開新窗口。多個窗口之間可以像在同一個頁面裡一樣互操作。</li>
 <li>利用 ADO 對象實現數據庫訪問。結合 <a href="#" onclick="openUrl('http://developer.yahoo.com/yui/'); return false">Yahoo YUI Library</a> 的 <a href="#" onclick="openUrl('http://developer.yahoo.com/yui/datatable/'); return false">DataTable</a> 控件，可以實現常見的數據庫表格功能。</li>
 <li>調用任意 domain 的 web service。</li>
+<li>LocalJS 獨特的多語言支持。</li>
 <li>調用 Windows API，支持指針和結構類型的參數。JavaScript 還能和用戶創建的 DLL 中的函數互相調用。</li>
 <li>創建 native script 線程，主線程和新線程之間可以方便地互相調用。自動同步對共享數據的訪問。</li>
 </ul>
@@ -175,6 +177,24 @@ localJS.globalDict.Item('lang') = 'zh';
 <div class="demo_block">並且，JavaScript天然地支持JSON數據格式使得調用Web Service更為簡單。</div>
 <div class="demo_block" style="text-align:center"><a href="#" id="demoWebService">點擊調用示例Web Service</a></div>
 對應源文件：<span class="code">demo_webservice.js</span>和<span class="code">demo_ws.php</span></li>
+</ul>
+</div>
+
+<div class="big_separator"></div>
+
+<div class="setting_title"><img class="title_arrow" src="_image/arrow_up.png"/>&nbsp;多語言支持<span class="title_tip">：LocalJS 獨特的多語言支持</span></div>
+<div class="setting_body">
+LOCALJS.LOCALIZATION 封裝了 LocalJS 的多語言支持。其獨特之處在于：
+<ul class="function_intro">
+<li>利用了 LocalJS 的全局存儲能力，界面語言的字符串只需要在任意一個窗口中加載一次，所有窗口都可用，不需要每個窗口都單獨加載字符串，又簡單又省內存。</li>
+<li>利用了 LocalJS 的本地訪問能力，界面字符串可以來自本地文件，也可以來自 web 服務器。</li>
+<li>利用了 JavaScript 的特點，本地化配置文件中可以包含簡單的 JavaScript 函數，使得對日期等有特殊要求的多語言支持簡單明了。</li>
+</ul>
+對應源文件：
+<ul class="function_intro">
+<li>大多數JavaScript文件都調用了 <span class="code">LOCALJS.LOCALIZATION.get</span> 來得到和當前語言對應的字符串。</li>
+<li><span class="code">LocalJSBootstrap.html</span> 文件中調用 <span class="code">LOCALJS.LOCALIZATION.setPath</span> 設定多語言文件的路徑，調用 <span class="code">LOCALJS.LOCALIZATION.setLang</span> 設定當前語言。</li>
+<li>localization 目錄下的<span class="code">en.json</span>，<span class="code">cn.json</span> 和 <span class="code">hk.json</span> 包含不同語言的字符串。</li>
 </ul>
 </div>
 
