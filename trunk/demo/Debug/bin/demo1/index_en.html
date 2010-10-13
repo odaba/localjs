@@ -46,6 +46,7 @@ div#div_app_title
 <!-- this div is floating title -->
 <div id="div_app_title"><b style="color:white">&nbsp;&nbsp;<span class="title_highlight2" style="font-size:200%;">Shining</span>&nbsp;&nbsp;<span style="font-size:120%">as</span>&nbsp;&nbsp;<span class="title_highlight">WPF</span>,&nbsp;&nbsp;&nbsp;<span class="title_highlight2" style="font-size:200%;">Smart</span>&nbsp;&nbsp;<span style="font-size:120%">as</span>&nbsp;&nbsp;<span class="title_highlight">Native C++</span><br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="title_highlight2" style="font-size:200%;">Easy</span>&nbsp;&nbsp;<span style="font-size:120%">with</span>&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-size:140%">ONLY</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="title_highlight">HTML</span><span class="title_plus">+</span><span class="title_highlight">CSS</span><span class="title_plus">+</span><span class="title_highlight">JavaScript</span></span></b>
 <img id="app_close" src="_image/exit.png"/>
+<img id="app_logo" style="top:15px" src="_image/localjs.png"/>
 <hr/>
 </div>
 
@@ -69,6 +70,7 @@ div#div_app_title
 <li>Create new browser window in JavaScript event handler, or when user click a link. JavaScript in multiple browser windows can interop as in same page.</li>
 <li>Access Database with ADO object. With the help of <a href="#" onclick="openUrl('http://developer.yahoo.com/yui/datatable/'); return false">DataTable</a> from <a href="#" onclick="openUrl('http://developer.yahoo.com/yui/'); return false">Yahoo YUI Library</a>, it's easy to implement a basic database grid.</li>
 <li>Call web service from any domain.</li>
+<li>LocalJS unique multi-languages support.</li>
 <li>Call Windows API, including those require parameters in type of pointer to buffer and structures. Interop between JavaScript and user created dll.</li>
 <li>Native multi-threading in script, and easily interop among threads. Automatically synchronize access to data shared by threads.</li>
 </ul>
@@ -191,6 +193,24 @@ Source files related: <span class="code">demo_ado.js</span>、<span class="code"
 <div class="demo_block">Moreover, the build in JSON format support of JavaScript makes caling web service even simpler.</div>
 <div class="demo_block" style="text-align:center"><a href="#" id="demoWebService">Click to call Sample Web Service</a></div>
 Source files related: <span class="code">demo_webservice.js</span> and <span class="code">demo_ws.php</span></li>
+</ul>
+</div>
+
+<div class="big_separator"></div>
+
+<div class="setting_title"><img class="title_arrow" src="_image/arrow_up.png"/>&nbsp;Multi-Language support<span class="title_tip">：LocalJS Unique Multi-Language support</span></div>
+<div class="setting_body">
+LOCALJS.LOCALIZATION wraps up multi-languages support:
+<ul class="function_intro">
+<li>With LocalJS global variables, strings for current language only need to be loaded once from within any single browser window, and become available for all browser windows. It's not necessary for each window to load langauge strings. LocalJS way is simpler and memory saving.</li>
+<li>With local access ability, language file can be served from either local file or web.</li>
+<li>Language files can contain simple JavaScript functions, which makes it simple and clear to implement special localization requirement like date format.</li>
+</ul>
+Source file related:
+<ul class="function_intro">
+<li>Most JavaScript files call <span class="code">LOCALJS.LOCALIZATION.get</span> to get string for current langauge.</li>
+<li>JavaScript in <span class="code">LocalJSBootstrap.html</span> calls <span class="code">LOCALJS.LOCALIZATION.setPath</span> to initialize path to langauge files, and calls <span class="code">LOCALJS.LOCALIZATION.setLang</span> to set current langauge.</li>
+<li>Files under folder <span class="code">localization</span> contain strings for different languages: <span class="code">en.json</span>，<span class="code">cn.json</span> and <span class="code">hk.json</span></li>
 </ul>
 </div>
 
