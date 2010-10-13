@@ -1,3 +1,13 @@
 {
-	"years_old" : ""
+	"years_old" : "",
+	"formatDate" : function(dt) 
+					{
+						return  (dt.getMonth() + 1) + "/" + dt.getDate() + "/" + dt.getFullYear();
+					},
+	"Open_with_ADO_1st" : "Open ",
+	"Open_with_ADO_2nd" : " with ADO",
+	"Open_with_Excel_1st" : "Open ",
+	"Open_with_Excel_2nd" : " with Excel",
+	"excel_changes" : "If you edit cell in this table, the value in Excel changes in real time.",
+	"table_reminder" : "Click header to sort.\nClick content to edit."
 }
