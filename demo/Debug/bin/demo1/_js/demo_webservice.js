@@ -5,6 +5,7 @@
 	window.attachEvent("onload", function()
 	{
 		var doc = document,
+			localization_get = LOCALJS.LOCALIZATION.get,
 			localjs_ui = LOCALJS.UI,
 			localjs_ws = LOCALJS.WEB_SERVICE;
 
@@ -14,12 +15,12 @@
 			{
 				// this one line simple code is how JSON string get parsed in javascript
 				var json_response = (new Function("return " + responseText))();
-				localjs_ui.msgBox("LocalJS 示例 Web Service 返回 JSON 字符串：\n\n" + responseText + "\n\n用JavaScript很容易解析JSON格式，得到:\n\n" + json_response.info);
+				localjs_ui.msgBox(localization_get("demo_webservice_wording_1") + "\n\n" + responseText + "\n\n" + localization_get("demo_webservice_wording_2") + "\n\n" + json_response.info);
 			};
 
 			var onFail = function (statusCode, objHttp)
 			{
-				alert("LocalJS 示例 Web Service 調用失敗，http 錯誤碼為 " + statusCode);
+				alert(localization_get("demo_webservice_wording_3") + " " + statusCode);
 			};
 
 			localjs_ws.callUrl("GET", "http://localjs.org/demo/demo_ws.php", { 'ok' : onOK, 'fail' : onFail });

@@ -6,7 +6,7 @@
 		var chkConfirmExit = document.getElementById("chkConfirmExit");
 		LOCALJS.UI.exitCallback = function()
 		{
-			return !chkConfirmExit.checked || LOCALJS.UI.confirm("這個確認是在 exit_confirm.js 中實現的：\n\n確定要退出？");
+			return !chkConfirmExit.checked || LOCALJS.UI.confirm(LOCALJS.LOCALIZATION.get("exit_confirm_wording"));
 		}
 	});
 })();

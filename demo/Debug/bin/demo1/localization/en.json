@@ -41,5 +41,17 @@
 
 	'script_thread_wording_4' : 'Next the new thread will sleep for 10 seconds',
 
-	'script_thread_wording_5' : 'In new thread: the string passed from main thread is: '
+	'script_thread_wording_5' : 'In new thread: the string passed from main thread is: ',
+	
+	"demo_webservice_wording_1" : "LocalJS sample Web Service returns JSON format string:",
+	
+	"demo_webservice_wording_2" : "it's easy to parse JSON format string with JavaScript:",
+	
+	"demo_webservice_wording_3" : "LocalJS sample Web Service call failed, the http error status returned is",
+	
+	"exit_confirm_wording" : "This confirm is implemented at exit_confirm.js:\n\nAre you sure to exit?",
+	
+	"auto_start_ok_wording" : "This program will be started when Windows starts.",
+	
+	"auto_start_no_wording" : "This program will not be started when Windows starts."
 }

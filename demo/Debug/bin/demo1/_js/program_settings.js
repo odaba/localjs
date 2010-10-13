@@ -9,7 +9,8 @@
 		locajs_namespace = LOCALJS,
 		localjs_file = locajs_namespace.FILE,
 		localjs_ui = locajs_namespace.UI,
-
+		localization_get = locajs_namespace.LOCALIZATION.get,
+		
 		// entries in INI file
 		SECTION_APP_SETTING = "AppSetting",
 
@@ -54,9 +55,9 @@
 
 				// double check: some Anti-virus program may block the registry operation
 				if (chkAutoStart.checked = fnGetAutoStart())
-					localjs_ui.msgBox("啟動Windows 的時候將啟動本演示程序。");
+					localjs_ui.msgBox(localization_get("auto_start_ok_wording"));
 				else
-					localjs_ui.msgBox("啟動Windows 的時候不再啟動本演示程序。");
+					localjs_ui.msgBox(localization_get("auto_start_no_wording"));
 			};
 
 		chkAutoStart.checked = fnGetAutoStart();
