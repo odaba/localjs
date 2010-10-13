@@ -75,5 +75,17 @@
 
 	'script_thread_wording_4' : '下面新線程將睡眠10秒鐘',
 
-	'script_thread_wording_5' : '在新線程中，從主線程傳來的字符串是：'
+	'script_thread_wording_5' : '在新線程中，從主線程傳來的字符串是：',
+	
+	"demo_webservice_wording_1" : "LocalJS 示例 Web Service 返回 JSON 字符串：",
+	
+	"demo_webservice_wording_2" : "用JavaScript很容易解析JSON格式，得到：",
+	
+	"demo_webservice_wording_3" : "LocalJS 示例 Web Service 調用失敗，http 錯誤碼為",
+	
+	"exit_confirm_wording" : "這個確認是在 exit_confirm.js 中實現的：\n\n確定要退出？",
+	
+	"auto_start_ok_wording" : "啟動Windows 的時候將啟動本演示程序。",
+	
+	"auto_start_no_wording" : "啟動Windows 的時候不再啟動本演示程序。"
 }
