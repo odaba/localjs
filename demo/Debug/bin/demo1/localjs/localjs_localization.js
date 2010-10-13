@@ -93,7 +93,7 @@
 				dict_item.Remove(key_funcs_name);
 		};
 
-	localjs_localization.setPath = function(path)
+	localjs_localization.setPath = function(path, reload)
 	{
 		var dict_item = get_dict_item(),
 			url = LOCALJS.FILE.normalizeUrl(path);
@@ -101,18 +101,18 @@
 		if (!url.match(/\/$/))
 			url = url + "/";
 
-		if (!dict_item.Exists(key_url) || url != dict_item.Item(key_url))
+		if (!dict_item.Exists(key_url) || url != dict_item.Item(key_url) || reload)
 		{
 			dict_item.Item(key_url) = url;
 			readin();
 		}
 	};
 
-	localjs_localization.setLang = function(lang)
+	localjs_localization.setLang = function(lang, reload)
 	{
 		var dict_item = get_dict_item();
 
-		if (!dict_item.Exists(key_lang) || lang != dict_item.Item(key_lang))
+		if (!dict_item.Exists(key_lang) || lang != dict_item.Item(key_lang) || reload)
 		{
 			dict_item.Item(key_lang) = lang;
 			readin();
