@@ -68,6 +68,9 @@
 	addFunc("comdlg32.dll", "BOOL WINAPI GetOpenFileName(__inout LPOPENFILENAME lpofn);");
 	addFunc("shlwapi.dll", "HRESULT UrlCombine(LPCTSTR pszBase,LPCTSTR pszRelative,LPTSTR pszCombined,LPDWORD pcchCombined,DWORD dwFlags);");
 	addFunc("urlmon.dll", "STDAPI CoInternetParseUrl(LPCWSTR pwzUrl,PARSEACTION ParseAction,DWORD dwFlags,LPWSTR pszResult,DWORD cchResult,DWORD *pcchResult,DWORD dwReserved);", "parseUrl");
+	addFunc("shlwapi.dll", "BOOL UrlIs(LPCTSTR pszUrl,URLIS UrlIs);");
+	addFunc("shlwapi.dll", "BOOL PathIsURL(LPCTSTR pszPath);");
+	addFunc("shlwapi.dll", "HRESULT UrlCreateFromPath(LPCTSTR pszPath,LPTSTR pszUrl,LPDWORD pcchUrl,DWORD dwReserved);");
 
 	var shellExecute = dllCall.ShellExecute,
 		getPrivateProfileInt = dllCall.GetPrivateProfileInt,
@@ -77,8 +80,15 @@
 		getOpenFileName = dllCall.GetOpenFileName,
 		urlCombine = dllCall.UrlCombine,
 		parseUrl = dllCall.parseUrl,
+		urlIs = dllCall.UrlIs,
+		pathIsURL = dllCall.PathIsURL,
+		urlCreateFromPath = dllCall.UrlCreateFromPath,
 
 		PARSE_PATH_FROM_URL = 9,
+		INTERNET_MAX_URL_LENGTH = 4200,
+
+		URLIS_FILEURL = 3,
+		URLIS_DIRECTORY = 5,
 
 		URL_ESCAPE_PERCENT = 0x00001000,
 		URL_ESCAPE_UNSAFE = 0x20000000;
@@ -367,17 +377,98 @@
 			shellExecute(0, 0, file, 0, 0, 1);
 		}
 
+		// get url from a local path
+		localjs_file.pathToUrl = function(path)
+		{
+			var url = newBuffer(INTERNET_MAX_URL_LENGTH),
+				pcchUrl = newBuffer(4, url.size >> 1);
+
+			if (urlCreateFromPath(path, url, pcchUrl, 0) >= 0)
+				return url.asStringW;
+
+			return path;
+		}
+
 		// get filename from url to a local file
 		localjs_file.urlToPath = function(url)
 		{
 			var path = newBuffer(512),
-				cchResult = newBuffer(4),
-				res = parseUrl(url, PARSE_PATH_FROM_URL, 0, path, path.size >> 1, cchResult, 0);
+				cchResult = newBuffer(4);
 
-			if (res >= 0)
+			if (parseUrl(url, PARSE_PATH_FROM_URL, 0, path, path.size >> 1, cchResult, 0) >= 0)
 				return path.asStringW;
 
 			return url;
+		}
+
+		// test if the string is a url
+		localjs_file.isUrl = function(path)
+		{
+			return pathIsURL(path);
+		}
+
+		// test if url is a file url
+		localjs_file.isFileUrl = function(path)
+		{
+			return urlIs(path, URLIS_FILEURL);
+		}
+
+		// test if url is a folder
+		localjs_file.isFolderUrl = function(path)
+		{
+			return urlIs(path, URLIS_DIRECTORY);
+		}
+
+		localjs_file.readUrl = function(url)
+		{
+			if (urlIs(url, URLIS_FILEURL))
+			{
+				var path = localjs_file.urlToPath(url);
+				if (localjs_file.fileExists(path))
+					return localjs_file.readFileUTF8(path);
+			}
+			else
+			{
+				var status, content,
+
+					onOK = function(responseText)
+					{
+						status = 1;
+						content = responseText;
+					},
+
+					onFail = function()
+					{
+						status = -1;
+					};
+
+				for (var i = 0; i < 5; ++i)
+				{
+					status = 0;
+					LOCALJS.WEB_SERVICE.callUrl("GET", url, {'ok' : onOK, 'fail' : onFail});
+					while (0 == status)
+					{
+						if (!LOCALJS.UI.doEvents())
+							return "";
+					}
+
+					if (1 == status)
+						return content;
+				}
+			}
+
+			return "";
+		}
+
+		localjs_file.buildUrl = function(parent, child)
+		{
+			var combined_url = newBuffer(INTERNET_MAX_URL_LENGTH),
+				characters_combined = newBuffer(4, combined_url.size >> 1);
+
+			if (urlCombine(parent, child, combined_url, characters_combined, URL_ESCAPE_PERCENT | URL_ESCAPE_UNSAFE) >= 0)
+				return combined_url.asStringW;
+
+			return parent;
 		}
 
 		// normalize url to current document, optionally append a relative url
@@ -387,13 +478,7 @@
 			if (!relativeUrl)
 				return url;
 
-			var normalized_url = newBuffer(4200),
-				characters_combined = newBuffer(4, normalized_url.size >> 1);
-
-			if (urlCombine(url, relativeUrl, normalized_url, characters_combined, URL_ESCAPE_PERCENT | URL_ESCAPE_UNSAFE) >= 0)
-				return normalized_url.asStringW;
-
-			return url;
+			return localjs_file.buildUrl(url, relativeUrl);
 		}
 	})();
 })();

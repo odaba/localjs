@@ -49,9 +49,9 @@
 				}
 			}
 			else
-				setTimeout(fnPullReadyState, 1000);
+				setTimeout(fnPullReadyState, 500);
 		};
 
-		setTimeout(fnPullReadyState, 1000);
+		setTimeout(fnPullReadyState, 500);
 	}
 })();
