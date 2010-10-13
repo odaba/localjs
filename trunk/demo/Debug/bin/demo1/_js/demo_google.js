@@ -7,17 +7,19 @@
 		var doc = document,
 			path_to_bk_image = LOCALJS.FILE.normalizeUrl("./_image/google.png"),
 
-			elDialog = $('<div style="text-align:center">當用戶點擊了頁面上的一個鏈接之後，LOCALJS.UI.newWindowCallback 會被調用。可以在該回調函數中決定是否打開此鏈接。<br/><br/><span></span><br/><br/><select><option value="0"></option><option value="1">在新窗口中打開</option><option value="2">在Internet Explorer中打開</option></select></div>'),
+			localization_get = LOCALJS.LOCALIZATION.get,
 
-			elDialog2 = $('<div>函數LOCALJS.UI.createBrowser在打開新窗口的同時，可以將一个 JavaScript 函數插入到新窗口的頁面中運行：它可以修改新頁面的內容，也可以在窗口之間實現互操作。</div>');
+			elDialog = $(localization_get('demo_google_dialog_1')),
+
+			elDialog2 = $(localization_get('demo_google_dialog_2'));
 
 		LOCALJS.UI.newWindowCallback = function(disp, cancel, flags, url_context, url)
 		{
 			if (url.toLowerCase() != "http://www.google.com.hk/")
 				return false;
 
-			elDialog.children("span").eq(0).text("是否要打開 " + url +" ?");
-			elDialog.children("select").eq(0).children("option").eq(0).text('不打開 ' + url);
+			elDialog.children("span").eq(0).text(localization_get('Are you going to open') + " " +  url +" ?");
+			elDialog.children("select").eq(0).children("option").eq(0).text(localization_get("Don't open") + ' ' + url);
 
 			var action = 0,
 				onOK = function()
@@ -45,7 +47,7 @@
 				modal : true,
 				show : 'fade',
 				width : 500,
-				height : 340,
+				height : 380,
 				buttons : {'Ok': onOK }
 			});
 
@@ -81,7 +83,7 @@
 				autoOpen: false,
 				show : 'slide',
 				width : 400,
-				height : 290,
+				height : 350,
 				buttons : { 'OK' : function() { elDialog2.dialog('close'); } }
 			});
 

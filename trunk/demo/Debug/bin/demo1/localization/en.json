@@ -1,6 +1,6 @@
 {
 	"years_old" : "",
-	"formatDate" : function(dt) 
+	"formatDate" : function(dt)
 					{
 						return  (dt.getMonth() + 1) + "/" + dt.getDate() + "/" + dt.getFullYear();
 					},
@@ -9,5 +9,37 @@
 	"Open_with_Excel_1st" : "Open ",
 	"Open_with_Excel_2nd" : " with Excel",
 	"excel_changes" : "If you edit cell in this table, the value in Excel changes in real time.",
-	"table_reminder" : "Click header to sort.\nClick content to edit."
+	"table_reminder" : "Click header to sort.\nClick content to edit.",
+
+	'demo_google_dialog_1' : '<div style="text-align:center">After a link is clicked to open a new window, LOCALJS.UI.newWindowCallback will be triggerred, which determines whether to open the new window or not. <br/><br/><span></span><br/><br/><select><option value="0"></option><option value="1">Open in new browser window</option><option value="2">Open in Internet Explorer</option></select></div>',
+
+	'demo_google_dialog_2' : '<div>LOCALJS.UI.createBrowser can inject a JavaScript function to new created window. The function can modify content of page in new window, or callback to JavaScript in creating window to implement interop among browser windows.</div>',
+
+	'demo_new_window_dialog_1' : '<div>For most cases, HTML Dialog is good enough.<br/>It\'s easy to style HTML with css, or animate dialog with JavaScript.<br/>Code in HTML Dialog shares globale functions and variables with main HTML page.<br/><br/>However, if a new window is required, it\'s simple to create one:<div style="text-align:center;padding-top:10px"><a href="#">Click here to open a new window</a></div></div>',
+
+	'demo_new_window_dialog_2' : 'This ListBox will be synchronized with ListBox in multiple new windows:',
+	
+	"demo_thread_wording_1" : function(threadId)
+								{
+									return "In function func_passed_to_thread in main thread, current thread ID: " + threadId + "\nNext, call function function_passed_from_thread passed from new thread";
+								},
+								
+	"demo_thread_wording_2" : "Ready to create new thread. The ID of main thread is: ",
+	
+	"demo_thread_wording_3" : "LocalJS thread synchronization is very simple",
+	
+	"demo_thread_wording_4" : function(threadId)
+								{
+									return "The new thread (thread id: " + threadId + ") ends.";
+								},
+								
+	'script_thread_wording_1' : 'In function function_passed_to_main_thread in new thread, current thread id: ',
+
+	'script_thread_wording_2' : 'In new thread, new thread id: ',
+
+	'script_thread_wording_3' : 'Call function passed from main thread',
+
+	'script_thread_wording_4' : 'Next the new thread will sleep for 10 seconds',
+
+	'script_thread_wording_5' : 'In new thread: the string passed from main thread is: '
 }

@@ -238,21 +238,27 @@
 		}
 
 		// define table columns
-		var cfg_DateCellEditor = {validator:validateDate};
+		var cfg_DateCellEditor = {validator:validateDate}, calendar_cfg;
 		if ('en' != localization.getLang())
 		{
 			var months = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"],
-				weekdays = ["日", "一", "二", "三", "四", "五", "六"],
-				calendar_cfg = {show_week_header:true,
-								"MY_LABEL_YEAR_SUFFIX":"年", "MY_LABEL_MONTH_SUFFIX":"月",
-								"MONTHS_SHORT":months, "MONTHS_LONG":months,
-								"WEEKDAYS_1CHAR":weekdays, "WEEKDAYS_SHORT":weekdays, "WEEKDAYS_MEDIUM":weekdays, "WEEKDAYS_LONG":weekdays,
-								"MY_LABEL_YEAR_POSITION":1, "MY_LABEL_MONTH_POSITION":2,
-								navigator:{strings: {month:localization_get("Please choose month"), year:localization_get("Please input year"), submit:localization_get("Goto"), cancel:localization_get("Cancel"), invalidYear:localization_get("Please input valid year")}}};
-			cfg_DateCellEditor[LABEL_SAVE] = LABEL_SAVE:localization_get("Save");
-			cfg_DateCellEditor[LABEL_CANCEL] = localization_get("Cancel");
-			cfg_DateCellEditor[calendarOptions] = calendar_cfg;
+				weekdays = ["日", "一", "二", "三", "四", "五", "六"];
+
+			calendar_cfg = {show_week_header:true,
+							"MY_LABEL_YEAR_SUFFIX":"年", "MY_LABEL_MONTH_SUFFIX":"月",
+							"MONTHS_SHORT":months, "MONTHS_LONG":months,
+							"WEEKDAYS_1CHAR":weekdays, "WEEKDAYS_SHORT":weekdays, "WEEKDAYS_MEDIUM":weekdays, "WEEKDAYS_LONG":weekdays,
+							"MY_LABEL_YEAR_POSITION":1, "MY_LABEL_MONTH_POSITION":2,
+							navigator:{strings: {month:localization_get("Please choose month"), year:localization_get("Please input year"), submit:localization_get("Goto"), cancel:localization_get("Cancel"), invalidYear:localization_get("Please input valid year")}}};
+
+			cfg_DateCellEditor['LABEL_SAVE'] = localization_get("Save");
+			cfg_DateCellEditor['LABEL_CANCEL'] = localization_get("Cancel");
 		}
+		else
+		{
+			calendar_cfg = {show_week_header:true, navigator:true};
+		}
+		cfg_DateCellEditor['calendarOptions'] = calendar_cfg;
 
 		var columnDef = [{key: "id", label: "ID", resizeable: true, sortable:true},
 						 {key: "name", label: localization_get("Name"), resizeable: true, sortable:true,
