@@ -5,11 +5,14 @@
 	{
 		var demoThread = document.getElementById("demoThread"),
 			local_js = localJS,
+			localization_get = LOCALJS.LOCALIZATION.get,
 			dllCall = local_js.COM.createObject('DllCall'),
 			msgBox = LOCALJS.UI.msgBox;
 
 		dllCall.add("Kernel32.dll", "DWORD WINAPI GetCurrentThreadId(void);");
 
+		var getCurrentThreadId = dllCall.GetCurrentThreadId;
+		
 		var fnReadJSFile = function (filename)
 		{
 			var localjs_file = LOCALJS.FILE,
@@ -20,20 +23,20 @@
 
 		var func_passed_to_thread = function(function_passed_from_thread)
 		{
-			msgBox("在主線程中的函數func_passed_to_thread 中，當前線程ID: " + dllCall.GetCurrentThreadId() + "\n下面調用由新線程傳來的函數function_passed_from_thread");
+			msgBox(localization_get("demo_thread_wording_1")(getCurrentThreadId()));
 			function_passed_from_thread();
 		};
 
 		demoThread.attachEvent("onclick", function()
 		{
-			msgBox("準備創建新線程，主線程的線程ID: " + dllCall.GetCurrentThreadId());
-			var thread = local_js.threading.newThread(fnReadJSFile("_js\\script_thread.js"), [func_passed_to_thread, "LocalJS的線程同步很簡單"]);
+			msgBox(localization_get("demo_thread_wording_2") + getCurrentThreadId());
+			var thread = local_js.threading.newThread(fnReadJSFile("_js\\script_thread.js"), [func_passed_to_thread, localization_get("demo_thread_wording_3"), localization_get]);
 			while (thread.running)
 			{
 				if (!LOCALJS.UI.doEvents())
 				break;
 			}
-			msgBox("新線程（線程ID：" + thread.id + "）執行結束.");
+			msgBox(localization_get("demo_thread_wording_4")(thread.id));
 		});
 	});
 })();

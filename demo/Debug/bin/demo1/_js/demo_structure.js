@@ -8,11 +8,12 @@
 	{
 		var doc = document,
 			demoWndPlacement = doc.getElementById('demoWndPlacement'),
-			localjs_ui = LOCALJS.UI;
+			localjs_ui = LOCALJS.UI,
+			localization_get = LOCALJS.LOCALIZATION.get;
 
 		demoWndPlacement.attachEvent("onclick", function()
 		{
-			localjs_ui.msgBox("下面將把本窗口向左移動10個像素");
+			localjs_ui.msgBox(localization_get("Next, move the window 10 pixels to left"));
 
 			var SW_SHOWNA = 8,
 				placement = localjs_ui.getWindowPlacement(),
@@ -36,19 +37,20 @@
 			demoOpenFile = doc.getElementById('demoOpenFile'),
 
 			localjs_ui = LOCALJS.UI,
-			localjs_file = LOCALJS.FILE;
+			localjs_file = LOCALJS.FILE,
+			localization_get = LOCALJS.LOCALIZATION.get;
 
 		demoOpenFile.attachEvent("onclick", function()
 		{
-			localjs_ui.msgBox("下面將彈出一個文件選擇對話框，專門選擇iexplore.exe");
+			localjs_ui.msgBox(localization_get("Next, a file open dialog will be popped up, special for iexplore.exe"));
 			var filename = localjs_file.browseFile(localjs_file.getProgramFolder('Internet Explorer'),
-											   "Internet Explorer 可執行文件\0iexplore.exe\0",
-											   "請選擇Internet Explorer的可執行文件",
+											   localization_get("Internet Explorer Executable File") + "\0iexplore.exe\0",
+											   localization_get("Please Choose Executable File of Internet Explorer"),
 											   "exe", "iexplore.exe", true);
 			if (false === filename)
-				localjs_ui.msgBox("您取消了文件對話框");
+				localjs_ui.msgBox(localization_get("The file open dialog was canceled"));
 			else
-				localjs_ui.msgBox("剛才選擇的文件是 " + filename);
+				localjs_ui.msgBox(localization_get("The file just selected is") + " " + filename);
 		});
 	});
 })();

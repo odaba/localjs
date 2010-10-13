@@ -547,7 +547,7 @@
 			dllCall.SetWindowPos(hostWnd, HWND_TOP, 0, 0, 0, 0, SWP_FRAMECHANGED | SWP_SHOWWINDOW | SWP_NOMOVE | SWP_NOSIZE);
 		}
 
-		localjs_ui.updateWindowTitle = function()
+		localjs_ui.updateTitle = function()
 		{
 			sendMessage(hostWnd, WM_SETTEXT, 0, document.title);
 		}

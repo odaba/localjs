@@ -4,9 +4,10 @@
 	window.attachEvent("onload", function()
 	{
 		var doc = document,
-			new_window_url = LOCALJS.FILE.normalizeUrl("./new_window_hk.html"),
+			localization_get = LOCALJS.LOCALIZATION.get,
+			new_window_url = LOCALJS.FILE.normalizeUrl(localization_get("./" + "new_window_en.html")),
 
-			elDialog = $('<div>大多數情況下，使用HTML的Dialog已經足夠好。<br/>可以用CSS為HTML Dialog定制不同的樣式，用JavaScript實現Dialog彈出的動態效果。<br/>HTML Dialog和主體HTML頁面共享全局的數據和函數。<br/><br/>然而如果確實要打開另外的窗口，也很簡單：<div style="text-align:center;padding-top:10px"><a href="#">點擊這裡打開新窗口</a></div></div>');
+			elDialog = $(localization_get('demo_new_window_dialog_1'));
 
 		// refer to http://blog.nemikor.com/2009/04/08/basic-usage-of-the-jquery-ui-dialog/ about how to open jQuery dialog
 		elDialog.dialog({
@@ -35,7 +36,7 @@
 
 					added_select = $(select_html);
 					aInDialog.before(added_select);
-					added_select.before('<div style="padding-bottom:10px">這個ListBox將和多個新窗口中的ListBox都保持同步：</div>');
+					added_select.before('<div style="padding-bottom:10px">' + localization_get('demo_new_window_dialog_2') + '</div>');
 					added_select.wrap('<div style="padding-bottom:10px"/>');
 				}
 

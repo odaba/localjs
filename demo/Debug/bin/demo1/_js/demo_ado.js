@@ -4,7 +4,7 @@
 	window.attachEvent("onload", function()
 	{
 		var doc = document,
-			data_table_url = LOCALJS.FILE.normalizeUrl(LOCALJS.LOCALIZATION.get("./data_table_en.html")),
+			data_table_url = LOCALJS.FILE.normalizeUrl(LOCALJS.LOCALIZATION.get("./" + "data_table_en.html")),
 			new_page;
 
 		doc.getElementById("demoADO").attachEvent("onclick", function()

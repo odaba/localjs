@@ -1,14 +1,14 @@
 {
-	"./data_table_en.html" : "./data_table_hk.html",
+	"data_table_en.html" : "data_table_hk.html",
+	"new_window_en.html" : "new_window_hk.html",
+
 	"years_old" : " 歲",
 	"Male" : "男",
 	"Female" : "女",
-	"formatDate" : function(dt) 
+	"formatDate" : function(dt)
 					{
 						return dt.getFullYear() + "年" + (dt.getMonth() + 1) + "月" + dt.getDate() + "日";
 					},
-	"year" : "年",
-	"month" : "月",
 	"Name should not be empty." : "姓名不能為空。",
 	"Please fill with valid non-negative integer." : "請填入有效的正整數。",
 	"Name" : "姓名",
@@ -26,5 +26,54 @@
 	"Open_with_Excel_1st" : "在Excel中打開 ",
 	"Open_with_Excel_2nd" : "",
 	"excel_changes" : "在本窗口內編輯表格內容，Excel 中的內容會實時改變。",
-	"table_reminder" : "點擊 表頭 可以排序；\n點擊 內容 可以編輯。 \n注意 修改日期時 彈出的對話框 已經本地化了。"
+	"table_reminder" : "點擊 表頭 可以排序；\n點擊 內容 可以編輯。 \n注意 修改日期時 彈出的對話框 已經本地化了。",
+
+	'demo_google_dialog_1' : '<div style="text-align:center">當用戶點擊了頁面上的一個鏈接之後，LOCALJS.UI.newWindowCallback 會被調用。可以在該回調函數中決定是否打開此鏈接。<br/><br/><span></span><br/><br/><select><option value="0"></option><option value="1">在新窗口中打開</option><option value="2">在Internet Explorer中打開</option></select></div>',
+
+	'demo_google_dialog_2' : '<div>函數LOCALJS.UI.createBrowser在打開新窗口的同時，可以將一个 JavaScript 函數插入到新窗口的頁面中運行：它可以修改新頁面的內容，也可以在窗口之間實現互操作。</div>',
+
+	'Are you going to open' : "是否要打開",
+	"Don't open" : '不打開',
+
+	'demo_new_window_dialog_1' : '<div>大多數情況下，使用HTML的Dialog已經足夠好。<br/>可以用CSS為HTML Dialog定制不同的樣式，用JavaScript實現Dialog彈出的動態效果。<br/>HTML Dialog和主體HTML頁面共享全局的數據和函數。<br/><br/>然而如果確實要打開另外的窗口，也很簡單：<div style="text-align:center;padding-top:10px"><a href="#">點擊這裡打開新窗口</a></div></div>',
+
+	'demo_new_window_dialog_2' : '這個ListBox將和多個新窗口中的ListBox都保持同步：',
+
+	"Next, move the window 10 pixels to left" : "下面將把本窗口向左移動10個像素",
+
+	"Next, a file open dialog will be popped up, special for iexplore.exe" : "下面將彈出一個文件選擇對話框，專門選擇iexplore.exe",
+
+	"Internet Explorer Executable File" : "Internet Explorer 可執行文件",
+
+	"Please Choose Executable File of Internet Explorer" : "請選擇Internet Explorer的可執行文件",
+
+	"The file open dialog was canceled" : "您取消了文件對話框",
+
+	"The file just selected is" : "剛才選擇的文件是",
+
+	"demo_thread_wording_1" : function(threadId)
+								{
+									return "在主線程中的函數func_passed_to_thread 中，當前線程ID: " + threadId + "\n下面調用由新線程傳來的函數function_passed_from_thread";
+								},
+
+	"demo_thread_wording_2" : "準備創建新線程，主線程的線程ID: ",
+
+	"demo_thread_wording_3" : "LocalJS的線程同步很簡單",
+
+	"demo_thread_wording_4" : function(threadId)
+								{
+									return "新線程（線程ID：" + threadId + "）執行結束。";
+								},
+
+	'New Thread' : '新線程',
+
+	'script_thread_wording_1' : '在新線程中的函數function_passed_to_main_thread中，當前線程ID: ',
+
+	'script_thread_wording_2' : '在新線程中，新線程的線程ID: ',
+
+	'script_thread_wording_3' : '下面調用從主線程傳來的函數',
+
+	'script_thread_wording_4' : '下面新線程將睡眠10秒鐘',
+
+	'script_thread_wording_5' : '在新線程中，從主線程傳來的字符串是：'
 }

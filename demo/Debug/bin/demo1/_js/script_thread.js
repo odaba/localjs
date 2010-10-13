@@ -2,6 +2,9 @@
 (function()
 {
 	var local_js = localJS,
+		func_passed_to_thread = threadArg[0],
+		string_from_main_thread = threadArg[1],
+		localization_get = threadArg[2],
 		createObject = local_js.COM.createObject,
 		dllCall = createObject('DllCall');
 
@@ -14,7 +17,7 @@
 		var MB_INFO = 0x00052040, // MB_ICONINFORMATION | MB_SETFOREGROUND | MB_TOPMOST | MB_TASKMODAL
 			MB_ERR = 0x00052010; //MB_ICONERROR | MB_SETFOREGROUND | MB_TOPMOST | MB_TASKMODAL
 
-		dllCall.MessageBox(0, msg, '新線程', error ? MB_ERR : MB_INFO);
+		dllCall.MessageBox(0, msg, localization_get('New Thread'), error ? MB_ERR : MB_INFO);
 	};
 
 	var getCurrentThreadId = dllCall.GetCurrentThreadId;
@@ -24,20 +27,20 @@
 	{
 		var function_passed_to_main_thread = function()
 		{
-			msgBox('在新線程中的函數function_passed_to_main_thread中，當前線程ID: ' + getCurrentThreadId());
+			msgBox(localization_get('script_thread_wording_1') + getCurrentThreadId());
 		};
 
-		msgBox('在新線程中，新線程的線程ID: ' + getCurrentThreadId() + "\n下面調用從主線程傳來的函數");
-		threadArg[0](function_passed_to_main_thread);
+		msgBox(localization_get('script_thread_wording_2') + getCurrentThreadId() + "\n" + localization_get('script_thread_wording_3'));
+		func_passed_to_thread(function_passed_to_main_thread);
 		// do not call Windows API Sleep or SleepEx to sleep, since these functions will stop thread messaging as well
 		// use localJS sleep function instead
-		msgBox('在新線程中，新線程的線程ID: ' + getCurrentThreadId() + "\n下面新線程將睡眠10秒鐘");
+		msgBox(localization_get('script_thread_wording_2') + getCurrentThreadId() + "\n" + localization_get('script_thread_wording_4'));
 		local_js.threading.sleep(10000);
-		msgBox('在新線程中，從主線程傳來的字符串是：\n' + threadArg[1]);
+		msgBox(localization_get('script_thread_wording_5') + '\n' + string_from_main_thread);
 	}
 	catch (e)
 	{
-		msgBox(e.name + "\n" + e.description, '新线程', true);
+		msgBox(e.name + "\n" + e.description, true);
 	}
 })();
 
