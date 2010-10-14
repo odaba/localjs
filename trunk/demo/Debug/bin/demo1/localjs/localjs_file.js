@@ -131,7 +131,7 @@
 			}
 			catch (e)
 			{
-				default_value = 0;
+				default_value = "";
 			}
 
 			var str = newBuffer(4096);
