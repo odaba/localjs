@@ -51,7 +51,12 @@
 			if (!fso)
 				fso = createObject("Scripting.FileSystemObject");
 			return fso;
-		}
+		},
+
+		fnToBoolean = function(val)
+		{
+			return val ? true : false;
+		},
 
 		dllCall = createObject('DllCall'),
 
@@ -132,10 +137,10 @@
 			var str = newBuffer(4096);
 			if (getPrivateProfileString(section, key, default_value, str, str.size >> 1, filename))
 				return str.asStringW;
-			return "";
+			return default_value;
 		}
 
-		// settings to registry
+		// settings in registry
 		localjs_file.regWrite = function(reg_path, val, strType)
 		{
 			fnGetShell().RegWrite(reg_path, val, strType);
@@ -148,19 +153,19 @@
 
 		localjs_file.regDelete = function(reg_path)
 		{
-			return fnGetShell().RegDelete(reg_path);
+			fnGetShell().RegDelete(reg_path);
 		}
 
 		// file exist
 		localjs_file.fileExists = function(filename)
 		{
-			return fnGetFso().FileExists(filename);
+			return fnToBoolean(fnGetFso().FileExists(filename))
 		}
 
 		// folder exists
 		localjs_file.folderExists = function(foldername)
 		{
-			return fnGetFso().FolderExists(foldername);
+			return fnToBoolean(fnGetFso().FolderExists(foldername));
 		}
 
 		// get user data folder
@@ -218,7 +223,7 @@
 			}
 			catch (e)
 			{
-				return "";
+				return false;
 			}
 		}
 
@@ -386,7 +391,7 @@
 			if (urlCreateFromPath(path, url, pcchUrl, 0) >= 0)
 				return url.asStringW;
 
-			return path;
+			return false;
 		}
 
 		// get filename from url to a local file
@@ -398,66 +403,85 @@
 			if (parseUrl(url, PARSE_PATH_FROM_URL, 0, path, path.size >> 1, cchResult, 0) >= 0)
 				return path.asStringW;
 
-			return url;
+			return false;
 		}
 
 		// test if the string is a url
 		localjs_file.isUrl = function(path)
 		{
-			return pathIsURL(path);
+			return fnToBoolean(pathIsURL(path));
 		}
 
 		// test if url is a file url
 		localjs_file.isFileUrl = function(path)
 		{
-			return urlIs(path, URLIS_FILEURL);
+			return fnToBoolean(urlIs(path, URLIS_FILEURL));
 		}
 
 		// test if url is a folder
 		localjs_file.isFolderUrl = function(path)
 		{
-			return urlIs(path, URLIS_DIRECTORY);
+			return fnToBoolean(urlIs(path, URLIS_DIRECTORY));
 		}
 
-		localjs_file.readUrl = function(url)
+		localjs_file.readUrl = function(url, callback)
 		{
 			if (urlIs(url, URLIS_FILEURL))
 			{
-				var path = localjs_file.urlToPath(url);
-				if (localjs_file.fileExists(path))
-					return localjs_file.readFileUTF8(path);
+				var path = localjs_file.urlToPath(url),
+					file_content = false;
+
+				if (false !== path && localjs_file.fileExists(path))
+					file_content = localjs_file.readFileUTF8(path);
+
+				if (!callback)
+					return file_content;
+
+				if (false === file_content)
+				{
+					if (callback.fail)
+						callback.fail(file_content);
+				}
+				else if (callback.ok)
+					callback.ok(file_content);
 			}
 			else
 			{
-				var status, content,
-
-					onOK = function(responseText)
-					{
-						status = 1;
-						content = responseText;
-					},
-
-					onFail = function()
-					{
-						status = -1;
-					};
-
-				for (var i = 0; i < 5; ++i)
+				var localjs_ws = LOCALJS.WEB_SERVICE;
+				if (callback)
 				{
-					status = 0;
-					LOCALJS.WEB_SERVICE.callUrl("GET", url, {'ok' : onOK, 'fail' : onFail});
-					while (0 == status)
-					{
-						if (!LOCALJS.UI.doEvents())
-							return "";
-					}
+					localjs_ws.callUrl("GET", url, callback);
+				}
+				else
+				{
+					var status, content,
 
-					if (1 == status)
-						return content;
+						onOK = function(responseText)
+						{
+							status = 1;
+							content = responseText;
+						},
+
+						onFail = function()
+						{
+							status = -1;
+						};
+
+					for (var i = 0; i < 5; ++i)
+					{
+						status = 0;
+						localjs_ws.callUrl("GET", url, {'ok' : onOK, 'fail' : onFail});
+						while (0 == status)
+						{
+							if (!LOCALJS.UI.doEvents())
+								return "";
+						}
+
+						if (1 == status)
+							return content;
+					}
 				}
 			}
-
-			return "";
 		}
 
 		localjs_file.buildUrl = function(parent, child)
