@@ -159,7 +159,7 @@
 		// file exist
 		localjs_file.fileExists = function(filename)
 		{
-			return fnToBoolean(fnGetFso().FileExists(filename))
+			return fnToBoolean(fnGetFso().FileExists(filename));
 		}
 
 		// folder exists
