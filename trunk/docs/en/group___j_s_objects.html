@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <META NAME=KEYWORDS CONTENT="LocalJS Documentation JavaScript Trusted browser local access HTML CSS WPF COM .Net Windows API">
 <META NAME=DESCRIPTION CONTENT="LocalJS Documentation, JavaScript in Trusted Browser. Fast, Easy and Low Cost. Develop Desktop Application with HTML/CSS/JavaScript, deployed and upgraded from web">
-<title>LocalJS: LocalJS Objects</title>
+<title>LocalJS: LocalJS Objects (Native)</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javaScript" src="search/search.js"></script>
@@ -80,11 +80,11 @@ function toggleVisibility(linkObj) {
   <div class="summary">
 <a href="#nested-classes">Classes</a>  </div>
   <div class="headertitle">
-<h1>LocalJS Objects</h1>  </div>
+<h1>LocalJS Objects (Native)</h1>  </div>
 </div>
 <div class="contents">
 
-<p>All JavaScript objects provided by LocalJS, accessable from root object <a class="el" href="interfacelocal_j_s.html" title="The root object for all LocalJS objects. Available directly in JavaScript.">localJS</a>.  
+<p>All native JavaScript objects provided by LocalJS, implemented by LocalJS.Dll, and accessable from root object <a class="el" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.  
 <a href="#_details">More...</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="nested-classes"></a>
@@ -100,7 +100,7 @@ Classes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_event_hook.html">EventHook</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returned by method <a class="el" href="interface_c_o_m.html#a03b548ce8da020a692d590d4a5b21247" title="Connect JavaScript functions to COM object events.">COM.connectEvents</a>, used to disconnect COM event connected.  <a href="interface_event_hook.html#_details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacelocal_j_s.html">localJS</a></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The root object for all LocalJS objects. <em>Available directly in JavaScript.</em>  <a href="interfacelocal_j_s.html#_details">More...</a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">The root object of all native JavaScript objects. <em>Available directly in JavaScript.</em>  <a href="interfacelocal_j_s.html#_details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_structure.html">Structure</a></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight"><a class="el" href="interface_structure.html" title="Structure object represents a C struct, used as parameters in Dll function call.">Structure</a> object represents a C struct, used as parameters in Dll function call.  <a href="interface_structure.html#_details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_thread.html">Thread</a></td></tr>
@@ -111,14 +111,14 @@ Classes</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Hook messages of the specified window.  <a href="interface_window_hook.html#_details">More...</a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
-<p>All JavaScript objects provided by LocalJS, accessable from root object <a class="el" href="interfacelocal_j_s.html" title="The root object for all LocalJS objects. Available directly in JavaScript.">localJS</a>. </p>
-<p>Diagram below shows the creation relationship among all LocalJS objects:</p>
+<p>All native JavaScript objects provided by LocalJS, implemented by LocalJS.Dll, and accessable from root object <a class="el" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>. </p>
+<p>Native JavaScript objects are implemented by LocalJS.Dll, they are available without need to include any JavaScript files. Diagram below shows the creation relationship among all native LocalJS objects:</p>
 <div align="center">
 <img src="objects.gif" alt="objects.gif"/>
-<p><strong>LocalJS Objects Tree</strong></p></div>
+<p><strong>LocalJS Native Objects Tree</strong></p></div>
  <dl class="user"><dt><b>Comments:</b></dt><dd></dd></dl>
 <ul>
-<li>Yellow for LocalJS internal objects </li>
+<li>Yellow for LocalJS native objects </li>
 <li>White for system objects available through LocalJS </li>
 <li>.Net object will be available in the next version</li>
 </ul>

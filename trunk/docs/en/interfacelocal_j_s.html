@@ -89,12 +89,12 @@ function toggleVisibility(linkObj) {
   <div class="headertitle">
 <h1>localJS Class Reference<br/>
 <small>
-[<a class="el" href="group___j_s_objects.html">LocalJS Objects</a>]</small>
+[<a class="el" href="group___j_s_objects.html">LocalJS Objects (Native)</a>]</small>
 </h1>  </div>
 </div>
 <div class="contents">
 <!-- doxytag: class="localJS" -->
-<p>The root object for all LocalJS objects. <em>Available directly in JavaScript.</em>  
+<p>The root object of all native JavaScript objects. <em>Available directly in JavaScript.</em>  
 <a href="#_details">More...</a></p>
 
 <p><a href="classlocal_j_s-members.html">List of all members.</a></p>
@@ -136,16 +136,27 @@ Properties</h2></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpf988dc6e0b4d047c838adcca890ea132"></a> </p>
 </div></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">long&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacelocal_j_s.html#a3566d4b69cb659d2e22501a77bc5af32">btmBarHeight</a><code> [get]</code></td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ReadOnly. Returns the height of the bottom <a class="el" href="interfacelocal_j_s.html" title="The root object for all LocalJS objects. Available directly in JavaScript.">localJS</a> bar in pixels.  <a href="#a3566d4b69cb659d2e22501a77bc5af32"></a><br/></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">ReadOnly. Returns the height of the bottom <a class="el" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a> bar in pixels.  <a href="#a3566d4b69cb659d2e22501a77bc5af32"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacelocal_j_s.html#a29a79e553fe87184f3a6ed6a9e0b270f">enableF5</a><code> [get, set]</code></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Get or set a boolean value to control whether pressing F5 key reloads HTML page. Ignored by standalone Internet Explorer application.  <a href="#a29a79e553fe87184f3a6ed6a9e0b270f"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
-<p>The root object for all LocalJS objects. <em>Available directly in JavaScript.</em> </p>
-<p><a class="el" href="interfacelocal_j_s.html" title="The root object for all LocalJS objects. Available directly in JavaScript.">localJS</a> object is where all local access start from. The properties and methods of <a class="el" href="interfacelocal_j_s.html" title="The root object for all LocalJS objects. Available directly in JavaScript.">localJS</a> object provide all kinds of local access abilities.</p>
-<p>To get access to object <a class="el" href="interfacelocal_j_s.html" title="The root object for all LocalJS objects. Available directly in JavaScript.">localJS</a>: </p>
-<div class="fragment"><pre class="fragment">    var local_js = <a class="code" href="interfacelocal_j_s.html" title="The root object for all LocalJS objects. Available directly in JavaScript.">localJS</a>;
-</pre></div> <hr/><h2>Method Documentation</h2>
+<p>The root object of all native JavaScript objects. <em>Available directly in JavaScript.</em> </p>
+<p><a class="el" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a> object is where all local access starts from. The properties and methods of <a class="el" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a> object provide all kinds of local access abilities.</p>
+<p>To get access to object <a class="el" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>: </p>
+<div class="fragment"><pre class="fragment">    var local_js = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>;
+</pre></div><p>Native JavaScript objects are implemented by LocalJS.Dll, they are available without need to include any JavaScript files. Diagram below shows the creation relationship among all native LocalJS objects:</p>
+<div align="center">
+<img src="objects.gif" alt="objects.gif"/>
+<p><strong>LocalJS Native Objects Tree</strong></p></div>
+ <dl class="user"><dt><b>Comments:</b></dt><dd></dd></dl>
+<ul>
+<li>Yellow for LocalJS native objects </li>
+<li>White for system objects available through LocalJS </li>
+<li>.Net object will be available in the next version</li>
+</ul>
+<p>Those objects above are <em>ONLY</em> available in LocalJS browsers (browsers hosted by LocalJS) and LocalJS Internet Explorer (standalone Internet Explorer application launched by LocalJS). They are not available to any other applications or browsers. </p>
+ <hr/><h2>Method Documentation</h2>
 <a class="anchor" id="ae0a273e38f45d2547157ddb6cfa6108c"></a><!-- doxytag: member="localJS::closeWindow" ref="ae0a273e38f45d2547157ddb6cfa6108c" args="([optional] var result)" -->
 <div class="memitem">
 <div class="memproto">
@@ -173,7 +184,7 @@ Properties</h2></td></tr>
 <p>Method <a class="el" href="interfacelocal_j_s.html#ae0a273e38f45d2547157ddb6cfa6108c">closeWindow</a> provides the way to close current browser window from within JavaScript.</p>
 <p>A typical usage of method <a class="el" href="interfacelocal_j_s.html#ae0a273e38f45d2547157ddb6cfa6108c">closeWindow</a> is to connect to <code>WindowClosing</code> event of <code>WebBrowser</code> object: when <code>window.close()</code> is called somewhere in JavaScript, cancel the default close confirm dialog popped up by browser, and use <a class="el" href="interfacelocal_j_s.html#ae0a273e38f45d2547157ddb6cfa6108c">closeWindow</a> to close browser window.</p>
 <div class="fragment"><pre class="fragment">    <span class="comment">// call window.close() triggers WindowClosing event of WebBrowser object</span>
-    <a class="code" href="interfacelocal_j_s.html" title="The root object for all LocalJS objects. Available directly in JavaScript.">localJS</a>.COM.connectEvents(<a class="code" href="interfacelocal_j_s.html" title="The root object for all LocalJS objects. Available directly in JavaScript.">localJS</a>.webBrowser, {<span class="stringliteral">&#39;WindowClosing&#39;</span>: function(IsChildWindow, cancel)
+    <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.connectEvents(<a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.webBrowser, {<span class="stringliteral">&#39;WindowClosing&#39;</span>: function(IsChildWindow, cancel)
     {
         <span class="comment">// let&#39;s always cancel the close event since otherwise it will popup an unwanted confirm dialog</span>
         cancel.returnValue = <span class="keyword">true</span>;
@@ -186,16 +197,16 @@ Properties</h2></td></tr>
             MB_DEFBUTTON2 = 0x00000100,
 
             <span class="comment">// Create DllCall object to call Windows API MessageBox function</span>
-            dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object for all LocalJS objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;DllCall&quot;</span>);
+            dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;DllCall&quot;</span>);
 
         dllCall.add(<span class="stringliteral">&quot;user32.dll&quot;</span>, <span class="stringliteral">&quot;int WINAPI MessageBox(HWND hWnd,LPCTSTR lpText,LPCTSTR lpCaption,UINT uType);&quot;</span>);
-        <span class="keywordflow">if</span> (IDYES == dllCall.MessageBox(<a class="code" href="interfacelocal_j_s.html" title="The root object for all LocalJS objects. Available directly in JavaScript.">localJS</a>.hostWnd, <span class="stringliteral">&quot;Are you sure to quit?&quot;</span>, document.title,  MB_ICONQUESTION | MB_YESNO | MB_DEFBUTTON2))
+        <span class="keywordflow">if</span> (IDYES == dllCall.MessageBox(<a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.hostWnd, <span class="stringliteral">&quot;Are you sure to quit?&quot;</span>, document.title,  MB_ICONQUESTION | MB_YESNO | MB_DEFBUTTON2))
         {
-            <a class="code" href="interfacelocal_j_s.html" title="The root object for all LocalJS objects. Available directly in JavaScript.">localJS</a>.closeWindow();
+            <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.closeWindow();
         }
     }});
 </pre></div><dl class="note"><dt><b>Note:</b></dt><dd>To close the browser window of standalone Internet Explorer application, use:</dd></dl>
-<div class="fragment"><pre class="fragment">    <a class="code" href="interfacelocal_j_s.html" title="The root object for all LocalJS objects. Available directly in JavaScript.">localJS</a>.webBrowser.Quit();
+<div class="fragment"><pre class="fragment">    <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.webBrowser.Quit();
 </pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="group___host_a_p_i.html#ga3bdfa56d0d14d6d6d5af554f7cc0be64" title="Launch a LocalJS browser.">createBrowser()</a> | <a class="el" href="interfacelocal_j_s.html#a426d92f4370abff654c9a85a060c25c9" title="Readonly. Returns WebBrowser Object of current browser. Help transparently moving forth and back betw...">localJS.webBrowser</a> | <a class="el" href="interface_c_o_m.html#a03b548ce8da020a692d590d4a5b21247" title="Connect JavaScript functions to COM object events.">COM.connectEvents</a> | <a class="el" href="interface_dll_call.html" title="DllCall object enables JavaScript call functions exported by DLL or EXE files, including most Windows...">DllCall</a> | <a class="el" href="interface_dll_call.html#ab6730ea57a7678c1f07953ce331edca0" title="Add function exported by DLL or EXE file as a method of current DllCall object.">DllCall.add</a> | <a href="http://msdn.microsoft.com/en-us/library/ms645505(VS.85).aspx" target="_blank">MessageBox Function</a> | <a href="http://msdn.microsoft.com/en-us/library/aa752084(VS.85).aspx" target="_blank">InternetExplorer Object</a> | <a href="http://msdn.microsoft.com/en-us/library/aa752097(VS.85).aspx" target="_blank">Quit Method</a> </dd></dl>
 
 </div>
@@ -214,7 +225,7 @@ Properties</h2></td></tr>
 
 <p>Readonly. Returns object <a class="el" href="interface_c_o_m.html" title="Object COM exposes methods to create COM object, connect COM events, etc.">COM</a>, which exposes methods to create COM object, connect COM events, etc. </p>
 <p>To get access to object <a class="el" href="interface_c_o_m.html" title="Object COM exposes methods to create COM object, connect COM events, etc.">COM</a>: </p>
-<div class="fragment"><pre class="fragment">    var com = <a class="code" href="interfacelocal_j_s.html" title="The root object for all LocalJS objects. Available directly in JavaScript.">localJS</a>.COM;
+<div class="fragment"><pre class="fragment">    var com = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM;
 </pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_c_o_m.html">Object COM</a> </dd></dl>
 
 </div>
@@ -232,7 +243,7 @@ Properties</h2></td></tr>
 
 <p>Readonly. Returns object <a class="el" href="interface_threading.html" title="Threading object exposes methods to create new script thread, sleep, get thread id, etc.">Threading</a>, which exposes methods to create new script thread, sleep, get thread id, etc. </p>
 <p>To get access to object <a class="el" href="interface_threading.html" title="Threading object exposes methods to create new script thread, sleep, get thread id, etc.">Threading</a>: </p>
-<div class="fragment"><pre class="fragment">    var <a class="code" href="interfacelocal_j_s.html#ac12d811a674c6cc7417b6f9a8d39736c" title="Readonly. Returns object Threading, which exposes methods to create new script thread, sleep, get thread id, etc.">threading</a> = <a class="code" href="interfacelocal_j_s.html" title="The root object for all LocalJS objects. Available directly in JavaScript.">localJS</a>.threading;
+<div class="fragment"><pre class="fragment">    var <a class="code" href="interfacelocal_j_s.html#ac12d811a674c6cc7417b6f9a8d39736c" title="Readonly. Returns object Threading, which exposes methods to create new script thread, sleep, get thread id, etc.">threading</a> = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.threading;
 </pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_threading.html">Object Threading</a> </dd></dl>
 
 </div>
@@ -256,7 +267,7 @@ Properties</h2></td></tr>
     location.replace(<span class="stringliteral">&quot;file:///C:/test.html&quot;</span>);
 </pre></div><p>However, with <a href="http://msdn.microsoft.com/en-us/library/aa752093(VS.85).aspx" target="_blank">Navigate Method</a> of <a href="http://msdn.microsoft.com/en-us/library/aa752085(VS.85).aspx" target="_blank">WebBrowser Object</a>, it's very simple:</p>
 <div class="fragment"><pre class="fragment">    <span class="comment">// The code below works well:</span>
-    <a class="code" href="interfacelocal_j_s.html" title="The root object for all LocalJS objects. Available directly in JavaScript.">localJS</a>.webBrowser.Navigate(<span class="stringliteral">&quot;file:///C:/test.html&quot;</span>);
+    <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.webBrowser.Navigate(<span class="stringliteral">&quot;file:///C:/test.html&quot;</span>);
 </pre></div><p>Another typical usage of <a class="el" href="interfacelocal_j_s.html#a426d92f4370abff654c9a85a060c25c9">webBrowser</a> property is to connect JavaScript functions to events of <a href="http://msdn.microsoft.com/en-us/library/aa752085(VS.85).aspx" target="_blank">WebBrowser Object</a>. Refer to examples in <a class="el" href="interfacelocal_j_s.html#ae0a273e38f45d2547157ddb6cfa6108c" title="Close the current browser window. NOT available in standalone Internet Explorer application.">localJS.closeWindow</a>, <a class="el" href="interface_c_o_m.html#a03b548ce8da020a692d590d4a5b21247" title="Connect JavaScript functions to COM object events.">COM.connectEvents</a>.</p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interfacelocal_j_s.html#ae0a273e38f45d2547157ddb6cfa6108c" title="Close the current browser window. NOT available in standalone Internet Explorer application.">localJS.closeWindow</a> | <a class="el" href="interface_c_o_m.html#a03b548ce8da020a692d590d4a5b21247" title="Connect JavaScript functions to COM object events.">COM.connectEvents</a> | <a href="http://msdn.microsoft.com/en-us/library/aa752085(VS.85).aspx" target="_blank">WebBrowser Object</a> | <a href="http://msdn.microsoft.com/en-us/library/aa752093(VS.85).aspx" target="_blank">Navigate Method</a> </dd></dl>
 
@@ -278,12 +289,12 @@ Properties</h2></td></tr>
 <p>The <a href="http://msdn.microsoft.com/en-us/library/x4k5wbx4(VS.85).aspx" target="_blank">Dictionary Object</a> returned by <a class="el" href="interfacelocal_j_s.html#ae46e48b1edd261d9c6fc8a9116ae564d">browserDict</a> property is an ideal persistent storage between browser navigations. The <a href="http://msdn.microsoft.com/en-us/library/x4k5wbx4(VS.85).aspx" target="_blank">Dictionary Object</a> is always available and unchanged as long as the browser window exists. When browser reloads page, or moved between different url, the content of the <a href="http://msdn.microsoft.com/en-us/library/x4k5wbx4(VS.85).aspx" target="_blank">Dictionary Object</a> remains unchanged.</p>
 <p>Each browser window has its own <a href="http://msdn.microsoft.com/en-us/library/x4k5wbx4(VS.85).aspx" target="_blank">Dictionary Object</a> instance for <a class="el" href="interfacelocal_j_s.html#ae46e48b1edd261d9c6fc8a9116ae564d">browserDict</a> property.</p>
 <p><a class="el" href="interfacelocal_j_s.html#ae46e48b1edd261d9c6fc8a9116ae564d">browserDict</a> property can be used to pass functions, objects and other variables between navigation:</p>
-<div class="fragment"><pre class="fragment">    <a class="code" href="interfacelocal_j_s.html" title="The root object for all LocalJS objects. Available directly in JavaScript.">localJS</a>.browserDict.Item(<span class="stringliteral">&#39;callback_func&#39;</span>) = function(para1, para2) { <span class="keywordflow">return</span> para1 * para2 } ;
-    <a class="code" href="interfacelocal_j_s.html" title="The root object for all LocalJS objects. Available directly in JavaScript.">localJS</a>.browserDict.Item(<span class="stringliteral">&#39;callback_para&#39;</span>) = {<span class="stringliteral">&#39;para1&#39;</span> : 10, <span class="stringliteral">&#39;para2&#39;</span> : 8};
-    <a class="code" href="interfacelocal_j_s.html" title="The root object for all LocalJS objects. Available directly in JavaScript.">localJS</a>.webBrowser.Navigate(<span class="stringliteral">&quot;url_to_some_process&quot;</span>);
+<div class="fragment"><pre class="fragment">    <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.browserDict.Item(<span class="stringliteral">&#39;callback_func&#39;</span>) = function(para1, para2) { <span class="keywordflow">return</span> para1 * para2 } ;
+    <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.browserDict.Item(<span class="stringliteral">&#39;callback_para&#39;</span>) = {<span class="stringliteral">&#39;para1&#39;</span> : 10, <span class="stringliteral">&#39;para2&#39;</span> : 8};
+    <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.webBrowser.Navigate(<span class="stringliteral">&quot;url_to_some_process&quot;</span>);
 </pre></div><p>In the page navigated to, these parameters can be retrieved as below:</p>
-<div class="fragment"><pre class="fragment">    var callback_func = <a class="code" href="interfacelocal_j_s.html" title="The root object for all LocalJS objects. Available directly in JavaScript.">localJS</a>.browserDict.Item(<span class="stringliteral">&#39;callback_func&#39;</span>);
-    var callback_para = <a class="code" href="interfacelocal_j_s.html" title="The root object for all LocalJS objects. Available directly in JavaScript.">localJS</a>.browserDict.Item(<span class="stringliteral">&#39;callback_para&#39;</span>);
+<div class="fragment"><pre class="fragment">    var callback_func = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.browserDict.Item(<span class="stringliteral">&#39;callback_func&#39;</span>);
+    var callback_para = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.browserDict.Item(<span class="stringliteral">&#39;callback_para&#39;</span>);
     alert(callback_func(callback_para[<span class="stringliteral">&#39;para1&#39;</span>], callback_para[<span class="stringliteral">&#39;para2&#39;</span>]));
 </pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interfacelocal_j_s.html#a426d92f4370abff654c9a85a060c25c9" title="Readonly. Returns WebBrowser Object of current browser. Help transparently moving forth and back betw...">localJS.webBrowser</a> | <a class="el" href="interfacelocal_j_s.html#a3db8e9f0672a2aed8a468da67db3b2e1" title="ReadOnly. Returns a Dictionary Object globally available in the process. An ideal global persistent s...">localJS.globalDict</a> | <a href="http://msdn.microsoft.com/en-us/library/aa752093(VS.85).aspx" target="_blank">Navigate Method</a> | <a href="http://msdn.microsoft.com/en-us/library/x4k5wbx4(VS.85).aspx" target="_blank">Dictionary Object</a> </dd></dl>
 
@@ -305,9 +316,9 @@ Properties</h2></td></tr>
 <p>The <a href="http://msdn.microsoft.com/en-us/library/x4k5wbx4(VS.85).aspx" target="_blank">Dictionary Object</a> returned by <a class="el" href="interfacelocal_j_s.html#a3db8e9f0672a2aed8a468da67db3b2e1">globalDict</a> property is an ideal global persistent storage. The <a href="http://msdn.microsoft.com/en-us/library/x4k5wbx4(VS.85).aspx" target="_blank">Dictionary Object</a> is always available and unchanged in the whole process lifetime.</p>
 <p>Every <a class="el" href="interfacelocal_j_s.html#a3db8e9f0672a2aed8a468da67db3b2e1">globalDict</a> property returns the same <a href="http://msdn.microsoft.com/en-us/library/x4k5wbx4(VS.85).aspx" target="_blank">Dictionary Object</a> instance.</p>
 <p><a class="el" href="interfacelocal_j_s.html#a3db8e9f0672a2aed8a468da67db3b2e1">globalDict</a> property is a good place to keep global variables:</p>
-<div class="fragment"><pre class="fragment">    <a class="code" href="interfacelocal_j_s.html" title="The root object for all LocalJS objects. Available directly in JavaScript.">localJS</a>.globalDict.Item(<span class="stringliteral">&#39;user_data&#39;</span>) = {<span class="stringliteral">&#39;login&#39;</span> : <span class="stringliteral">&#39;username&#39;</span>, <span class="stringliteral">&#39;passwd&#39;</span> : <span class="stringliteral">&#39;userpassword&#39;</span>};
+<div class="fragment"><pre class="fragment">    <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.globalDict.Item(<span class="stringliteral">&#39;user_data&#39;</span>) = {<span class="stringliteral">&#39;login&#39;</span> : <span class="stringliteral">&#39;username&#39;</span>, <span class="stringliteral">&#39;passwd&#39;</span> : <span class="stringliteral">&#39;userpassword&#39;</span>};
 </pre></div><p>Any script code can access the data saved above:</p>
-<div class="fragment"><pre class="fragment">    var user_data = <a class="code" href="interfacelocal_j_s.html" title="The root object for all LocalJS objects. Available directly in JavaScript.">localJS</a>.globalDict.Item(<span class="stringliteral">&#39;user_data&#39;</span>),
+<div class="fragment"><pre class="fragment">    var user_data = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.globalDict.Item(<span class="stringliteral">&#39;user_data&#39;</span>),
         login = user_data[<span class="stringliteral">&#39;login&#39;</span>],
         passwd = user_data[<span class="stringliteral">&#39;passwd&#39;</span>];
 </pre></div><dl class="note"><dt><b>Note:</b></dt><dd>Access to <a href="http://msdn.microsoft.com/en-us/library/x4k5wbx4(VS.85).aspx" target="_blank">Dictionary Object</a> returned by <a class="el" href="interfacelocal_j_s.html#a3db8e9f0672a2aed8a468da67db3b2e1">globalDict</a> property from different threads have been automatically synchronized.</dd></dl>
@@ -328,7 +339,7 @@ Properties</h2></td></tr>
 
 <p>ReadOnly. Returns the browser handle returned by function <a class="el" href="group___host_a_p_i.html#ga3bdfa56d0d14d6d6d5af554f7cc0be64" title="Launch a LocalJS browser.">createBrowser()</a> or <a class="el" href="group___host_a_p_i.html#gac32ee10aa76ef792c4fad3f9cd6ce4f2" title="Launch a LocalJS standalone Internet Explorer application.">createIE()</a> when create this browser window or standalone Internet Explorer application. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The browser handle returned by function <a class="el" href="group___host_a_p_i.html#ga3bdfa56d0d14d6d6d5af554f7cc0be64" title="Launch a LocalJS browser.">createBrowser()</a> or <a class="el" href="group___host_a_p_i.html#gac32ee10aa76ef792c4fad3f9cd6ce4f2" title="Launch a LocalJS standalone Internet Explorer application.">createIE()</a> when create this browser window or standalone Internet Explorer application.</dd></dl>
-<p><a class="el" href="interfacelocal_j_s.html#ab3a05ab37323f39c10c14d601ef0f98c">browserHandle</a> can be used for parameter <code>void * browser</code> when call <a class="el" href="interfacelocal_j_s.html" title="The root object for all LocalJS objects. Available directly in JavaScript.">localJS</a> hosting functions.</p>
+<p><a class="el" href="interfacelocal_j_s.html#ab3a05ab37323f39c10c14d601ef0f98c">browserHandle</a> can be used for parameter <code>void * browser</code> when call <a class="el" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a> hosting functions.</p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="group___host_a_p_i.html#ga3bdfa56d0d14d6d6d5af554f7cc0be64" title="Launch a LocalJS browser.">createBrowser()</a> | <a class="el" href="group___host_a_p_i.html#gac32ee10aa76ef792c4fad3f9cd6ce4f2" title="Launch a LocalJS standalone Internet Explorer application.">createIE()</a> </dd></dl>
 
 </div>
@@ -400,9 +411,9 @@ Properties</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>ReadOnly. Returns the height of the bottom <a class="el" href="interfacelocal_j_s.html" title="The root object for all LocalJS objects. Available directly in JavaScript.">localJS</a> bar in pixels. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>The height of the bottom <a class="el" href="interfacelocal_j_s.html" title="The root object for all LocalJS objects. Available directly in JavaScript.">localJS</a> bar in pixels.</dd></dl>
-<p>Trial version of <a class="el" href="interfacelocal_j_s.html" title="The root object for all LocalJS objects. Available directly in JavaScript.">localJS</a> appends a bar at the bottom of the browser window. Property <a class="el" href="interfacelocal_j_s.html#a3566d4b69cb659d2e22501a77bc5af32">btmBarHeight</a> is mainly used in window position calculation. For example, function below moves the window to the center of the screen with specified width and height in pixels:</p>
+<p>ReadOnly. Returns the height of the bottom <a class="el" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a> bar in pixels. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The height of the bottom <a class="el" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a> bar in pixels.</dd></dl>
+<p>Trial version of <a class="el" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a> appends a bar at the bottom of the browser window. Property <a class="el" href="interfacelocal_j_s.html#a3566d4b69cb659d2e22501a77bc5af32">btmBarHeight</a> is mainly used in window position calculation. For example, function below moves the window to the center of the screen with specified width and height in pixels:</p>
 <div class="fragment"><pre class="fragment">    var centerWindow = function(cx, cy)
     {
         var scr = screen,
@@ -411,16 +422,16 @@ Properties</h2></td></tr>
 
         <span class="keywordflow">if</span> (cx &gt; scrWidth)
             cx = scrWidth - 10;
-        cy += <a class="code" href="interfacelocal_j_s.html" title="The root object for all LocalJS objects. Available directly in JavaScript.">localJS</a>.btmBarHeight;
+        cy += <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.btmBarHeight;
         <span class="keywordflow">if</span> (cy &gt; scrHeight)
             cy = scrHeight - 10;
 
-        var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object for all LocalJS objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;DllCall&quot;</span>);
+        var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;DllCall&quot;</span>);
         dllCall.add(<span class="stringliteral">&quot;user32.dll&quot;</span>, <span class="stringliteral">&quot;BOOL MoveWindow(HWND hWnd,int X,int Y,int nWidth,int nHeight,BOOL bRepaint);&quot;</span>);
         dllCall.add(<span class="stringliteral">&quot;user32.dll&quot;</span>, <span class="stringliteral">&quot;BOOL SetForegroundWindow(HWND hWnd);&quot;</span>);
 
-        dllCall.MoveWindow(<a class="code" href="interfacelocal_j_s.html" title="The root object for all LocalJS objects. Available directly in JavaScript.">localJS</a>.hostWnd, (scrWidth - cx) / 2, (scrHeight - cy) / 2, cx, cy, 1);
-        dllCall.SetForegroundWindow(<a class="code" href="interfacelocal_j_s.html" title="The root object for all LocalJS objects. Available directly in JavaScript.">localJS</a>.hostWnd);
+        dllCall.MoveWindow(<a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.hostWnd, (scrWidth - cx) / 2, (scrHeight - cy) / 2, cx, cy, 1);
+        dllCall.SetForegroundWindow(<a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.hostWnd);
     };
 </pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_dll_call.html" title="DllCall object enables JavaScript call functions exported by DLL or EXE files, including most Windows...">DllCall</a> | <a class="el" href="interface_dll_call.html#ab6730ea57a7678c1f07953ce331edca0" title="Add function exported by DLL or EXE file as a method of current DllCall object.">DllCall.add</a> | <a class="el" href="interfacelocal_j_s.html#aa05066bf1c7f31ea898c0d2aed29eedb" title="ReadOnly. Returns the HWND handle of current browser window.">localJS.hostWnd</a> | <a href="http://www.javascriptkit.com/jsref/screen.shtml" target="_blank">Screen Object</a> | <a href="http://msdn.microsoft.com/en-us/library/ms633534(VS.85).aspx" target="_blank">MoveWindow Function</a> | <a href="http://msdn.microsoft.com/en-us/library/ms633539(VS.85).aspx" target="_blank">SetForegroundWindow Function</a> </dd></dl>
 
@@ -441,7 +452,7 @@ Properties</h2></td></tr>
 <p>When set to <code>false</code>, pressing F5 key will be ignored. When set to <code>true</code>, which is the default value, if user presses F5, the page will be reloaded and all JavaScript variables are reinitialized.</p>
 <p>A typical usage is to enable F5 key for development, so it's easier to reload the page and re-run all JavaScript code. But disable F5 key for production release so JavaScript code doesn't have to handle the case when user unexpectedly presses F5 key and everything get reinitialized.</p>
 <p>To disable F5 key:</p>
-<div class="fragment"><pre class="fragment">    <a class="code" href="interfacelocal_j_s.html" title="The root object for all LocalJS objects. Available directly in JavaScript.">localJS</a>.enableF5 = <span class="keyword">false</span>; <span class="comment">// the default value of enableF5 is true.</span>
+<div class="fragment"><pre class="fragment">    <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.enableF5 = <span class="keyword">false</span>; <span class="comment">// the default value of enableF5 is true.</span>
 </pre></div> 
 </div>
 </div>

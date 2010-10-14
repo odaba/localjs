@@ -293,7 +293,7 @@ Optimize JavaScript for Compressor</h2>
 
     <span class="comment">// define multiple variables in one var statement</span>
     <span class="comment">// refer global variables with local variables</span>
-    var local_js = <a class="code" href="interfacelocal_j_s.html" title="The root object for all LocalJS objects. Available directly in JavaScript.">localJS</a>,                 <span class="comment">// Will be compressed to: var a=localJS,</span>
+    var local_js = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>,                 <span class="comment">// Will be compressed to: var a=localJS,</span>
 
         <span class="comment">// refer properties and methods of objects with local variables</span>
         com = local_js.COM,                 <span class="comment">// Will be compressed to: b=a.COM,</span>
