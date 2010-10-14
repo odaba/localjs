@@ -1,0 +1,224 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://www.w3.org/2005/10/profile">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>LocalJS Demo Application File List</title>
+<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="_css/main.css"/>
+<!-- global functions and variables are defined here -->
+<script type="text/javascript" src="localjs/localjs_ui.js" charset="UTF-8"></script>
+<script type="text/javascript" src="localjs/localjs_file.js" charset="UTF-8"></script>
+<script type="text/javascript">
+LOCALJS.UI.centerWindow(1020, 780);
+//localJS.enableF5 = false; // enable F5 refresh make debug easy, but we can disable F5 when release since F5 causes page reinitialize.
+openUrl = LOCALJS.FILE.exec;
+</script>
+<style>
+<!-- Overwrite the color in main.css -->
+span.title_highlight
+{
+	color:red;
+	top:0px;
+}
+
+span.title_highlight2
+{
+	color:yellow;
+	top:0px;
+}
+div#div_app_title
+{
+	font-size:80%;
+}
+
+span.title_plus
+{
+	padding:0px 5px;
+	top:2px;
+}
+
+div.setting_title
+{
+	font-family:Arial;
+}
+
+ul.function_intro
+{
+	font-family:MS Sans Serif;
+}
+
+</style>
+</head>
+<!-- to hide scrollbar, set scroll="no" -->
+<body scroll="auto" style="background-image:url('_image/background-intro.jpg');">
+
+<!-- this div is floating title -->
+<div id="div_app_title" style="text-align:center"><b style="color:white"><span class="title_highlight2" style="font-size:200%;">Shining</span>&nbsp;&nbsp;<span style="font-size:130%">as</span>&nbsp;&nbsp;<span class="title_highlight">WPF</span>,&nbsp;&nbsp;&nbsp;<span class="title_highlight2" style="font-size:200%;">Smart</span>&nbsp;&nbsp;<span style="font-size:130%">as</span>&nbsp;&nbsp;<span class="title_highlight">Native C++</span>,&nbsp;&nbsp;&nbsp;<span class="title_highlight2" style="font-size:200%;">Easy</span>&nbsp;&nbsp;<span style="font-size:130%">with</span>&nbsp;&nbsp;<span style="font-size:150%">ONLY</span>&nbsp;&nbsp;<span class="title_highlight">HTML</span><span class="title_plus">+</span><span class="title_highlight">CSS</span><span class="title_plus">+</span><span class="title_highlight">JavaScript</span></span></b>
+<img id="app_close" src="_image/exit.png"/ style="top:5px" onclick="localJS.closeWindow();">
+<hr/>
+<div style="font-weight:bold;font-size:140%;text-align:center;">LocalJS Demo <span style="color:white">Application</span> File List</div>
+</div>
+
+<!-- this div is used to take up the place left by div_app_title because div_app_title has css property position:fixed,
+	 and to meature the width of body area
+	 
+	 Also pass mouse down event to body for dragging
+-->
+<div id="width_marker" class="width_marker"></div>
+<script type="text/javascript">
+	LOCALJS.UI.addDraggable(document.getElementById('width_marker'));
+	LOCALJS.UI.addDraggable(document.getElementById('div_app_title'));
+</script>
+
+<!-- this div is first setting block -->
+<div class="setting_title"><img class="title_arrow" src="_image/arrow_up.png"/><span style="font-weight:bold">&nbsp;LocalJS Library</span><span class="title_tip">&nbsp;Click to expand</span></div>
+<div class="setting_body">
+<ul class="function_intro">
+<li><span class="code">Debug \ bin \ LocalJS.dll</span>: LocalJS DLL Binary.</li>
+<li><span class="code">Debug \ bin \ localJS.cfg</span>: localJS configuration file, MUST be in same folder with <span class="code">LocalJS.DLL</span>.</li>
+</ul>
+</div>
+
+<div class="big_separator"></div>
+
+<div class="setting_title"><img class="title_arrow" src="_image/arrow_up.png"/><span style="font-weight:bold">&nbsp;LocalJS JavaScript Open Source Library</span><span class="title_tip">&nbsp;Click to expand</span></div>
+<div class="setting_body">
+<ul class="function_intro">
+<li><span class="code">Debug \ bin \ demo1 \ localjs \ localjs_file.js</span>: Implements namespace <span class="code">LOCALJS.FILE</span>, which provides common file operations.</li>
+<li><span class="code">Debug \ bin \ demo1 \ localjs \ localjs_ui.js</span>: Implements namespace <span class="code">LOCALJS.UI</span>, which provides common UI operations.</li>
+<li><span class="code">Debug \ bin \ demo1 \ localjs \ localjs_webservice.js</span>: Implements namespace <span class="code">LOCALJS.WEB_SERVICE</span>, which provides method to call web service.</li>
+<li><span class="code">Debug \ bin \ demo1 \ localjs \ localjs_localization.js</span>：Implements namespace <span class="code">LOCALJS.LOCALIZATION</span>, which provides multi-languages support.</li></ul>
+</ul>
+</div>
+
+<div class="big_separator"></div>
+
+<div class="setting_title"><img class="title_arrow" src="_image/arrow_up.png"/><span style="font-weight:bold">&nbsp;Save settings to registry and INI file</span><span class="title_tip">&nbsp;Click to expand</span></div>
+<div class="setting_body">
+<ul class="function_intro">
+<li><span class="code">Debug \ bin \ demo1 \ _js \ global_functions.js</span>: Create sub folder under user data folder for saving INI file.</li>
+<li><span class="code">Debug \ bin \ demo1 \ _js \ program_settings.js</span>: Read / Write / Delete key in registry. Read / Write integer from INI file.</li>
+<li><span class="code">Debug \ bin \ demo1 \ _js \ personal_settings.js</span>: Read / Write string from INI file.</li>
+</ul>
+</div>
+
+<div class="big_separator"></div>
+
+<div class="setting_title"><img class="title_arrow" src="_image/arrow_up.png"/><span style="font-weight:bold">&nbsp;Confirm window close by hooking both COM events and Window messages</span><span class="title_tip">&nbsp;Click to expand</span></div>
+<div class="setting_body">
+<ul class="function_intro">
+<li><span class="code">Debug \ bin \ demo1 \ _js \ exit_confirm.js</span>: LOCALJS.UI wraps complex COM event handling and Window message hooking into one simple callback function: <span class="code">LOCALJS.UI.exitCallback</span>.</li>
+</ul>
+</div>
+
+<div class="big_separator"></div>
+
+<div class="setting_title"><img class="title_arrow" src="_image/arrow_up.png"/><span style="font-weight:bold">&nbsp;New window creation and interop</span><span class="title_tip">&nbsp;Click to expand</span></div>
+<div class="setting_body">
+<ul class="function_intro">
+<li><span class="code">Debug \ bin \ demo1 \ _js \ demo_newwindow.js</span>: Create new browser window <span class="code">LOCALJS.UI.createBrowser</span> in JavaScript event handler, and enable interop among windows by injecting an initializing JavaScript function specified by parameter <span class="code">initFunction</span> into new window.</li>
+<li><span class="code">Debug \ bin \ demo1 \ new_window_en.html</span>: The HTML page opened by <span class="code">demo_newwindow.js</span>.</li>
+<li><span class="code">Debug \ bin \ demo1 \ _js \ demo_google.js</span>: When a link is clicked to open a new window, callback function <span class="code">LOCALJS.UI.newWindowCallback</span> will be triggerred. Processing this function can cancel the new window, or create a new window and open the url inside it.</li>
+</ul>
+</div>
+
+<div class="big_separator"></div>
+
+<div class="setting_title"><img class="title_arrow" src="_image/arrow_up.png"/><span style="font-weight:bold">&nbsp;Database access with ADO objects</span><span class="title_tip">&nbsp;Click to expand</span></div>
+<div class="setting_body">
+<ul class="function_intro">
+<li><span class="code">Debug \ bin \ demo1 \ _js \ demo_ado.js</span>: Open database demo window. If the window has been opened, switch to the opening window.</li>
+<li><span class="code">Debug \ bin \ demo1 \ data_table_en.html</span>: HTML page file for database demo.</li>
+<li><span class="code">Debug \ bin \ demo1 \ _js \ demo_datatable.js</span>: Open database with ADO objects, sort and edit data inside <a href="#" onclick="openUrl('http://developer.yahoo.com/yui/datatable/'); return false">DataTable</a> from <a href="#" onclick="openUrl('http://developer.yahoo.com/yui/'); return false">Yahoo YUI Library</a>.</li>
+<li><span class="code">Debug \ bin \ demo1 \ sample data.xls</span>: Excel file acting as database.</li>
+<li><span class="code">Debug \ bin \ demo1 \ yui</span>: Part of <a href="#" onclick="openUrl('http://developer.yahoo.com/yui/'); return false">Yahoo YUI Library</a>.</li>
+</ul>
+</div>
+
+<div class="big_separator"></div>
+
+<div class="setting_title"><img class="title_arrow" src="_image/arrow_up.png"/><span style="font-weight:bold">&nbsp;Call web service from any domain</span><span class="title_tip">&nbsp;Click to expand</span></div>
+<div class="setting_body">
+<ul class="function_intro">
+<li><span class="code">Debug \ bin \ demo1 \ _js \ demo_webservice.js</span>: Call sample web service with <span class="code">LOCALJS.WEB_SERVICE.callUrl</span>, convert JSON format string to JavaScript variable easily.</li>
+<li><span class="code">demo_ws.php</span>: Source code for sample web service.</li>
+</ul>
+</div>
+
+<div class="big_separator"></div>
+
+<div class="setting_title"><img class="title_arrow" src="_image/arrow_up.png"/><span style="font-weight:bold">&nbsp;Multi-Languages Support</span><span class="title_tip">&nbsp;Click to expand</span></div>
+<div class="setting_body">
+<ul class="function_intro">
+<li><span class="code">Debug \ bin \ demo1 \ localization</span>: language files.</li>
+<li><span class="code">Debug \ bin \ LocalJSBootstrap.html</span>: initialize path to language files and set current language.</li>
+</ul>
+</div>
+
+<div class="big_separator"></div>
+
+<div class="setting_title"><img class="title_arrow" src="_image/arrow_up.png"/><span style="font-weight:bold">&nbsp;Call Windows API and interop with user created dll</span><span class="title_tip">&nbsp;Click to expand</span></div>
+<div class="setting_body">
+<ul class="function_intro">
+<li><span class="code">Debug \ bin \ demo1 \ _js \ demo_structure.js</span>: Call functions in <span class="code">LOCALJS.UI</span> to move browser window, and open file dialog.</li>
+<li><span class="code">Debug \ bin \ demo1 \ _js \ demo_calljs.js</span>: Call function <span class="code">callJSFunctionInNewThread</span> exported by <span class="code">LocalJSDemoDll.dll</span>; <span class="code">callJSFunctionInNewThread</span> then calls JavaScript function back.</li>
+<li><span class="code">LocalJSDemoDll \ LocalJSDemoDll.dsp</span>: Visual C++ 6 project file for <span class="code">LocalJSDemoDll</span>.</li>
+</ul>
+</div>
+
+<div class="big_separator"></div>
+
+<div class="setting_title"><img class="title_arrow" src="_image/arrow_up.png"/><span style="font-weight:bold">&nbsp;Create native script thread, call back and forth between threads</span><span class="title_tip">&nbsp;Click to expand</span></div>
+<div class="setting_body">
+<ul class="function_intro">
+<li><span class="code">Debug \ bin \ demo1 \ _js \ demo_thread.js</span>: Run <span class="code">script_thread.js</span> in new thread with parameter passed to new thread.</li>
+<li><span class="code">Debug \ bin \ demo1 \ _js \ script_thread.js</span>: Code of the new thread, call back and forth with main thread through parameters passed in.</li>
+</ul>
+</div>
+
+<div class="big_separator"></div>
+
+<div class="setting_title"><img class="title_arrow" src="_image/arrow_up.png"/><span style="font-weight:bold">&nbsp;Dynamic effect of UI</span><span class="title_tip">&nbsp;Click to expand</span></div>
+<div class="setting_body">
+<ul class="function_intro">
+<li><span class="code">Debug \ bin \ demo1 \ _js \ float_title.js</span>: Implements floating title.</li>
+<li><span class="code">Debug \ bin \ demo1 \ _js \ setting_blocks.js</span>: Implements slide up / down of sections.</li>
+<li><span class="code">_css \ main.css</span>: Implements mouse hover effect.</li>
+</ul>
+</div>
+
+<div class="big_separator"></div>
+
+<div class="setting_title"><img class="title_arrow" src="_image/arrow_up.png"/><span style="font-weight:bold">&nbsp;This demo application</span><span class="title_tip">&nbsp;Click to expand</span></div>
+<div class="setting_body">
+<ul class="function_intro">
+<li><span class="code">LocalJSBootstrap \ LocalJSBootstrap.dsp</span>: Visual C++ 6 project file for LocalJS bootstrap program, which can be directly used in most cases.</li>
+<li><span class="code">Debug \ bin \ demo1 \ index_en.html</span>: Main page of demo application.</li>
+<li><span class="code">Debug \ bin \ demo1 \ intro_en.html</span>: This page.</li>
+<li><span class="code">Debug \ bin \ LocalJSBootstrap.html</span>: Startup page called by <span class="code">LocalJSBootstrap.exe</span>.</li>
+</ul>
+</div>
+
+<div class="big_separator"></div>
+
+<div class="setting_title"><img class="title_arrow" src="_image/arrow_up.png"/><span style="font-weight:bold">&nbsp;Misc.</span><span class="title_tip">&nbsp;Click to expand</span></div>
+<div class="setting_body">
+<ul class="function_intro">
+<li><span class="code">LocaJSDemo.dsw</span>: Visual C++ 6 workspace file containing <span class="code">LocalJSBootstrap \ LocalJSBootstrap.dsp</span> and <span class="code">LocalJSDemoDll \ LocalJSDemoDll.dsp</span>.</li>
+<li><span class="code">compress_js.pl</span>: Sample <span class="code">Perl</span> script calling <span class="code">YUI Compressor</span>.</li>
+</ul>
+</div>
+
+</body>
+</html>
+
+<!-- For a page to render fastest, all css should be in header and all javascript should go after html tag.
+	But we also put a little bit javascript code in header to set up the window style and postion so let html window appear as earlier as possible
+-->
+<!-- jQuery is a small javascript library which provides a set of easy methods to access elements in page, it makes javascript coding much easier than the standard way. 
+	 Very worth to learn! 
+	 It's very easy to learn too. I read http://www.w3schools.com/jquery/default.asp and http://jquery.com/ for an hour then started to use it. -->
+<script type="text/javascript" src="_js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="_js/setting_blocks.js" charset="UTF-8"></script>
+<script type="text/javascript" src="_js/float_title.js" charset="UTF-8"></script>
