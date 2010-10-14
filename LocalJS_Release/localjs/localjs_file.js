@@ -131,7 +131,7 @@
 			}
 			catch (e)
 			{
-				default_value = 0;
+				default_value = "";
 			}
 
 			var str = newBuffer(4096);
@@ -159,7 +159,7 @@
 		// file exist
 		localjs_file.fileExists = function(filename)
 		{
-			return fnToBoolean(fnGetFso().FileExists(filename))
+			return fnToBoolean(fnGetFso().FileExists(filename));
 		}
 
 		// folder exists
