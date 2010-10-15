@@ -241,10 +241,9 @@
 		}
 
 		// delete file
-		localjs_file.deleteFile = function(filename, force)
+		localjs_file.deleteFile = function(filespec, force)
 		{
-			if (fnGetFso().FileExists(filename))
-				fnGetFso().DeleteFile(filename, force);
+			fnGetFso().DeleteFile(filespec, force);
 		}
 
 		// create folder
@@ -255,10 +254,9 @@
 		}
 
 		// delete folder
-		localjs_file.deleteFolder = function(folder, forced)
+		localjs_file.deleteFolder = function(folderspec, force)
 		{
-			if (fnGetFso().FolderExists(folder))
-				fnGetFso().DeleteFolder(folder, forced);
+			fnGetFso().DeleteFolder(folderspec, force);
 		}
 
 		// list files in folder
@@ -375,7 +373,14 @@
 		// browse for folder
 		localjs_file.browseFolder = function(title, rootFolder)
 		{
-			return fnGetShellApp().BrowseForFolder(hostWnd, title ? title : document.title, 0, rootFolder);
+			try
+			{
+				return fnGetShellApp().BrowseForFolder(hostWnd, title ? title : document.title, 0, rootFolder).Self.Path;
+			}
+			catch (e)
+			{
+				return false;
+			}
 		}
 
 		// exec file or url
@@ -409,21 +414,15 @@
 		}
 
 		// test if the string is a url
-		localjs_file.isUrl = function(path)
+		localjs_file.isUrl = function(url)
 		{
-			return fnToBoolean(pathIsURL(path));
+			return fnToBoolean(pathIsURL(url));
 		}
 
 		// test if url is a file url
-		localjs_file.isFileUrl = function(path)
+		localjs_file.isFileUrl = function(url)
 		{
-			return fnToBoolean(urlIs(path, URLIS_FILEURL));
-		}
-
-		// test if url is a folder
-		localjs_file.isFolderUrl = function(path)
-		{
-			return fnToBoolean(urlIs(path, URLIS_DIRECTORY));
+			return fnToBoolean(urlIs(url, URLIS_FILEURL));
 		}
 
 		localjs_file.readUrl = function(url, callback)
@@ -456,7 +455,7 @@
 				}
 				else
 				{
-					var status, content,
+					var status, content = false,
 
 						onOK = function(responseText)
 						{
@@ -476,31 +475,33 @@
 						while (0 == status)
 						{
 							if (!LOCALJS.UI.doEvents())
-								return "";
+								return false;
 						}
 
 						if (1 == status)
-							return content;
+							break;
 					}
+					
+					return content;
 				}
 			}
 		}
 
-		localjs_file.buildUrl = function(parent, child)
+		localjs_file.buildUrl = function(baseUrl, relativeUrl)
 		{
 			var combined_url = newBuffer(INTERNET_MAX_URL_LENGTH),
 				characters_combined = newBuffer(4, combined_url.size >> 1);
 
-			if (urlCombine(parent, child, combined_url, characters_combined, URL_ESCAPE_PERCENT | URL_ESCAPE_UNSAFE) >= 0)
+			if (urlCombine(baseUrl, relativeUrl, combined_url, characters_combined, URL_ESCAPE_PERCENT | URL_ESCAPE_UNSAFE) >= 0)
 				return combined_url.asStringW;
 
-			return parent;
+			return false;
 		}
 
 		// normalize url to current document, optionally append a relative url
 		localjs_file.normalizeUrl = function(relativeUrl)
 		{
-			var url = document.URL.replace(/#.*$/, '');
+			var url = document.URL.replace(/[#\?].*$/, '');
 			if (!relativeUrl)
 				return url;
 
