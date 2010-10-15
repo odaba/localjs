@@ -375,7 +375,8 @@
 		{
 			try
 			{
-				return fnGetShellApp().BrowseForFolder(hostWnd, title ? title : document.title, 0, rootFolder).Self.Path;
+				var path = fnGetShellApp().BrowseForFolder(hostWnd, title ? title : document.title, 0, rootFolder).Self.Path;
+				return fnGetFso().FolderExists(path) ? path : "";
 			}
 			catch (e)
 			{
@@ -481,7 +482,7 @@
 						if (1 == status)
 							break;
 					}
-					
+
 					return content;
 				}
 			}
