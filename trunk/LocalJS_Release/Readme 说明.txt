@@ -1,4 +1,4 @@
-LocalJS Release 2.0.1
+LocalJS Release 2.0.2
 
 For any issues, please contact me at martin@localjs.org.
 有问题请发邮件到 martin@localjs.org。
@@ -50,6 +50,9 @@ Folder list:
 		LocalJSBootstrap.exe 的源代码和 Visual C++ 6 工程文件。你可以自由地修改和使用它。
 
 Change History:
+
+2010-10-15
+	LocalJS 2.0.2 released with a batch of small fixes in LOCALJS.FILE.
 
 2010-10-13
 	LocalJS 2.0.1 released with LOCALJS.LOCALIZATION added. Also several functions have been added to LOCALJS.FILE. Demo application updated
