@@ -81,7 +81,7 @@ function toggleVisibility(linkObj) {
 <h1>How To ... </h1>  </div>
 </div>
 <div class="contents">
-<div align="center"><em>Prev:</em> <a class="el" href="getting_started.html">Getting Started</a> | <em>Next:</em> <a class="el" href="tutorial_js4cpp.html">JavaScript Jump Start For C++ Programmers</a> | <a class="el" href="group___j_s_objects.html">LocalJS Objects (Native)</a> | <a class="el" href="index.html">Document Home</a> | <a href="http://sourceforge.net/projects/localjs/files/" target="_blank">Download demo application</a></div><p>Quick jump link:</p>
+<div align="center"><em>Prev:</em> <a class="el" href="getting_started.html">Getting Started</a> | <em>Next:</em> <a class="el" href="tutorial_js4cpp.html">JavaScript Jump Start For C++ Programmers</a> | <a class="el" href="group___j_s_objects.html">LocalJS Objects (Advanced)</a> | <a class="el" href="index.html">Document Home</a> | <a href="http://sourceforge.net/projects/localjs/files/" target="_blank">Download demo application</a></div><p>Quick jump link:</p>
 <p><a class="el" href="howto.html#howto_start_up">LocalJS Start Up</a> </p>
 <ul>
 <li><a class="el" href="howto.html#howto_start_local_js">How to start a LocalJS application?</a> </li>
@@ -156,12 +156,12 @@ How to start a LocalJS application?</h3>
 <h3><a class="anchor" id="howto_access_objects"></a>
 How to start to use LocalJS objects in JavaScript?</h3>
 <ul>
-<li>Root object <a class="el" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a> is globally available in LocalJS browser. </li>
-<li>All other LocalJS objects derive from properies of <a class="el" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a> object, or properies and methods of derived objects:</li>
+<li>Root object <a class="el" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a> is globally available in LocalJS browser. </li>
+<li>All other LocalJS objects derive from properies of <a class="el" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a> object, or properies and methods of derived objects:</li>
 </ul>
-<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&#39;DllCall&#39;</span>);
-    var thr = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.threading.newThread(<span class="stringliteral">&#39;return true;&#39;</span>);
-    var globalDict = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.globalDict;
+<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&#39;DllCall&#39;</span>);
+    var thr = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.threading.newThread(<span class="stringliteral">&#39;return true;&#39;</span>);
+    var globalDict = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.globalDict;
 </pre></div><h3><a class="anchor" id="howto_debug"></a>
 How to debug JavaScript?</h3>
 <p>There are several JavaScript debug tools on web. Here is one of the solutions using Microsoft IDE:</p>
@@ -202,7 +202,7 @@ How to change browser window style (borders, title bars, etc) within JavaScript?
 <li>Retrive window handle with <a class="el" href="interfacelocal_j_s.html#aa05066bf1c7f31ea898c0d2aed29eedb" title="ReadOnly. Returns the HWND handle of current browser window.">localJS.hostWnd</a>; </li>
 <li>Call Windows API <a href="http://msdn.microsoft.com/en-us/library/ms633591(VS.85).aspx" target="_blank">SetWindowLong</a> and <a href="http://msdn.microsoft.com/en-us/library/ms633545(VS.85).aspx" target="_blank">SetWindowPos</a> with <a class="el" href="interface_dll_call.html" title="DllCall object enables JavaScript call functions exported by DLL or EXE files, including most Windows...">DllCall</a> object:</li>
 </ul>
-<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;DllCall&quot;</span>),
+<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;DllCall&quot;</span>),
 
         SWP_FRAMECHANGED = 0x0020, <span class="comment">// constants can be found in MSDN</span>
         SWP_SHOWWINDOW = 0x0040,
@@ -215,7 +215,7 @@ How to change browser window style (borders, title bars, etc) within JavaScript?
         WS_VISIBLE = 0x10000000,
         WS_SYSMENU = 0x00080000,
 
-        hostWnd = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.hostWnd;
+        hostWnd = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.hostWnd;
 
     dllCall.add(<span class="stringliteral">&quot;user32.dll&quot;</span>, <span class="stringliteral">&quot;LONG SetWindowLong(HWND hWnd, int nIndex, LONG dwNewLong);&quot;</span>);
     dllCall.add(<span class="stringliteral">&quot;user32.dll&quot;</span>, <span class="stringliteral">&quot;BOOL SetWindowPos(HWND hWnd, HWND hWndInsertAfter, int X, int Y, int cx, int cy, UINT uFlags);&quot;</span>);
@@ -280,7 +280,7 @@ Call Windows API <a href="http://msdn.microsoft.com/en-us/library/ms724353(VS.85
 </ul>
 </li>
 </ul>
-<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;DllCall&quot;</span>);
+<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;DllCall&quot;</span>);
 
     dllCall.add(<span class="stringliteral">&quot;Kernel32.dll&quot;</span>, <span class="stringliteral">&quot;UINT WINAPI GetPrivateProfileInt(__in LPCTSTR lpAppName,__in LPCTSTR lpKeyName,__in INT nDefault,__in LPCTSTR lpFileName);&quot;</span>);
     dllCall.add(<span class="stringliteral">&quot;Kernel32.dll&quot;</span>, <span class="stringliteral">&quot;DWORD WINAPI GetPrivateProfileString(__in LPCTSTR lpAppName,__in LPCTSTR lpKeyName,__in LPCTSTR lpDefault,__out LPTSTR lpReturnedString,__in DWORD nSize,__in LPCTSTR lpFileName);&quot;</span>);
@@ -298,7 +298,7 @@ Call Windows API <a href="http://msdn.microsoft.com/en-us/library/ms724353(VS.85
 </pre></div><ul>
 <li>To save general text file into files, create <a href="http://msdn.microsoft.com/en-us/library/6kxy1a51(VS.85).aspx" target="_blank">FileSystemObject</a> with method <a class="el" href="interface_c_o_m.html#a14285e3676c39b414cac2652046ec881" title="Create COM object by ProgID, optionally specify object location.">COM.createObject</a>:</li>
 </ul>
-<div class="fragment"><pre class="fragment">    var fso = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;Scripting.FileSystemObject&quot;</span>),
+<div class="fragment"><pre class="fragment">    var fso = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;Scripting.FileSystemObject&quot;</span>),
         ForWriting = 2; <span class="comment">// constant value found in documentation of OpenTextFile method in MSDN</span>
 
     var f = fso.OpenTextFile(<span class="stringliteral">&quot;c:\\test.txt&quot;</span>, ForWriting, <span class="keyword">true</span>);
@@ -311,7 +311,7 @@ How to save settings to registry?</h3>
 <ul>
 <li>Create <a href="http://msdn.microsoft.com/en-us/library/aew9yb99(VS.85).aspx" target="_blank">WshShell Object</a> with <a class="el" href="interface_c_o_m.html#a14285e3676c39b414cac2652046ec881" title="Create COM object by ProgID, optionally specify object location.">COM.createObject</a>:</li>
 </ul>
-<div class="fragment"><pre class="fragment">    var shell = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;WScript.Shell&quot;</span>);
+<div class="fragment"><pre class="fragment">    var shell = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;WScript.Shell&quot;</span>);
     var val = shell.RegRead(path_to_registry_entry);
     shell.RegWrite(path_to_registry_entry, val);
 </pre></div><h3><a class="anchor" id="howto_utf_8"></a>
@@ -320,7 +320,7 @@ How to access file in utf-8 format?</h3>
 <li>Create <a href="http://msdn.microsoft.com/en-us/library/ms675032(VS.85).aspx" target="_blank">Stream Object (ADO)</a> with <a class="el" href="interface_c_o_m.html#a14285e3676c39b414cac2652046ec881" title="Create COM object by ProgID, optionally specify object location.">COM.createObject</a>; </li>
 <li>Use <a href="http://msdn.microsoft.com/en-us/library/ms675032(VS.85).aspx" target="_blank">Stream Object (ADO)</a> to read and write utf-8 format files.</li>
 </ul>
-<div class="fragment"><pre class="fragment">    var objStream = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;ADODB.Stream&quot;</span>);
+<div class="fragment"><pre class="fragment">    var objStream = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;ADODB.Stream&quot;</span>);
         adSaveCreateOverWrite = 2; <span class="comment">// constants value found in documentation of SaveOptionsEnum in MSDN</span>
 
     objStream.Open();
@@ -349,8 +349,8 @@ How to browse for folder?</h3>
 <li>Create <a href="http://msdn.microsoft.com/en-us/library/bb774094(VS.85).aspx" target="_blank">Shell Object</a> with method <a class="el" href="interface_c_o_m.html#a14285e3676c39b414cac2652046ec881" title="Create COM object by ProgID, optionally specify object location.">COM.createObject</a>; </li>
 <li>Call <a href="http://msdn.microsoft.com/en-us/library/bb774065(VS.85).aspx" target="_blank">Shell.BrowseForFolder method</a>:</li>
 </ul>
-<div class="fragment"><pre class="fragment">    var shellApp = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;Shell.Application&quot;</span>),
-        retVal = shellApp.BrowseForFolder(<a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.hostWnd, <span class="stringliteral">&quot;Title&quot;</span>, 0);
+<div class="fragment"><pre class="fragment">    var shellApp = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;Shell.Application&quot;</span>),
+        retVal = shellApp.BrowseForFolder(<a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.hostWnd, <span class="stringliteral">&quot;Title&quot;</span>, 0);
 </pre></div><h3><a class="anchor" id="howto_enum_file"></a>
 How to enumerate files in a folder?</h3>
 <ul>
@@ -358,9 +358,9 @@ How to enumerate files in a folder?</h3>
 <li>Call <a href="http://msdn.microsoft.com/en-us/library/f1xtf7ta(VS.85).aspx" target="_blank">GetFolder method</a> and <a href="http://msdn.microsoft.com/en-us/library/18b41306(VS.85).aspx" target="_blank">Files property</a> to return <a href="http://msdn.microsoft.com/en-us/library/wz72a8c0(VS.85).aspx" target="_blank">Files collection</a>. </li>
 <li>Enumerate collection with <a class="el" href="interface_enumerator.html" title="Similar to Enumerator object in JScript, providing access to items in Collection object.">Enumerator</a> object created by <a class="el" href="interface_c_o_m.html#a14285e3676c39b414cac2652046ec881" title="Create COM object by ProgID, optionally specify object location.">COM.createObject</a> method:</li>
 </ul>
-<div class="fragment"><pre class="fragment">    var fso = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;Scripting.FileSystemObject&quot;</span>),
+<div class="fragment"><pre class="fragment">    var fso = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;Scripting.FileSystemObject&quot;</span>),
         folder = fso.GetFolder(<span class="stringliteral">&quot;C:\\Program Files\\&quot;</span>),
-        fc = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;Enumerator&quot;</span>, folder.Files),
+        fc = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;Enumerator&quot;</span>, folder.Files),
         s = <span class="stringliteral">&quot;&quot;</span>;
 
     <span class="keywordflow">for</span> (; !fc.atEnd(); fc.moveNext())
@@ -376,13 +376,13 @@ How to get WebBrowser object of current browser window?</h3>
 <ul>
 <li>It's quite straightforward with <a class="el" href="interfacelocal_j_s.html#a426d92f4370abff654c9a85a060c25c9" title="Readonly. Returns WebBrowser Object of current browser. Help transparently moving forth and back betw...">localJS.webBrowser</a> property:</li>
 </ul>
-<div class="fragment"><pre class="fragment">    var browser_obj = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.webBrowser;
+<div class="fragment"><pre class="fragment">    var browser_obj = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.webBrowser;
 </pre></div><h3><a class="anchor" id="howto_nav_2_local"></a>
 How to navigate from remote url to local url?</h3>
 <ul>
 <li>Use <a href="http://msdn.microsoft.com/en-us/library/aa752093(VS.85).aspx" target="_blank">Navigate Method</a> of <a href="http://msdn.microsoft.com/en-us/library/aa752085(VS.85).aspx" target="_blank">WebBrowser Object</a>:</li>
 </ul>
-<div class="fragment"><pre class="fragment">    <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.webBrowser.Navigate(<span class="stringliteral">&quot;file:///C:/test.html&quot;</span>);
+<div class="fragment"><pre class="fragment">    <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.webBrowser.Navigate(<span class="stringliteral">&quot;file:///C:/test.html&quot;</span>);
 </pre></div><h3><a class="anchor" id="howto_cancel_nav"></a>
 How to cancel a navigation?</h3>
 <ul>
@@ -392,7 +392,7 @@ How to cancel a navigation?</h3>
     {
         cancel.returnValue = <span class="keyword">true</span>;
     };
-    com.connectEvents(<a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.webBrowser, {<span class="stringliteral">&#39;BeforeNavigate2&#39;</span>:onBeforeNavigate2});
+    com.connectEvents(<a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.webBrowser, {<span class="stringliteral">&#39;BeforeNavigate2&#39;</span>:onBeforeNavigate2});
 </pre></div><h3><a class="anchor" id="howto_pass_para_2_nav_page"></a>
 How to pass parameters to the next page navigate to?</h3>
 <p>When browser navigates, all JavaScript variables of the previous page are lost. But variables saved to <a class="el" href="interfacelocal_j_s.html#ae46e48b1edd261d9c6fc8a9116ae564d" title="ReadOnly. Returns a Dictionary Object associated with current browser window. An ideal persistent sto...">localJS.browserDict</a> remain unchanged.</p>
@@ -410,13 +410,13 @@ How to prevent data from lost when page is reloaded?</h3>
 
     window.attachEvent(<span class="stringliteral">&quot;onload&quot;</span>, function()
     {
-        var browserDict = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.browserDict;
+        var browserDict = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.browserDict;
         <span class="keywordflow">if</span> (browserDict.Exists(<span class="stringliteral">&quot;key_to_persist_data&quot;</span>))
             persist_data = browserDict.Item(<span class="stringliteral">&quot;key_to_persist_data&quot;</span>);
     }};
     window.attachEvent(<span class="stringliteral">&quot;onunload&quot;</span>, function()
     {
-        var browserDict = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.browserDict;
+        var browserDict = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.browserDict;
         browserDict.Item(<span class="stringliteral">&quot;key_to_persist_data&quot;</span>) = persist_data;
     }};
 </pre></div><h3><a class="anchor" id="howto_f5"></a>
@@ -469,7 +469,7 @@ How to open a url in system default browser?</h3>
 <li>Create <a class="el" href="interface_dll_call.html" title="DllCall object enables JavaScript call functions exported by DLL or EXE files, including most Windows...">DllCall</a> object with <a class="el" href="interface_c_o_m.html#a14285e3676c39b414cac2652046ec881" title="Create COM object by ProgID, optionally specify object location.">COM.createObject</a>; </li>
 <li>Call <a href="http://msdn.microsoft.com/en-us/library/bb762153(VS.85).aspx" target="_blank">ShellExecute function</a> with <a class="el" href="interface_dll_call.html" title="DllCall object enables JavaScript call functions exported by DLL or EXE files, including most Windows...">DllCall</a> object:</li>
 </ul>
-<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&#39;DllCall&#39;</span>);
+<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&#39;DllCall&#39;</span>);
     dllCall.add(<span class="stringliteral">&quot;shell32.dll&quot;</span>, <span class="stringliteral">&quot;HINSTANCE ShellExecute(HWND hwnd,LPCTSTR lpOperation,LPCTSTR lpFile,LPCTSTR lpParameters,LPCTSTR lpDirectory,INT nShowCmd);&quot;</span>);
     dllCall.ShellExecute(0, 0, <span class="stringliteral">&quot;http://localjs.org/&quot;</span>, 0, 0, 1);
 </pre></div><h2><a class="anchor" id="howto_db"></a>
@@ -483,7 +483,7 @@ How to access database?</h3>
 <p>Code below opens an <a href="http://www.w3schools.com/ado/ado_ref_connection.asp" target="_blank">ADO Connection</a> to an excel <a href="file:">file:</a></p>
 <div class="fragment"><pre class="fragment">    var openExcelFile = function(excel_file)
     {
-        var cn = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;ADODB.Connection&quot;</span>);
+        var cn = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;ADODB.Connection&quot;</span>);
         cn.Provider = <span class="stringliteral">&quot;Microsoft.Jet.OLEDB.4.0&quot;</span>;
         cn.ConnectionString = <span class="stringliteral">&quot;Data Source=&quot;</span> + excel_file + <span class="stringliteral">&quot;;Extended Properties=Excel 8.0;&quot;</span>
         cn.Open();
@@ -496,7 +496,7 @@ How to call web service from other domains?</h3>
 <li>Create <a href="http://msdn.microsoft.com/en-us/library/ms535874(VS.85).aspx" target="_blank">XMLHttpRequest object</a> with <a class="el" href="interface_c_o_m.html#a14285e3676c39b414cac2652046ec881" title="Create COM object by ProgID, optionally specify object location.">COM.createObject</a>; </li>
 <li>Use properies and methods of <a href="http://msdn.microsoft.com/en-us/library/ms535874(VS.85).aspx" target="_blank">XMLHttpRequest object</a> to access url from any domain.</li>
 </ul>
-<div class="fragment"><pre class="fragment">    var oHttp = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;Microsoft.XMLHTTP&quot;</span>);
+<div class="fragment"><pre class="fragment">    var oHttp = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;Microsoft.XMLHTTP&quot;</span>);
     oHttp.open(<span class="stringliteral">&quot;GET&quot;</span>, <span class="stringliteral">&quot;http://www.example.com/example.php&quot;</span>);
     oHttp.send();
 </pre></div><dl class="note"><dt><b>Note:</b></dt><dd>There is no domain limitations on this <a href="http://msdn.microsoft.com/en-us/library/ms535874(VS.85).aspx" target="_blank">XMLHttpRequest object</a>.</dd></dl>
@@ -573,7 +573,7 @@ How to synchronize data access among threads?</h3>
 <li>Thread synchronization becomes <em>EXTREMELY</em> <em>SIMPLE</em> for localJS script: you don't need to synchronize access to variables from different script threads; they will be synchronized automatically.</li>
 </ul>
 <p>Refer to section <em>Synchronization</em> of <a class="el" href="interface_threading.html#ab83b569dcb6b1ed35d6e9f13a8376a64" title="Create new script thread with optional arguments. Returns Thread object represents the new thread...">Threading.newThread</a> description.</p>
-<div align="center"><em>Prev:</em> <a class="el" href="getting_started.html">Getting Started</a> | <em>Next:</em> <a class="el" href="tutorial_js4cpp.html">JavaScript Jump Start For C++ Programmers</a> | <a class="el" href="group___j_s_objects.html">LocalJS Objects (Native)</a> | <a class="el" href="index.html">Document Home</a> | <a href="http://sourceforge.net/projects/localjs/files/" target="_blank">Download demo application</a></div> </div>
+<div align="center"><em>Prev:</em> <a class="el" href="getting_started.html">Getting Started</a> | <em>Next:</em> <a class="el" href="tutorial_js4cpp.html">JavaScript Jump Start For C++ Programmers</a> | <a class="el" href="group___j_s_objects.html">LocalJS Objects (Advanced)</a> | <a class="el" href="index.html">Document Home</a> | <a href="http://sourceforge.net/projects/localjs/files/" target="_blank">Download demo application</a></div> </div>
 <hr class="footer"/><div class="footer"><a href="/">LocalJS Site</a> | <a href="/docs/">Documentation Home</a> | <a href="http://sourceforge.net/projects/localjs/files/" target="_blank">Downloads</a> | <a href="http://sourceforge.net/tracker/?group_id=359375" target="_blank">Report an Issue</a></div>
 </body>
 <script type="text/javascript">

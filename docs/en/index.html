@@ -93,8 +93,8 @@ function toggleVisibility(linkObj) {
 LocalJS Overview</h2>
 <p>LocalJS is composed of:</p>
 <ul>
-<li><a class="el" href="group___j_s_src_objects.html">LocalJS Objects (Open Source)</a>. Open source JavaScript library wrapping up common desktop operations, based on <a class="el" href="group___j_s_objects.html">LocalJS Objects (Native)</a> and <a class="el" href="group___host_a_p_i.html">LocalJS Hosting API</a>. </li>
-<li><a class="el" href="group___j_s_objects.html">LocalJS Objects (Native)</a>. A batch of JavaScript Objects which provide fully local access ability to JavaScript running in LocalJS browsers. </li>
+<li><a class="el" href="group___j_s_src_objects.html">LocalJS Objects (Open Source)</a>. Open source JavaScript library wrapping up common desktop operations, based on <a class="el" href="group___j_s_objects.html">LocalJS Objects (Advanced)</a> and <a class="el" href="group___host_a_p_i.html">LocalJS Hosting API</a>. </li>
+<li><a class="el" href="group___j_s_objects.html">LocalJS Objects (Advanced)</a>. A batch of JavaScript Objects which provide fully local access ability to JavaScript running in LocalJS browsers. </li>
 <li><a class="el" href="group___host_a_p_i.html">LocalJS Hosting API</a>. A set of C functions exposed by localjs.dll, used to launch and manage LocalJS browsers.</li>
 </ul>
 <p>Diagram below shows typical structure of LocalJS application:</p>
@@ -109,14 +109,14 @@ LocalJS Overview</h2>
 <img src="open_src_objects.gif" alt="open_src_objects.gif"/>
 <p><strong>LocalJS Open Source Objects Dependencies</strong></p></div>
 <p> For example, to use LOCALJS.FILE, localjs_file.js, localjs_ui.js and localjs_webservice.js should be included; to use LOCALJS.LOCALIZATION, all the 4 JavaScript files should be included. The sequence of files being included doesn't matter. </p>
-<dl class="user"><dt><b>LocalJS Native Objects</b></dt><dd></dd></dl>
-<p>Native JavaScript objects are implemented by LocalJS.Dll, they are available without need to include any JavaScript files. Diagram below shows the creation relationship among all native LocalJS objects:</p>
+<dl class="user"><dt><b>LocalJS Advanced Objects</b></dt><dd></dd></dl>
+<p>Advanced JavaScript objects are implemented by LocalJS.Dll, they are available without need to include any JavaScript files. Diagram below shows the creation relationship among all advanced LocalJS objects:</p>
 <div align="center">
 <img src="objects.gif" alt="objects.gif"/>
-<p><strong>LocalJS Native Objects Tree</strong></p></div>
+<p><strong>LocalJS Advanced Objects Tree</strong></p></div>
  <dl class="user"><dt><b>Comments:</b></dt><dd></dd></dl>
 <ul>
-<li>Yellow for LocalJS native objects </li>
+<li>Yellow for LocalJS advanced objects </li>
 <li>White for system objects available through LocalJS </li>
 <li>.Net object will be available in the next version</li>
 </ul>

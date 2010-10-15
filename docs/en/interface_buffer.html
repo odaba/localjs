@@ -90,7 +90,7 @@ function toggleVisibility(linkObj) {
   <div class="headertitle">
 <h1>Buffer Class Reference<br/>
 <small>
-[<a class="el" href="group___j_s_objects.html">LocalJS Objects (Native)</a>]</small>
+[<a class="el" href="group___j_s_objects.html">LocalJS Objects (Advanced)</a>]</small>
 </h1>  </div>
 </div>
 <div class="contents">
@@ -132,7 +132,7 @@ Properties</h2></td></tr>
 <li>or fields in <a class="el" href="interface_structure.html" title="Structure object represents a C struct, used as parameters in Dll function call.">Structure</a> Object.</li>
 </ul>
 <p><a class="el" href="interface_buffer.html" title="Buffer object represents a fixed size buffer, used as parameters in Dll function call.">Buffer</a> object is created from <a class="el" href="interface_dll_call.html" title="DllCall object enables JavaScript call functions exported by DLL or EXE files, including most Windows...">DllCall</a> object as following:</p>
-<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;DllCall&quot;</span>),
+<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;DllCall&quot;</span>),
         buf = dllCall.newBuffer(512); <span class="comment">// create a 512 bytes buffer</span>
 </pre></div><p>A typical usage of <a class="el" href="interface_buffer.html" title="Buffer object represents a fixed size buffer, used as parameters in Dll function call.">Buffer</a> object is to return a string from Dll function.</p>
 <p>First, call <a class="el" href="interface_dll_call.html#ab6730ea57a7678c1f07953ce331edca0" title="Add function exported by DLL or EXE file as a method of current DllCall object.">DllCall.add</a> method to add dll functions as methods of <a class="el" href="interface_dll_call.html" title="DllCall object enables JavaScript call functions exported by DLL or EXE files, including most Windows...">DllCall</a> object:</p>
@@ -151,16 +151,16 @@ Properties</h2></td></tr>
     getModuleFileName(NULL, buf, buf.size &gt;&gt; 1);
 
     <span class="comment">// buf has been filled with string, so it can be used as a string value.</span>
-    messageBox(<a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.hostWnd, <span class="stringliteral">&quot;The EXE file name is &quot;</span> + buf, document.title, MB_ICONINFORMATION);
+    messageBox(<a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.hostWnd, <span class="stringliteral">&quot;The EXE file name is &quot;</span> + buf, document.title, MB_ICONINFORMATION);
 </pre></div><p>Another usage is to use <a class="el" href="interface_buffer.html" title="Buffer object represents a fixed size buffer, used as parameters in Dll function call.">Buffer</a> object as pointer to a buffer, note that the 4 bytes <a class="el" href="interface_buffer.html" title="Buffer object represents a fixed size buffer, used as parameters in Dll function call.">Buffer</a> object is used directly as an integer value:</p>
 <div class="fragment"><pre class="fragment">    addFunc(<span class="stringliteral">&#39;user32.dll&#39;</span>, <span class="stringliteral">&#39;DWORD GetWindowThreadProcessId(HWND hWnd, LPDWORD lpdwProcessId);&#39;</span>);
 
     var createBuffer = dllCall.newBuffer, <span class="comment">// method newBuffer can be referred by a variable just like other JavaScript methods</span>
         processID = createBuffer(4),
-        threadID = dllCall.GetWindowThreadProcessId(<a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.hostWnd, processID);
+        threadID = dllCall.GetWindowThreadProcessId(<a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.hostWnd, processID);
 
     <span class="comment">// The 4 bytes buffer can be used as an integer value</span>
-    messageBox(<a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.hostWnd, <span class="stringliteral">&quot;Process ID is &quot;</span> + processID + <span class="stringliteral">&quot;, Thread ID is &quot;</span> + threadID, document.title, MB_ICONINFORMATION);
+    messageBox(<a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.hostWnd, <span class="stringliteral">&quot;Process ID is &quot;</span> + processID + <span class="stringliteral">&quot;, Thread ID is &quot;</span> + threadID, document.title, MB_ICONINFORMATION);
 </pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_c_o_m.html#a14285e3676c39b414cac2652046ec881" title="Create COM object by ProgID, optionally specify object location.">COM.createObject</a> | <a class="el" href="interface_dll_call.html#ab6730ea57a7678c1f07953ce331edca0" title="Add function exported by DLL or EXE file as a method of current DllCall object.">DllCall.add</a> | <a class="el" href="interface_dll_call.html#af9c99ab123bbf569e623a9c5e5c9f40e" title="Create a Buffer object, optionaly initialized it to given value.">DllCall.newBuffer</a> | <a class="el" href="interface_structure.html" title="Structure object represents a C struct, used as parameters in Dll function call.">Structure</a> | <a href="http://msdn.microsoft.com/en-us/library/ms683197(VS.85).aspx" target="_blank">GetModuleFileName Function</a> | <a href="http://msdn.microsoft.com/en-us/library/ms633522(VS.85).aspx" target="_blank">GetWindowThreadProcessId Function</a> | <a href="http://msdn.microsoft.com/en-us/library/ms645505(VS.85).aspx" target="_blank">MessageBox Function</a> </dd></dl>
 <hr/><h2>Method Documentation</h2>
 <a class="anchor" id="ae92cd8c68053b3cd5197dfdd93f39529"></a><!-- doxytag: member="Buffer::clone" ref="ae92cd8c68053b3cd5197dfdd93f39529" args="()" -->
@@ -205,10 +205,10 @@ Properties</h2></td></tr>
     var processID = dllCall.newBuffer(4),
 
         <span class="comment">// INCORRECT: DO NOT pass the address property to Dll function when the Dll function asks for a pointer !!!</span>
-        threadID = dllCall.GetWindowThreadProcessId(<a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.hostWnd, processID.address);
+        threadID = dllCall.GetWindowThreadProcessId(<a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.hostWnd, processID.address);
 
     <span class="comment">// CORRECT: Pass the buffer object instead.</span>
-    threadID = dllCall.GetWindowThreadProcessId(<a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.hostWnd, processID);
+    threadID = dllCall.GetWindowThreadProcessId(<a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.hostWnd, processID);
 </pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_structure.html" title="Structure object represents a C struct, used as parameters in Dll function call.">Structure</a> | <a class="el" href="interface_structure.html#a0ce42643bb28edae3ef95829c7257d18" title="Append field to Structure object, optionally specify field name.">Structure.add</a> | <a class="el" href="interface_structure.html#a948cb08f27bc32eb7afdd80cfc6f0486" title="ReadOnly. Returns an object represents a pointer to the Structure object.">Structure.address</a> </dd></dl>
 
 </div>
@@ -239,7 +239,7 @@ Properties</h2></td></tr>
 <dl class="user"><dt><b></b></dt><dd></dd></dl>
 <p>If <em>offsetBytes</em> &gt;= <a class="el" href="interface_buffer.html#a37363161b41c4165b98cba7abc7a9d95" title="ReadOnly. Returns the size of the buffer in bytes.">Buffer.size</a>, or offsetBytes &lt; (-1 * <a class="el" href="interface_buffer.html#a37363161b41c4165b98cba7abc7a9d95" title="ReadOnly. Returns the size of the buffer in bytes.">Buffer.size</a>), or <a class="el" href="interface_buffer.html#a37363161b41c4165b98cba7abc7a9d95" title="ReadOnly. Returns the size of the buffer in bytes.">Buffer.size</a> is zero, an error will be generated.</p>
 <p><a class="anchor" id="parameterized_property_usage"></a><a class="el" href="interface_buffer.html#a9b4cb31d5174d4de8731ed3af15e348e" title="Get or set the 1 byte value of the buffer, optionally at given offset.">Buffer.asByte</a> is a Parameterized Property, which is not often seen in JavaScript programming. Here are how Parameterized Property is used:</p>
-<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;DllCall&quot;</span>),
+<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;DllCall&quot;</span>),
         buf = dllCall.newBuffer(1);
 
     buf.asByte = 4; <span class="comment">// set the first byte in the buffer to 4.</span>
@@ -285,7 +285,7 @@ Properties</h2></td></tr>
 <p>If <em>offsetBytes</em> + 1 &gt;= <a class="el" href="interface_buffer.html#a37363161b41c4165b98cba7abc7a9d95" title="ReadOnly. Returns the size of the buffer in bytes.">Buffer.size</a>, or offsetBytes &lt; (-1 * <a class="el" href="interface_buffer.html#a37363161b41c4165b98cba7abc7a9d95" title="ReadOnly. Returns the size of the buffer in bytes.">Buffer.size</a>), or <a class="el" href="interface_buffer.html#a37363161b41c4165b98cba7abc7a9d95" title="ReadOnly. Returns the size of the buffer in bytes.">Buffer.size</a> &lt; 2, an error will be generated.</p>
 <p><a class="el" href="interface_buffer.html#ae60d4e9dd793b189919de121e297f2d6" title="Get or set the 2 bytes value of the buffer, optionally at given offset.">Buffer.asShort</a> is a Parameterized Property. Refer to <a class="el" href="interface_buffer.html#a9b4cb31d5174d4de8731ed3af15e348e" title="Get or set the 1 byte value of the buffer, optionally at given offset.">Buffer.asByte</a> to see <a href="#parameterized_property_usage">how to use Parameterized Property</a>.</p>
 <p>A <a class="el" href="interface_buffer.html" title="Buffer object represents a fixed size buffer, used as parameters in Dll function call.">Buffer</a> object whose size is 2 byte can be used as short value by default:</p>
-<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;DllCall&quot;</span>),
+<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;DllCall&quot;</span>),
         buf = dllCall.newBuffer(2);
 
     buf = 1024;
@@ -321,7 +321,7 @@ Properties</h2></td></tr>
 <p>If <em>offsetBytes</em> + 3 &gt;= <a class="el" href="interface_buffer.html#a37363161b41c4165b98cba7abc7a9d95" title="ReadOnly. Returns the size of the buffer in bytes.">Buffer.size</a>, or offsetBytes &lt; (-1 * <a class="el" href="interface_buffer.html#a37363161b41c4165b98cba7abc7a9d95" title="ReadOnly. Returns the size of the buffer in bytes.">Buffer.size</a>), or <a class="el" href="interface_buffer.html#a37363161b41c4165b98cba7abc7a9d95" title="ReadOnly. Returns the size of the buffer in bytes.">Buffer.size</a> &lt; 4, an error will be generated.</p>
 <p><a class="el" href="interface_buffer.html#ad1b100412adf8563f02dab7d03e1ed49" title="Get or set the 4 bytes value of the buffer, optionally at given offset.">Buffer.asLong</a> is a Parameterized Property. Refer to <a class="el" href="interface_buffer.html#a9b4cb31d5174d4de8731ed3af15e348e" title="Get or set the 1 byte value of the buffer, optionally at given offset.">Buffer.asByte</a> to see <a href="#parameterized_property_usage">how to use Parameterized Property</a>.</p>
 <p>A <a class="el" href="interface_buffer.html" title="Buffer object represents a fixed size buffer, used as parameters in Dll function call.">Buffer</a> object whose size is 4 byte can be used as long value by default:</p>
-<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;DllCall&quot;</span>),
+<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;DllCall&quot;</span>),
         buf = dllCall.newBuffer(4);
 
     buf = 102400;
@@ -357,7 +357,7 @@ Properties</h2></td></tr>
 <p>If <em>offsetBytes</em> + 7 &gt;= <a class="el" href="interface_buffer.html#a37363161b41c4165b98cba7abc7a9d95" title="ReadOnly. Returns the size of the buffer in bytes.">Buffer.size</a>, or offsetBytes &lt; (-1 * <a class="el" href="interface_buffer.html#a37363161b41c4165b98cba7abc7a9d95" title="ReadOnly. Returns the size of the buffer in bytes.">Buffer.size</a>), or <a class="el" href="interface_buffer.html#a37363161b41c4165b98cba7abc7a9d95" title="ReadOnly. Returns the size of the buffer in bytes.">Buffer.size</a> &lt; 8, an error will be generated.</p>
 <p><a class="el" href="interface_buffer.html#ad4a18dcb3d2b30cfffde1c69bcbe27ac" title="Get or set the 8 bytes value of the buffer, optionally at given offset.">Buffer.asLongLong</a> is a Parameterized Property. Refer to <a class="el" href="interface_buffer.html#a9b4cb31d5174d4de8731ed3af15e348e" title="Get or set the 1 byte value of the buffer, optionally at given offset.">Buffer.asByte</a> to see <a href="#parameterized_property_usage">how to use Parameterized Property</a>.</p>
 <p>A <a class="el" href="interface_buffer.html" title="Buffer object represents a fixed size buffer, used as parameters in Dll function call.">Buffer</a> object whose size is 8 byte can be used as 64 bits integer value by default:</p>
-<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;DllCall&quot;</span>),
+<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;DllCall&quot;</span>),
         buf = dllCall.newBuffer(8);
 
     buf = 102400;
@@ -392,7 +392,7 @@ Properties</h2></td></tr>
 </dd></dl>
 <dl class="user"><dt><b></b></dt><dd></dd></dl>
 <p>If the string to be set extends beyond the buffer boundary, an error will be generated:</p>
-<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;DllCall&quot;</span>),
+<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;DllCall&quot;</span>),
         ansi_buf = dllCall.newBuffer(<span class="stringliteral">&quot;ANSI12345678&quot;</span>, <span class="keyword">true</span>); <span class="comment">// Create an ANSI string buffer</span>
 
     ansi_buf.asStringA(4) = <span class="stringliteral">&quot;abcde&quot;</span>; <span class="comment">// OK, the buffer will hold ANSIabcde678</span>
@@ -402,7 +402,7 @@ Properties</h2></td></tr>
 </pre></div><p><a class="el" href="interface_buffer.html#a38cfdfb341762d2219745b74fc6d4098" title="Get or set the ANSI string value of the buffer, optionally at given offset.">Buffer.asStringA</a> is a Parameterized Property. Refer to <a class="el" href="interface_buffer.html#a9b4cb31d5174d4de8731ed3af15e348e" title="Get or set the 1 byte value of the buffer, optionally at given offset.">Buffer.asByte</a> to see <a href="#parameterized_property_usage">how to use Parameterized Property</a>.</p>
 <p>In most cases, if the buffer is simply used to retrieve string from Dll function and passed around, you don't need to call this function explicitly.</p>
 <p>Given following code to call the ANSI version of Windows API function <a href="http://msdn.microsoft.com/en-us/library/ms683197(VS.85).aspx" target="_blank">GetModuleFileName</a>, which is exported as <code>GetModuleFileNameA:</code> </p>
-<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;DllCall&quot;</span>),
+<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;DllCall&quot;</span>),
         buf = dllCall.newBuffer(512); <span class="comment">// create a 512 bytes buffer</span>
 
     <span class="comment">// Please be noted that the function name is GetModuleFileNameA and the type of parameter lpFilename is LPSTR, which means ANSI string.</span>
@@ -414,7 +414,7 @@ Properties</h2></td></tr>
 <div class="fragment"><pre class="fragment">    var MB_ICONINFORMATION = 0x00000040; <span class="comment">// The constants used by MessageBox can be found in MSDN</span>
 
     dllCall.add(<span class="stringliteral">&quot;user32.dll&quot;</span>, <span class="stringliteral">&quot;int MessageBox(HWND hWnd,LPCTSTR lpText,LPCTSTR lpCaption,UINT uType);&quot;</span>);
-    dllCall.MessageBox(<a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.hostWnd, <span class="stringliteral">&quot;The EXE file name is &quot;</span> + buf, document.title, MB_ICONINFORMATION);
+    dllCall.MessageBox(<a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.hostWnd, <span class="stringliteral">&quot;The EXE file name is &quot;</span> + buf, document.title, MB_ICONINFORMATION);
 </pre></div><dl class="note"><dt><b>Note:</b></dt><dd>Although the <a class="el" href="interface_buffer.html" title="Buffer object represents a fixed size buffer, used as parameters in Dll function call.">Buffer</a> object can be used as string value after filled with string, it's still a <a class="el" href="interface_buffer.html" title="Buffer object represents a fixed size buffer, used as parameters in Dll function call.">Buffer</a> object, <em>NOT</em> a <code>String</code> object in JavaScript. It doesn't support the methods of JavaScript <code>String</code> object.</dd></dl>
 <dl class="user"><dt><b></b></dt><dd>There is a simple work around for this:</dd></dl>
 <div class="fragment"><pre class="fragment">    var str = buf, <span class="comment">// save the string value represented by buf into a real String object</span>
@@ -453,7 +453,7 @@ Properties</h2></td></tr>
 </dd></dl>
 <dl class="user"><dt><b></b></dt><dd></dd></dl>
 <p>If the string to be set extends beyond the buffer boundary, an error will be generated:</p>
-<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;DllCall&quot;</span>),
+<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;DllCall&quot;</span>),
         buf = dllCall.newBuffer(<span class="stringliteral">&quot;UNICODE12345678&quot;</span>); <span class="comment">// Create an UNICODE string buffer</span>
 
     <span class="comment">// Note that for UNICODE string, each character takes 2 bytes, and the offset is by bytes</span>
@@ -464,7 +464,7 @@ Properties</h2></td></tr>
 </pre></div><p><a class="el" href="interface_buffer.html#a6d6c189bbcee710e8bc2481099d1a5d1" title="Get or set the UNICODE string value of the buffer, optionally at given offset.">Buffer.asStringW</a> is a Parameterized Property. Refer to <a class="el" href="interface_buffer.html#a9b4cb31d5174d4de8731ed3af15e348e" title="Get or set the 1 byte value of the buffer, optionally at given offset.">Buffer.asByte</a> to see <a href="#parameterized_property_usage">how to use Parameterized Property</a>.</p>
 <p>In most cases, if the buffer is simply used to retrieve string from Dll function and passed around, you don't need to call this function explicitly. The sample code at <a href="#_details">Detailed Description of Buffer Object</a> demonstrates using UNICODE string buffer object directly as as a string value.</p>
 <p>A <a class="el" href="interface_buffer.html" title="Buffer object represents a fixed size buffer, used as parameters in Dll function call.">Buffer</a> object whose size is not 1, 2, 4, nor 8 byte can be used as UNICODE string value by default:</p>
-<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;DllCall&quot;</span>),
+<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;DllCall&quot;</span>),
         buf = dllCall.newBuffer(128);
 
     buf = <span class="stringliteral">&quot;UNICODE String&quot;</span>;
@@ -494,7 +494,7 @@ Properties</h2></td></tr>
 
 <p>ReadOnly. Returns the size of the buffer in bytes. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The size of the buffer in bytes.</dd></dl>
-<dl class="note"><dt><b>Note:</b></dt><dd>String length (or string buffer size) in most Windows API are counted by characters, not by bytes. Since <a class="el" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a> uses UNICODE string (each single character takes 2 bytes) by default, when pass buffer as string to Windows API, unless ANSI string is explicitly used, remember the buffer size passed to Windows API should be <code>buffer.size / 2</code>, or <code>buffer.size &gt;&gt; 1</code>.</dd></dl>
+<dl class="note"><dt><b>Note:</b></dt><dd>String length (or string buffer size) in most Windows API are counted by characters, not by bytes. Since <a class="el" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a> uses UNICODE string (each single character takes 2 bytes) by default, when pass buffer as string to Windows API, unless ANSI string is explicitly used, remember the buffer size passed to Windows API should be <code>buffer.size / 2</code>, or <code>buffer.size &gt;&gt; 1</code>.</dd></dl>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_structure.html#a37363161b41c4165b98cba7abc7a9d95" title="ReadOnly. Returns the size of the structure (represented by the Structure object) in bytes...">Structure.size</a> </dd></dl>
 
 </div>

@@ -90,7 +90,7 @@ function toggleVisibility(linkObj) {
   <div class="headertitle">
 <h1>Threading Class Reference<br/>
 <small>
-[<a class="el" href="group___j_s_objects.html">LocalJS Objects (Native)</a>]</small>
+[<a class="el" href="group___j_s_objects.html">LocalJS Objects (Advanced)</a>]</small>
 </h1>  </div>
 </div>
 <div class="contents">
@@ -113,10 +113,10 @@ Properties</h2></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p><a class="el" href="interface_threading.html" title="Threading object exposes methods to create new script thread, sleep, get thread id, etc.">Threading</a> object exposes methods to create new script thread, sleep, get thread id, etc. </p>
-<p>Retrieved from property <a class="el" href="interfacelocal_j_s.html#ac12d811a674c6cc7417b6f9a8d39736c">threading</a> of Object <a class="el" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>. <p>To get access to object <a class="el" href="interface_threading.html" title="Threading object exposes methods to create new script thread, sleep, get thread id, etc.">Threading</a>: </p>
-<div class="fragment"><pre class="fragment">    var threading = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.threading;
+<p>Retrieved from property <a class="el" href="interfacelocal_j_s.html#ac12d811a674c6cc7417b6f9a8d39736c">threading</a> of Object <a class="el" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>. <p>To get access to object <a class="el" href="interface_threading.html" title="Threading object exposes methods to create new script thread, sleep, get thread id, etc.">Threading</a>: </p>
+<div class="fragment"><pre class="fragment">    var threading = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.threading;
 </pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_threading.html">Object Threading</a> </dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a> </dd></dl>
 <hr/><h2>Method Documentation</h2>
 <a class="anchor" id="ab83b569dcb6b1ed35d6e9f13a8376a64"></a><!-- doxytag: member="Threading::newThread" ref="ab83b569dcb6b1ed35d6e9f13a8376a64" args="(String code,[optional] String language,[optional] var arguments)" -->
 <div class="memitem">
@@ -162,11 +162,11 @@ Properties</h2></td></tr>
 <dl class="note"><dt><b>Note:</b></dt><dd>The supported JScript version is 5.7</dd></dl>
 <h3>Prepare the code</h3>
 <p>A very simple demostration of script thread:</p>
-<div class="fragment"><pre class="fragment">    <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.threading.newThread(<span class="stringliteral">&quot;var var_in_thread = 1;&quot;</span>);
+<div class="fragment"><pre class="fragment">    <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.threading.newThread(<span class="stringliteral">&quot;var var_in_thread = 1;&quot;</span>);
 </pre></div><p>Obviously simple thread as above is not very useful. In most cases, script for new thread are saved in disk files. Following function returns content of the file with <a href="http://msdn.microsoft.com/en-us/library/t58aa4dd(VS.85).aspx" target="_blank">ReadAll Method</a> of <a href="http://msdn.microsoft.com/en-us/library/312a5kbt(VS.85).aspx" target="_blank">TextStream Object</a>:</p>
 <div class="fragment"><pre class="fragment">    var fnReadFile = function(file_name)
     {
-        var fso = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;Scripting.FileSystemObject&quot;</span>),
+        var fso = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;Scripting.FileSystemObject&quot;</span>),
             f = fso.OpenTextFile(file_name);
 
         <span class="keywordflow">if</span> (f.AtEndOfStream)
@@ -177,7 +177,7 @@ Properties</h2></td></tr>
 </pre></div><p>One limitation of <a href="http://msdn.microsoft.com/en-us/library/6kxy1a51(VS.85).aspx" target="_blank">FileSystemObject</a> is it can only read files in either ANSI or utf-16 format: it will fail to read utf-8 format file correctly. For utf-8 format file, read with <a href="http://msdn.microsoft.com/en-us/library/ms675032(VS.85).aspx" target="_blank">Stream Object (ADO)</a> instead:</p>
 <div class="fragment"><pre class="fragment">    var fnReadUTF8File = function(file_name)
     {
-        var objStream = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;ADODB.Stream&quot;</span>);
+        var objStream = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;ADODB.Stream&quot;</span>);
 
         objStream.Open();
         objStream.Charset = <span class="stringliteral">&quot;utf-8&quot;</span>;
@@ -190,7 +190,7 @@ Properties</h2></td></tr>
 </pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a href="http://msdn.microsoft.com/en-us/library/6kxy1a51(VS.85).aspx" target="_blank">FileSystemObject</a> | <a href="http://msdn.microsoft.com/en-us/library/312a5kbt(VS.85).aspx" target="_blank">TextStream Object</a> | <a href="http://msdn.microsoft.com/en-us/library/t58aa4dd(VS.85).aspx" target="_blank">ReadAll Method</a> | <a href="http://msdn.microsoft.com/en-us/library/ms675032(VS.85).aspx" target="_blank">Stream Object (ADO)</a></dd></dl>
 <h3>Receive arguments through <code>threadArg</code> Object</h3>
 <p>Now the code is ready, the next step is to pass arguments to new thread. Suppose there are 3 variables <code>val1</code>, <code>val2</code> and <code>val3</code> to be passed to new thread, they can be grouped into a JavaScript array and passed as one argument:</p>
-<div class="fragment"><pre class="fragment">    <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.threading.newThread(fnReadFile(<span class="stringliteral">&quot;c:\\script_thread.js&quot;</span>), [val1, val2, val3]);
+<div class="fragment"><pre class="fragment">    <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.threading.newThread(fnReadFile(<span class="stringliteral">&quot;c:\\script_thread.js&quot;</span>), [val1, val2, val3]);
 </pre></div><p>Then in the script thread, the argument is available through a global object <code>threadArg:</code> </p>
 <div class="fragment"><pre class="fragment">    <span class="comment">// This is code in new thread</span>
     var val_in_thread1 = threadArg[0],
@@ -198,7 +198,7 @@ Properties</h2></td></tr>
         val_in_thread3 = threadArg[2];
 </pre></div><p>Remember JavaScript functions are variables themselves, so functions can be passed to thread just as other type of variables.</p>
 <p>Alternatively, these 3 variables can be grouped into one JavaScript object:</p>
-<div class="fragment"><pre class="fragment">    <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.threading.newThread(fnReadFile(<span class="stringliteral">&quot;c:\\script_thread.js&quot;</span>), {<span class="stringliteral">&#39;arg1&#39;</span> : val1, <span class="stringliteral">&#39;arg2&#39;</span> : val2, <span class="stringliteral">&#39;arg3&#39;</span> : val3]);
+<div class="fragment"><pre class="fragment">    <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.threading.newThread(fnReadFile(<span class="stringliteral">&quot;c:\\script_thread.js&quot;</span>), {<span class="stringliteral">&#39;arg1&#39;</span> : val1, <span class="stringliteral">&#39;arg2&#39;</span> : val2, <span class="stringliteral">&#39;arg3&#39;</span> : val3]);
 </pre></div><p>And in script thread, the arguments can be referred by name through <code>threadArg:</code> </p>
 <div class="fragment"><pre class="fragment">    <span class="comment">// This is code in new thread</span>
     var val_in_thread1 = threadArg[<span class="stringliteral">&#39;arg1&#39;</span>],
@@ -206,8 +206,8 @@ Properties</h2></td></tr>
         val_in_thread3 = threadArg[<span class="stringliteral">&#39;arg3&#39;</span>];
 </pre></div><dl class="note"><dt><b>Note:</b></dt><dd>Object <code>threadArg</code> is <em>ONLY</em> globaly available in script threads created by <a class="el" href="interface_threading.html#ab83b569dcb6b1ed35d6e9f13a8376a64">newThread</a> method. <em>NOT</em> available in script running in browser.</dd></dl>
 <h3>localJS object in thread</h3>
-<p>In addition to <code>threadArg</code>, there is another gloabl object available in script thread: <a class="el" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a> object.</p>
-<p>The <a class="el" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a> object in script thread does <em>NOT</em> have browser related properties and methods. It has <em>ONLY</em> 3 properties and no methods: </p>
+<p>In addition to <code>threadArg</code>, there is another gloabl object available in script thread: <a class="el" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a> object.</p>
+<p>The <a class="el" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a> object in script thread does <em>NOT</em> have browser related properties and methods. It has <em>ONLY</em> 3 properties and no methods: </p>
 <ul>
 <li><a class="el" href="interfacelocal_j_s.html#ac46dd82aca231ab33f6308ba12975594">COM</a>, returns <a class="el" href="interface_c_o_m.html">Object COM</a> </li>
 <li><a class="el" href="interfacelocal_j_s.html#ac12d811a674c6cc7417b6f9a8d39736c">threading</a>, returns <a class="el" href="interface_threading.html">Object Threading</a> </li>
@@ -218,12 +218,12 @@ Properties</h2></td></tr>
 <ul>
 <li>If the <a class="el" href="interface_thread.html" title="Represent a script thread.">Thread</a> object returned by <a class="el" href="interface_threading.html#ab83b569dcb6b1ed35d6e9f13a8376a64">newThread</a> method is ignored as below:</li>
 </ul>
-<div class="fragment"><pre class="fragment">    <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.threading.newThread(fnReadFile(<span class="stringliteral">&quot;c:\\script_thread.js&quot;</span>), [val1, val2, val3]);
+<div class="fragment"><pre class="fragment">    <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.threading.newThread(fnReadFile(<span class="stringliteral">&quot;c:\\script_thread.js&quot;</span>), [val1, val2, val3]);
 </pre></div><dl class="user"><dt><b></b></dt><dd>Then the thread will run until script in thread exits (the thread terminates itself), or process ends (which is a forced termination). There is no more control to the thread created.</dd></dl>
 <ul>
 <li>If the <a class="el" href="interface_thread.html" title="Represent a script thread.">Thread</a> object returned by <a class="el" href="interface_threading.html#ab83b569dcb6b1ed35d6e9f13a8376a64">newThread</a> method is referred by a variable:</li>
 </ul>
-<div class="fragment"><pre class="fragment">    var thr = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.threading.newThread(fnReadFile(<span class="stringliteral">&quot;c:\\script_thread.js&quot;</span>), [val1, val2, val3]);
+<div class="fragment"><pre class="fragment">    var thr = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.threading.newThread(fnReadFile(<span class="stringliteral">&quot;c:\\script_thread.js&quot;</span>), [val1, val2, val3]);
 </pre></div><dl class="user"><dt><b></b></dt><dd>Then the thread will run until script in thread exits (the thread terminates itself), or all variables referring <code>thr</code> have run out of scope (which is a forced termination).</dd></dl>
 <ul>
 <li>If it's unwanted to force terminate the thread when all referring variables run out of scope, use method <a class="el" href="interface_thread.html#aa4c7e8ce5147b0a22d6f2543c017a937" title="Detach the underlying thread apart from the Thread object.">Thread.detach</a>:</li>

@@ -90,7 +90,7 @@ function toggleVisibility(linkObj) {
   <div class="headertitle">
 <h1>WindowHook Class Reference<br/>
 <small>
-[<a class="el" href="group___j_s_objects.html">LocalJS Objects (Native)</a>]</small>
+[<a class="el" href="group___j_s_objects.html">LocalJS Objects (Advanced)</a>]</small>
 </h1>  </div>
 </div>
 <div class="contents">
@@ -121,7 +121,7 @@ Properties</h2></td></tr>
 <p>Hook messages of the specified window. </p>
 <p><a class="el" href="interface_window_hook.html" title="Hook messages of the specified window.">WindowHook</a> object is created by <a class="el" href="interface_c_o_m.html#a14285e3676c39b414cac2652046ec881" title="Create COM object by ProgID, optionally specify object location.">COM.createObject</a> method as following:</p>
 <div class="fragment"><pre class="fragment">    <span class="comment">// The second parameter is HWND handle to a window in same process:</span>
-    var hooker = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;WindowHook&quot;</span>, <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.hostWnd);
+    var hooker = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;WindowHook&quot;</span>, <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.hostWnd);
 </pre></div><p>The handle of current hooked window can be retrieved through property <a class="el" href="interface_window_hook.html#a5c785feafd2dd03964acb3813cc605a8" title="ReadOnly. Returns handle of current hooked window.">WindowHook.hookedWnd</a>.</p>
 <p>A typical usage of object <a class="el" href="interface_window_hook.html" title="Hook messages of the specified window.">WindowHook</a> is to hook the current browser window to process <code>WM_CLOSE</code> message, to get a chance to prompt user to confirm closing the browser window. When user closes browser window through context menu of window title bar, or shortcut key Alt-F4, JavaScript event <code>onbeforeunload</code> is <em>NOT</em> triggerred, thus <a class="el" href="interface_window_hook.html" title="Hook messages of the specified window.">WindowHook</a> is the <em>ONLY</em> way to go.</p>
 <p>Sample code below demostrates how to hook <code>WM_CLOSE</code> of current browser window.</p>
@@ -134,7 +134,7 @@ Properties</h2></td></tr>
         MB_DEFBUTTON2 = 0x00000100;
 </pre></div><dl class="user"><dt><b></b></dt><dd>Prepare <a class="el" href="interface_dll_call.html" title="DllCall object enables JavaScript call functions exported by DLL or EXE files, including most Windows...">DllCall</a> object to call <a href="http://msdn.microsoft.com/en-us/library/ms645505(VS.85).aspx" target="_blank">MessageBox Function</a>:</dd></dl>
 <div class="fragment"><pre class="fragment">    var doc = document,
-        local_js = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>,
+        local_js = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>,
         hostWnd = local_js.hostWnd, <span class="comment">// hostWnd property return handle of browser window</span>
         createObject = local_js.COM.createObject,
         dllCall = createObject(<span class="stringliteral">&quot;DllCall&quot;</span>);
@@ -175,7 +175,7 @@ Properties</h2></td></tr>
         hooker.unhook();
         hooker2.unhook();
     });
-</pre></div><dl class="note"><dt><b>Note:</b></dt><dd>Only window in same process can be hooked. For standalone LocalJS Internet Explorer application, Internet Explorer runs in a process different from the process <a class="el" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a> objects exit, so <a class="el" href="interface_window_hook.html" title="Hook messages of the specified window.">WindowHook</a> cannot hook the Window procedure of the Internet Explorer window.</dd></dl>
+</pre></div><dl class="note"><dt><b>Note:</b></dt><dd>Only window in same process can be hooked. For standalone LocalJS Internet Explorer application, Internet Explorer runs in a process different from the process <a class="el" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a> objects exit, so <a class="el" href="interface_window_hook.html" title="Hook messages of the specified window.">WindowHook</a> cannot hook the Window procedure of the Internet Explorer window.</dd></dl>
 <dl class="user"><dt><b></b></dt><dd>However, JavaScript objects in Internet Explorer can still co-operate with JavaScript objects in other LocalJS browser windows (crossing process boundary).</dd></dl>
 <dl class="user"><dt><b></b></dt><dd>When user closes window of Internet Explorer, JavaScript event <code>onbeforeunload</code> is triggerred, so you still have the chance to prompt user to confirm closing window.</dd></dl>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_dll_call.html" title="DllCall object enables JavaScript call functions exported by DLL or EXE files, including most Windows...">DllCall</a> | <a class="el" href="interface_c_o_m.html#a14285e3676c39b414cac2652046ec881" title="Create COM object by ProgID, optionally specify object location.">COM.createObject</a> | <a class="el" href="interfacelocal_j_s.html#aa05066bf1c7f31ea898c0d2aed29eedb" title="ReadOnly. Returns the HWND handle of current browser window.">localJS.hostWnd</a> | <a href="http://msdn.microsoft.com/en-us/library/ms632617(VS.85).aspx" target="_blank">WM_CLOSE Message</a> | <a href="http://msdn.microsoft.com/en-us/library/ms645505(VS.85).aspx" target="_blank">MessageBox Function</a> | <a href="http://msdn.microsoft.com/en-us/library/ms632586(VS.85).aspx" target="_blank">Windows and Messages</a> | <a href="http://msdn.microsoft.com/en-us/library/ms632593(VS.85).aspx" target="_blank">Window Procedures</a> </dd></dl>

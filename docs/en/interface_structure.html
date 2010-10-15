@@ -90,7 +90,7 @@ function toggleVisibility(linkObj) {
   <div class="headertitle">
 <h1>Structure Class Reference<br/>
 <small>
-[<a class="el" href="group___j_s_objects.html">LocalJS Objects (Native)</a>]</small>
+[<a class="el" href="group___j_s_objects.html">LocalJS Objects (Advanced)</a>]</small>
 </h1>  </div>
 </div>
 <div class="contents">
@@ -129,7 +129,7 @@ Properties</h2></td></tr>
 <p><a class="el" href="interface_structure.html" title="Structure object represents a C struct, used as parameters in Dll function call.">Structure</a> object represents a C struct, used as parameters in Dll function call. </p>
 <p><a class="el" href="interface_structure.html" title="Structure object represents a C struct, used as parameters in Dll function call.">Structure</a> object is used as parameters of type pointer (pointer to a struct) in Dll function call. Fields of <a class="el" href="interface_structure.html" title="Structure object represents a C struct, used as parameters in Dll function call.">Structure</a> can be appended to <a class="el" href="interface_structure.html" title="Structure object represents a C struct, used as parameters in Dll function call.">Structure</a> object through methods of <a class="el" href="interface_structure.html" title="Structure object represents a C struct, used as parameters in Dll function call.">Structure</a> object.</p>
 <p><a class="el" href="interface_structure.html" title="Structure object represents a C struct, used as parameters in Dll function call.">Structure</a> object is created from <a class="el" href="interface_dll_call.html" title="DllCall object enables JavaScript call functions exported by DLL or EXE files, including most Windows...">DllCall</a> object as following:</p>
-<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;DllCall&quot;</span>),
+<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;DllCall&quot;</span>),
         createStruct = dllCall.newStruct, <span class="comment">// newStruct method can be referred by a variable just like other JavaScript functions.</span>
         rect = createStruct(); <span class="comment">// create an empty Structure object</span>
 </pre></div><p>Methods <a class="el" href="interface_structure.html#a0ce42643bb28edae3ef95829c7257d18">add</a>, <a class="el" href="interface_structure.html#a9823b3580b74ed81cf6542b5df88eff1">addByte</a>, <a class="el" href="interface_structure.html#add3df9b88b7ecc45ee30cd9969020c28">addShort</a>, <a class="el" href="interface_structure.html#a9281de28bee204692288a33173e38568">addLong</a>, <a class="el" href="interface_structure.html#a6fb29719905b419d362cb7db84fc363c">addLongLong</a> of <a class="el" href="interface_structure.html" title="Structure object represents a C struct, used as parameters in Dll function call.">Structure</a> object all append fields to <a class="el" href="interface_structure.html" title="Structure object represents a C struct, used as parameters in Dll function call.">Structure</a> object with an optional field name.</p>
@@ -154,7 +154,7 @@ Properties</h2></td></tr>
     addFunc(<span class="stringliteral">&#39;user32.dll&#39;</span>, <span class="stringliteral">&#39;BOOL WINAPI GetWindowPlacement(__in HWND hWnd, __inout WINDOWPLACEMENT *lpwndpl);&#39;</span>);
     addFunc(<span class="stringliteral">&#39;user32.dll&#39;</span>, <span class="stringliteral">&#39;BOOL WINAPI SetWindowPlacement(__in HWND hWnd, __in const WINDOWPLACEMENT *lpwndpl);&#39;</span>);
 
-    var hostWnd = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.hostWnd,
+    var hostWnd = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.hostWnd,
         SW_SHOWNA = 8; <span class="comment">// refer to WINDOWPLACEMENT in MSDN for value of SW_SHOWNA</span>
 
     <span class="keywordflow">if</span> (dllCall.GetWindowPlacement(hostWnd, placement))
@@ -238,7 +238,7 @@ Properties</h2></td></tr>
 <dl class="user"><dt><b></b></dt><dd>Sample function below creates a <a class="el" href="interface_structure.html" title="Structure object represents a C struct, used as parameters in Dll function call.">Structure</a> object represents an <a href="http://msdn.microsoft.com/en-us/library/ms646839(VS.85).aspx" target="_blank">OPENFILENAME Structure</a>:</dd></dl>
 <div class="fragment"><pre class="fragment">    var fnCreateOpenFileName = function() <span class="comment">// creation of complex structures can be wrapped up in functions to hide detail</span>
     {
-        var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&#39;DllCall&#39;</span>),
+        var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&#39;DllCall&#39;</span>),
 
             <span class="comment">// refer newBuffer method with a variable so JavaScript compressor generates smaller code</span>
             newBuffer = dllCall.newBuffer,
@@ -253,7 +253,7 @@ Properties</h2></td></tr>
 
                     <span class="comment">// The corresponding field in OPENFILENAME is hwndOwner.</span>
                     <span class="comment">// the field name can be ignored if the field doesn&#39;t need to be referred by name</span>
-                    .addLong(<a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.hostWnd)
+                    .addLong(<a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.hostWnd)
 
                     <span class="comment">// In this case, the initial value of the field is omitted (assumed zero if omitted)</span>
                     .addLong(<span class="stringliteral">&#39;hInstance&#39;</span>)
@@ -323,7 +323,7 @@ Pointer fields in C struct, if used in dll call, should be mapped to either <a c
     openfilename.lpstrFile = <span class="stringliteral">&quot;iexplore.exe&quot;</span>;
     openfilename.nMaxFile = openfilename.lpstrFile.size &gt;&gt; 1; <span class="comment">// nMaxFile asks for size in UNICODE characters</span>
 </pre></div><p>After initialized, the <a class="el" href="interface_structure.html" title="Structure object represents a C struct, used as parameters in Dll function call.">Structure</a> object can be passed to Windows API <a href="http://msdn.microsoft.com/en-us/library/ms646927(VS.85).aspx" target="_blank">GetOpenFileName Function</a>:</p>
-<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&#39;DllCall&#39;</span>),
+<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&#39;DllCall&#39;</span>),
 
     dllCall.add(<span class="stringliteral">&quot;comdlg32.dll&quot;</span>, <span class="stringliteral">&quot;BOOL WINAPI GetOpenFileName(__inout LPOPENFILENAME lpofn);&quot;</span>);
     dllCall.add(<span class="stringliteral">&quot;user32.dll&quot;</span>, <span class="stringliteral">&quot;int MessageBox(HWND hWnd,LPCTSTR lpText,LPCTSTR lpCaption,UINT uType);&quot;</span>);
@@ -331,9 +331,9 @@ Pointer fields in C struct, if used in dll call, should be mapped to either <a c
     var MB_ICONINFORMATION = 0x00000040; <span class="comment">// The constants used by MessageBox can be found in MSDN</span>
 
     <span class="keywordflow">if</span> (dllCall.GetOpenFileName(openfilename))
-        dllCall.MessageBox(<a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.hostWnd, <span class="stringliteral">&quot;You just selected &quot;</span> + openfilename.lpstrFile, document.title, MB_ICONINFORMATION);
+        dllCall.MessageBox(<a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.hostWnd, <span class="stringliteral">&quot;You just selected &quot;</span> + openfilename.lpstrFile, document.title, MB_ICONINFORMATION);
     <span class="keywordflow">else</span>
-        dllCall.MessageBox(<a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.hostWnd, <span class="stringliteral">&quot;You just canceled the dialog&quot;</span>, document.title, MB_ICONINFORMATION);
+        dllCall.MessageBox(<a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.hostWnd, <span class="stringliteral">&quot;You just canceled the dialog&quot;</span>, document.title, MB_ICONINFORMATION);
 </pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_structure.html#a9fd5a67375c442dddcf84e715abc92a8" title="Get or set field of the Structure object by zero based index or name.">Structure.field</a> | <a class="el" href="interface_structure.html#a9823b3580b74ed81cf6542b5df88eff1" title="Append a 1 byte field to Structure object, optionally specify initial value and field name...">Structure.addByte</a> | <a class="el" href="interface_structure.html#add3df9b88b7ecc45ee30cd9969020c28" title="Append a 2 bytes field to Structure object, optionally specify initial value and field name...">Structure.addShort</a> | <a class="el" href="interface_structure.html#a9281de28bee204692288a33173e38568" title="Append a 4 bytes field to Structure object, optionally specify initial value and field name...">Structure.addLong</a> | <a class="el" href="interface_structure.html#a6fb29719905b419d362cb7db84fc363c" title="Append a 8 bytes field to Structure object, optionally specify initial value and field name...">Structure.addLongLong</a> | <a class="el" href="interface_dll_call.html#ab6730ea57a7678c1f07953ce331edca0" title="Add function exported by DLL or EXE file as a method of current DllCall object.">DllCall.add</a> | <a href="http://msdn.microsoft.com/en-us/library/ms646839(VS.85).aspx" target="_blank">OPENFILENAME Structure</a> | <a href="http://msdn.microsoft.com/en-us/library/ms646927(VS.85).aspx" target="_blank">GetOpenFileName Function</a> | <a href="http://msdn.microsoft.com/en-us/library/ms645505(VS.85).aspx" target="_blank">MessageBox Function</a> </dd></dl>
 
 </div>
@@ -563,7 +563,7 @@ Pointer fields in C struct, if used in dll call, should be mapped to either <a c
 </dl>
 <p>In addition to access named field like <code>Structure.fieldName</code>, property <a class="el" href="interface_structure.html#a9fd5a67375c442dddcf84e715abc92a8">field</a> provides an unified way to access fields in <a class="el" href="interface_structure.html" title="Structure object represents a C struct, used as parameters in Dll function call.">Structure</a> object. It is a Parameterized Property, which is not often seen in JavaScript programming. Here are sample codes of how to use it:</p>
 <p>First create a <a class="el" href="interface_structure.html" title="Structure object represents a C struct, used as parameters in Dll function call.">Structure</a> for C RECT struct:</p>
-<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;DllCall&quot;</span>),
+<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&quot;DllCall&quot;</span>),
         rect = dllCall.newStruct().addLong(<span class="stringliteral">&quot;left&quot;</span>).addLong(<span class="stringliteral">&quot;top&quot;</span>).addLong(<span class="stringliteral">&quot;right&quot;</span>).addLong(<span class="stringliteral">&quot;bottom&quot;</span>);
 </pre></div><p>To access the fields of the <a class="el" href="interface_structure.html" title="Structure object represents a C struct, used as parameters in Dll function call.">Structure</a> object:</p>
 <div class="fragment"><pre class="fragment">    rect.field(<span class="stringliteral">&quot;left&quot;</span>) = 10;
