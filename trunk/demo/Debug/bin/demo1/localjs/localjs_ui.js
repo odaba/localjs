@@ -413,7 +413,7 @@
 			}
 		};
 
-		this.isRunning = function() { return browserRunning(handle_); };
+		this.isRunning = function() { return browserRunning(handle_) ? true : false; };
 
 		this.getJSWindow = function()
 		{
@@ -493,6 +493,12 @@
 			}
 			else
 			{
+				if (!window_style)
+					window_style = localjs_ui.WS_NORMAL;
+
+				if (!parent_window)
+					parent_window = 0;
+
 				browser = new fnObjBrowserCtor(createBrowser(window_style, left, top, width, height, parent_window, url, 0, 0));
 			}
 
@@ -577,7 +583,7 @@
 			getWindowRect(hostWnd, rect);
 			return rect;
 		}
-		
+
 		localjs_ui.moveWindow = function(left, top, width, height)
 		{
 			moveWindow(hostWnd, left, top, width, height, 1);
