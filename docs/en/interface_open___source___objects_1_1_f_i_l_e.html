@@ -98,7 +98,7 @@ function toggleVisibility(linkObj) {
 </div>
 <div class="contents">
 <!-- doxytag: class="Open_Source_Objects::FILE" -->
-<p>Provide methods for common file and registry operations. Include localjs_file.js to use it.  
+<p>Provide methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.  
 <a href="#_details">More...</a></p>
 
 <p><a href="class_open___source___objects_1_1_f_i_l_e-members.html">List of all members.</a></p>
@@ -108,22 +108,84 @@ Methods</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Methods for INI and registry access</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrp371ee9285a68151c286a152a055f1d53"></a> </p>
 </div></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_open___source___objects_1_1_f_i_l_e.html#ab9954bc8055b82adc93551a16569fcc9">iniReadInt</a> (String filename, String section, String key, int default_value)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Read an integer from INI file.  <a href="#ab9954bc8055b82adc93551a16569fcc9"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_open___source___objects_1_1_f_i_l_e.html#adc8c357fe8077f0b9c0a63493f73cbbc">iniReadStr</a> (String filename, String section, String key, String default_value)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Read a string from INI file.  <a href="#adc8c357fe8077f0b9c0a63493f73cbbc"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_open___source___objects_1_1_f_i_l_e.html#a1fffc9aeebd4703f8d82d3190025b84b">iniWrite</a> (String filename, String section, String key, var value)</td></tr>
-<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Write an entry to INI file.  <a href="#a1fffc9aeebd4703f8d82d3190025b84b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_open___source___objects_1_1_f_i_l_e.html#a0f1894aaa83f22c87ac4cfc0f3ff05be">iniReadInt</a> (String filename, String section, String key,[optional] int default_value)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Read an integer from INI file.  <a href="#a0f1894aaa83f22c87ac4cfc0f3ff05be"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">String&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_open___source___objects_1_1_f_i_l_e.html#a3130fd3652e1b86373b61cfc0348981e">iniReadStr</a> (String filename, String section, String key,[optional] String default_value)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Read a string from INI file.  <a href="#a3130fd3652e1b86373b61cfc0348981e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_open___source___objects_1_1_f_i_l_e.html#ab82c10757856fbd93d04603ce226cb38">iniWrite</a> (String filename, String section, String key,[optional] var value)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Write an entry to INI file or delete the entry from INI file.  <a href="#ab82c10757856fbd93d04603ce226cb38"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">var&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_open___source___objects_1_1_f_i_l_e.html#ae283d76f4b92fd2f67e1db96f607e70c">regRead</a> (String reg_path)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns the value of a key or value-name from the registry.  <a href="#ae283d76f4b92fd2f67e1db96f607e70c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_open___source___objects_1_1_f_i_l_e.html#a461f0e68e5dc507ba50ac94d56a2cfcd">regWrite</a> (String reg_path, var val,[optional] String strType)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Creates a new key, adds another value-name to an existing key (and assigns it a value), or changes the value of an existing value-name.  <a href="#a461f0e68e5dc507ba50ac94d56a2cfcd"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_open___source___objects_1_1_f_i_l_e.html#aa9ccfdf0c38f87f504a5ae2f763977b7">regDelete</a> (String reg_path)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Deletes a key or one of its values from the registry.  <a href="#aa9ccfdf0c38f87f504a5ae2f763977b7"></a><br/></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Methods for file and folder operations</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrp025de87cdf07898d6491d6ee32af7c03"></a> </p>
+</div></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a91fbbb6be53e0d94b74476ef3e475334"></a><!-- doxytag: member="Open_Source_Objects::FILE::fileExists" ref="a91fbbb6be53e0d94b74476ef3e475334" args="(filename)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><b>fileExists</b> (filename)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a288d2030d9ab3027b85ceef22ca59cec"></a><!-- doxytag: member="Open_Source_Objects::FILE::folderExists" ref="a288d2030d9ab3027b85ceef22ca59cec" args="(foldername)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><b>folderExists</b> (foldername)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afd9a85f215b9936805511fbef2fd54a6"></a><!-- doxytag: member="Open_Source_Objects::FILE::getAppDataFolder" ref="afd9a85f215b9936805511fbef2fd54a6" args="(sub_folder)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><b>getAppDataFolder</b> (sub_folder)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a6e8a3f1e6dc5d5c0fd8ffd96b252b431"></a><!-- doxytag: member="Open_Source_Objects::FILE::getProgramFolder" ref="a6e8a3f1e6dc5d5c0fd8ffd96b252b431" args="(sub_folder)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><b>getProgramFolder</b> (sub_folder)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9420a19c7a8cd9709f37d4e0c5084739"></a><!-- doxytag: member="Open_Source_Objects::FILE::getExeFilename" ref="a9420a19c7a8cd9709f37d4e0c5084739" args="()" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><b>getExeFilename</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf8e7d64f5d121fbff514c29694be422"></a><!-- doxytag: member="Open_Source_Objects::FILE::getExeFolder" ref="adf8e7d64f5d121fbff514c29694be422" args="()" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><b>getExeFolder</b> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5916a69f4398a4bcda49539b82e242d3"></a><!-- doxytag: member="Open_Source_Objects::FILE::getParentFolder" ref="a5916a69f4398a4bcda49539b82e242d3" args="(folder)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><b>getParentFolder</b> (folder)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a23282b053afd83fdf49310be16de2ae3"></a><!-- doxytag: member="Open_Source_Objects::FILE::buildPath" ref="a23282b053afd83fdf49310be16de2ae3" args="(parent, child)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><b>buildPath</b> (parent, child)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab6d3e51c0100301b5f06616fe74424f9"></a><!-- doxytag: member="Open_Source_Objects::FILE::readFileUTF8" ref="ab6d3e51c0100301b5f06616fe74424f9" args="(filename)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><b>readFileUTF8</b> (filename)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae2363a4bb64dcaad0d4b58270445582d"></a><!-- doxytag: member="Open_Source_Objects::FILE::writeFileUTF8" ref="ae2363a4bb64dcaad0d4b58270445582d" args="(filename, text)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><b>writeFileUTF8</b> (filename, text)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac2a0aca4674b2b5f5bd957b802a577e7"></a><!-- doxytag: member="Open_Source_Objects::FILE::deleteFile" ref="ac2a0aca4674b2b5f5bd957b802a577e7" args="(filename, force)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><b>deleteFile</b> (filename, force)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a06e8bcc562741d98f37a4ecb2386d884"></a><!-- doxytag: member="Open_Source_Objects::FILE::createFolder" ref="a06e8bcc562741d98f37a4ecb2386d884" args="(folder)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><b>createFolder</b> (folder)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae5b05dee65ad9169adfe67bc56d5cb71"></a><!-- doxytag: member="Open_Source_Objects::FILE::deleteFolder" ref="ae5b05dee65ad9169adfe67bc56d5cb71" args="(folder, forced)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><b>deleteFolder</b> (folder, forced)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5abafd31bfd4f99c46c186990b113b7f"></a><!-- doxytag: member="Open_Source_Objects::FILE::listFolder" ref="a5abafd31bfd4f99c46c186990b113b7f" args="(folder)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><b>listFolder</b> (folder)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a107dd17ec4171b69c1a630cf5df34f13"></a><!-- doxytag: member="Open_Source_Objects::FILE::browseFile" ref="a107dd17ec4171b69c1a630cf5df34f13" args="(initialDir, strFilter, title, defExt, initialFile, readOnly)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><b>browseFile</b> (initialDir, strFilter, title, defExt, initialFile, readOnly)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9b2d54efc9e96629c6af74a1180350c3"></a><!-- doxytag: member="Open_Source_Objects::FILE::browseFolder" ref="a9b2d54efc9e96629c6af74a1180350c3" args="(title, rootFolder)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><b>browseFolder</b> (title, rootFolder)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4944bf177f39150930d144913a8c4d70"></a><!-- doxytag: member="Open_Source_Objects::FILE::exec" ref="a4944bf177f39150930d144913a8c4d70" args="(file)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><b>exec</b> (file)</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Methods for url operations</div></td></tr>
+<tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd2db4d9631b418770b2df3af7c3f8891"></a> </p>
+</div></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae55175ba74c80031132a8f770174d693"></a><!-- doxytag: member="Open_Source_Objects::FILE::pathToUrl" ref="ae55175ba74c80031132a8f770174d693" args="(path)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><b>pathToUrl</b> (path)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1e7a62ebb1b45373648ca0fa26915412"></a><!-- doxytag: member="Open_Source_Objects::FILE::urlToPath" ref="a1e7a62ebb1b45373648ca0fa26915412" args="(url)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><b>urlToPath</b> (url)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab4c95448b63649bad4872a8b127be849"></a><!-- doxytag: member="Open_Source_Objects::FILE::isUrl" ref="ab4c95448b63649bad4872a8b127be849" args="(path)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><b>isUrl</b> (path)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af2e1011279581b72762a019b37a82889"></a><!-- doxytag: member="Open_Source_Objects::FILE::isFileUrl" ref="af2e1011279581b72762a019b37a82889" args="(path)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><b>isFileUrl</b> (path)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f39212e807fce931ae54d18f2716988"></a><!-- doxytag: member="Open_Source_Objects::FILE::isFolderUrl" ref="a5f39212e807fce931ae54d18f2716988" args="(path)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><b>isFolderUrl</b> (path)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abd0046565990f659541555f8fb8fc3bc"></a><!-- doxytag: member="Open_Source_Objects::FILE::readUrl" ref="abd0046565990f659541555f8fb8fc3bc" args="(url, callback)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><b>readUrl</b> (url, callback)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ac03c75dbb7487c494b54657f3e227264"></a><!-- doxytag: member="Open_Source_Objects::FILE::buildUrl" ref="ac03c75dbb7487c494b54657f3e227264" args="(parent, child)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><b>buildUrl</b> (parent, child)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a9ea195b8baee5f933ff07a514db8a8f3"></a><!-- doxytag: member="Open_Source_Objects::FILE::normalizeUrl" ref="a9ea195b8baee5f933ff07a514db8a8f3" args="(relativeUrl)" -->
+&nbsp;</td><td class="memItemRight" valign="bottom"><b>normalizeUrl</b> (relativeUrl)</td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
-<p>Provide methods for common file and registry operations. Include localjs_file.js to use it. </p>
+<p>Provide methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it. </p>
 <hr/><h2>Method Documentation</h2>
-<a class="anchor" id="ab9954bc8055b82adc93551a16569fcc9"></a><!-- doxytag: member="Open_Source_Objects::FILE::iniReadInt" ref="ab9954bc8055b82adc93551a16569fcc9" args="(String filename, String section, String key, int default_value)" -->
+<a class="anchor" id="a0f1894aaa83f22c87ac4cfc0f3ff05be"></a><!-- doxytag: member="Open_Source_Objects::FILE::iniReadInt" ref="a0f1894aaa83f22c87ac4cfc0f3ff05be" args="(String filename, String section, String key,[optional] int default_value)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">iniReadInt </td>
+          <td class="memname">int iniReadInt </td>
           <td>(</td>
           <td class="paramtype">String&nbsp;</td>
           <td class="paramname"> <em>filename</em>, </td>
@@ -143,7 +205,7 @@ Methods</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&nbsp;</td>
+          <td class="paramtype">[optional] int&nbsp;</td>
           <td class="paramname"> <em>default_value</em></td><td>&nbsp;</td>
         </tr>
         <tr>
@@ -161,7 +223,7 @@ Methods</h2></td></tr>
     <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>filename</em>&nbsp;</td><td>INI file name to read from </td></tr>
     <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>section</em>&nbsp;</td><td>Section in INI file </td></tr>
     <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>key</em>&nbsp;</td><td>Key of the value to read from </td></tr>
-    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>default_value</em>&nbsp;</td><td>default value to be returned if the section and key do not exist.</td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>default_value</em>&nbsp;</td><td>Optional. default value to be returned if the section and key do not exist. Zero is assumed if omitted.</td></tr>
   </table>
   </dd>
 </dl>
@@ -171,12 +233,12 @@ Methods</h2></td></tr>
 </pre></div> 
 </div>
 </div>
-<a class="anchor" id="adc8c357fe8077f0b9c0a63493f73cbbc"></a><!-- doxytag: member="Open_Source_Objects::FILE::iniReadStr" ref="adc8c357fe8077f0b9c0a63493f73cbbc" args="(String filename, String section, String key, String default_value)" -->
+<a class="anchor" id="a3130fd3652e1b86373b61cfc0348981e"></a><!-- doxytag: member="Open_Source_Objects::FILE::iniReadStr" ref="a3130fd3652e1b86373b61cfc0348981e" args="(String filename, String section, String key,[optional] String default_value)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">iniReadStr </td>
+          <td class="memname">String iniReadStr </td>
           <td>(</td>
           <td class="paramtype">String&nbsp;</td>
           <td class="paramname"> <em>filename</em>, </td>
@@ -196,7 +258,7 @@ Methods</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">String&nbsp;</td>
+          <td class="paramtype">[optional] String&nbsp;</td>
           <td class="paramname"> <em>default_value</em></td><td>&nbsp;</td>
         </tr>
         <tr>
@@ -214,7 +276,7 @@ Methods</h2></td></tr>
     <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>filename</em>&nbsp;</td><td>INI file name to read from </td></tr>
     <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>section</em>&nbsp;</td><td>Section in INI file </td></tr>
     <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>key</em>&nbsp;</td><td>Key of the value to read from </td></tr>
-    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>default_value</em>&nbsp;</td><td>default value to be returned if the section and key do not exist.</td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>default_value</em>&nbsp;</td><td>Optional. default value to be returned if the section and key do not exist. "" is assumed if omitted.</td></tr>
   </table>
   </dd>
 </dl>
@@ -224,7 +286,7 @@ Methods</h2></td></tr>
 </pre></div> 
 </div>
 </div>
-<a class="anchor" id="a1fffc9aeebd4703f8d82d3190025b84b"></a><!-- doxytag: member="Open_Source_Objects::FILE::iniWrite" ref="a1fffc9aeebd4703f8d82d3190025b84b" args="(String filename, String section, String key, var value)" -->
+<a class="anchor" id="ab82c10757856fbd93d04603ce226cb38"></a><!-- doxytag: member="Open_Source_Objects::FILE::iniWrite" ref="ab82c10757856fbd93d04603ce226cb38" args="(String filename, String section, String key,[optional] var value)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -249,7 +311,7 @@ Methods</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">var&nbsp;</td>
+          <td class="paramtype">[optional] var&nbsp;</td>
           <td class="paramname"> <em>value</em></td><td>&nbsp;</td>
         </tr>
         <tr>
@@ -261,13 +323,13 @@ Methods</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Write an entry to INI file. </p>
+<p>Write an entry to INI file or delete the entry from INI file. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>filename</em>&nbsp;</td><td>INI file name to write to </td></tr>
     <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>section</em>&nbsp;</td><td>Section in INI file </td></tr>
     <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>key</em>&nbsp;</td><td>Key of the value to write </td></tr>
-    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>value</em>&nbsp;</td><td>String value to write to. <em>vlaue</em> will be converted to string if it's not. If <em>value</em> cannot be converted to a string (e.g., pass in <code>undefined</code>), the key will be deleted from INI file.</td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>value</em>&nbsp;</td><td>Optional. String value to write to. <em>vlaue</em> will be converted to string if it's not. If <em>value</em> is omitted or cannot be converted to a string (e.g., pass in <code>undefined</code>), the key will be deleted from INI file.</td></tr>
   </table>
   </dd>
 </dl>
@@ -275,6 +337,111 @@ Methods</h2></td></tr>
 <div class="fragment"><pre class="fragment">    LOCALJS.FILE.iniWrite(<span class="stringliteral">&quot;c:\\settings.ini&quot;</span>, <span class="stringliteral">&quot;section_name&quot;</span>, <span class="stringliteral">&quot;key_name&quot;</span>, <span class="stringliteral">&quot;value&quot;</span>);
 </pre></div><p>To remove an entry from ini <a href="file:">file:</a></p>
 <div class="fragment"><pre class="fragment">    LOCALJS.FILE.iniWrite(<span class="stringliteral">&quot;c:\\settings.ini&quot;</span>, <span class="stringliteral">&quot;section_name&quot;</span>, <span class="stringliteral">&quot;key_name&quot;</span>, undefined);
+</pre></div> 
+</div>
+</div>
+<a class="anchor" id="ae283d76f4b92fd2f67e1db96f607e70c"></a><!-- doxytag: member="Open_Source_Objects::FILE::regRead" ref="ae283d76f4b92fd2f67e1db96f607e70c" args="(String reg_path)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">var regRead </td>
+          <td>(</td>
+          <td class="paramtype">String&nbsp;</td>
+          <td class="paramname"> <em>reg_path</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns the value of a key or value-name from the registry. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>reg_path</em>&nbsp;</td><td>String value indicating the key or value-name whose value you want.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The value read from registry.</dd></dl>
+<p>This method simply wraps up <a href="http://msdn.microsoft.com/en-us/library/x05fawxd(VS.85).aspx" target="_blank">RegRead method of WshShell Object</a>. Refer to <a href="http://msdn.microsoft.com/en-us/library/x05fawxd(VS.85).aspx" target="_blank">RegRead</a> for more detail.</p>
+<p>Code below reads registry:</p>
+<div class="fragment"><pre class="fragment">    var value = LOCALJS.FILE.regRead(<span class="stringliteral">&quot;HKCU\\Software\\ACME\\FortuneTeller\\MindReader&quot;</span>);
+</pre></div> 
+</div>
+</div>
+<a class="anchor" id="a461f0e68e5dc507ba50ac94d56a2cfcd"></a><!-- doxytag: member="Open_Source_Objects::FILE::regWrite" ref="a461f0e68e5dc507ba50ac94d56a2cfcd" args="(String reg_path, var val,[optional] String strType)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">regWrite </td>
+          <td>(</td>
+          <td class="paramtype">String&nbsp;</td>
+          <td class="paramname"> <em>reg_path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">var&nbsp;</td>
+          <td class="paramname"> <em>val</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[optional] String&nbsp;</td>
+          <td class="paramname"> <em>strType</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Creates a new key, adds another value-name to an existing key (and assigns it a value), or changes the value of an existing value-name. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>reg_path</em>&nbsp;</td><td>String value indicating the key-name, value-name, or value you want to create, add, or change. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>val</em>&nbsp;</td><td>The name of the new key you want to create, the name of the value you want to add to an existing key, or the new value you want to assign to an existing value-name. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>strType</em>&nbsp;</td><td>Optional. String value indicating the value's data type. Refer to <a href="http://msdn.microsoft.com/en-us/library/yfdfhz1b(VS.85).aspx" target="_blank">RegWrite method of WshShell Object</a> for detail.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This method simply wraps up <a href="http://msdn.microsoft.com/en-us/library/yfdfhz1b(VS.85).aspx" target="_blank">RegWrite method of WshShell Object</a>. Refer to <a href="http://msdn.microsoft.com/en-us/library/yfdfhz1b(VS.85).aspx" target="_blank">RegWrite</a> for more detail.</p>
+<p>Code below writes a value to registry:</p>
+<div class="fragment"><pre class="fragment">    LOCALJS.FILE.regWrite(<span class="stringliteral">&quot;HKCU\\Software\\ACME\\FortuneTeller\\MindReader&quot;</span>, <span class="stringliteral">&quot;Goocher!&quot;</span>, <span class="stringliteral">&quot;REG_SZ&quot;</span>);
+</pre></div> 
+</div>
+</div>
+<a class="anchor" id="aa9ccfdf0c38f87f504a5ae2f763977b7"></a><!-- doxytag: member="Open_Source_Objects::FILE::regDelete" ref="aa9ccfdf0c38f87f504a5ae2f763977b7" args="(String reg_path)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">regDelete </td>
+          <td>(</td>
+          <td class="paramtype">String&nbsp;</td>
+          <td class="paramname"> <em>reg_path</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Deletes a key or one of its values from the registry. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>reg_path</em>&nbsp;</td><td>String value indicating the name of the registry key or key value you want to delete.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This method simply wraps up <a href="http://msdn.microsoft.com/en-us/library/293bt9hh(VS.85).aspx" target="_blank">RegDelete method of WshShell Object</a>. Refer to <a href="http://msdn.microsoft.com/en-us/library/293bt9hh(VS.85).aspx" target="_blank">RegDelete</a> for more detail.</p>
+<p>Code below deletes a value from registry:</p>
+<div class="fragment"><pre class="fragment">    LOCALJS.FILE.regDelete(<span class="stringliteral">&quot;HKCU\\Software\\ACME\\FortuneTeller\\MindReader&quot;</span>);
 </pre></div> 
 </div>
 </div>
