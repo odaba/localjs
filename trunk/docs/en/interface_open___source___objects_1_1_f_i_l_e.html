@@ -143,39 +143,37 @@ Methods</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Read UTF8 format file and return the content, or false if read fails.  <a href="#af18bb442d4a17a21806d850fab3dcb99"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_open___source___objects_1_1_f_i_l_e.html#a79aabfb4240680c61bf91440ff6e9823">writeFileUTF8</a> (String filename, String text)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Save text to file in UTF8 format. Existing content will be overwritten. A new file will be created if not exists.  <a href="#a79aabfb4240680c61bf91440ff6e9823"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc1439a54877d1d1408ec9f790e86ea7"></a><!-- doxytag: member="Open_Source_Objects::FILE::deleteFile" ref="afc1439a54877d1d1408ec9f790e86ea7" args="(String filename,[optional] boolean force)" -->
-&nbsp;</td><td class="memItemRight" valign="bottom"><b>deleteFile</b> (String filename,[optional] boolean force)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0984af0264088614354ad4cd7c1515d7"></a><!-- doxytag: member="Open_Source_Objects::FILE::createFolder" ref="a0984af0264088614354ad4cd7c1515d7" args="(String folder)" -->
-&nbsp;</td><td class="memItemRight" valign="bottom"><b>createFolder</b> (String folder)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5820b9c268034648d014b940e2350103"></a><!-- doxytag: member="Open_Source_Objects::FILE::deleteFolder" ref="a5820b9c268034648d014b940e2350103" args="(String folder,[optional] boolean forced)" -->
-&nbsp;</td><td class="memItemRight" valign="bottom"><b>deleteFolder</b> (String folder,[optional] boolean forced)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af20f5de0d692771dafbeef7fb57fc500"></a><!-- doxytag: member="Open_Source_Objects::FILE::listFolder" ref="af20f5de0d692771dafbeef7fb57fc500" args="(String folder)" -->
-Array&nbsp;</td><td class="memItemRight" valign="bottom"><b>listFolder</b> (String folder)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e0fe7ac5f6831be2c0cdaa37803580e"></a><!-- doxytag: member="Open_Source_Objects::FILE::browseFile" ref="a7e0fe7ac5f6831be2c0cdaa37803580e" args="(String initialDir, String strFilter, String title, String defExt,[optional] String initialFile,[optional] boolean readOnly)" -->
-&nbsp;</td><td class="memItemRight" valign="bottom"><b>browseFile</b> (String initialDir, String strFilter, String title, String defExt,[optional] String initialFile,[optional] boolean readOnly)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf2d4597328f21f6a570a5f6b60da37f"></a><!-- doxytag: member="Open_Source_Objects::FILE::browseFolder" ref="adf2d4597328f21f6a570a5f6b60da37f" args="(String title, String rootFolder)" -->
-&nbsp;</td><td class="memItemRight" valign="bottom"><b>browseFolder</b> (String title, String rootFolder)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4944bf177f39150930d144913a8c4d70"></a><!-- doxytag: member="Open_Source_Objects::FILE::exec" ref="a4944bf177f39150930d144913a8c4d70" args="(file)" -->
-&nbsp;</td><td class="memItemRight" valign="bottom"><b>exec</b> (file)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_open___source___objects_1_1_f_i_l_e.html#ae422d3995ad20fae50da0a6a5667654f">deleteFile</a> (String filespec,[optional] boolean force)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Deletes a specified file.  <a href="#ae422d3995ad20fae50da0a6a5667654f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_open___source___objects_1_1_f_i_l_e.html#a11c4eb341be6b3dcf3f2ce9d855b058e">createFolder</a> (String foldername)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Creates a folder.  <a href="#a11c4eb341be6b3dcf3f2ce9d855b058e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_open___source___objects_1_1_f_i_l_e.html#ac37bcb6da1316d7792a5491a2f7801a6">deleteFolder</a> (String folderspec,[optional] boolean force)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Deletes a specified folder and its contents.  <a href="#ac37bcb6da1316d7792a5491a2f7801a6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Array&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_open___source___objects_1_1_f_i_l_e.html#af20f5de0d692771dafbeef7fb57fc500">listFolder</a> (String folder)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns an array of all File objects contained in the specified folder, including those with hidden and system file attributes set.  <a href="#af20f5de0d692771dafbeef7fb57fc500"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">String&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_open___source___objects_1_1_f_i_l_e.html#a561e6ec182a20ebe1d85653d67b0ae44">browseFile</a> (String initialDir, String strFilter, String title, String defExt,[optional] String initialFile,[optional] boolean readOnly)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Open file dialig to browse to a file, return path to the select file, or false if the dialog is canceled.  <a href="#a561e6ec182a20ebe1d85653d67b0ae44"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">String&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_open___source___objects_1_1_f_i_l_e.html#a5ddc249346092c53b6e0fadd644a0fb7">browseFolder</a> (String title,[optional] String rootFolder)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Creates a dialog box that enables the user to select a folder and then returns the path to the selected folder, or false if the dialog is canceled.  <a href="#a5ddc249346092c53b6e0fadd644a0fb7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_open___source___objects_1_1_f_i_l_e.html#a7c00c5f992f9567ec7b69d6e3cf25934">exec</a> (String file)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Execute a executable file, open a url in user default browser, or open a file with system default application.  <a href="#a7c00c5f992f9567ec7b69d6e3cf25934"></a><br/></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Methods for url operations</div></td></tr>
 <tr><td colspan="2"><div class="groupText"><p><a class="anchor" id="amgrpd2db4d9631b418770b2df3af7c3f8891"></a> </p>
 </div></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad6e821755d0d8b859a69853bb8b3144d"></a><!-- doxytag: member="Open_Source_Objects::FILE::pathToUrl" ref="ad6e821755d0d8b859a69853bb8b3144d" args="(String path)" -->
-String&nbsp;</td><td class="memItemRight" valign="bottom"><b>pathToUrl</b> (String path)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af4d5763f007ae57760e4903712f323f3"></a><!-- doxytag: member="Open_Source_Objects::FILE::urlToPath" ref="af4d5763f007ae57760e4903712f323f3" args="(String url)" -->
-String&nbsp;</td><td class="memItemRight" valign="bottom"><b>urlToPath</b> (String url)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5ccc5b82a796c8c4abc419331d579de0"></a><!-- doxytag: member="Open_Source_Objects::FILE::isUrl" ref="a5ccc5b82a796c8c4abc419331d579de0" args="(String path)" -->
-boolean&nbsp;</td><td class="memItemRight" valign="bottom"><b>isUrl</b> (String path)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a909b409d9beb14d407274265dc6692e1"></a><!-- doxytag: member="Open_Source_Objects::FILE::isFileUrl" ref="a909b409d9beb14d407274265dc6692e1" args="(String path)" -->
-boolean&nbsp;</td><td class="memItemRight" valign="bottom"><b>isFileUrl</b> (String path)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad1844f7835a0b9db640973304bfe9899"></a><!-- doxytag: member="Open_Source_Objects::FILE::isFolderUrl" ref="ad1844f7835a0b9db640973304bfe9899" args="(String path)" -->
-boolean&nbsp;</td><td class="memItemRight" valign="bottom"><b>isFolderUrl</b> (String path)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1eb8e8b7d53846f96be305a9d8262b07"></a><!-- doxytag: member="Open_Source_Objects::FILE::readUrl" ref="a1eb8e8b7d53846f96be305a9d8262b07" args="(String url, Object callback)" -->
-String&nbsp;</td><td class="memItemRight" valign="bottom"><b>readUrl</b> (String url, Object callback)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7e70efa786ee604bc8666bba11711beb"></a><!-- doxytag: member="Open_Source_Objects::FILE::buildUrl" ref="a7e70efa786ee604bc8666bba11711beb" args="(String parent, String child)" -->
-String&nbsp;</td><td class="memItemRight" valign="bottom"><b>buildUrl</b> (String parent, String child)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab912b391b927c9d7642f10d2218711c5"></a><!-- doxytag: member="Open_Source_Objects::FILE::normalizeUrl" ref="ab912b391b927c9d7642f10d2218711c5" args="(String relativeUrl)" -->
-String&nbsp;</td><td class="memItemRight" valign="bottom"><b>normalizeUrl</b> (String relativeUrl)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">String&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_open___source___objects_1_1_f_i_l_e.html#ad6e821755d0d8b859a69853bb8b3144d">pathToUrl</a> (String path)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns the url points to a local file, returns false if fails.  <a href="#ad6e821755d0d8b859a69853bb8b3144d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">String&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_open___source___objects_1_1_f_i_l_e.html#af4d5763f007ae57760e4903712f323f3">urlToPath</a> (String url)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns the local file path from a url, return false if fails.  <a href="#af4d5763f007ae57760e4903712f323f3"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_open___source___objects_1_1_f_i_l_e.html#a58b7576336d5c990156ccc211bc09c3a">isUrl</a> (String url)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Return <code>true</code> if the url given is a valid url, <code>false</code> if it's not.  <a href="#a58b7576336d5c990156ccc211bc09c3a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_open___source___objects_1_1_f_i_l_e.html#a0c351eaed10231b01698938550e31cbe">isFileUrl</a> (String url)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Return <code>true</code> if the url given is a file system url, <code>false</code> if it's not.  <a href="#a0c351eaed10231b01698938550e31cbe"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">String&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_open___source___objects_1_1_f_i_l_e.html#a755585f93d7b4fdc84e455fe334a7e29">readUrl</a> (String url,[optional] Object callback)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">One single function to read both local and remote files, synchronized or asynchronized.  <a href="#a755585f93d7b4fdc84e455fe334a7e29"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">String&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_open___source___objects_1_1_f_i_l_e.html#ab7cbd8e35cc7111c289225daf4696cea">buildUrl</a> (String baseUrl, String relativeUrl)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">When provided with a relative URL and its base, returns a URL in canonical form, or <code>false</code> if the parameters are incorrect.  <a href="#ab7cbd8e35cc7111c289225daf4696cea"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">String&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_open___source___objects_1_1_f_i_l_e.html#a841b182f6e93f43af7ba128d020dcea7">normalizeUrl</a> ([optional], String relativeUrl)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns normalized url of current document (remove trailing query strings), optionally append a relative url.  <a href="#a841b182f6e93f43af7ba128d020dcea7"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Open source object. Provide methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it. </p>
@@ -470,7 +468,7 @@ String&nbsp;</td><td class="memItemRight" valign="bottom"><b>normalizeUrl</b> (S
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd><code>true</code> if a specified file exists; <code>false</code> if it does not.</dd></dl>
 <p>This method simply wraps up <a href="http://msdn.microsoft.com/en-us/library/x23stk5t(VS.85).aspx" target="_blank">FileExists method of FileSystemObject Object</a>. Refer to <a href="http://msdn.microsoft.com/en-us/library/x23stk5t(VS.85).aspx" target="_blank">FileExists</a> for more detail.</p>
-<p>Sample code to check if a file exists or not:</p>
+<p>The following code illustrates how to check if a file exists or not:</p>
 <div class="fragment"><pre class="fragment">    var exists = LOCALJS.FILE.fileExists(<span class="stringliteral">&quot;C:\\test.ini&quot;</span>);
 </pre></div> 
 </div>
@@ -500,7 +498,7 @@ String&nbsp;</td><td class="memItemRight" valign="bottom"><b>normalizeUrl</b> (S
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd><code>true</code> if a specified folder exists; <code>false</code> if it does not.</dd></dl>
 <p>This method simply wraps up <a href="http://msdn.microsoft.com/en-us/library/5xc78d8d(VS.85).aspx" target="_blank">FolderExists method of FileSystemObject Object</a>. Refer to <a href="http://msdn.microsoft.com/en-us/library/5xc78d8d(VS.85).aspx" target="_blank">FolderExists</a> for more detail.</p>
-<p>Sample code to check if a folder exists or not:</p>
+<p>The following code illustrates how to check if a folder exists or not:</p>
 <div class="fragment"><pre class="fragment">    var exists = LOCALJS.FILE.folderExists(<span class="stringliteral">&quot;C:\\Documents and Settings&quot;</span>);
 </pre></div> 
 </div>
@@ -529,7 +527,7 @@ String&nbsp;</td><td class="memItemRight" valign="bottom"><b>normalizeUrl</b> (S
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>User data folder if <em>sub_folder</em> is omitted; if <em>sub_folder</em> presents, returns the sub folder under user data folder.</dd></dl>
-<p>Sample code:</p>
+<p>The following code illustrates how to use the getAppDataFolder method:</p>
 <div class="fragment"><pre class="fragment">    var app_data_folder = LOCALJS.FILE.getAppDataFolder(); <span class="comment">// On Windows XP, return C:\Documents and Settings\Username\Application Data</span>
     var app_data_sub_folder = LOCALJS.FILE.getAppDataFolder(<span class="stringliteral">&quot;LocalJS&quot;</span>); <span class="comment">// On Windows XP, return C:\Documents and Settings\Username\Application Data\LocalJS</span>
 </pre></div><dl class="note"><dt><b>Note:</b></dt><dd>The getAppDataFolder method doesn't create the sub folder if it doesn't exists. </dd></dl>
@@ -560,7 +558,7 @@ String&nbsp;</td><td class="memItemRight" valign="bottom"><b>normalizeUrl</b> (S
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>Program Files folder if <em>sub_folder</em> is omitted; if <em>sub_folder</em> presents, returns the sub folder under Program Files folder.</dd></dl>
-<p>Sample code:</p>
+<p>The following code illustrates how to use the getProgramFolder method:</p>
 <div class="fragment"><pre class="fragment">    var program_folder = LOCALJS.FILE.getProgramFolder(); <span class="comment">// return C:\Program Files</span>
     var program_folder = LOCALJS.FILE.getProgramFolder(<span class="stringliteral">&quot;LocalJS&quot;</span>); <span class="comment">// return C:\Program Files\LocalJS</span>
 </pre></div><dl class="note"><dt><b>Note:</b></dt><dd>The getProgramFolder method doesn't create the sub folder if it doesn't exists. </dd></dl>
@@ -584,7 +582,7 @@ String&nbsp;</td><td class="memItemRight" valign="bottom"><b>normalizeUrl</b> (S
 
 <p>Get full filename of current exe file. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>Full filename of current exe file.</dd></dl>
-<p>Sample code:</p>
+<p>The following code illustrates how to use the getExeFilename method:</p>
 <div class="fragment"><pre class="fragment">    var exe_name = LOCALJS.FILE.getExeFilename(); <span class="comment">// for example, return C:\Program Files\LocalJS\app.exe</span>
 </pre></div> 
 </div>
@@ -606,7 +604,7 @@ String&nbsp;</td><td class="memItemRight" valign="bottom"><b>normalizeUrl</b> (S
 
 <p>Get folder where current exe file exists. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>Folder where current exe file exists.</dd></dl>
-<p>Sample code:</p>
+<p>The following code illustrates how to use the getExeFolder method:</p>
 <div class="fragment"><pre class="fragment">    var exe_folder = LOCALJS.FILE.getExeFolder(); <span class="comment">// for example, return C:\Program Files\LocalJS</span>
 </pre></div> 
 </div>
@@ -635,7 +633,7 @@ String&nbsp;</td><td class="memItemRight" valign="bottom"><b>normalizeUrl</b> (S
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>A string containing the name of the parent folder of the last component in a specified path.</dd></dl>
-<p>Sample code:</p>
+<p>The following code illustrates how to use the getParentFolder method:</p>
 <div class="fragment"><pre class="fragment">    var parent_folder = LOCALJS.FILE.getParentFolder(<span class="stringliteral">&quot;C:\\Program Files\\LocalJS&quot;</span>); <span class="comment">// return C:\Program Files</span>
 </pre></div><dl class="note"><dt><b>Note:</b></dt><dd>The getParentFolder method works only on the provided path string. It does not attempt to resolve the path, nor does it check for the existence of the specified path. </dd></dl>
 
@@ -675,7 +673,7 @@ String&nbsp;</td><td class="memItemRight" valign="bottom"><b>normalizeUrl</b> (S
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The combined path. The path doesn't have to exist and wonn't be created if not existed.</dd></dl>
-<p>Sample code:</p>
+<p>The following code illustrates how to use the buildPath method:</p>
 <div class="fragment"><pre class="fragment">    var path = LOCALJS.FILE.buildPath(<span class="stringliteral">&quot;C:\\Program Files&quot;</span>, <span class="stringliteral">&quot;LocalJS&quot;</span>); <span class="comment">// return C:\Program Files\\LocalJS</span>
 </pre></div> 
 </div>
@@ -705,7 +703,7 @@ String&nbsp;</td><td class="memItemRight" valign="bottom"><b>normalizeUrl</b> (S
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>Content of the file as string, or false if read fails. Use <code>false</code> <code>===</code> to test if reading fails.</dd></dl>
 <dl class="note"><dt><b>Note:</b></dt><dd>The UTF8 file should not have the leading BOM.</dd></dl>
-<p>Sample code:</p>
+<p>The following code illustrates how to use the readFileUTF8 method to read file in:</p>
 <div class="fragment"><pre class="fragment">    var content = LOCALJS.FILE.readFileUTF8(<span class="stringliteral">&quot;C:\\settings.ini&quot;</span>);
     <span class="keywordflow">if</span> (<span class="keyword">false</span> === content)
         alert(<span class="stringliteral">&quot;Reading failed!&quot;</span>);
@@ -747,8 +745,549 @@ String&nbsp;</td><td class="memItemRight" valign="bottom"><b>normalizeUrl</b> (S
 </dl>
 <p>The text will be saved to file in UTF8 format. No leading BOM is prepended to the file.</p>
 <p>An error will be generated if write fails.</p>
-<p>Sample code:</p>
+<p>The following code illustrates how to use the writeFileUTF8 method to save text to a <a href="file:">file:</a></p>
 <div class="fragment"><pre class="fragment">    LOCALJS.FILE.writeFileUTF8(<span class="stringliteral">&quot;C:\\settings.ini&quot;</span>, <span class="stringliteral">&quot;LocalJS&quot;</span>);
+</pre></div> 
+</div>
+</div>
+<a class="anchor" id="ae422d3995ad20fae50da0a6a5667654f"></a><!-- doxytag: member="Open_Source_Objects::FILE::deleteFile" ref="ae422d3995ad20fae50da0a6a5667654f" args="(String filespec,[optional] boolean force)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">deleteFile </td>
+          <td>(</td>
+          <td class="paramtype">String&nbsp;</td>
+          <td class="paramname"> <em>filespec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[optional] boolean&nbsp;</td>
+          <td class="paramname"> <em>force</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Deletes a specified file. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>filespec</em>&nbsp;</td><td>The name of the file to delete. The <em>filespec</em> can contain wildcard characters in the last path component. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>force</em>&nbsp;</td><td>Optional. Boolean value that is <code>true</code> if files with the read-only attribute set are to be deleted; <code>false</code> (default) if they are not.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>An error occurs if no matching files are found. The deleteFile method stops on the first error it encounters. No attempt is made to roll back or undo any changes that were made before an error occurred.</p>
+<p>The following example illustrates the use of the deleteFile method.</p>
+<div class="fragment"><pre class="fragment">    LOCALJS.FILE.deleteFile(<span class="stringliteral">&quot;C:\\settings.ini&quot;</span>);
+</pre></div> 
+</div>
+</div>
+<a class="anchor" id="a11c4eb341be6b3dcf3f2ce9d855b058e"></a><!-- doxytag: member="Open_Source_Objects::FILE::createFolder" ref="a11c4eb341be6b3dcf3f2ce9d855b058e" args="(String foldername)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">createFolder </td>
+          <td>(</td>
+          <td class="paramtype">String&nbsp;</td>
+          <td class="paramname"> <em>foldername</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Creates a folder. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>foldername</em>&nbsp;</td><td>String expression that identifies the folder to create.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>If the folder already exists, this method simply returns without generating an error.</p>
+<p>The following code illustrates how to use the createFolder method to create a folder.</p>
+<div class="fragment"><pre class="fragment">    var a = LOCALJS.FILE.createFolder(<span class="stringliteral">&quot;c:\\new folder&quot;</span>);
+</pre></div> 
+</div>
+</div>
+<a class="anchor" id="ac37bcb6da1316d7792a5491a2f7801a6"></a><!-- doxytag: member="Open_Source_Objects::FILE::deleteFolder" ref="ac37bcb6da1316d7792a5491a2f7801a6" args="(String folderspec,[optional] boolean force)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">deleteFolder </td>
+          <td>(</td>
+          <td class="paramtype">String&nbsp;</td>
+          <td class="paramname"> <em>folderspec</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[optional] boolean&nbsp;</td>
+          <td class="paramname"> <em>force</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Deletes a specified folder and its contents. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>folderspec</em>&nbsp;</td><td>The name of the folder to delete. The folderspec can contain wildcard characters in the last path component. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>force</em>&nbsp;</td><td>Boolean value that is <code>true</code> if folders with the read-only attribute set are to be deleted; <code>false</code> (default) if they are not.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The deleteFolder method does not distinguish between folders that have contents and those that do not. The specified folder is deleted regardless of whether or not it has contents.</p>
+<p>An error occurs if no matching folders are found. The deleteFolder method stops on the first error it encounters. No attempt is made to roll back or undo any changes that were made before an error occurred.</p>
+<p>The following example illustrates the use of the deleteFolder method.</p>
+<div class="fragment"><pre class="fragment">    LOCALJS.FILE.deleteFolder(<span class="stringliteral">&quot;C:\\Program Files\\LocalJS&quot;</span>);
+</pre></div> 
+</div>
+</div>
+<a class="anchor" id="af20f5de0d692771dafbeef7fb57fc500"></a><!-- doxytag: member="Open_Source_Objects::FILE::listFolder" ref="af20f5de0d692771dafbeef7fb57fc500" args="(String folder)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Array listFolder </td>
+          <td>(</td>
+          <td class="paramtype">String&nbsp;</td>
+          <td class="paramname"> <em>folder</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns an array of all File objects contained in the specified folder, including those with hidden and system file attributes set. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>folder</em>&nbsp;</td><td>name whose content to be listed.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The listFolder method wraps up <a href="http://msdn.microsoft.com/en-us/library/18b41306(VS.85).aspx" target="_blank">Files Property of Folder object</a>, refer to <a href="http://msdn.microsoft.com/en-us/library/18b41306(VS.85).aspx" target="_blank">Files Property</a> for more detail.</p>
+<p>The following code illustrates how to use the listFolder method:</p>
+<div class="fragment"><pre class="fragment">    var file_array = LOCALJS.FILE.listFolder(<span class="stringliteral">&quot;C:\\Program Files&quot;</span>), s = <span class="stringliteral">&quot;&quot;</span>;
+    <span class="keywordflow">for</span> (var i = 0; i &lt; file_array.length; ++i)
+    {
+        s += file_array[i].name;
+        s += <span class="stringliteral">&quot;&lt;br/&gt;&quot;</span>;
+    }
+    LOCALJS.FILE.writeFileUTF8(<span class="stringliteral">&quot;C:\\test.html&quot;</span>, s);
+</pre></div> 
+</div>
+</div>
+<a class="anchor" id="a561e6ec182a20ebe1d85653d67b0ae44"></a><!-- doxytag: member="Open_Source_Objects::FILE::browseFile" ref="a561e6ec182a20ebe1d85653d67b0ae44" args="(String initialDir, String strFilter, String title, String defExt,[optional] String initialFile,[optional] boolean readOnly)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String browseFile </td>
+          <td>(</td>
+          <td class="paramtype">String&nbsp;</td>
+          <td class="paramname"> <em>initialDir</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&nbsp;</td>
+          <td class="paramname"> <em>strFilter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&nbsp;</td>
+          <td class="paramname"> <em>title</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&nbsp;</td>
+          <td class="paramname"> <em>defExt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[optional] String&nbsp;</td>
+          <td class="paramname"> <em>initialFile</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[optional] boolean&nbsp;</td>
+          <td class="paramname"> <em>readOnly</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Open file dialig to browse to a file, return path to the select file, or false if the dialog is canceled. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>initialDir</em>&nbsp;</td><td>The initial directory the dialog opens at </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>strFilter</em>&nbsp;</td><td>A string like <code>"Text Files\0*.TXT\0Document Files\0*.TXT;*.DOC;*.BAK\0All Files\0*.*\0"</code> to specify file filter of the dialog. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>title</em>&nbsp;</td><td>The title for the dialog. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>defExt</em>&nbsp;</td><td>The default extension appended to the file name if the user fails to type an extension. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>initialFile</em>&nbsp;</td><td>Optional. The initial filename displayed in edit control of the file dialog. If omitted, the edit control is left empty. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>readOnly</em>&nbsp;</td><td>Optional. If <code>true</code>, the Read Only check box will be initially checked; <code>false</code> (default value) to not check it.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The filename user selected, or false if user cancels the dialog. Use <code>false</code> <code>===</code> to check if the dialog is canceled.</dd></dl>
+<p>Parameter <em>strFilter</em> has to be ended by <code>"\0"</code>. The sub strings separated by <code>"\0"</code> have to be in pairs: they are in <code>"Filter name displayed\0Filter\0Filter name displayed\0Filter"</code> format. If you feel confused, it's OK. Simply try the sample code below you will understand it.</p>
+<p>The following code illustrates how to use the browseFile method:</p>
+<div class="fragment"><pre class="fragment">    var filename = LOCALJS.FILE.browseFile(<span class="stringliteral">&quot;C:\\Program Files\\LocalJS&quot;</span>,
+                                           <span class="stringliteral">&quot;Text Files\0*.TXT\0Document Files\0*.TXT;*.DOC;*.BAK\0All Files\0*.*\0&quot;</span>,
+                                           <span class="stringliteral">&quot;Please choose the file&quot;</span>, <span class="stringliteral">&quot;txt&quot;</span>, <span class="stringliteral">&quot;settings.txt&quot;</span>);
+    <span class="keywordflow">if</span> (<span class="keyword">false</span> === filename)
+        alert(<span class="stringliteral">&quot;The file dialog was canceled&quot;</span>);
+    <span class="keywordflow">else</span>
+        alert(filename);
+</pre></div><dl class="note"><dt><b>Note:</b></dt><dd>The browseFile method wraps up Windows API <a href="http://msdn.microsoft.com/en-us/library/ms646927(VS.85).aspx" target="_blank">GetOpenFileName Function</a>. If you are interested at more detail, refer to the source code of browseFile method in localjs_file.js, <a href="http://msdn.microsoft.com/en-us/library/ms646927(VS.85).aspx" target="_blank">GetOpenFileName Function</a> and <a href="http://msdn.microsoft.com/en-us/library/ms646839(VS.85).aspx" target="_blank">OPENFILENAME Structure</a>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5ddc249346092c53b6e0fadd644a0fb7"></a><!-- doxytag: member="Open_Source_Objects::FILE::browseFolder" ref="a5ddc249346092c53b6e0fadd644a0fb7" args="(String title,[optional] String rootFolder)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String browseFolder </td>
+          <td>(</td>
+          <td class="paramtype">String&nbsp;</td>
+          <td class="paramname"> <em>title</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[optional] String&nbsp;</td>
+          <td class="paramname"> <em>rootFolder</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Creates a dialog box that enables the user to select a folder and then returns the path to the selected folder, or false if the dialog is canceled. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>title</em>&nbsp;</td><td>A String value that represents the title displayed inside the Browse dialog box. </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>rootFolder</em>&nbsp;</td><td>Optional. The root folder to use in the dialog box. The user cannot browse higher in the tree than this folder. If this value is not specified, the root folder used in the dialog box is the desktop.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The path to the selected folder, or false if user cancels the dialog. Use <code>false</code> <code>===</code> to check if the dialog is canceled.</dd></dl>
+<p>The following code illustrates how to use the browseFolder method:</p>
+<div class="fragment"><pre class="fragment">    var folder = LOCALJS.FILE.browseFolder(<span class="stringliteral">&quot;Please choose a folder&quot;</span>);
+    <span class="keywordflow">if</span> (<span class="keyword">false</span> === folder)
+        alert(<span class="stringliteral">&quot;The folder dialog was canceled&quot;</span>);
+    <span class="keywordflow">else</span>
+        alert(folder);
+</pre></div><dl class="note"><dt><b>Note:</b></dt><dd>The browseFolder method wraps up <a href="http://msdn.microsoft.com/en-us/library/bb774065(VS.85).aspx" target="_blank">Shell.BrowseForFolder Method</a>. If you are interested at more detail, refer to the source code of browseFolder method in localjs_file.js, and <a href="http://msdn.microsoft.com/en-us/library/bb774065(VS.85).aspx" target="_blank">Shell.BrowseForFolder Method</a>. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a7c00c5f992f9567ec7b69d6e3cf25934"></a><!-- doxytag: member="Open_Source_Objects::FILE::exec" ref="a7c00c5f992f9567ec7b69d6e3cf25934" args="(String file)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">exec </td>
+          <td>(</td>
+          <td class="paramtype">String&nbsp;</td>
+          <td class="paramname"> <em>file</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Execute a executable file, open a url in user default browser, or open a file with system default application. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>file</em>&nbsp;</td><td>The executable filename, or a url, or a file to be opened by system default application.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>The following code illustrates how to use the exec method:</p>
+<div class="fragment"><pre class="fragment">    LOCALJS.FILE.exec(<span class="stringliteral">&quot;http://localjs.org/&quot;</span>); <span class="comment">// Open the site at user default browser.</span>
+</pre></div> 
+</div>
+</div>
+<a class="anchor" id="ad6e821755d0d8b859a69853bb8b3144d"></a><!-- doxytag: member="Open_Source_Objects::FILE::pathToUrl" ref="ad6e821755d0d8b859a69853bb8b3144d" args="(String path)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String pathToUrl </td>
+          <td>(</td>
+          <td class="paramtype">String&nbsp;</td>
+          <td class="paramname"> <em>path</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns the url points to a local file, returns false if fails. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>path</em>&nbsp;</td><td>The path to the local file</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The url points to the local file, or <code>false</code> if cannot get the url. Use <code>false</code> <code>===</code> to check if the convert fails.</dd></dl>
+<p>The following code illustrates how to use the pathToUrl method:</p>
+<div class="fragment"><pre class="fragment">    var url = LOCALJS.FILE.pathToUrl(<span class="stringliteral">&quot;C:\\test.ini&quot;</span>); <span class="comment">// return file:///C:/test.ini</span>
+</pre></div> 
+</div>
+</div>
+<a class="anchor" id="af4d5763f007ae57760e4903712f323f3"></a><!-- doxytag: member="Open_Source_Objects::FILE::urlToPath" ref="af4d5763f007ae57760e4903712f323f3" args="(String url)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String urlToPath </td>
+          <td>(</td>
+          <td class="paramtype">String&nbsp;</td>
+          <td class="paramname"> <em>url</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns the local file path from a url, return false if fails. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>url</em>&nbsp;</td><td>The url whose local file path will be returned.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The local file path from the url, or <code>false</code> if fails to convert. Use <code>false</code> <code>===</code> to check if the convert fails.</dd></dl>
+<p>The following code illustrates how to use the urlToPath method:</p>
+<div class="fragment"><pre class="fragment">    var path = LOCALJS.FILE.urlToPath(<span class="stringliteral">&quot;file:///C:/test.ini&quot;</span>); <span class="comment">// return C:\test.ini</span>
+</pre></div> 
+</div>
+</div>
+<a class="anchor" id="a58b7576336d5c990156ccc211bc09c3a"></a><!-- doxytag: member="Open_Source_Objects::FILE::isUrl" ref="a58b7576336d5c990156ccc211bc09c3a" args="(String url)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean isUrl </td>
+          <td>(</td>
+          <td class="paramtype">String&nbsp;</td>
+          <td class="paramname"> <em>url</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Return <code>true</code> if the url given is a valid url, <code>false</code> if it's not. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>url</em>&nbsp;</td><td>The url to be checked</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd><code>true</code> if the url given is a valid url, <code>false</code> if it's not.</dd></dl>
+<p>The following code illustrates how to use the isUrl method:</p>
+<div class="fragment"><pre class="fragment">    var ok = LOCALJS.FILE.isUrl(<span class="stringliteral">&quot;http://localjs.org/&quot;</span>); <span class="comment">// a valid url</span>
+    var error = LOCALJS.FILE.isUrl(<span class="stringliteral">&quot;localjs.org&quot;</span>);  <span class="comment">// not a valid url</span>
+</pre></div> 
+</div>
+</div>
+<a class="anchor" id="a0c351eaed10231b01698938550e31cbe"></a><!-- doxytag: member="Open_Source_Objects::FILE::isFileUrl" ref="a0c351eaed10231b01698938550e31cbe" args="(String url)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean isFileUrl </td>
+          <td>(</td>
+          <td class="paramtype">String&nbsp;</td>
+          <td class="paramname"> <em>url</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Return <code>true</code> if the url given is a file system url, <code>false</code> if it's not. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>url</em>&nbsp;</td><td>The url to be checked</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd><code>true</code> if the url given is a file system url, <code>false</code> if it's not.</dd></dl>
+<p>The file or folder pointed by the url doesn't have to exist.</p>
+<p>The following code illustrates how to use the isFileUrl method:</p>
+<div class="fragment"><pre class="fragment">    var ok = LOCALJS.FILE.isFileUrl(<span class="stringliteral">&quot;file:///C:\\Windows\\system32\\notepad.exe&quot;</span>); <span class="comment">// a file system url</span>
+    var error = LOCALJS.FILE.isFileUrl(<span class="stringliteral">&quot;http://localjs.org/&quot;</span>);  <span class="comment">// a http url</span>
+</pre></div> 
+</div>
+</div>
+<a class="anchor" id="a755585f93d7b4fdc84e455fe334a7e29"></a><!-- doxytag: member="Open_Source_Objects::FILE::readUrl" ref="a755585f93d7b4fdc84e455fe334a7e29" args="(String url,[optional] Object callback)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String readUrl </td>
+          <td>(</td>
+          <td class="paramtype">String&nbsp;</td>
+          <td class="paramname"> <em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">[optional] Object&nbsp;</td>
+          <td class="paramname"> <em>callback</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>One single function to read both local and remote files, synchronized or asynchronized. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>url</em>&nbsp;</td><td>The url to be read. Can be a file url or http url </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>callback</em>&nbsp;</td><td>Optional. Details are discussed below.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>If <em>callback</em> is omitted, the readUrl method waits until the read operation ends and returns the content of the url. If read fails, readUrl returns <code>false</code>. Use <code>false</code> <code>===</code> to check if the read fails.</p>
+<p>If <em>callback</em> is not omitted, then readUrl method returns immediately and read result are passed to functions in callback object.</p>
+<p>The callback object should have two properties <code>ok</code> and <code>fail</code>, each be a function:</p>
+<div class="fragment"><pre class="fragment">    var callback = {<span class="stringliteral">&#39;ok&#39;</span> : function(contentText, oHttp) { <span class="comment">/* read ok handling */</span> },
+                    <span class="stringliteral">&#39;fail&#39;</span> : function(statusCode, oHttp) { <span class="comment">/* error handling */</span> } };
+</pre></div><ul>
+<li>If <em>url</em> is a file system url, only <em>contentText</em> is used, which is the file content if read succeeded. Other parameters in callback functions are not used.</li>
+</ul>
+<ul>
+<li>If <em>url</em> is a web url, then <em>callback</em> is same as the <em>callback</em> parameter passed to LOCALJS.WEB_SERVICE.callUrl. Refer to LOCALJS.WEB_SERVICE.callUrl for more detail.</li>
+</ul>
+<p>The following code illustrates how to use the readUrl method:</p>
+<div class="fragment"><pre class="fragment">    var content = LOCALJS.FILE.readUrl(<span class="stringliteral">&quot;file:///C:\\settings.txt&quot;</span>); <span class="comment">// synchronized read</span>
+
+    <span class="comment">// asynchronized read</span>
+    var onOK = function(contentText)
+    {
+        alert(contentText);
+    };
+
+    var onFail = function(statusCode)
+    {
+        alert(<span class="stringliteral">&quot;Read failed, the error status is &quot;</span> + statusCode;
+    };
+
+    LOCALJS.FILE.readUrl(<span class="stringliteral">&quot;http://example.com/example.php&quot;</span>, {<span class="stringliteral">&#39;ok&#39;</span>: onOK, <span class="stringliteral">&#39;fail&#39;</span>: onFail});
+</pre></div> 
+</div>
+</div>
+<a class="anchor" id="ab7cbd8e35cc7111c289225daf4696cea"></a><!-- doxytag: member="Open_Source_Objects::FILE::buildUrl" ref="ab7cbd8e35cc7111c289225daf4696cea" args="(String baseUrl, String relativeUrl)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String buildUrl </td>
+          <td>(</td>
+          <td class="paramtype">String&nbsp;</td>
+          <td class="paramname"> <em>baseUrl</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&nbsp;</td>
+          <td class="paramname"> <em>relativeUrl</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>When provided with a relative URL and its base, returns a URL in canonical form, or <code>false</code> if the parameters are incorrect. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>baseUrl</em>&nbsp;</td><td>The base url </td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>relativeUrl</em>&nbsp;</td><td>The relative url</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The combined url, or <code>false</code> if the parameters are incorrect.</dd></dl>
+<p>The following code illustrates how to use the buildUrl method:</p>
+<div class="fragment"><pre class="fragment">    var url = LOCALJS.FILE.buildUrl(<span class="stringliteral">&quot;http://example.com/app/index.php&quot;</span>, <span class="stringliteral">&quot;../go.php&quot;</span>); <span class="comment">// return &quot;http://example.com/go.php&quot;</span>
+</pre></div> 
+</div>
+</div>
+<a class="anchor" id="a841b182f6e93f43af7ba128d020dcea7"></a><!-- doxytag: member="Open_Source_Objects::FILE::normalizeUrl" ref="a841b182f6e93f43af7ba128d020dcea7" args="([optional], String relativeUrl)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">String normalizeUrl </td>
+          <td>(</td>
+          <td class="paramtype">String&nbsp;</td>
+          <td class="paramname"> <em>relativeUrl</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns normalized url of current document (remove trailing query strings), optionally append a relative url. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>relativeUrl</em>&nbsp;</td><td>Optional. If present, the relative url will be appended to result url.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>Normalized url.</dd></dl>
+<p>The following code illustrates how to use the normalizeUrl method:</p>
+<div class="fragment"><pre class="fragment">    <span class="comment">// assume current url is http://example.com/index.php?id=10&quot;</span>
+    var url = LOCALJS.FILE.normalizeUrl(); <span class="comment">// return &quot;http://example.com/index.php&quot;</span>
+    var url2 = LOCALJS.FILE.normalizeUrl(<span class="stringliteral">&quot;app/go.php&quot;</span>); <span class="comment">// return &quot;http://example.com/app/go.php&quot;</span>
 </pre></div> 
 </div>
 </div>

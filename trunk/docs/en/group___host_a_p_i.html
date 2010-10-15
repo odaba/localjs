@@ -343,8 +343,8 @@ Call JavaScript functions</h2></td></tr>
     <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>url</em>&nbsp;</td><td>The initial url the browser navigates to. If <em>url</em> is NULL, the browser doesn't navigate to anywhere. </td></tr>
     <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>url_pattern</em>&nbsp;</td><td>A <a href="http://www.boost.org/doc/libs/1_44_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html" target="_blank">Perl Regular Expression</a> that will be matched against each url the browser navigates to. </p>
 <ul>
-<li>If it doesn't match, then <a class="el" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a> object will not be available in the page. </li>
-<li>If <em>url_pattern</em> is NULL, then <a class="el" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a> object is available for any url. </li>
+<li>If it doesn't match, then <a class="el" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a> object will not be available in the page. </li>
+<li>If <em>url_pattern</em> is NULL, then <a class="el" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a> object is available for any url. </li>
 </ul>
 </td></tr>
     <tr><td valign="top"><tt>[out]</tt>&nbsp;</td><td valign="top"><em>pVarResult</em>&nbsp;</td><td>Receive the parameter <em>result</em> passed to JavaScript method <a class="el" href="interfacelocal_j_s.html#ae0a273e38f45d2547157ddb6cfa6108c" title="Close the current browser window. NOT available in standalone Internet Explorer application.">localJS.closeWindow</a>. Can be NULL to ignore the <em>result</em>.</td></tr>
@@ -355,7 +355,7 @@ Call JavaScript functions</h2></td></tr>
 <p>Code below launches a LocalJS browser:</p>
 <div class="fragment"><pre class="fragment">    <span class="keywordtype">void</span> * hLocalJSBrowser = <a class="code" href="group___host_a_p_i.html#ga3bdfa56d0d14d6d6d5af554f7cc0be64" title="Launch a LocalJS browser.">LocalJS::createBrowser</a>(WS_POPUP | WS_VISIBLE, 100, 100, 300, 200, NULL, L<span class="stringliteral">&quot;http://www.localJS.org/&quot;</span>, NULL, NULL);
 </pre></div><p><a class="el" href="group___host_a_p_i.html#ga3bdfa56d0d14d6d6d5af554f7cc0be64" title="Launch a LocalJS browser.">createBrowser()</a> can be called from JavaScript to create another LocalJS browser window:</p>
-<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&#39;DllCall&#39;</span>);
+<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&#39;DllCall&#39;</span>);
     dllCall.add(<span class="stringliteral">&quot;LocalJS.dll&quot;</span>, <span class="stringliteral">&quot;void * __stdcall createBrowser(DWORD dwStyle, int x, int y, int nWidth, int nHeight, HWND hWndParent, LPCWSTR url, LPCWSTR url_pattern, VARIANT * const pVarResult);&quot;</span>);
 
     var WS_POPUP = 0x80000000, <span class="comment">// Refer to window styles in MSDN</span>
@@ -364,7 +364,7 @@ Call JavaScript functions</h2></td></tr>
     var browser = dllCall.createBrowser(WS_POPUP | WS_VISIBLE, 100, 100, 300, 200, 0, <span class="stringliteral">&quot;http://www.localJS.org/&quot;</span>, 0, 0);
 </pre></div><p>To get the WebBrowser object of the new LocalJS browser, call <a class="el" href="group___host_a_p_i.html#ga3d893359694af5cddd626024b2a1dfd0" title="Returns the WebBrowser object of underlying LocalJS browser or Internet Explorer.">getBrowserObj()</a>:</p>
 <div class="fragment"><pre class="fragment">    dllCall.add(<span class="stringliteral">&quot;LocalJS.dll&quot;</span>, <span class="stringliteral">&quot;IDispatch * __stdcall getBrowserObj(void * browser);&quot;</span>);
-    var browser_obj = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.interface2Object(dllCall.getBrowserObj(browser));
+    var browser_obj = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.interface2Object(dllCall.getBrowserObj(browser));
 
     <span class="comment">// To navigate the new LocalJS browser with WebBrowser object:</span>
     browser_obj.Navigate2(<span class="stringliteral">&quot;http://www.google.com/&quot;</span>);
@@ -411,7 +411,7 @@ Call JavaScript functions</h2></td></tr>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table border="0" cellspacing="2" cellpadding="0">
     <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>url</em>&nbsp;</td><td>The initial url Internet Explorer navigates to. If <em>url</em> is NULL, Internet Explorer goes to it's home page. </td></tr>
-    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>url_pattern</em>&nbsp;</td><td>A <a href="http://www.boost.org/doc/libs/1_44_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html" target="_blank">Perl Regular Expression</a> that will be matched against each url Internet Explorer navigates to. If it doesn't match, then <a class="el" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a> object will not be available in the page. If <em>url_pattern</em> is NULL, then <a class="el" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a> object is available for any url.</td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>url_pattern</em>&nbsp;</td><td>A <a href="http://www.boost.org/doc/libs/1_44_0/libs/regex/doc/html/boost_regex/syntax/perl_syntax.html" target="_blank">Perl Regular Expression</a> that will be matched against each url Internet Explorer navigates to. If it doesn't match, then <a class="el" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a> object will not be available in the page. If <em>url_pattern</em> is NULL, then <a class="el" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a> object is available for any url.</td></tr>
   </table>
   </dd>
 </dl>
@@ -419,7 +419,7 @@ Call JavaScript functions</h2></td></tr>
 <p>Code below launches a LocalJS standalone Internet Explorer:</p>
 <div class="fragment"><pre class="fragment">    <span class="keywordtype">void</span> * hLocalJSIE = <a class="code" href="group___host_a_p_i.html#gac32ee10aa76ef792c4fad3f9cd6ce4f2" title="Launch a LocalJS standalone Internet Explorer application.">LocalJS::createIE</a>(L<span class="stringliteral">&quot;http://www.localJS.org/&quot;</span>, NULL);
 </pre></div><p><a class="el" href="group___host_a_p_i.html#gac32ee10aa76ef792c4fad3f9cd6ce4f2" title="Launch a LocalJS standalone Internet Explorer application.">createIE()</a> can be called from JavaScript:</p>
-<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all native JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&#39;DllCall&#39;</span>);
+<div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.COM.createObject(<span class="stringliteral">&#39;DllCall&#39;</span>);
     dllCall(<span class="stringliteral">&quot;LocalJS.dll&quot;</span>, <span class="stringliteral">&quot;void * __stdcall createIE(LPCWSTR url, LPCWSTR url_pattern);&quot;</span>);
     var browser = dllCall.createIE(<span class="stringliteral">&quot;http://www.localJS.org/&quot;</span>, 0);
 </pre></div><p>Although the position where the Internet Explorer application window initially appear cannot be specified, the window can be moved in JavaScript when HTML page is loaded:</p>
