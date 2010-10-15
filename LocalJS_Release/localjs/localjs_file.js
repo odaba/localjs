@@ -184,7 +184,7 @@
 		// get exe filename
 		localjs_file.getExeFilename = function()
 		{
-			var filename = newBuffer(512);
+			var filename = newBuffer(1024);
 			getModuleFileName(0, filename, filename.size >> 1);
 			return filename.asStringW;
 		}
@@ -359,6 +359,8 @@
 				openfilename.lpstrInitialDir = initialDir;
 			if (title)
 				openfilename.lpstrTitle = title;
+			else
+				openfilename.lpstrTitle = document.title;
 			if (defExt)
 				openfilename.lpstrDefExt = defExt;
 			if (initialFile)
