@@ -94,7 +94,7 @@ span.title_highlight2
 <div class="setting_title"><img class="title_arrow" src="_image/arrow_up.png"/><span style="font-weight:bold">&nbsp;创建新窗口及多个窗口之间的互操作</span><span class="title_tip">&nbsp;点击展开</span></div>
 <div class="setting_body">
 <ul class="function_intro">
-<li><span class="code">Debug \ bin \ demo1 \ _js \ demo_newwindow.js</span>：在 DHTML 事件处理函数中用 <span class="code">LOCALJS.UI.createBrowser</span> 函数创建新窗口，通过 <span class="code">initFunction</span> 参数，将主窗口中定义的一个 JavaScript 函数注入到新窗口中执行，从而实现窗口之间的互操作。</li>
+<li><span class="code">Debug \ bin \ demo1 \ _js \ demo_newwindow.js</span>：在 DHTML 事件处理函数中用 <span class="code">LOCALJS.UI.newWindow</span> 函数创建新窗口，通过 <span class="code">initFunction</span> 参数，将主窗口中定义的一个 JavaScript 函数注入到新窗口中执行，从而实现窗口之间的互操作。</li>
 <li><span class="code">Debug \ bin \ demo1 \ new_window_cn.html</span>：<span class="code">demo_newwindow.js</span>所打开的页面。</li>
 <li><span class="code">Debug \ bin \ demo1 \ _js \ demo_google.js</span>：当用户选择在新窗口中打开链接的时候，可以通过回调函数 <span class="code">LOCALJS.UI.newWindowCallback</span> 来决定是否取消这次点击；或者创建一个新窗口，在此新窗口中打开此链接。</li>
 </ul>

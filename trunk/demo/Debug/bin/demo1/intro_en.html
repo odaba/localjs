@@ -117,7 +117,7 @@ ul.function_intro
 <div class="setting_title"><img class="title_arrow" src="_image/arrow_up.png"/><span style="font-weight:bold">&nbsp;New window creation and interop</span><span class="title_tip">&nbsp;Click to expand</span></div>
 <div class="setting_body">
 <ul class="function_intro">
-<li><span class="code">Debug \ bin \ demo1 \ _js \ demo_newwindow.js</span>: Create new browser window <span class="code">LOCALJS.UI.createBrowser</span> in JavaScript event handler, and enable interop among windows by injecting an initializing JavaScript function specified by parameter <span class="code">initFunction</span> into new window.</li>
+<li><span class="code">Debug \ bin \ demo1 \ _js \ demo_newwindow.js</span>: Create new browser window <span class="code">LOCALJS.UI.newWindow</span> in JavaScript event handler, and enable interop among windows by injecting an initializing JavaScript function specified by parameter <span class="code">initFunction</span> into new window.</li>
 <li><span class="code">Debug \ bin \ demo1 \ new_window_en.html</span>: The HTML page opened by <span class="code">demo_newwindow.js</span>.</li>
 <li><span class="code">Debug \ bin \ demo1 \ _js \ demo_google.js</span>: When a link is clicked to open a new window, callback function <span class="code">LOCALJS.UI.newWindowCallback</span> will be triggerred. Processing this function can cancel the new window, or create a new window and open the url inside it.</li>
 </ul>
