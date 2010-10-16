@@ -26,7 +26,7 @@
 			var cn = createObject("ADODB.Connection");
 
 			cn.Provider = "Microsoft.Jet.OLEDB.4.0";
-			cn.ConnectionString = "Data Source=" + excel_file + ";Extended Properties=Excel 8.0;"
+			cn.ConnectionString = "Data Source=" + excel_file + ";Extended Properties=Excel 8.0;";
 			cn.Open();
 
 			return cn;
