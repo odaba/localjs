@@ -13,10 +13,6 @@ File list:
 		LocalJS library files.
 		LocalJS 的库文件。
 
-	LocalJS.lib
-		LocalJS link library. Containing information of function exported by LocalJS.dll.
-		LocalJS 连接时用到的库。包含 LocalJS.dll 所输出函数的信息。
-
 	LocalJSBootstrap.exe
 		LocalJS bootstrap program. It is used as this:
 			LocalJSBootstrap.exe first_page.html
