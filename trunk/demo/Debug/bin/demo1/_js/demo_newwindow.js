@@ -1,4 +1,4 @@
-// This function demostrates create a new window with LOCALJS.UI.createBrowser, and interop among new created windows
+// This function demostrates create a new window with LOCALJS.UI.newWindow, and interop among new created windows
 (function()
 {
 	window.attachEvent("onload", function()
@@ -44,9 +44,8 @@
 			};
 
 			// create the new browser window
-			LOCALJS.UI.createBrowser(0, new_window_url, window_number * 50, window_number * 50, 600, 300, LOCALJS.UI.WS_CLOSE_ONLY, localJS.hostWnd, function(new_window)
+			LOCALJS.UI.newWindow(new_window_url, window_number * 50, window_number * 50, 600, 300, LOCALJS.UI.WS_CLOSE_ONLY, localJS.hostWnd, function(new_window)
 			{
-				// the "this" keyword in injected_function will refer to the window object in new browser. refer to createBrowser.js
 				var new_doc = new_window.document;
 					new_sel = new_doc.getElementsByTagName("select")[0];
 
