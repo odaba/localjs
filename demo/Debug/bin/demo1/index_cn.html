@@ -144,7 +144,7 @@ openUrl = LOCALJS.FILE.exec;
 <div class="setting_body">
 <div>创建多个窗口并实现互相访问涉及到 COM 事件处理，窗口消息拦截以及窗口对象的自动释放，这些复杂的逻辑都封装在 LOCALJS.UI 里面。对外提供：</div>
 <ul class="function_intro">
-<li><span class="code">LOCALJS.UI.createBrowser</span> 函数：打开新窗口，并可以传入一个在主窗口中定义的 JavaScript 函数；此函数在新窗口初始化时执行，从而实现窗口之间的互操作。
+<li><span class="code">LOCALJS.UI.newWindow</span> 函数：打开新窗口，并可以传入一个在主窗口中定义的 JavaScript 函数；此函数在新窗口初始化时执行，从而实现窗口之间的互操作。
 <div class="demo_block" style="text-align:center"><a href="#" id="demoNewWindow">点击打开新窗口</a></div>
 对应源文件：<span class="code">demo_newwindow.js</span> 和 <span class="code">new_window_cn.html</span></li>
 <li><span class="code">LOCALJS.UI.newWindowCallback</span> 回调函数：当用户点击链接在新窗口中打开页面时此回调函数将被触发。在此函数中，可以取消这个新窗口的打开，也可以创建一个新窗口，像上例一样传入一个函数，然后在这个新窗口中打开页面。
