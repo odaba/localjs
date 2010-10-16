@@ -1,5 +1,5 @@
 // This file use LOCALJS.UI.newWindowCallback to handle the event of create a new window.
-// The callback function uses LOCALJS.UI.createBrowser to create a window with initial javascript code injected to the new browser window, which changes google logo in page
+// The callback function uses LOCALJS.UI.newWindow to create a window with initial javascript code injected to the new browser window, which changes google logo in page
 (function()
 {
 	window.attachEvent("onload", function()
@@ -157,7 +157,8 @@
 			};
 
 			// create new browser window and inject function above into google page
-			var browser_obj = LOCALJS.UI.createBrowser(2 == action, "about:blank", 10, 10, 500, 300, LOCALJS.UI.WS_CLOSE_ONLY, localJS.hostWnd, fnInjected_to_google);
+			var browser_obj = LOCALJS.UI.newWindow("about:blank", 10, 10, 500, 300, LOCALJS.UI.WS_CLOSE_ONLY, 
+												   localJS.hostWnd, fnInjected_to_google, false, '^http://www.google.com', 2 == action);
 			disp.returnValue = browser_obj.webBrowser;
 
 			return true;
