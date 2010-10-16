@@ -38,6 +38,11 @@
 		newStruct = dllCall.newStruct,
 		newBuffer = dllCall.newBuffer,
 
+		fnCheckOptionalParameter = function(p, default_value)
+		{
+			return "undefined" == typeof(p) ? default_value : p;
+		},
+
 		fnCreateRect = function () // creation of complex structures can be wrapped up in functions to hide detail
 		{
 			//  typedef struct _RECT {
@@ -379,7 +384,7 @@
     })();
 
 	// constructor of Browser object;
-	var fnObjBrowserCtor = function(browser_handle)
+	var fnObjBrowserWindowCtor = function(browser_handle)
 	{
 		// private variables
 		var handle_ = browser_handle,
@@ -482,13 +487,19 @@
 	// initialize new browser window functions
 	(function()
 	{
-		localjs_ui.createBrowser = function(ie, url, left, top, width, height, window_style, parent_window, initFunction, leave_alone)
+		localjs_ui.newWindow = function(url, left, top, width, height, window_style, parent_window, initFunction, leave_alone, pattern_url, ie)
 		{
 			var browser;
 
+			left = fnCheckOptionalParameter(left, 100);
+			top = fnCheckOptionalParameter(top, 100);
+			width = fnCheckOptionalParameter(width, 300);
+			height = fnCheckOptionalParameter(height, 180);
+			pattern_url = fnCheckOptionalParameter(pattern_url, 0);
+
 			if (ie)
 			{
-				browser = new fnObjBrowserCtor(createIE(url, 0));
+				browser = new fnObjBrowserWindowCtor(createIE(url, pattern_url));
 				moveWindow(browser.HWND, left, top, width, height, 1);
 			}
 			else
@@ -499,7 +510,7 @@
 				if (!parent_window)
 					parent_window = 0;
 
-				browser = new fnObjBrowserCtor(createBrowser(window_style, left, top, width, height, parent_window, url, 0, 0));
+				browser = new fnObjBrowserWindowCtor(createBrowser(window_style, left, top, width, height, parent_window, url, pattern_url, 0));
 			}
 
 			if (initFunction)
@@ -646,9 +657,9 @@
 				return;
 
 			// use our default process
-			// make the new window start from center of window
+			// make the new window start from center of screen
 			var scr = screen;
-			disp.returnValue = LOCALJS.UI.createBrowser(0, url, scr.availWidth / 2 - 10, scr.availHeight / 2 - 10, 10, 10, LOCALJS.UI.WS_NO_TITLE_BAR, 0);
+			disp.returnValue = LOCALJS.UI.newWindow(url, scr.availWidth / 2 - 10, scr.availHeight / 2 - 10, 10, 10, LOCALJS.UI.WS_NO_TITLE_BAR);
 		}});
 
 		win.attachEvent("onunload", function()

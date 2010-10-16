@@ -160,7 +160,7 @@ div#div_app_title
 <div class="setting_body">
 <div>Create multiple browser windows and JavaScript interop involves complex COM event handling, window message hooking and automatic management of browser window object, which are all wrapped up in LOCALJS.UI, with a few simple functions exposed: </div>
 <ul class="function_intro">
-<li>Function <span class="code">LOCALJS.UI.createBrowser</span>: create new browser window, optionally passing a JavaScript function which will be executed when new window is loaded. Based on this function, JavaScript in different windows can call each other as in same page. 
+<li>Function <span class="code">LOCALJS.UI.newWindow</span>: create new browser window, optionally passing a JavaScript function which will be executed when new window is loaded. Based on this function, JavaScript in different windows can call each other as in same page. 
 <div class="demo_block" style="text-align:center"><a href="#" id="demoNewWindow">Click to open a new window</a></div>
 Source files related: <span class="code">demo_newwindow.js</span> and <span class="code">new_window_en.html</span></li>
 <li>Callback function <span class="code">LOCALJS.UI.newWindowCallback</span>: When a link is clicked to open a page in a new window, this callback function will be triggerred. Processing this function can cancel the new window; or create a new window, pass a function in as example above, and open the url inside it.
