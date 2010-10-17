@@ -47,6 +47,9 @@ Folder list:
 
 Change History:
 
+2010-10-17
+	LocalJS 2.0.3 rename C functions exported by LocalJS.Dll for better readability.
+
 2010-10-15
 	LocalJS 2.0.2 released with a batch of small fixes in LOCALJS.FILE.
 
