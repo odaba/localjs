@@ -9,7 +9,7 @@
 
 		doc.getElementById("demoADO").attachEvent("onclick", function()
 		{
-			if (new_page && new_page.isRunning())
+			if (new_page && !new_page.isClosed())
 				new_page.webBrowser.Navigate2(data_table_url);
 			else
 				new_page = LOCALJS.UI.newWindow(data_table_url, -100, -100, 10, 10);

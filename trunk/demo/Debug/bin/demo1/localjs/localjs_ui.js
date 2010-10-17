@@ -125,11 +125,11 @@
 	addFunc('user32.dll', 'BOOL GetWindowPlacement(HWND hWnd,WINDOWPLACEMENT *lpwndpl);');
 	addFunc('user32.dll', 'BOOL SetWindowPlacement(HWND hWnd,WINDOWPLACEMENT *lpwndpl);');
 
-	addFunc("LocalJS.dll", "void * __stdcall createBrowser(DWORD dwStyle, int x, int y, int nWidth, int nHeight, HWND hWndParent, LPCWSTR url, LPCWSTR url_pattern, VARIANT * const pVarResult);");
-	addFunc("LocalJS.dll", "void __stdcall deleteBrowser(void * browser)");
-	addFunc("LocalJS.dll", "void __stdcall detachBrowser(void * browser);");
+	addFunc("LocalJS.dll", "void * __stdcall createBrowserWindow(DWORD dwStyle, int x, int y, int nWidth, int nHeight, HWND hWndParent, LPCWSTR url, LPCWSTR url_pattern, VARIANT * const pVarResult);");
+	addFunc("LocalJS.dll", "void __stdcall deleteBrowserWindow(void * browser)");
+	addFunc("LocalJS.dll", "void __stdcall detachBrowserWindow(void * browser);");
 	addFunc("LocalJS.dll", "IDispatch * __stdcall getBrowserObj(void * browser);");
-	addFunc("LocalJS.dll", "BOOL __stdcall browserRunning(void * browser);");
+	addFunc("LocalJS.dll", "BOOL __stdcall browserWindowClosed(void * browser);");
 	addFunc("LocalJS.dll", "int __stdcall getBrowserType(void * browser);");
 	addFunc("LocalJS.dll", "void * __stdcall createIE(LPCWSTR url, LPCWSTR url_pattern);");
 	addFunc("LocalJS.dll", "HWND __stdcall getBrowserHostWnd(void * browser);");
@@ -151,11 +151,11 @@
 		getWindowPlacement = dllCall.GetWindowPlacement,
 		setWindowPlacement = dllCall.SetWindowPlacement,
 
-		createBrowser = dllCall.createBrowser,
-		deleteBrowser = dllCall.deleteBrowser,
-		detachBrowser = dllCall.detachBrowser,
+		createBrowserWindow = dllCall.createBrowserWindow,
+		deleteBrowserWindow = dllCall.deleteBrowserWindow,
+		detachBrowserWindow = dllCall.detachBrowserWindow,
 		getBrowserObj = dllCall.getBrowserObj,
-		browserRunning = dllCall.browserRunning,
+		browserWindowClosed = dllCall.browserWindowClosed,
 		getBrowserHostWnd = dllCall.getBrowserHostWnd,
 		getBrowserType = dllCall.getBrowserType,
 		createIE = dllCall.createIE,
@@ -413,12 +413,12 @@
 				if (eventHook_)
 					eventHook_.disconnect();
 				if (detach)
-					detachBrowser(tmp_handle);
-				deleteBrowser(tmp_handle);
+					detachBrowserWindow(tmp_handle);
+				deleteBrowserWindow(tmp_handle);
 			}
 		};
 
-		this.isRunning = function() { return browserRunning(handle_) ? true : false; };
+		this.isClosed = function() { return browserWindowClosed(handle_) ? true : false; };
 
 		this.getJSWindow = function()
 		{
@@ -510,7 +510,7 @@
 				if (!parent_window)
 					parent_window = 0;
 
-				browser = new fnObjBrowserWindowCtor(createBrowser(window_style, left, top, width, height, parent_window, url, pattern_url, 0));
+				browser = new fnObjBrowserWindowCtor(createBrowserWindow(window_style, left, top, width, height, parent_window, url, pattern_url, 0));
 			}
 
 			if (initFunction)
