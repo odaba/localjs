@@ -20,7 +20,7 @@ CWebBrowserWindow::~CWebBrowserWindow(void)
 {
 	if (m_localjs_window)
 	{
-		deleteBrowser(m_localjs_window);
+		deleteBrowserWindow(m_localjs_window);
 		m_localjs_window = NULL;
 	}
 
@@ -30,7 +30,7 @@ CWebBrowserWindow::~CWebBrowserWindow(void)
 bool CWebBrowserWindow::createWindow(DWORD dwStyle, int x, int y, int nWidth, int nHeight, 
 									 HWND hWndParent, LPCWSTR url, LPCWSTR url_pattern)
 {
-	m_localjs_window = createBrowser(dwStyle, x, y, nWidth, nHeight, hWndParent, url, url_pattern, NULL);
+	m_localjs_window = createBrowserWindow(dwStyle, x, y, nWidth, nHeight, hWndParent, url, url_pattern, NULL);
 	return NULL != m_localjs_window;
 }
 
@@ -45,7 +45,7 @@ bool CWebBrowserWindow::dialogBox(DWORD dwStyle, int x, int y, int nWidth, int n
 	if (hWndDisable)
 		EnableWindow(hWndDisable, FALSE);
 
-	m_localjs_window = createBrowser(dwStyle, x, y, nWidth, nHeight, hWndParent, url, url_pattern, pVarResult);
+	m_localjs_window = createBrowserWindow(dwStyle, x, y, nWidth, nHeight, hWndParent, url, url_pattern, pVarResult);
 	bool bRes = (NULL != m_localjs_window);
 	HWND hWndHost = NULL;
 	if (bRes)
@@ -106,7 +106,7 @@ HWND CWebBrowserWindow::getHostWnd(void) const
 
 bool CWebBrowserWindow::running(void) const
 {
-	return !!browserRunning(m_localjs_window);
+	return !browserWindowClosed(m_localjs_window);
 }
 
 void CWebBrowserWindow::setModelDialogForeground(void)
