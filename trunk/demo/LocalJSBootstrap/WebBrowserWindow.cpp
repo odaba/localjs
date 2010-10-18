@@ -28,15 +28,14 @@ CWebBrowserWindow::~CWebBrowserWindow(void)
 }
 
 bool CWebBrowserWindow::createWindow(DWORD dwStyle, int x, int y, int nWidth, int nHeight, 
-									 HWND hWndParent, LPCWSTR url, LPCWSTR url_pattern)
+									 HWND hWndParent, LPCWSTR url)
 {
-	m_localjs_window = createBrowserWindow(dwStyle, x, y, nWidth, nHeight, hWndParent, url, url_pattern, NULL);
+	m_localjs_window = createBrowserWindow(dwStyle, x, y, nWidth, nHeight, hWndParent, url, NULL);
 	return NULL != m_localjs_window;
 }
 
 bool CWebBrowserWindow::dialogBox(DWORD dwStyle, int x, int y, int nWidth, int nHeight, 
-								  HWND hWndParent, LPCWSTR url, LPCWSTR url_pattern, 
-								  HWND hWndDisable, VARIANT * const pVarResult)
+								  HWND hWndParent, LPCWSTR url, HWND hWndDisable, VARIANT * const pVarResult)
 {
 	// Disable some windows to make the browser UI behaves like a modal dialog. :-)
 	// the window be enabled/diabled will receive WM_ENABLE message.
@@ -45,7 +44,7 @@ bool CWebBrowserWindow::dialogBox(DWORD dwStyle, int x, int y, int nWidth, int n
 	if (hWndDisable)
 		EnableWindow(hWndDisable, FALSE);
 
-	m_localjs_window = createBrowserWindow(dwStyle, x, y, nWidth, nHeight, hWndParent, url, url_pattern, pVarResult);
+	m_localjs_window = createBrowserWindow(dwStyle, x, y, nWidth, nHeight, hWndParent, url, pVarResult);
 	bool bRes = (NULL != m_localjs_window);
 	HWND hWndHost = NULL;
 	if (bRes)

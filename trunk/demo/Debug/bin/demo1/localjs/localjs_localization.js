@@ -146,7 +146,20 @@
 		}
 		else
         {
-            return key;   
+            return key;
         }
+	};
+
+	localjs_localization.getAcceptLanguages = function()
+	{
+		var dllCall = localJS.COM.createObject('DllCall'),
+			newBuffer = dllCall.newBuffer,
+			languages = newBuffer(512),
+			languages_length = newBuffer(4, languages.size);
+
+		dllCall.add("shlwapi.dll", "HRESULT GetAcceptLanguages(LPTSTR psz, LPDWORD pcch);", "f");
+		if (dllCall.f(languages, languages_length) >= 0)
+			return languages.asStringW;
+		return false;
 	};
 })();

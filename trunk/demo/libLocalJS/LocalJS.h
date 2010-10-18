@@ -15,9 +15,8 @@ void __stdcall setBrowserControlRegPath(LPCSTR reg_path);
 void __stdcall setLicense(LPCSTR license);
 
 void * __stdcall createBrowserWindow(DWORD dwStyle, int x, int y, int nWidth, int nHeight,
-								     HWND hWndParent, LPCWSTR url, LPCWSTR url_pattern,
-								     VARIANT * const pVarResult);
-void * __stdcall createIE(LPCWSTR url, LPCWSTR url_pattern);
+								     HWND hWndParent, LPCWSTR url, VARIANT * const pVarResult);
+void * __stdcall createIE(LPCWSTR url);
 void __stdcall deleteBrowserWindow(void * browser);
 void __stdcall detachBrowserWindow(void * browser);
 BOOL __stdcall translateBrowserAccelerator(LPMSG lpmsg);
