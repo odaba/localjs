@@ -158,7 +158,7 @@
 
 			// create new browser window and inject function above into google page
 			var browser_obj = LOCALJS.UI.newWindow("about:blank", 10, 10, 500, 300, LOCALJS.UI.WS_CLOSE_ONLY, 
-												   localJS.hostWnd, fnInjected_to_google, false, '^http://www.google.com', 2 == action);
+												   localJS.hostWnd, fnInjected_to_google, false, 2 == action);
 			disp.returnValue = browser_obj.webBrowser;
 
 			return true;

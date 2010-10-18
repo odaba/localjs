@@ -20,7 +20,10 @@
 	localjs_namespace.UI = {};
 
     // common variables of this closure
-    var win = window,
+    var false_value = false, // this variable is used to make false be compressed by compressor.
+		true_value = true, // this variable is used to make true be compressed by compressor.
+		win = window,
+		scr = screen,
 		localjs_ui = localjs_namespace.UI,
 
 		local_js = localJS,
@@ -125,13 +128,13 @@
 	addFunc('user32.dll', 'BOOL GetWindowPlacement(HWND hWnd,WINDOWPLACEMENT *lpwndpl);');
 	addFunc('user32.dll', 'BOOL SetWindowPlacement(HWND hWnd,WINDOWPLACEMENT *lpwndpl);');
 
-	addFunc("LocalJS.dll", "void * __stdcall createBrowserWindow(DWORD dwStyle, int x, int y, int nWidth, int nHeight, HWND hWndParent, LPCWSTR url, LPCWSTR url_pattern, VARIANT * const pVarResult);");
+	addFunc("LocalJS.dll", "void * __stdcall createBrowserWindow(DWORD dwStyle, int x, int y, int nWidth, int nHeight, HWND hWndParent, LPCWSTR url, VARIANT * const pVarResult);");
 	addFunc("LocalJS.dll", "void __stdcall deleteBrowserWindow(void * browser)");
 	addFunc("LocalJS.dll", "void __stdcall detachBrowserWindow(void * browser);");
 	addFunc("LocalJS.dll", "IDispatch * __stdcall getBrowserObj(void * browser);");
 	addFunc("LocalJS.dll", "BOOL __stdcall browserWindowClosed(void * browser);");
 	addFunc("LocalJS.dll", "int __stdcall getBrowserType(void * browser);");
-	addFunc("LocalJS.dll", "void * __stdcall createIE(LPCWSTR url, LPCWSTR url_pattern);");
+	addFunc("LocalJS.dll", "void * __stdcall createIE(LPCWSTR url);");
 	addFunc("LocalJS.dll", "HWND __stdcall getBrowserHostWnd(void * browser);");
 
     var getMessage = dllCall.GetMessage,
@@ -222,17 +225,17 @@
     (function ()
 	{
         var msg = fnCreateMsg();
-        unloading = false;
+        unloading = false_value;
 
         win.attachEvent("onunload", function ()
 		{
-            unloading = true;
+            unloading = true_value;
         });
 
         localjs_ui.doEvents = function ()
 		{
             if (unloading)
-                return false;
+                return false_value;
 
             var ret = getMessage(msg, 0, 0, 0);
 
@@ -240,7 +243,7 @@
             if (0 == ret) // WM_QUIT
             {
                 postQuitMessage(msg.wParam);
-                return false;
+                return false_value;
             }
 
             if (ret > 0)
@@ -252,7 +255,7 @@
                 }
             };
 
-            return true;
+            return true_value;
         };
     })();
 
@@ -307,7 +310,7 @@
             if (!el_draggables)
                 el_draggables = [body, elHtml];
 
-            var mouse_capture = false,
+            var mouse_capture = false_value,
 				rectWindows = fnCreateRect(),
 				start_mouse_x,
 				start_mouse_y,
@@ -321,10 +324,10 @@
 				        for (var i = 0; i < el_draggables.length; ++i)
 						{
 				            if (el_draggables[i] === elClicked)
-				                return true;
+				                return true_value;
 				        }
 				    }
-				    return false;
+				    return false_value;
 				},
 
 				elClicked,
@@ -333,7 +336,7 @@
 
 				fnOnlosecapture = function ()
 				{
-				    mouse_capture = false;
+				    mouse_capture = false_value;
 				    if (elClicked)
 					{
 				        elClicked.detachEvent(str_onlosecapture, fnOnlosecapture);
@@ -351,7 +354,7 @@
                 if (!mouse_capture && (1 & event.button) && fnCheckDraggableElement(elClicked)
 					&& event.clientX < elHtml.clientWidth && event.clientY < elHtml.clientHeight)
 				{
-                    mouse_capture = true;
+                    mouse_capture = true_value;
                     elClicked.setCapture();
 
                     elClicked.attachEvent(str_onlosecapture, fnOnlosecapture);
@@ -418,7 +421,7 @@
 			}
 		};
 
-		this.isClosed = function() { return browserWindowClosed(handle_) ? true : false; };
+		this.isClosed = function() { return browserWindowClosed(handle_) ? true_value : false_value; };
 
 		this.getJSWindow = function()
 		{
@@ -436,7 +439,7 @@
 		}
 
 		// Handle COM events of the new browser object to inject this.initFunction to new page
-		var attached = false,
+		var attached = false_value,
 			attachCode = function()
 			{
 				if (!attached)
@@ -453,10 +456,10 @@
 
 						new_window.attachEvent("onunload", function()
 						{
-							attached = false;
+							attached = false_value;
 						});
 
-						attached = true;
+						attached = true_value;
 					}
 				}
 			},
@@ -481,25 +484,25 @@
 			break;
 		}
 
-		eventHook_ = connectEvents(browser_.webBrowser, event_hanlders, false);
+		eventHook_ = connectEvents(browser_.webBrowser, event_hanlders, false_value);
 	};
 
 	// initialize new browser window functions
 	(function()
 	{
-		localjs_ui.newWindow = function(url, left, top, width, height, window_style, parent_window, initFunction, leave_alone, pattern_url, ie)
+		localjs_ui.newWindow = function(url, left, top, width, height, window_style, parent_window, initFunction, leave_alone, ie)
 		{
 			var browser;
 
-			left = fnCheckOptionalParameter(left, 100);
-			top = fnCheckOptionalParameter(top, 100);
 			width = fnCheckOptionalParameter(width, 300);
 			height = fnCheckOptionalParameter(height, 180);
-			pattern_url = fnCheckOptionalParameter(pattern_url, 0);
+
+			left = fnCheckOptionalParameter(left, (scr.availWidth - width) >> 1);
+			top = fnCheckOptionalParameter(top, (scr.availHeight - height) >> 1);
 
 			if (ie)
 			{
-				browser = new fnObjBrowserWindowCtor(createIE(url, pattern_url));
+				browser = new fnObjBrowserWindowCtor(createIE(url));
 				moveWindow(browser.HWND, left, top, width, height, 1);
 			}
 			else
@@ -510,7 +513,7 @@
 				if (!parent_window)
 					parent_window = 0;
 
-				browser = new fnObjBrowserWindowCtor(createBrowserWindow(window_style, left, top, width, height, parent_window, url, pattern_url, 0));
+				browser = new fnObjBrowserWindowCtor(createBrowserWindow(window_style, left, top, width, height, parent_window, url, 0));
 			}
 
 			if (initFunction)
@@ -539,7 +542,7 @@
 		// replace default alert function
 		win.alert = function(msg)
 		{
-			localjs_ui.msgBox(msg, true);
+			localjs_ui.msgBox(msg, true_value);
 		}
 
 		localjs_ui.confirm = function(msg, default_yes, ok_cancel)
@@ -576,8 +579,7 @@
 
 		localjs_ui.centerWindow = function(cx, cy) // cx, cy are window width
 		{
-			var scr = screen,
-				scrWidth = scr.availWidth,
+			var scrWidth = scr.availWidth,
 				scrHeight = scr.availHeight;
 			if (cx > scrWidth)
 				cx = scrWidth;
@@ -620,7 +622,7 @@
 
 		var exitConfirm = function()
 		{
-			return localjs_ui.exitCallback ? localjs_ui.exitCallback() : true;
+			return localjs_ui.exitCallback ? localjs_ui.exitCallback() : true_value;
 		};
 
 		var windowHook = createObject('WindowHook', hostWnd);
@@ -632,7 +634,7 @@
 		var eventHook = connectEvents(webBrowser, {'WindowClosing': function(IsChildWindow, cancel)
 		{
 			// let's always cancel the close event since otherwise it will popup an unwanted confirm dialog
-			cancel.returnValue = true;
+			cancel.returnValue = true_value;
 
 			if (exitConfirm())
 				local_js.closeWindow(); // the way close the window from within javascript
@@ -659,7 +661,7 @@
 			// use our default process
 			// make the new window start from center of screen
 			var scr = screen;
-			disp.returnValue = LOCALJS.UI.newWindow(url, scr.availWidth / 2 - 10, scr.availHeight / 2 - 10, 10, 10, LOCALJS.UI.WS_NO_TITLE_BAR);
+			disp.returnValue = LOCALJS.UI.newWindow(url, scr.availWidth / 2 - 5, scr.availHeight / 2 - 5, 10, 10, LOCALJS.UI.WS_NO_TITLE_BAR);
 		}});
 
 		win.attachEvent("onunload", function()
