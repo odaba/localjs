@@ -12,11 +12,10 @@ public:
 	~CWebBrowserWindow(void);
 
 	bool createWindow(DWORD dwStyle, int x, int y, int nWidth, int nHeight, 
-					  HWND hWndParent, LPCWSTR url, LPCWSTR url_pattern);
+					  HWND hWndParent, LPCWSTR url);
 
 	bool dialogBox(DWORD dwStyle, int x, int y, int nWidth, int nHeight, 
-				   HWND hWndParent, LPCWSTR url, LPCWSTR url_pattern, 
-				   HWND hWndDisable, VARIANT * const pVarResult);
+				   HWND hWndParent, LPCWSTR url, HWND hWndDisable, VARIANT * const pVarResult);
 
 	HWND getHostWnd(void) const;
 	bool running(void) const;
