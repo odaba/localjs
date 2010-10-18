@@ -1,0 +1,28 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://www.w3.org/2005/10/profile">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>Hello World, LocalJS!</title>
+<!-- add LOCALJS Library -->
+<script type="text/javascript" src="localjs/localjs_ui.js" charset="UTF-8"></script>
+</head>
+
+<body scroll="auto">
+
+<div id="main" align="center">
+<br/>
+<b>Hello World, LocalJS!</b>
+</div>
+
+<script type="text/javascript">
+var localjs_ui = LOCALJS.UI;
+localjs_ui.centerWindow(300, 200); // this function is defined in global_functions.js
+localjs_ui.showTitleBar();
+localjs_ui.msgBox(document.title);
+localjs_ui.addDraggable(document.getElementById('main'));
+</script>
+
+</body>
+</html>
+
