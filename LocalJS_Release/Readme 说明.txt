@@ -1,4 +1,4 @@
-LocalJS Release 2.0.2
+LocalJS Release 2.1.0
 
 For any issues, please contact me at martin@localjs.org.
 有问题请发邮件到 martin@localjs.org。
@@ -47,6 +47,10 @@ Folder list:
 
 Change History:
 
+2010-10-18
+	LocalJS 2.1.0 remove url_pattern parameter from C function createBrowserWindow, add localJS.trust method.
+	add LOCALJS.LOCALIZATION.getAcceptLanguages 
+
 2010-10-17
 	LocalJS 2.0.3 rename C functions exported by LocalJS.Dll for better readability.
 
@@ -58,3 +62,6 @@ Change History:
 
 2010-10-10
 	LocalJS 2.0 released along with demo application
+	
+Agreement:
+	For security reason, LocalJS will send information about program hosting LocalJS to LocalJS server, to identify what program is using LocalJS.

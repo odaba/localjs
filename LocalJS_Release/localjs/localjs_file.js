@@ -20,7 +20,8 @@
 	localjs_namespace.FILE = {};
 
     // common variables of this closure
-    var win = window,
+    var false_value = false, // this variable is used to make false be compressed by compressor.
+		win = window,
 		localjs_file = localjs_namespace.FILE,
 
 		local_js = localJS,
@@ -55,7 +56,7 @@
 
 		fnToBoolean = function(val)
 		{
-			return val ? true : false;
+			return val ? true : false_value;
 		},
 
 		dllCall = createObject('DllCall'),
@@ -223,7 +224,7 @@
 			}
 			catch (e)
 			{
-				return false;
+				return false_value;
 			}
 		}
 
@@ -367,7 +368,7 @@
 
 			if (getOpenFileName(openfilename))
 				return openfilename.lpstrFile.asStringW;
-			return false;
+			return false_value;
 		}
 
 		// browse for folder
@@ -380,7 +381,7 @@
 			}
 			catch (e)
 			{
-				return false;
+				return false_value;
 			}
 		}
 
@@ -399,7 +400,7 @@
 			if (urlCreateFromPath(path, url, pcchUrl, 0) >= 0)
 				return url.asStringW;
 
-			return false;
+			return false_value;
 		}
 
 		// get filename from url to a local file
@@ -411,7 +412,7 @@
 			if (parseUrl(url, PARSE_PATH_FROM_URL, 0, path, path.size >> 1, cchResult, 0) >= 0)
 				return path.asStringW;
 
-			return false;
+			return false_value;
 		}
 
 		// test if the string is a url
@@ -431,15 +432,15 @@
 			if (urlIs(url, URLIS_FILEURL))
 			{
 				var path = localjs_file.urlToPath(url),
-					file_content = false;
+					file_content = false_value;
 
-				if (false !== path && localjs_file.fileExists(path))
+				if (false_value !== path && localjs_file.fileExists(path))
 					file_content = localjs_file.readFileUTF8(path);
 
 				if (!callback)
 					return file_content;
 
-				if (false === file_content)
+				if (false_value === file_content)
 				{
 					if (callback.fail)
 						callback.fail(file_content);
@@ -456,7 +457,7 @@
 				}
 				else
 				{
-					var status, content = false,
+					var status, content = false_value,
 
 						onOK = function(responseText)
 						{
@@ -476,7 +477,7 @@
 						while (0 == status)
 						{
 							if (!LOCALJS.UI.doEvents())
-								return false;
+								return false_value;
 						}
 
 						if (1 == status)
@@ -496,7 +497,7 @@
 			if (urlCombine(baseUrl, relativeUrl, combined_url, characters_combined, URL_ESCAPE_PERCENT | URL_ESCAPE_UNSAFE) >= 0)
 				return combined_url.asStringW;
 
-			return false;
+			return false_value;
 		}
 
 		// normalize url to current document, optionally append a relative url
