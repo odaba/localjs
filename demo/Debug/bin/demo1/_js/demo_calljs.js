@@ -17,7 +17,7 @@
 
 		doc.getElementById('demoCallJS').attachEvent("onclick", function()
 		{
-			dllCall.demo(local_js.browserHandle);
+			dllCall.demo(local_js.browserWindowHandle);
 		});
 
 		// this global function will be called by dll, refer to LocalJSDemoDll.cpp
