@@ -17,18 +17,18 @@ void __stdcall setLicense(LPCSTR license);
 void * __stdcall createBrowserWindow(DWORD dwStyle, int x, int y, int nWidth, int nHeight,
 								     HWND hWndParent, LPCWSTR url, VARIANT * const pVarResult);
 void * __stdcall createIE(LPCWSTR url);
-void __stdcall deleteBrowserWindow(void * browser);
-void __stdcall detachBrowserWindow(void * browser);
+void __stdcall deleteBrowserWindow(void * browser_window);
+void __stdcall detachBrowserWindow(void * browser_window);
 BOOL __stdcall translateBrowserAccelerator(LPMSG lpmsg);
 
-BOOL __stdcall browserWindowClosed(void * browser);
-HWND __stdcall getBrowserHostWnd(void * browser);
+BOOL __stdcall browserWindowClosed(void * browser_window);
+HWND __stdcall getBrowserHostWnd(void * browser_window);
 HWND __stdcall getIETabWnd(void * ie);
-int __stdcall getBrowserType(void * browser);
-IDispatch * __stdcall getBrowserObj(void * browser);
+int __stdcall getBrowserType(void * browser_window);
+IDispatch * __stdcall getBrowserObj(void * browser_window);
 
-void __cdecl callJSFunction(void * browser, const bool popup_error, VARIANT * pvarResult, LPCSTR prototype, ...);
-void __cdecl callJSFunction_va_list(void * browser, const bool popup_error, VARIANT * pvarResult, LPCSTR prototype, va_list vargs);
+void __cdecl callJSFunction(void * browser_window, const bool popup_error, VARIANT * pvarResult, LPCSTR prototype, ...);
+void __cdecl callJSFunction_va_list(void * browser_window, const bool popup_error, VARIANT * pvarResult, LPCSTR prototype, va_list vargs);
 
 #ifdef __cplusplus
 }
