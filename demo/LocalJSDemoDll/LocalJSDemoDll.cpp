@@ -16,8 +16,8 @@ DWORD WINAPI CallJSThreadProc(LPVOID lpParameter)
 {
 	CoInitialize(NULL);
 
-	void * browser = lpParameter;
-	assert(browser);
+	void * browser_window = lpParameter;
+	assert(browser_window);
 
 	const static LPCWSTR DIALOG_TITLE = L"Thread in DLL";
 
@@ -32,7 +32,7 @@ DWORD WINAPI CallJSThreadProc(LPVOID lpParameter)
 	// call JS function
 	VARIANT vres;
 	VariantInit(&vres);
-	LocalJSHostAPI::callJSFunction(browser, true, &vres, "void funcCalledByDll(long * plval, LPWSTR str, IDispatch ** obj)", &lval, wstr, &pdisp);
+	LocalJSHostAPI::callJSFunction(browser_window, true, &vres, "void funcCalledByDll(long * plval, LPWSTR str, IDispatch ** obj)", &lval, wstr, &pdisp);
 	
 	// display parameters changed by JavaScript function
 	WCHAR info[2048];
@@ -60,11 +60,11 @@ DWORD WINAPI CallJSThreadProc(LPVOID lpParameter)
 }
 
 
-extern "C" void __stdcall callJSFunctionInNewThread(void * browser)
+extern "C" void __stdcall callJSFunctionInNewThread(void * browser_window)
 {
-	assert(browser);
+	assert(browser_window);
 
-	HANDLE hThread = CreateThread(NULL, 0, CallJSThreadProc, browser, 0, NULL);
+	HANDLE hThread = CreateThread(NULL, 0, CallJSThreadProc, browser_window, 0, NULL);
 	assert(NULL != hThread);
 	CloseHandle(hThread);
 
