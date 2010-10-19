@@ -185,7 +185,7 @@ How to debug JavaScript?</h3>
 <img src="debug_popup.JPG" alt="debug_popup.JPG"/>
 <p><strong>Prompt for Debug</strong></p></div>
  <dl class="user"><dt><b></b></dt><dd>Choose the debugger you want and click Yes to debug JavaScript with the IDE.</dd></dl>
-<dl class="note"><dt><b>Note:</b></dt><dd>If you called <a class="el" href="group___host_a_p_i.html#ga7474b7f77001b41241fdadc926054645" title="Change the default registry used by LocalJS browser to save its own options.">setBrowserControlRegPath()</a> to change the registry entry for LocalJS browser, you will need to set the 'Disable Script Debugger' option under the registry postion you specified.</dd></dl>
+<dl class="note"><dt><b>Note:</b></dt><dd>If you called <a class="el" href="group___host_a_p_i.html#ga7474b7f77001b41241fdadc926054645" title="Change the default registry used by LocalJS browser window to save its own options.">setBrowserControlRegPath()</a> to change the registry entry for LocalJS browser, you will need to set the 'Disable Script Debugger' option under the registry postion you specified.</dd></dl>
 <dl class="see"><dt><b>See also:</b></dt><dd><a href="http://msdn.microsoft.com/en-us/library/k2h50zzs(VS.80).aspx" target="_blank">How to: Enable Client-Side Script Debugging</a></dd></dl>
 <h2><a class="anchor" id="howto_browser_wnd"></a>
 Play with Browser Window</h2>
@@ -432,9 +432,9 @@ Launching New Browser Window</h2>
 How to launch a new LocalJS browser window from within JavaScript?</h3>
 <ul>
 <li>Create <a class="el" href="interface_dll_call.html" title="DllCall object enables JavaScript call functions exported by DLL or EXE files, including most Windows...">DllCall</a> object through <a class="el" href="interface_c_o_m.html#a14285e3676c39b414cac2652046ec881" title="Create COM object by ProgID, optionally specify object location.">COM.createObject</a>; </li>
-<li>Call <a class="el" href="group___host_a_p_i.html">LocalJS Hosting API</a> <a class="el" href="group___host_a_p_i.html#ga3bdfa56d0d14d6d6d5af554f7cc0be64" title="Launch a LocalJS browser.">createBrowser()</a> function through <a class="el" href="interface_dll_call.html" title="DllCall object enables JavaScript call functions exported by DLL or EXE files, including most Windows...">DllCall</a> object.</li>
+<li>Call <a class="el" href="group___host_a_p_i.html">LocalJS Hosting API</a> <a class="el" href="group___host_a_p_i.html#ga1ca250104d8e424d1af1fae979bea9d6" title="Launch a LocalJS browser window.">createBrowserWindow()</a> function through <a class="el" href="interface_dll_call.html" title="DllCall object enables JavaScript call functions exported by DLL or EXE files, including most Windows...">DllCall</a> object.</li>
 </ul>
-<p>Refer to <a class="el" href="group___host_a_p_i.html#ga3bdfa56d0d14d6d6d5af554f7cc0be64" title="Launch a LocalJS browser.">createBrowser()</a> for an example.</p>
+<p>Refer to <a class="el" href="group___host_a_p_i.html#ga1ca250104d8e424d1af1fae979bea9d6" title="Launch a LocalJS browser window.">createBrowserWindow()</a> for an example.</p>
 <h3><a class="anchor" id="howto_new_wnd_by_click"></a>
 How to launch a new LocalJS browser window when user clicks a link?</h3>
 <ul>
@@ -443,12 +443,12 @@ How to launch a new LocalJS browser window when user clicks a link?</h3>
 <li>Set <code>disp.returnValue</code> to the <code>WebBrowser</code> object of a new created browser window.</li>
 </ul>
 <p>Refer to <a class="el" href="interface_c_o_m.html#a03b548ce8da020a692d590d4a5b21247" title="Connect JavaScript functions to COM object events.">COM.connectEvents</a> for an example of handling <a href="http://msdn.microsoft.com/en-us/library/aa768337(VS.85).aspx" target="_blank">NewWindow3 event</a>.</p>
-<dl class="note"><dt><b>Note:</b></dt><dd>The <code>WebBrowser</code> object of new created browser window is retrieved through function <a class="el" href="group___host_a_p_i.html#ga3d893359694af5cddd626024b2a1dfd0" title="Returns the WebBrowser object of underlying LocalJS browser or Internet Explorer.">getBrowserObj()</a> and <a class="el" href="interface_c_o_m.html#a9742cc74cdf0445008d4adb2adbaa0d3" title="Convert a raw IDispatch * pointer to an object usable in JavaScript.">COM.interface2Object</a>. </dd></dl>
-<dl class="user"><dt><b></b></dt><dd>Refer to <a class="el" href="group___host_a_p_i.html#ga3bdfa56d0d14d6d6d5af554f7cc0be64" title="Launch a LocalJS browser.">createBrowser()</a> for an example showing how to get the <code>WebBrowser</code> object of new created browser window.</dd></dl>
+<dl class="note"><dt><b>Note:</b></dt><dd>The <code>WebBrowser</code> object of new created browser window is retrieved through function <a class="el" href="group___host_a_p_i.html#gad71e54ddf1d1fad062c95a5c9b574806" title="Returns the WebBrowser object of underlying LocalJS browser window or Internet Explorer.">getBrowserObj()</a> and <a class="el" href="interface_c_o_m.html#a9742cc74cdf0445008d4adb2adbaa0d3" title="Convert a raw IDispatch * pointer to an object usable in JavaScript.">COM.interface2Object</a>. </dd></dl>
+<dl class="user"><dt><b></b></dt><dd>Refer to <a class="el" href="group___host_a_p_i.html#ga1ca250104d8e424d1af1fae979bea9d6" title="Launch a LocalJS browser window.">createBrowserWindow()</a> for an example showing how to get the <code>WebBrowser</code> object of new created browser window.</dd></dl>
 <h3><a class="anchor" id="howto_interop_other_wnd"></a>
 How to interop with JavaScript in other LocalJS browser window?</h3>
 <ul>
-<li>Get the <code>WebBrowser</code> object of new created browser window through function <a class="el" href="group___host_a_p_i.html#ga3d893359694af5cddd626024b2a1dfd0" title="Returns the WebBrowser object of underlying LocalJS browser or Internet Explorer.">getBrowserObj()</a> and <a class="el" href="interface_c_o_m.html#a9742cc74cdf0445008d4adb2adbaa0d3" title="Convert a raw IDispatch * pointer to an object usable in JavaScript.">COM.interface2Object</a>. </li>
+<li>Get the <code>WebBrowser</code> object of new created browser window through function <a class="el" href="group___host_a_p_i.html#gad71e54ddf1d1fad062c95a5c9b574806" title="Returns the WebBrowser object of underlying LocalJS browser window or Internet Explorer.">getBrowserObj()</a> and <a class="el" href="interface_c_o_m.html#a9742cc74cdf0445008d4adb2adbaa0d3" title="Convert a raw IDispatch * pointer to an object usable in JavaScript.">COM.interface2Object</a>. </li>
 <li>Get the <a href="http://www.javascriptkit.com/jsref/window.shtml" target="_blank">JavaScript Window object</a> of the new LocalJS browser page: <div class="fragment"><pre class="fragment">    var new_window = browser_obj.Document.parentWindow;
 </pre></div> </li>
 <li>Access <em>global</em> functions and variables in the new LocalJS browser page through properties of <a href="http://www.javascriptkit.com/jsref/window.shtml" target="_blank">JavaScript Window object</a> of the new LocalJS browser page: <div class="fragment"><pre class="fragment">    var new_window_func = new_window.function_name; <span class="comment">// assuming function_name is a global function name in the new page</span>
@@ -456,7 +456,7 @@ How to interop with JavaScript in other LocalJS browser window?</h3>
 </pre></div> </li>
 <li>Now the JavaScript inside two LocalJS browser windows can interop each other as in same page.</li>
 </ul>
-<p>Refer to <a class="el" href="group___host_a_p_i.html#ga3bdfa56d0d14d6d6d5af554f7cc0be64" title="Launch a LocalJS browser.">createBrowser()</a> for example code.</p>
+<p>Refer to <a class="el" href="group___host_a_p_i.html#ga1ca250104d8e424d1af1fae979bea9d6" title="Launch a LocalJS browser window.">createBrowserWindow()</a> for example code.</p>
 <h3><a class="anchor" id="howto_global_dict"></a>
 How to make a variable global to JavaScript in all LocalJS browser windows?</h3>
 <ul>
