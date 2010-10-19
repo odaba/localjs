@@ -333,8 +333,8 @@ Methods</h2></td></tr>
         <span class="keywordflow">if</span> (ok_to_open_new_window)
         {
             <span class="comment">// let&#39;s open the url in a new localJS browser window created here.</span>
-            <span class="comment">// createBrowser is a global JavaScript function defined elsewhere</span>
-            disp.returnValue = <a class="code" href="group___host_a_p_i.html#ga3bdfa56d0d14d6d6d5af554f7cc0be64" title="Launch a LocalJS browser.">createBrowser</a>(0, url, -100, -100, 10, 10, WS_POPUP | WS_CAPTION | WS_VISIBLE | WS_SYSMENU | WS_THICKFRAME, 0, url);
+            <span class="comment">// assume createBrowserWindow is a global JavaScript function defined elsewhere</span>
+            disp.returnValue = <a class="code" href="group___host_a_p_i.html#ga1ca250104d8e424d1af1fae979bea9d6" title="Launch a LocalJS browser window.">createBrowserWindow</a>(url, -100, -100, 10, 10, WS_POPUP | WS_CAPTION | WS_VISIBLE | WS_SYSMENU | WS_THICKFRAME, 0);
         }
         <span class="keywordflow">else</span>
         {
@@ -411,7 +411,7 @@ Methods</h2></td></tr>
     dllCall.add(<span class="stringliteral">&#39;path_to_demo.dll&#39;</span>, <span class="stringliteral">&#39;extern &quot;C&quot; IDispatch * __stdcall getInternalDispatchObject(void)&#39;</span>);
 
     var objInternal = com.interface2Object(dllCall.getInternalDispatchObject());
-</pre></div><p>Refer to <a class="el" href="group___host_a_p_i.html#ga3bdfa56d0d14d6d6d5af554f7cc0be64" title="Launch a LocalJS browser.">createBrowser()</a> function for example code using <a class="el" href="interface_c_o_m.html#a9742cc74cdf0445008d4adb2adbaa0d3">interface2Object</a> when create new LocalJS browser from JavaScript.</p>
+</pre></div><p>Refer to <a class="el" href="group___host_a_p_i.html#ga1ca250104d8e424d1af1fae979bea9d6" title="Launch a LocalJS browser window.">createBrowserWindow()</a> function for example code using <a class="el" href="interface_c_o_m.html#a9742cc74cdf0445008d4adb2adbaa0d3">interface2Object</a> when create new LocalJS browser from JavaScript.</p>
 <dl class="note"><dt><b>Note:</b></dt><dd><code>interface2Object</code> method does <em>NOT</em> modify reference count of the <code>IDispatch</code> * pointer passed in. Function <code>getInternalDispatchObject</code> <em>SHOULD</em> make sure the reference count is increased by 1. When corresponding JavaScript object is destructed, it will decrease the reference count of the object by 1.</dd></dl>
 <dl class="user"><dt><b></b></dt><dd>Illustration using QueryInterface:</dd></dl>
 <div class="fragment"><pre class="fragment">    IInternalInterface * g_internal_object2 = NULL; <span class="comment">// Assume g_internal_object2 is initialized elsewhere.</span>
@@ -439,7 +439,7 @@ Methods</h2></td></tr>
         <span class="comment">// after Detach() is called, destructor of CComQIPtr&lt;IDispatch&gt; does not decrease reference count any more.</span>
         <span class="keywordflow">return</span> disp_interface.Detach();
     }
-</pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_dll_call.html" title="DllCall object enables JavaScript call functions exported by DLL or EXE files, including most Windows...">DllCall</a> | <a class="el" href="interface_c_o_m.html#a14285e3676c39b414cac2652046ec881" title="Create COM object by ProgID, optionally specify object location.">COM.createObject</a> | <a class="el" href="group___host_a_p_i.html#ga3bdfa56d0d14d6d6d5af554f7cc0be64" title="Launch a LocalJS browser.">createBrowser()</a> | <a class="el" href="group___host_a_p_i.html#ga3d893359694af5cddd626024b2a1dfd0" title="Returns the WebBrowser object of underlying LocalJS browser or Internet Explorer.">getBrowserObj()</a> | <a href="http://msdn.microsoft.com/en-us/library/ms693431(VS.85).aspx" target="_blank">Implementing Reference Counting</a> </dd></dl>
+</pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_dll_call.html" title="DllCall object enables JavaScript call functions exported by DLL or EXE files, including most Windows...">DllCall</a> | <a class="el" href="interface_c_o_m.html#a14285e3676c39b414cac2652046ec881" title="Create COM object by ProgID, optionally specify object location.">COM.createObject</a> | <a class="el" href="group___host_a_p_i.html#ga1ca250104d8e424d1af1fae979bea9d6" title="Launch a LocalJS browser window.">createBrowserWindow()</a> | <a class="el" href="group___host_a_p_i.html#gad71e54ddf1d1fad062c95a5c9b574806" title="Returns the WebBrowser object of underlying LocalJS browser window or Internet Explorer.">getBrowserObj()</a> | <a href="http://msdn.microsoft.com/en-us/library/ms693431(VS.85).aspx" target="_blank">Implementing Reference Counting</a> </dd></dl>
 
 </div>
 </div>
