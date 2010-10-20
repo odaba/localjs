@@ -47,9 +47,15 @@ Folder list:
 
 Change History:
 
+2010-10-20
+	LocalJS 2.1.1 rename localJS.browserHandle to localJS.browserWindowHandle
+		add properties LOCALJS.UI.isIE and BrowserWindow.isIE
+		LOCALJS.UI.addDraggable accepts variable number of arguments, and can be id of HTML element or HTML element object
+		Other small fixes of LOCALJS.UI
+
 2010-10-18
 	LocalJS 2.1.0 remove url_pattern parameter from C function createBrowserWindow, add localJS.trust method.
-	add LOCALJS.LOCALIZATION.getAcceptLanguages 
+		add LOCALJS.LOCALIZATION.getAcceptLanguages 
 
 2010-10-17
 	LocalJS 2.0.3 rename C functions exported by LocalJS.Dll for better readability.

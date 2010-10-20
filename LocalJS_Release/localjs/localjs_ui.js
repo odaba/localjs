@@ -221,6 +221,8 @@
 	localjs_ui.WS_NO_TITLE_BAR = WS_POPUP | WS_VISIBLE | WS_SYSMENU;
 	localjs_ui.WS_NORMAL = WS_OVERLAPPEDWINDOW | WS_VISIBLE;
 
+	localjs_ui.isIE = BROWSER_TYPE_IE == getBrowserType(local_js.browserWindowHandle);
+
     // initialize function doEvents
     (function ()
 	{
@@ -273,26 +275,34 @@
             el_draggables = el_draggable_array;
         };
 
-        localjs_ui.addDraggable = function (el)
+        localjs_ui.addDraggable = function ()
 		{
-            if (el)
+			var i = 0, args = arguments;
+			for (; i < args.length; ++i)
 			{
-                if (!el_draggables)
+				var el = args[i];
+				if ("string" == typeof(el))
+					el = document.getElementById(el);
+
+				if (el)
 				{
-                    el_draggables = [];
-
-                    var doc = document, body;
-                    if (doc)
+					if (!el_draggables)
 					{
-                        el_draggables.push(fnGetElHtml(doc));
-                        body = doc.body;
-                    }
+						el_draggables = [];
 
-                    if (body)
-                        el_draggables.push(body);
-                }
-                el_draggables.push(el);
-            }
+						var doc = document, body;
+						if (doc)
+						{
+							el_draggables.push(fnGetElHtml(doc));
+							body = doc.body;
+						}
+
+						if (body)
+							el_draggables.push(body);
+					}
+					el_draggables.push(el);
+				}
+			}
         };
 
         localjs_ui.getDraggables = function ()
@@ -399,6 +409,7 @@
 		this.webBrowser = interface2Object(getBrowserObj(handle_));
 		this.HWND = getBrowserHostWnd(handle_);
 		this.initFunction = null;
+		this.isIE = BROWSER_TYPE_IE == getBrowserType(handle_);
 
 		// methods
 		this.getHandle = function() { return handle_; };
@@ -423,20 +434,35 @@
 
 		this.isClosed = function() { return browserWindowClosed(handle_) ? true_value : false_value; };
 
-		this.getJSWindow = function()
+		this.getJSWindow = function(timout_seconds)
 		{
-			if (browser_.webBrowser && browser_.webBrowser.Document)
-				return browser_.webBrowser.Document.parentWindow;
-			return null;
+			timout_seconds = fnCheckOptionalParameter(timout_seconds, 10);
+			var start = (new Date()).getTime() / 1000;
+
+			do
+			{
+				if (browser_.webBrowser && browser_.webBrowser.Document)
+					return browser_.webBrowser.Document.parentWindow;
+			} while (((new Date()).getTime() / 1000) - start < timout_seconds && localjs_ui.doEvents());
+
+			return undefined;
 		};
 
-		this.getJSVariable = function(variable_name)
+		this.getJSVariable = function(variable_name, timout_seconds)
 		{
-			var js_window = browser_.getJSWindow();
+			timout_seconds = fnCheckOptionalParameter(timout_seconds, 10);
+
+			var start = (new Date()).getTime() / 1000,
+				js_window = browser_.getJSWindow(timout_seconds);
+
 			if (js_window)
+			{
+				while (undefined == js_window[variable_name] && ((new Date()).getTime() / 1000) - start < timout_seconds && localjs_ui.doEvents());
 				return js_window[variable_name];
-			return null;
-		}
+			}
+
+			return undefined;
+		};
 
 		// Handle COM events of the new browser object to inject this.initFunction to new page
 		var attached = false_value,
@@ -637,7 +663,12 @@
 			cancel.returnValue = true_value;
 
 			if (exitConfirm())
-				local_js.closeWindow(); // the way close the window from within javascript
+			{
+				if (localjs_ui.isIE)
+					webBrowser.Quit();
+				else
+					local_js.closeWindow();
+			}
 		}});
 
 		win.attachEvent("onunload", function()
