@@ -122,6 +122,8 @@ Properties</h2></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns the <a href="http://msdn.microsoft.com/en-us/library/aa752085(VS.85).aspx" target="_blank">WebBrowser object</a> of the browser window.  <a href="#a426d92f4370abff654c9a85a060c25c9"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_open___source___objects_1_1_browser_window.html#ab814a25959c1cc0849f8a4fc780c1b50">HWND</a><code> [get]</code></td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns the HWND window handle of the browser window.  <a href="#ab814a25959c1cc0849f8a4fc780c1b50"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_open___source___objects_1_1_browser_window.html#a862ffbf6976d63755adc1fc78f1a0354">isIE</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Returns <code>true</code> if the <a class="el" href="interface_open___source___objects_1_1_browser_window.html" title="Open source object. Represents a browser window. Returned by LOCALJS.UI.newWindow. Include localjs_ui.js to use it.">BrowserWindow</a> object refers to a standalone Internet Explorer, <code>false</code> for LocalJS browser window.  <a href="#a862ffbf6976d63755adc1fc78f1a0354"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>Open source object. Represents a browser window. Returned by LOCALJS.UI.newWindow. Include localjs_ui.js to use it. </p>
@@ -276,6 +278,22 @@ Properties</h2></td></tr>
 <p>You may need to use this handle in some cases. Provide it here for convenience.</p>
 <dl class="note"><dt><b>Note:</b></dt><dd>For LocalJS Internet Explorer, it's the handle to the main window of Internet Explorer, not to the tab window of the page.</dd></dl>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interfacelocal_j_s.html#aa05066bf1c7f31ea898c0d2aed29eedb" title="ReadOnly. Returns the HWND handle of current browser window.">localJS.hostWnd</a> | <a class="el" href="interfacelocal_j_s.html#a231aa00f34826cb7baf3d21ca25cc2cc" title="ReadOnly. Returns the HWND handle of current browser window tab. ONLY apply to Internet Explorer 7 an...">localJS.IETabWnd</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a862ffbf6976d63755adc1fc78f1a0354"></a><!-- doxytag: member="Open_Source_Objects::BrowserWindow::isIE" ref="a862ffbf6976d63755adc1fc78f1a0354" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean isIE<code> [get]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Returns <code>true</code> if the <a class="el" href="interface_open___source___objects_1_1_browser_window.html" title="Open source object. Represents a browser window. Returned by LOCALJS.UI.newWindow. Include localjs_ui.js to use it.">BrowserWindow</a> object refers to a standalone Internet Explorer, <code>false</code> for LocalJS browser window. </p>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_open___source___objects_1_1_u_i.html#a862ffbf6976d63755adc1fc78f1a0354" title="Returns true if current page is loaded by standalone Internet Explorer, false if by LocalJS browser w...">UI.isIE</a> </dd></dl>
 
 </div>
 </div>

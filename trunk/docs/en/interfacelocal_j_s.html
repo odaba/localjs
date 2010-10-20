@@ -101,6 +101,8 @@ function toggleVisibility(linkObj) {
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Methods</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacelocal_j_s.html#a638f18884615ddd3e7cc901a3302f931">trust</a> (String trusted_source,...)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Trust web pages from given domain, url prefix, or path prefix. LocalJS objects are ONLY available in pages from trusted sources.  <a href="#a638f18884615ddd3e7cc901a3302f931"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacelocal_j_s.html#ae0a273e38f45d2547157ddb6cfa6108c">closeWindow</a> ([optional] var result)</td></tr>
 <tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Close the current browser window. <em>NOT</em> available in standalone Internet Explorer application.  <a href="#ae0a273e38f45d2547157ddb6cfa6108c"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="properties"></a>
@@ -157,6 +159,52 @@ Properties</h2></td></tr>
 </ul>
 <p>Those objects above are <em>ONLY</em> available in LocalJS browsers (browsers hosted by LocalJS) and LocalJS Internet Explorer (standalone Internet Explorer application launched by LocalJS). They are not available to any other applications or browsers. </p>
  <hr/><h2>Method Documentation</h2>
+<a class="anchor" id="a638f18884615ddd3e7cc901a3302f931"></a><!-- doxytag: member="localJS::trust" ref="a638f18884615ddd3e7cc901a3302f931" args="(String trusted_source,...)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">trust </td>
+          <td>(</td>
+          <td class="paramtype">String&nbsp;</td>
+          <td class="paramname"> <em>trusted_source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&nbsp;</td>
+          <td class="paramname"> <em>...</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Trust web pages from given domain, url prefix, or path prefix. LocalJS objects are ONLY available in pages from trusted sources. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>trusted_source</em>&nbsp;</td><td>It can be: </p>
+<ul>
+<li>Domain name like <code>"mysite.com"</code>. All pages from the domain and its subdomains are trusted. </li>
+<li>Url prefix like <code>"http://mysite.com/myapp/"</code>. Pages match this url prefix are trusted. </li>
+<li>Path prefix like <code>"C:\\Program Files\\MyApp\\"</code>. Pages whose path match this path prefix are trusted. </li>
+</ul>
+</td></tr>
+    <tr><td valign="top"><tt>[in]</tt>&nbsp;</td><td valign="top"><em>...</em>&nbsp;</td><td>Optional. More trusted sources to be added.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Typically <code>trust</code> is called at the first html file loaded by LocalJS bootstrap program, which by default is LocalJSBootstrap.html.</p>
+<dl class="note"><dt><b>Note:</b></dt><dd>Initially the sub folders of folder containing LocalJS bootstrap program exe file are trusted. So those folders don't have to be passed to <code>trust</code> method.</dd></dl>
+<p>Following code illustrates how to trust pages from your site: </p>
+<div class="fragment"><pre class="fragment">    <a class="code" href="interfacelocal_j_s.html" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.trust(<span class="stringliteral">&quot;mysite.com&quot;</span>, <span class="stringliteral">&quot;mysite.org&quot;</span>); <span class="comment">// All pages from mysite.com, or any subdomain like &quot;app.mysite.com&quot; are trusted.</span>
+</pre></div> 
+</div>
+</div>
 <a class="anchor" id="ae0a273e38f45d2547157ddb6cfa6108c"></a><!-- doxytag: member="localJS::closeWindow" ref="ae0a273e38f45d2547157ddb6cfa6108c" args="([optional] var result)" -->
 <div class="memitem">
 <div class="memproto">
