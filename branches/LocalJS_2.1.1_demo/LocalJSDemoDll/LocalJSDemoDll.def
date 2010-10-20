@@ -1,0 +1,2 @@
+LIBRARY		"LocalJSDemoDll"
+EXPORTS		callJSFunctionInNewThread
