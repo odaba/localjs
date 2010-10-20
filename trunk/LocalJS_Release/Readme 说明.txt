@@ -1,49 +1,49 @@
 LocalJS Release 2.1.0
 
 For any issues, please contact me at martin@localjs.org.
-ÓĞÎÊÌâÇë·¢ÓÊ¼şµ½ martin@localjs.org¡£
+æœ‰é—®é¢˜è¯·å‘é‚®ä»¶åˆ° martin@localjs.orgã€‚
 
 File list:
-ÎÄ¼şÁĞ±í£º
+æ–‡ä»¶åˆ—è¡¨ï¼š
 	localJS.cfg
 		Configuration file of LocalJS. MUST be in the same folder with LocalJS.dll.
-		LocalJS µÄÅäÖÃÎÄ¼ş¡£±ØĞëºÍ LocalJS.dll ÔÚÍ¬Ò»Ä¿Â¼ÏÂ¡£
+		LocalJS çš„é…ç½®æ–‡ä»¶ã€‚å¿…é¡»å’Œ LocalJS.dll åœ¨åŒä¸€ç›®å½•ä¸‹ã€‚
 
 	LocalJS.dll
 		LocalJS library files.
-		LocalJS µÄ¿âÎÄ¼ş¡£
+		LocalJS çš„åº“æ–‡ä»¶ã€‚
 
 	LocalJSBootstrap.exe
 		LocalJS bootstrap program. It is used as this:
 			LocalJSBootstrap.exe first_page.html
 			LocalJSBootstrap.exe then creates a LocalJS browser window and opens first_page.html in that window.
 
-		If no command line arguments is given, LocalJSBootstrap.exe will look for a file under same folder with same filename having .html extension name as the first page to open, in this case it looks for LocalJSBootstrap.html¡£
+		If no command line arguments is given, LocalJSBootstrap.exe will look for a file under same folder with same filename having .html extension name as the first page to open, in this case it looks for LocalJSBootstrap.htmlã€‚
 
 		You can rename LocalJSBootstrap.exe to yourname.exe, then it will looks for yourname.html if no command line arguments is given.
 
-		LocalJS µÄÆô¶¯³ÌĞò¡£ÓÃ·¨ÈçÏÂ£º
+		LocalJS çš„å¯åŠ¨ç¨‹åºã€‚ç”¨æ³•å¦‚ä¸‹ï¼š
 			LocalJSBootstrap.exe first_page.html
-			LocalJSBootstrap.exe ´´½¨Ò»¸ö LocalJS ä¯ÀÀÆ÷´°¿Ú²¢ÔÚÆäÖĞ´ò¿ª first_page.html¡£
+			LocalJSBootstrap.exe åˆ›å»ºä¸€ä¸ª LocalJS æµè§ˆå™¨çª—å£å¹¶åœ¨å…¶ä¸­æ‰“å¼€ first_page.htmlã€‚
 
-		Èç¹ûÃ»ÓĞÃüÁîĞĞ²ÎÊı£¬LocalJSBootstrap.exe ÔÚÍ¬Ò»Ä¿Â¼ÏÂÑ°ÕÒÒ»¸öÍ¬ÃûµÄ´ø .html ºó×ºÃûµÄÎÄ¼ş£¬ÔÚä¯ÀÀÆ÷´°¿ÚÖĞ´ò¿ªËü¡£±ÈÈç LocalJSBootstrap.html¡£
+		å¦‚æœæ²¡æœ‰å‘½ä»¤è¡Œå‚æ•°ï¼ŒLocalJSBootstrap.exe åœ¨åŒä¸€ç›®å½•ä¸‹å¯»æ‰¾ä¸€ä¸ªåŒåçš„å¸¦ .html åç¼€åçš„æ–‡ä»¶ï¼Œåœ¨æµè§ˆå™¨çª—å£ä¸­æ‰“å¼€å®ƒã€‚æ¯”å¦‚ LocalJSBootstrap.htmlã€‚
 
-		Äã¿ÉÒÔ½« LocalJSBootstrap.exe ¸ÄÃûÎª yourname.exe£¬Ôòµ±Ã»ÓĞÃüÁîĞĞ²ÎÊıµÄÊ±ºò£¬Ëü½«ÔÚÍ¬Ò»Ä¿Â¼ÏÂÑ°ÕÒ yourname.html¡£
+		ä½ å¯ä»¥å°† LocalJSBootstrap.exe æ”¹åä¸º yourname.exeï¼Œåˆ™å½“æ²¡æœ‰å‘½ä»¤è¡Œå‚æ•°çš„æ—¶å€™ï¼Œå®ƒå°†åœ¨åŒä¸€ç›®å½•ä¸‹å¯»æ‰¾ yourname.htmlã€‚
 
 	LocalJSBootstrap.html
 		The default html file loaded by LocalJSBootstrap.exe.
-		LocalJSBootstrap.exe Ä¬ÈÏ´ò¿ªµÄ html ÎÄ¼ş¡£
+		LocalJSBootstrap.exe é»˜è®¤æ‰“å¼€çš„ html æ–‡ä»¶ã€‚
 
 
 Folder list:
-Ä¿Â¼ÁĞ±í£º
+ç›®å½•åˆ—è¡¨ï¼š
 	localjs
 		LOCALJS JavaScript Open Source Library, wrapping up common local operations to JavaScript functions.
-		¿ªÔ´µÄ LOCALJS JavaScript£¬½«³£ÓÃµÄ±¾µØ²Ù×÷·â×°Îª JavaScript º¯Êı¡£
+		å¼€æºçš„ LOCALJS JavaScriptï¼Œå°†å¸¸ç”¨çš„æœ¬åœ°æ“ä½œå°è£…ä¸º JavaScript å‡½æ•°ã€‚
 
 	LocalJSBootstrap
 		Source code and Visual C++ 6 project file of LocalJSBootstrap.exe. You can modify and use it freely.
-		LocalJSBootstrap.exe µÄÔ´´úÂëºÍ Visual C++ 6 ¹¤³ÌÎÄ¼ş¡£Äã¿ÉÒÔ×ÔÓÉµØĞŞ¸ÄºÍÊ¹ÓÃËü¡£
+		LocalJSBootstrap.exe çš„æºä»£ç å’Œ Visual C++ 6 å·¥ç¨‹æ–‡ä»¶ã€‚ä½ å¯ä»¥è‡ªç”±åœ°ä¿®æ”¹å’Œä½¿ç”¨å®ƒã€‚
 
 Change History:
 
