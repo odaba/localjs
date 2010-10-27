@@ -1,4 +1,4 @@
-LocalJS Release 2.1.0
+LocalJS Runtime Release 2.1.1
 
 For any issues, please contact me at martin@localjs.org.
 有问题请发邮件到 martin@localjs.org。
@@ -70,4 +70,4 @@ Change History:
 	LocalJS 2.0 released along with demo application
 	
 Agreement:
-	For security reason, LocalJS will send information about program hosting LocalJS to LocalJS server, to identify what program is using LocalJS.
+	For security reason, LocalJS will send information about program hosting LocalJS to LocalJS server, to identify what program is using LocalJS. LocalJS doesn't collect any user personal information.
