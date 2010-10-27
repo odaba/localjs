@@ -1,1 +1,0 @@
-(function(){var b=LOCALJS.FILE,a=b.getAppDataFolder("LocalJSDemo");b.createFolder(a);INI_FILE=b.buildPath(a,"localJSDemoSetting.ini")})();
