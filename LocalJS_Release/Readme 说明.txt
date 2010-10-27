@@ -1,4 +1,4 @@
-LocalJS Runtime Release 2.1.0
+LocalJS Runtime Release 2.1.1
 
 For any issues, please contact me at martin@localjs.org.
 有问题请发邮件到 martin@localjs.org。
