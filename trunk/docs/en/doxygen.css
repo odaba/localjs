@@ -1,9 +1,9 @@
 /* The standard CSS for doxygen */
 
-/*body, table, div, p, dl {
-	font-family: arial,helvetica,clean,sans-serif;
+body, table, div, p, dl {
+	font-family: Lucida Grande, Verdana, Geneva, Arial, sans-serif;
 	font-size: 12px;
-}*/
+}
 
 /* @group Heading Levels */
 
@@ -179,7 +179,7 @@ div.groupText {
 body {
 	background: white;
 	color: black;
-    margin: 10px;
+        margin: 0;
 }
 
 div.contents {
@@ -330,17 +330,6 @@ hr {
 
 hr.footer {
 	height: 1px;
-}
-
-div.footer {
-	padding:10px;
-	text-align:center;
-}
-
-
-div.site_header {
-	padding:10px;
-	text-align:center;
 }
 
 /* @group Member Descriptions */
@@ -694,3 +683,4 @@ div.headertitle
 {
 	padding: 5px 5px 5px 10px;
 }
+
