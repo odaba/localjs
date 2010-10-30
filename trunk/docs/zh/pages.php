@@ -14,7 +14,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="contents">
 这里列出所有相关的页面：<ul>
-<li><a class="el" href="howto.php">How To ...</a>
+<li><a class="el" href="howto.php">如何做到 ...</a>
 </li>
 <li><a class="el" href="tutorial_js4cpp.php">JavaScript Jump Start For C++ Programmers</a>
 </li>

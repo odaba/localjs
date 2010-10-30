@@ -2,7 +2,7 @@
 require_once('../../_config.php');
 include_once($base_path.'/_include/common_header_part1.php');
 ?>
-<title>LocalJS: How To ...</title>
+<title>LocalJS: 如何做到 ...</title>
 <?php include_once($base_path.'/_include/doxygen_header.php'); ?>
 <!-- 制作者 Doxygen 1.7.2 -->
 <script type="text/javascript"><!--
@@ -10,13 +10,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 --></script>
 <div class="header">
   <div class="headertitle">
-<h1>How To ... </h1>  </div>
+<h1>如何做到 ... </h1>  </div>
 </div>
 <div class="contents">
-<p>Quick jump link:</p>
-<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_start_up">LocalJS Start Up</a></div> <ul>
-<li><a class="el" href="howto.php#howto_start_local_js">How to run my site as LocalJS application?</a> </li>
-<li><a class="el" href="howto.php#howto_access_objects">How to start to use LocalJS objects in JavaScript?</a> </li>
+<p>本页目录：</p>
+<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_start_up">LocalJS 起步</a></div> <ul>
+<li><a class="el" href="howto.php#howto_start_local_js">如何把网站变成LocalJS 桌面程序？</a> </li>
+<li><a class="el" href="howto.php#howto_access_objects">如何在JavaScript 代码中使用LocalJS 对象？</a> </li>
 <li><a class="el" href="howto.php#howto_debug">How to debug JavaScript?</a></li>
 </ul>
 <div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_browser_wnd">Play with Browser Window</a></div> <ul>
@@ -69,23 +69,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <li><a class="el" href="howto.php#howto_thread_sync">How to synchronize data access among threads?</a></li>
 </ul>
 <h2><a class="anchor" id="howto_start_up"></a>
-LocalJS Start Up</h2>
+LocalJS 起步</h2>
 <h3><a class="anchor" id="howto_start_local_js"></a>
-How to run my site as LocalJS application?</h3>
+如何把网站变成LocalJS 桌面程序？</h3>
 <ul>
-<li>Download LocalJS Runtime, which is Free and less than 1 MB after decompression. </li>
-<li>Find LocalJSBootstrap.html in decompressed files, add JavaScript code below: <div class="fragment"><pre class="fragment">    <a class="code" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.<a class="code" href="interfacelocal_j_s.php#a638f18884615ddd3e7cc901a3302f931" title="Trust web pages from given domain, url prefix, or path prefix. LocalJS objects are ONLY available in ...">trust</a>(<span class="stringliteral">&quot;mysite.com&quot;</span>);
+<li> <a href="<?php echo $release_zip_link; ?>" target="_blank"><span class="red">免费</span>下载LocalJS 运行库</a>，解压缩后大小<span class="red">不到1 MB</span>。 </li>
+<li>在解压缩后的文件中找到 LocalJSBootstrap.html 并加入如下 JavaScript 代码：</li>
+</ul>
+<div class="fragment"><pre class="fragment">    <a class="code" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.<a class="code" href="interfacelocal_j_s.php#a638f18884615ddd3e7cc901a3302f931" title="Trust web pages from given domain, url prefix, or path prefix. LocalJS objects are ONLY available in ...">trust</a>(<span class="stringliteral">&quot;mysite.com&quot;</span>);
     location.replace(<span class="stringliteral">&quot;http://mysite.com/&quot;</span>);
-</pre></div> </li>
-<li>Run LocalJSBootstrap.exe.</li>
+</pre></div><ul>
+<li>运行LocalJSBootstrap.exe.</li>
 </ul>
 <h3><a class="anchor" id="howto_access_objects"></a>
-How to start to use LocalJS objects in JavaScript?</h3>
-<p>To use <a class="el" href="group___j_s_src_objects.php">LocalJS 基本对象</a>, include the JavaScript files included in <a href="http://sourceforge.net/projects/localjs/files/" target="_blank">LocalJS Runtime</a> in your page.</p>
-<p>To use <a class="el" href="group___j_s_objects.php">LocalJS 高级对象</a> :</p>
+如何在JavaScript 代码中使用LocalJS 对象？</h3>
+<p>对于<a class="el" href="group___j_s_src_objects.php">LocalJS 基本对象</a>, 在你的页面中包含  <a href="<?php echo $release_zip_link; ?>" target="_blank">LocalJS 运行库</a> 自带的JavaScript 文件。</p>
+<p>对于<a class="el" href="group___j_s_objects.php">LocalJS 高级对象</a> ：</p>
 <ul>
-<li>Root object <a class="el" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a> is globally available in LocalJS browser. </li>
-<li>All other LocalJS objects derive from properies of <a class="el" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a> object, or properies and methods of derived objects:</li>
+<li>LocalJS 高级对象的根对象localJS 是页面中的全局变量； </li>
+<li>其他的LocalJS 高级对象都派生自localJS 对象的属性，或者派生对象的属性或方法：</li>
 </ul>
 <div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.<a class="code" href="interfacelocal_j_s.php#ac46dd82aca231ab33f6308ba12975594" title="Readonly. Returns object COM, which exposes methods to create COM object, connect COM events...">COM</a>.<a class="code" href="interface_c_o_m.php#a14285e3676c39b414cac2652046ec881" title="Create COM object by ProgID, optionally specify object location.">createObject</a>(<span class="stringliteral">&#39;DllCall&#39;</span>);
     var thr = <a class="code" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.<a class="code" href="interfacelocal_j_s.php#ac12d811a674c6cc7417b6f9a8d39736c" title="Readonly. Returns object Threading, which exposes methods to create new script thread, sleep, get thread id, etc.">threading</a>.<a class="code" href="interface_threading.php#ab83b569dcb6b1ed35d6e9f13a8376a64" title="Create new script thread with optional arguments. Returns Thread object represents the new thread...">newThread</a>(<span class="stringliteral">&#39;return true;&#39;</span>);
