@@ -10,12 +10,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 --></script>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Methods</a> &#124;
+<a href="#pub-methods">方法</a> &#124;
 <a href="#properties">属性</a>  </div>
   <div class="headertitle">
 <h1>DllCall类参考<br/>
 <small>
-[<a class="el" href="group___j_s_objects.php">LocalJS Advanced Objects</a>]</small>
+[<a class="el" href="group___j_s_objects.php">LocalJS 高级对象</a>]</small>
 </h1>  </div>
 </div>
 <div class="contents">
@@ -26,7 +26,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <p><a href="class_dll_call-members.php">所有成员的列表。</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
-Methods</h2></td></tr>
+方法</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_dll_call.php#ab6730ea57a7678c1f07953ce331edca0">add</a> (String dllPath, String prototype,[optional] String renameTo)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Add function exported by DLL or EXE file as a method of current <a class="el" href="interface_dll_call.php" title="DllCall object enables JavaScript call functions exported by DLL or EXE files, including most Windows...">DllCall</a> object.  <a href="#ab6730ea57a7678c1f07953ce331edca0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_dll_call.php#af9c99ab123bbf569e623a9c5e5c9f40e">newBuffer</a> (int/String sizeOrString,[optional] int/boolean valueOrAnsi)</td></tr>

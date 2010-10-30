@@ -10,12 +10,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 --></script>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Methods</a> &#124;
+<a href="#pub-methods">方法</a> &#124;
 <a href="#properties">属性</a>  </div>
   <div class="headertitle">
 <h1>Threading类参考<br/>
 <small>
-[<a class="el" href="group___j_s_objects.php">LocalJS Advanced Objects</a>]</small>
+[<a class="el" href="group___j_s_objects.php">LocalJS 高级对象</a>]</small>
 </h1>  </div>
 </div>
 <div class="contents">
@@ -26,7 +26,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <p><a href="class_threading-members.php">所有成员的列表。</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
-Methods</h2></td></tr>
+方法</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_thread.php">Thread</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_threading.php#ab83b569dcb6b1ed35d6e9f13a8376a64">newThread</a> (String code,[optional] String language,[optional] var arguments)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create new script thread with optional arguments. Returns <a class="el" href="interface_thread.php" title="Represent a script thread.">Thread</a> object represents the new thread.  <a href="#ab83b569dcb6b1ed35d6e9f13a8376a64"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_threading.php#a2f94dee6d866d46d1f949359c765f704">sleep</a> (long milliseconds)</td></tr>

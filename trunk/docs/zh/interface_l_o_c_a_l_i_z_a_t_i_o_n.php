@@ -10,7 +10,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 --></script>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Methods</a>  </div>
+<a href="#pub-methods">方法</a>  </div>
   <div class="headertitle">
 <h1>LOCALIZATION类参考<br/>
 <small>
@@ -25,7 +25,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <p><a href="class_l_o_c_a_l_i_z_a_t_i_o_n-members.php">所有成员的列表。</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
-Methods</h2></td></tr>
+方法</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_l_o_c_a_l_i_z_a_t_i_o_n.php#a494b7408816f0e6545fe409d7f14a1a6">setPath</a> (String path,[optional] boolean reload)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the path to language files folder.  <a href="#a494b7408816f0e6545fe409d7f14a1a6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_l_o_c_a_l_i_z_a_t_i_o_n.php#acaf64f0e414c32bfa3c5cee215b06373">setLang</a> (String lang,[optional] boolean reload)</td></tr>

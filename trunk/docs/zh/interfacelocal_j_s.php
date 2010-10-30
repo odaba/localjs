@@ -10,11 +10,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 --></script>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Methods</a>  </div>
+<a href="#pub-methods">方法</a>  </div>
   <div class="headertitle">
 <h1>localJS类参考<br/>
 <small>
-[<a class="el" href="group___j_s_objects.php">LocalJS Advanced Objects</a>]</small>
+[<a class="el" href="group___j_s_objects.php">LocalJS 高级对象</a>]</small>
 </h1>  </div>
 </div>
 <div class="contents">
@@ -25,7 +25,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <p><a href="classlocal_j_s-members.php">所有成员的列表。</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
-Methods</h2></td></tr>
+方法</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacelocal_j_s.php#a638f18884615ddd3e7cc901a3302f931">trust</a> (String trusted_source,...)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Trust web pages from given domain, url prefix, or path prefix. LocalJS objects are ONLY available in pages from trusted sources.  <a href="#a638f18884615ddd3e7cc901a3302f931"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacelocal_j_s.php#ae0a273e38f45d2547157ddb6cfa6108c">closeWindow</a> ([optional] var result)</td></tr>

@@ -23,7 +23,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <p><a href="class_f_i_l_e-members.php">所有成员的列表。</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
-Methods</h2></td></tr>
+方法</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">INI and registry access</div></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a0f1894aaa83f22c87ac4cfc0f3ff05be">iniReadInt</a> (String filename, String section, String key,[optional] int default_value)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Read an integer from INI file.  <a href="#a0f1894aaa83f22c87ac4cfc0f3ff05be"></a><br/></td></tr>

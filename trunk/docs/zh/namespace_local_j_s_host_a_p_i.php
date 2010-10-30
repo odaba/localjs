@@ -14,7 +14,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="contents">
 
-<p>C functions to launch and manage LocalJS browser windows, also available to JavaScript. Detailed in <a class="el" href="group___host_a_p_i.php">LocalJS Host API</a>.  
+<p>C functions to launch and manage LocalJS browser windows, also available to JavaScript. Detailed in <a class="el" href="group___host_a_p_i.php">LocalJS 运行库接口</a>.  
 <a href="#_details">更多...</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="func-members"></a>
@@ -63,7 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Call JavaScript function by C style function prototype, passing variable number of arguments in one <code>va_list</code> argument.  <a href="group___host_a_p_i.php#ga1cd8332c156b5897050189b2250dca2e"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>详细描述</h2>
-<p>C functions to launch and manage LocalJS browser windows, also available to JavaScript. Detailed in <a class="el" href="group___host_a_p_i.php">LocalJS Host API</a>. </p>
+<p>C functions to launch and manage LocalJS browser windows, also available to JavaScript. Detailed in <a class="el" href="group___host_a_p_i.php">LocalJS 运行库接口</a>. </p>
 </div>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>
 </html>

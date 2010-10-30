@@ -15,22 +15,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <div class="contents">
 <h2><a class="anchor" id="localjs_components"></a>
 LocalJS 包括三部分</h2>
-<div class="yui-gc"> <div class="yui-u first"> <div class="myli"> <a class="el" href="group___j_s_src_objects.php">LocalJS 基本对象</a>. Objects wrapping up common desktop operations. <b>In most cases, you only need to deal with LocalJS Basic Objects</b>. </p>
-<div class="indent">LocalJS Basic Objects are implemented by LocalJS open source JavaScript library, and based on <a class="el" href="group___j_s_objects.php">LocalJS Advanced Objects</a> and <a class="el" href="group___host_a_p_i.php">LocalJS Host API</a>.</div> </div> <div class="myli"> <a class="el" href="group___j_s_objects.php">LocalJS Advanced Objects</a>. A batch of JavaScript Objects which provide fully local access ability to JavaScript running in LocalJS browsers. </p>
-<div class="indent">These objects are provided for advanced operations like access local database, call Windows API, create script thread, etc.</div> </div> <div class="myli"> <a class="el" href="group___host_a_p_i.php">LocalJS Host API</a>. A set of C functions exported by localjs.dll, used to launch and manage LocalJS browsers. </p>
-<div class="indent">These functions are called by LocalJS bootstrap program. You only need to take a look at them when you need to control your application from out of JavaScript. For instance, call JavaScript functions from C++ code.</div> </div> </div> <div class="yui-u">  
-<div class="download" style="padding-top:0.5em">
-<a href="<?php echo $demo_7z_link; ?>" target="_blank"><span class="download link" style="width:8.5em">Download Demo</span><span class="download_end link">&nbsp;</span></a>
-</div>
-<div class="download" style="padding-top:0.5em">
-<a href="<?php echo $release_zip_link; ?>" target="_blank"><span class="download link">Download Runtime</span><span class="download_end link">&nbsp;</span></a>
-</div>
-<a href="howto.php" style="color:MediumBlue"><div class="next link" style="width:12.5em;padding-left:0em;margin-left:1.5em;margin-top:1em;">Try Some JavaScript</div></a>
- </div> </div><p>Diagram below shows relationship among LocalJS components:</p>
+<div class="yui-gc"> <div class="yui-u first"> <div class="myli"> <a class="el" href="group___j_s_src_objects.php">LocalJS 基本对象</a>. 这一组对象封装了常用的本地操作。<b>LocalJS 基本对象能满足你绝大多数的应用需求。</b> </p>
+<div class="indent"> LocalJS 基本对象基于<a class="el" href="group___j_s_objects.php">LocalJS 高级对象</a> 和 <a class="el" href="group___host_a_p_i.php">LocalJS 运行库接口</a>, 由LocalJS 开源JavaScript 库提供。 </div> </div> <div class="myli"> <a class="el" href="group___j_s_objects.php">LocalJS 高级对象</a>. 这一组对象为LocalJS 页面窗口中的JavaScript 提供了完整的本地访问能力。 </p>
+<div class="indent"> 这一组对象主要用于较高级的本地操作，比如访问本地数据库，调用Windows API，创建Script 线程等。</div> </div> <div class="myli"> <a class="el" href="group___host_a_p_i.php">LocalJS 运行库接口</a>. 这是一组由localjs.dll 输出的C 函数，用于启动和管理LocaljS 页面窗口。 </p>
+<div class="indent"> LocalJS 启动程序调用了这一组中的部分函数。除非需要JavaScript 之外的代码调用页面窗口（比如在C++ 代码中调用JavaScript 函数），你可以忽略这部分函数。</div> </div> </div> <div class="yui-u">  <!--[if IE]>
+<style>
+div.download span.download {
+	position:relative;
+	top:-1px;
+}
+</style>
+<![endif]-->
+  <div class="download" style="padding-top:0.5em">   
+<a href="<?php echo $demo_7z_link; ?>" target="_blank"><span class="download link">下载演示程序</span><span class="download_end link">&nbsp;</span></a>   </div>
+<div class="download" style="padding-top:0.5em">   <a href="<?php echo $release_zip_link; ?>" target="_blank"><span class="download link" style="width:5.8em">下载运行库</span><span class="download_end link">&nbsp;</span></a>   </div>
+<div class="ver">
+ 当前版本：  
+<?php echo $version; ?></div>
+  
+<a href="howto.php" style="color:MediumBlue"><div class="next link" style="width:10.6em;padding-left:0em;margin-left:1.5em;margin-top:1em;">动手写JavaScript</div></a>
+ </div> </div><p>下面是LocalJS 各部分之间的关系图： </p>
 <div align="center">
 <img src="overview.png" alt="overview.png"/>
-<p><strong>LocalJS Components</strong></p></div>
- <h2><a class="anchor" id="localjs_why"></a>
+<p><strong>LocalJS 各部分关系图</strong></p></div>
+<h2><a class="anchor" id="localjs_why"></a>
 Why LocalJS?</h2>
 <p><span class="blue"><b>Fast, Easy, and Low Cost.</b></span></p>
 <div class="myli">LocalJS is very small, launch fast, and run fast</div> <div class="myli">LocalJS doesn't depend on anything else to run</div> <div class="myli">HTML/CSS/JavaScript is designed for easy to use, and easy to learn with <a href="http://www.javascriptkit.com/javatutors/" target="_blank">so many tutorials</a> on web</div> <div class="myli">Prototyping and developing in HTML/CSS/JavaScript are very fast and flexible</div> <div class="myli"><span class="red">FREE</span> JavaScript libraries like <a href="http://jQuery.com/" target="_blank">jQuery</a> make prototyping and programming in JavaScript even simpler</div> <div class="myli">JavaScript libraries like <a href="http://developer.yahoo.com/yui/" target="_blank">YUI</a> provide rich user interface controls for <span class="red">FREE</span></div> <div class="myli">It's much easier to maintain and upgrade desktop application from web</div><div class="big_separator"></div><h2><a class="anchor" id="localjs_safe"></a>
