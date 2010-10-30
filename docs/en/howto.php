@@ -73,18 +73,20 @@ LocalJS Start Up</h2>
 <h3><a class="anchor" id="howto_start_local_js"></a>
 How to run my site as LocalJS application?</h3>
 <ul>
-<li>Download LocalJS Runtime, which is Free and less than 1 MB after decompression. </li>
-<li>Find LocalJSBootstrap.html in decompressed files, add JavaScript code below: <div class="fragment"><pre class="fragment">    <a class="code" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.<a class="code" href="interfacelocal_j_s.php#a638f18884615ddd3e7cc901a3302f931" title="Trust web pages from given domain, url prefix, or path prefix. LocalJS objects are ONLY available in ...">trust</a>(<span class="stringliteral">&quot;mysite.com&quot;</span>);
+<li> <a href="<?php echo $release_zip_link; ?>" target="_blank">Download LocalJS Runtime</a>, which is <span class="red"><i>Free</i></span> and <span class="red">less than 1 MB</span> after decompression.  </li>
+<li>Find LocalJSBootstrap.html in decompressed files, add JavaScript code below:</li>
+</ul>
+<div class="fragment"><pre class="fragment">    <a class="code" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.<a class="code" href="interfacelocal_j_s.php#a638f18884615ddd3e7cc901a3302f931" title="Trust web pages from given domain, url prefix, or path prefix. LocalJS objects are ONLY available in ...">trust</a>(<span class="stringliteral">&quot;mysite.com&quot;</span>);
     location.replace(<span class="stringliteral">&quot;http://mysite.com/&quot;</span>);
-</pre></div> </li>
-<li>Run LocalJSBootstrap.exe.</li>
+</pre></div><ul>
+<li>Run LocalJSBootstrap.exe. </li>
 </ul>
 <h3><a class="anchor" id="howto_access_objects"></a>
 How to start to use LocalJS objects in JavaScript?</h3>
-<p>To use <a class="el" href="group___j_s_src_objects.php">LocalJS Basic Objects</a>, include the JavaScript files included in <a href="http://sourceforge.net/projects/localjs/files/" target="_blank">LocalJS Runtime</a> in your page.</p>
+<p>To use <a class="el" href="group___j_s_src_objects.php">LocalJS Basic Objects</a>, include the JavaScript files included in  <a href="<?php echo $release_zip_link; ?>" target="_blank">LocalJS Runtime</a> in your page.</p>
 <p>To use <a class="el" href="group___j_s_objects.php">LocalJS Advanced Objects</a> :</p>
 <ul>
-<li>Root object <a class="el" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a> is globally available in LocalJS browser. </li>
+<li>Root object <a class="el" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a> is globally available in LocalJS browser window. </li>
 <li>All other LocalJS objects derive from properies of <a class="el" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a> object, or properies and methods of derived objects:</li>
 </ul>
 <div class="fragment"><pre class="fragment">    var dllCall = <a class="code" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.<a class="code" href="interfacelocal_j_s.php#ac46dd82aca231ab33f6308ba12975594" title="Readonly. Returns object COM, which exposes methods to create COM object, connect COM events...">COM</a>.<a class="code" href="interface_c_o_m.php#a14285e3676c39b414cac2652046ec881" title="Create COM object by ProgID, optionally specify object location.">createObject</a>(<span class="stringliteral">&#39;DllCall&#39;</span>);
