@@ -42,6 +42,5 @@ Classes</h2></td></tr>
 <p><strong>LocalJS Basic Objects Dependencies</strong></p></div>
 <p> For example, to use <a class="el" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">LOCALJS.FILE</a>, localjs_file.js, localjs_ui.js and localjs_webservice.js should be included; to use <a class="el" href="interface_l_o_c_a_l_j_s.php#a98bcca2bbefab54c92e47741132d25a9" title="Return LOCALIZATION Object, which provides method for multi-languages support. Include localjs_locali...">LOCALJS.LOCALIZATION</a>, all the 4 JavaScript files should be included. The sequence of files being included doesn't matter. </p>
 </div>
-<hr class="footer"/>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>
 </html>

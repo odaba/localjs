@@ -485,6 +485,5 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </li>
 </ul>
 </div>
-<hr class="footer"/>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>
 </html>

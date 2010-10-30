@@ -20,6 +20,5 @@ This is the complete list of members for <a class="el" href="interface_thread.ph
   <tr class="memlist"><td><a class="el" href="interface_thread.php#a980d8518a01dac55c30b0fb2fb894eba">kill</a>()</td><td><a class="el" href="interface_thread.php">Thread</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="interface_thread.php#a2bb58b88ac256b165a95a806ae3b41e5">running</a></td><td><a class="el" href="interface_thread.php">Thread</a></td><td></td></tr>
 </table></div>
-<hr class="footer"/>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>
 </html>

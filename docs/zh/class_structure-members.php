@@ -25,6 +25,5 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
   <tr class="memlist"><td><a class="el" href="interface_structure.php#a6725042366a2566ebaeecd8d267859ac">fieldCount</a></td><td><a class="el" href="interface_structure.php">Structure</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="interface_structure.php#a37363161b41c4165b98cba7abc7a9d95">size</a></td><td><a class="el" href="interface_structure.php">Structure</a></td><td></td></tr>
 </table></div>
-<hr class="footer"/>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>
 </html>

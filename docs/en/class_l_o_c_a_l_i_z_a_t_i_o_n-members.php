@@ -20,6 +20,5 @@ This is the complete list of members for <a class="el" href="interface_l_o_c_a_l
   <tr class="memlist"><td><a class="el" href="interface_l_o_c_a_l_i_z_a_t_i_o_n.php#acaf64f0e414c32bfa3c5cee215b06373">setLang</a>(String lang,[optional] boolean reload)</td><td><a class="el" href="interface_l_o_c_a_l_i_z_a_t_i_o_n.php">LOCALIZATION</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="interface_l_o_c_a_l_i_z_a_t_i_o_n.php#a494b7408816f0e6545fe409d7f14a1a6">setPath</a>(String path,[optional] boolean reload)</td><td><a class="el" href="interface_l_o_c_a_l_i_z_a_t_i_o_n.php">LOCALIZATION</a></td><td></td></tr>
 </table></div>
-<hr class="footer"/>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>
 </html>

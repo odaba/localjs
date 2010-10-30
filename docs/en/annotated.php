@@ -32,6 +32,5 @@ Here are the classes, structs, unions and interfaces with brief descriptions:<ta
   <tr><td class="indexkey"><a class="el" href="interface_window_hook.php">WindowHook</a></td><td class="indexvalue">Hook messages of the specified window </td></tr>
 </table>
 </div>
-<hr class="footer"/>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>
 </html>

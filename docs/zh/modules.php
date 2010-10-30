@@ -19,6 +19,5 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <li><a class="el" href="group___j_s_src_objects.php">LocalJS 基本对象</a></li>
 </ul>
 </div>
-<hr class="footer"/>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>
 </html>

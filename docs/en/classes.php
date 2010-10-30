@@ -27,6 +27,5 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </td><td><a class="el" href="interfacelocal_j_s.php">localJS</a>&#160;&#160;&#160;</td><td><a class="el" href="interface_threading.php">Threading</a>&#160;&#160;&#160;</td><td><a class="el" href="interface_window_hook.php">WindowHook</a>&#160;&#160;&#160;</td></tr><tr><td><a name="letter_D"></a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;D&#160;&#160;</div></td></tr></table>
 </td></tr></table><div class="qindex"><a class="qindex" href="#letter_B">B</a>&#160;|&#160;<a class="qindex" href="#letter_C">C</a>&#160;|&#160;<a class="qindex" href="#letter_D">D</a>&#160;|&#160;<a class="qindex" href="#letter_E">E</a>&#160;|&#160;<a class="qindex" href="#letter_F">F</a>&#160;|&#160;<a class="qindex" href="#letter_L">L</a>&#160;|&#160;<a class="qindex" href="#letter_S">S</a>&#160;|&#160;<a class="qindex" href="#letter_T">T</a>&#160;|&#160;<a class="qindex" href="#letter_U">U</a>&#160;|&#160;<a class="qindex" href="#letter_W">W</a></div>
 </div>
-<hr class="footer"/>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>
 </html>

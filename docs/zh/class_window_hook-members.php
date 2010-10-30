@@ -21,6 +21,5 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
   <tr class="memlist"><td><a class="el" href="interface_window_hook.php#a916fade963fb61259cb414f46d6f0bb3">unhook</a>()</td><td><a class="el" href="interface_window_hook.php">WindowHook</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="interface_window_hook.php#abaa21865555f3152ae8185807c50cd25">unhookMessage</a>(long message)</td><td><a class="el" href="interface_window_hook.php">WindowHook</a></td><td></td></tr>
 </table></div>
-<hr class="footer"/>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>
 </html>

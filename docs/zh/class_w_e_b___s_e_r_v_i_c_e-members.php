@@ -16,6 +16,5 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 成员的完整列表，这些成员属于<a class="el" href="interface_w_e_b___s_e_r_v_i_c_e.php">WEB_SERVICE</a>，包括所有继承而来的成员<table>
   <tr class="memlist"><td><a class="el" href="interface_w_e_b___s_e_r_v_i_c_e.php#a7eb6ada1e0326fa0119b999ab83efd55">callUrl</a>(String http_method, String url,[optional] Object callback,[optional] String request_body,[optional] String username,[optional] String password)</td><td><a class="el" href="interface_w_e_b___s_e_r_v_i_c_e.php">WEB_SERVICE</a></td><td></td></tr>
 </table></div>
-<hr class="footer"/>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>
 </html>

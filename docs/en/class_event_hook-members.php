@@ -16,6 +16,5 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 This is the complete list of members for <a class="el" href="interface_event_hook.php">EventHook</a>, including all inherited members.<table>
   <tr class="memlist"><td><a class="el" href="interface_event_hook.php#abe175fcf658475bc56e9d6fa02bc88ec">disconnect</a>()</td><td><a class="el" href="interface_event_hook.php">EventHook</a></td><td></td></tr>
 </table></div>
-<hr class="footer"/>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>
 </html>

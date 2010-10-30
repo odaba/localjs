@@ -22,6 +22,5 @@ This is the complete list of members for <a class="el" href="interface_browser_w
   <tr class="memlist"><td><a class="el" href="interface_browser_window.php#a862ffbf6976d63755adc1fc78f1a0354">isIE</a></td><td><a class="el" href="interface_browser_window.php">BrowserWindow</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="interface_browser_window.php#a426d92f4370abff654c9a85a060c25c9">webBrowser</a></td><td><a class="el" href="interface_browser_window.php">BrowserWindow</a></td><td></td></tr>
 </table></div>
-<hr class="footer"/>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>
 </html>

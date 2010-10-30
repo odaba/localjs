@@ -353,6 +353,5 @@ How to synchronize data access among threads?</h3>
 </ul>
 <p>Refer to section <em>Synchronization</em> of <a class="el" href="interface_threading.php#ab83b569dcb6b1ed35d6e9f13a8376a64" title="Create new script thread with optional arguments. Returns Thread object represents the new thread...">Threading.newThread</a> description. </p>
 </div>
-<hr class="footer"/>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>
 </html>

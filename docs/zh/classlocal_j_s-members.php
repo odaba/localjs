@@ -28,6 +28,5 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
   <tr class="memlist"><td><a class="el" href="interfacelocal_j_s.php#a426d92f4370abff654c9a85a060c25c9">webBrowser</a></td><td><a class="el" href="interfacelocal_j_s.php">localJS</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="interfacelocal_j_s.php#ad22e31bcafab13df9916ae10ec5ee3fa">windowDict</a></td><td><a class="el" href="interfacelocal_j_s.php">localJS</a></td><td></td></tr>
 </table></div>
-<hr class="footer"/>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>
 </html>

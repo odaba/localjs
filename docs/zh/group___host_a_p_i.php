@@ -866,6 +866,5 @@ The JavaScript function name <em>MUST</em> be global, or the variable holding th
 </div>
 </div>
 </div>
-<hr class="footer"/>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>
 </html>

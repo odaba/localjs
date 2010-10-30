@@ -19,6 +19,5 @@ This is the complete list of members for <a class="el" href="interface_c_o_m.php
   <tr class="memlist"><td><a class="el" href="interface_c_o_m.php#aa5d75d3298d5de451ecbead91d92b32d">getObject</a>(String displayName,[optional] String progID)</td><td><a class="el" href="interface_c_o_m.php">COM</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="interface_c_o_m.php#a9742cc74cdf0445008d4adb2adbaa0d3">interface2Object</a>(long rawPointer)</td><td><a class="el" href="interface_c_o_m.php">COM</a></td><td></td></tr>
 </table></div>
-<hr class="footer"/>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>
 </html>

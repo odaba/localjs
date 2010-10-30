@@ -24,6 +24,5 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
   <tr class="memlist"><td><a class="el" href="interface_buffer.php#ae92cd8c68053b3cd5197dfdd93f39529">clone</a>()</td><td><a class="el" href="interface_buffer.php">Buffer</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="interface_buffer.php#a37363161b41c4165b98cba7abc7a9d95">size</a></td><td><a class="el" href="interface_buffer.php">Buffer</a></td><td></td></tr>
 </table></div>
-<hr class="footer"/>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>
 </html>
