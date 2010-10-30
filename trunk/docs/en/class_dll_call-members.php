@@ -19,6 +19,5 @@ This is the complete list of members for <a class="el" href="interface_dll_call.
   <tr class="memlist"><td><a class="el" href="interface_dll_call.php#af9c99ab123bbf569e623a9c5e5c9f40e">newBuffer</a>(int/String sizeOrString,[optional] int/boolean valueOrAnsi)</td><td><a class="el" href="interface_dll_call.php">DllCall</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="interface_dll_call.php#ac5fb73dfc65171de9e56b090a56b1269">newStruct</a>()</td><td><a class="el" href="interface_dll_call.php">DllCall</a></td><td></td></tr>
 </table></div>
-<hr class="footer"/>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>
 </html>

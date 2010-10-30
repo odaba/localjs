@@ -19,6 +19,5 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
   <tr class="memlist"><td><a class="el" href="interface_enumerator.php#a6ee9f6f3140a53b0805c17ff3155d2f1">moveFirst</a>()</td><td><a class="el" href="interface_enumerator.php">Enumerator</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="interface_enumerator.php#aa8ea58356f7061aa51df936b16acb242">moveNext</a>()</td><td><a class="el" href="interface_enumerator.php">Enumerator</a></td><td></td></tr>
 </table></div>
-<hr class="footer"/>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>
 </html>

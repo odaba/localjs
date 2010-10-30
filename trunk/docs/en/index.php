@@ -44,6 +44,5 @@ Which platforms does LocalJS support?</h2>
  
 <a href="howto.php" style="color:MediumBlue"><div class="btm_next link" style="width:11.7em;padding-right:0em;margin-left:8em">Try Some JavaScript</div></a>
  </div>
-<hr class="footer"/>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>
 </html>

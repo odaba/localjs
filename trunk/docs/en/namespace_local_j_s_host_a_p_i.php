@@ -65,6 +65,5 @@ Functions</h2></td></tr>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>C functions to launch and manage LocalJS browser windows, also available to JavaScript. Detailed in <a class="el" href="group___host_a_p_i.php">LocalJS Host API</a>. </p>
 </div>
-<hr class="footer"/>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>
 </html>

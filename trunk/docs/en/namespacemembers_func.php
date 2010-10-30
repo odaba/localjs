@@ -63,6 +63,5 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 </ul>
 </div>
-<hr class="footer"/>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>
 </html>

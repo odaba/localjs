@@ -19,6 +19,5 @@ Here is a list of all modules:<ul>
 <li><a class="el" href="group___host_a_p_i.php">LocalJS Host API</a></li>
 </ul>
 </div>
-<hr class="footer"/>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>
 </html>

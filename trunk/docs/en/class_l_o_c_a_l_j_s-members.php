@@ -19,6 +19,5 @@ This is the complete list of members for <a class="el" href="interface_l_o_c_a_l
   <tr class="memlist"><td><a class="el" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9">UI</a></td><td><a class="el" href="interface_l_o_c_a_l_j_s.php">LOCALJS</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="interface_l_o_c_a_l_j_s.php#a93d1c0c70becb07c74e108b0f1bd49d6">WEB_SERVICE</a></td><td><a class="el" href="interface_l_o_c_a_l_j_s.php">LOCALJS</a></td><td></td></tr>
 </table></div>
-<hr class="footer"/>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>
 </html>

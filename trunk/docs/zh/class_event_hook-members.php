@@ -16,6 +16,5 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 成员的完整列表，这些成员属于<a class="el" href="interface_event_hook.php">EventHook</a>，包括所有继承而来的成员<table>
   <tr class="memlist"><td><a class="el" href="interface_event_hook.php#abe175fcf658475bc56e9d6fa02bc88ec">disconnect</a>()</td><td><a class="el" href="interface_event_hook.php">EventHook</a></td><td></td></tr>
 </table></div>
-<hr class="footer"/>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>
 </html>

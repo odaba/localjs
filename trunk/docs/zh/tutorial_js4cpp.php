@@ -260,6 +260,5 @@ DOCTYPE</h2>
 <div class="fragment"><pre class="fragment">    &lt;!DOCTYPE html PUBLIC <span class="stringliteral">&quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot;</span>
     <span class="stringliteral">&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;</span>&gt;
 </pre></div> </div>
-<hr class="footer"/>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>
 </html>

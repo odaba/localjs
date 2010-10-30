@@ -45,6 +45,5 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
   <tr class="memlist"><td><a class="el" href="interface_f_i_l_e.php#af4d5763f007ae57760e4903712f323f3">urlToPath</a>(String url)</td><td><a class="el" href="interface_f_i_l_e.php">FILE</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="interface_f_i_l_e.php#a79aabfb4240680c61bf91440ff6e9823">writeFileUTF8</a>(String filename, String text)</td><td><a class="el" href="interface_f_i_l_e.php">FILE</a></td><td></td></tr>
 </table></div>
-<hr class="footer"/>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>
 </html>

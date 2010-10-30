@@ -485,6 +485,5 @@ Here is a list of all documented class members with links to the class documenta
 </li>
 </ul>
 </div>
-<hr class="footer"/>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>
 </html>

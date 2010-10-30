@@ -194,6 +194,5 @@ Methods</h2></td></tr>
 </div>
 </div>
 </div>
-<hr class="footer"/>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>
 </html>

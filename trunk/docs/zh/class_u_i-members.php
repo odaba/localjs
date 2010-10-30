@@ -36,6 +36,5 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
   <tr class="memlist"><td><a class="el" href="interface_u_i.php#a427576c9d7c9ec954db20eadde150301">WS_NO_TITLE_BAR</a></td><td><a class="el" href="interface_u_i.php">UI</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="interface_u_i.php#a3f568fbb10b5e9901afe81d86c5d5989">WS_NORMAL</a></td><td><a class="el" href="interface_u_i.php">UI</a></td><td></td></tr>
 </table></div>
-<hr class="footer"/>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>
 </html>
