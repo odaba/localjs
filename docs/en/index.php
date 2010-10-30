@@ -16,22 +16,22 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h2><a class="anchor" id="localjs_components"></a>
 LocalJS Components</h2>
 <p>LocalJS is composed of:</p>
-<div class="yui-gc"> <div class="yui-u first"> <div class="myli"> <a class="el" href="group___j_s_src_objects.php">LocalJS Basic Objects</a>. Objects wrapping up common desktop operations. <b>In most cases, you only need to deal with LocalJS Basic Objects</b>. </p>
-<div class="indent">LocalJS Basic Objects are implemented by LocalJS open source JavaScript library, and based on <a class="el" href="group___j_s_objects.php">LocalJS Advanced Objects</a> and <a class="el" href="group___host_a_p_i.php">LocalJS Host API</a>.</div> </div> <div class="myli"> <a class="el" href="group___j_s_objects.php">LocalJS Advanced Objects</a>. A batch of JavaScript Objects which provide fully local access ability to JavaScript running in LocalJS browsers. </p>
-<div class="indent">These objects are provided for advanced operations like access local database, call Windows API, create script thread, etc.</div> </div> <div class="myli"> <a class="el" href="group___host_a_p_i.php">LocalJS Host API</a>. A set of C functions exported by localjs.dll, used to launch and manage LocalJS browsers. </p>
-<div class="indent">These functions are called by LocalJS bootstrap program. You only need to take a look at them when you need to control your application from out of JavaScript. For instance, call JavaScript functions from C++ code.</div> </div> </div> <div class="yui-u">  
-<div class="download" style="padding-top:0.5em">
-<a href="<?php echo $demo_7z_link; ?>" target="_blank"><span class="download link" style="width:8.5em">Download Demo</span><span class="download_end link">&nbsp;</span></a>
-</div>
-<div class="download" style="padding-top:0.5em">
-<a href="<?php echo $release_zip_link; ?>" target="_blank"><span class="download link">Download Runtime</span><span class="download_end link">&nbsp;</span></a>
-</div>
+<div class="yui-gc"> <div class="yui-u first"> <div class="myli"> <a class="el" href="group___j_s_src_objects.php">LocalJS Basic Objects</a>. Objects wrapping up common desktop operations. <b>In most cases, you only need to deal with LocalJS Basic Objects.</b> </p>
+<div class="indent"> LocalJS Basic Objects are implemented by LocalJS open source JavaScript library, and based on <a class="el" href="group___j_s_objects.php">LocalJS Advanced Objects</a> and <a class="el" href="group___host_a_p_i.php">LocalJS Host API</a>. </div> </div> <div class="myli"> <a class="el" href="group___j_s_objects.php">LocalJS Advanced Objects</a>. A batch of JavaScript Objects which provide fully local access ability to JavaScript running in LocalJS browser windows. </p>
+<div class="indent"> These objects are provided for advanced operations like access local database, call Windows API, create script thread, etc.</div> </div> <div class="myli"> <a class="el" href="group___host_a_p_i.php">LocalJS Host API</a>. A set of C functions exported by localjs.dll, used to launch and manage LocalJS browser windows. </p>
+<div class="indent"> These functions are called by LocalJS bootstrap program. You only need to take a look at them when you need to control browser windows from out of JavaScript. For instance, call JavaScript functions from C++ code.</div> </div> </div> <div class="yui-u">  <div class="download" style="padding-top:0.5em">   
+<a href="<?php echo $demo_7z_link; ?>" target="_blank"><span class="download link" style="width:8.5em">Download Demo</span><span class="download_end link">&nbsp;</span></a>   </div>
+<div class="download" style="padding-top:0.5em">   <a href="<?php echo $release_zip_link; ?>" target="_blank"><span class="download link">Download Runtime</span><span class="download_end link">&nbsp;</span></a>   </div>
+<div class="ver">
+ Current Release:  
+<?php echo $version; ?></div>
+  
 <a href="howto.php" style="color:MediumBlue"><div class="next link" style="width:12.5em;padding-left:0em;margin-left:1.5em;margin-top:1em;">Try Some JavaScript</div></a>
- </div> </div><p>Diagram below shows relationship among LocalJS components:</p>
+</div></div><div class="yui-gc"><div class="yui-u"></div> </div><p>Diagram below shows relationship among LocalJS components: </p>
 <div align="center">
 <img src="overview.png" alt="overview.png"/>
 <p><strong>LocalJS Components</strong></p></div>
- <h2><a class="anchor" id="localjs_why"></a>
+<h2><a class="anchor" id="localjs_why"></a>
 Why LocalJS?</h2>
 <p><span class="blue"><b>Fast, Easy, and Low Cost.</b></span></p>
 <div class="myli">LocalJS is very small, launch fast, and run fast</div> <div class="myli">LocalJS doesn't depend on anything else to run</div> <div class="myli">HTML/CSS/JavaScript is designed for easy to use, and easy to learn with <a href="http://www.javascriptkit.com/javatutors/" target="_blank">so many tutorials</a> on web</div> <div class="myli">Prototyping and developing in HTML/CSS/JavaScript are very fast and flexible</div> <div class="myli"><span class="red">FREE</span> JavaScript libraries like <a href="http://jQuery.com/" target="_blank">jQuery</a> make prototyping and programming in JavaScript even simpler</div> <div class="myli">JavaScript libraries like <a href="http://developer.yahoo.com/yui/" target="_blank">YUI</a> provide rich user interface controls for <span class="red">FREE</span></div> <div class="myli">It's much easier to maintain and upgrade desktop application from web</div><div class="big_separator"></div><h2><a class="anchor" id="localjs_safe"></a>

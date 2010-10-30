@@ -10,7 +10,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 --></script>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Methods</a> &#124;
+<a href="#pub-methods">方法</a> &#124;
 <a href="#properties">属性</a>  </div>
   <div class="headertitle">
 <h1>BrowserWindow类参考<br/>
@@ -26,7 +26,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <p><a href="class_browser_window-members.php">所有成员的列表。</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
-Methods</h2></td></tr>
+方法</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">window&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_browser_window.php#ad2d8da20a97eb156c4c54ae708c6a389">getJSWindow</a> ([optional] int timout_seconds)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the JavaScript <a href="http://www.javascriptkit.com/jsref/window.shtml" target="_blank">window object</a> of the browser window.  <a href="#ad2d8da20a97eb156c4c54ae708c6a389"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_browser_window.php#a280f7ebe3df2ce474a5852d5cd2191d7">getJSVariable</a> (String variable_name,[optional] int timout_seconds)</td></tr>

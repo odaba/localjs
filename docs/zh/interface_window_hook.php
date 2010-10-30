@@ -10,12 +10,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 --></script>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Methods</a> &#124;
+<a href="#pub-methods">方法</a> &#124;
 <a href="#properties">属性</a>  </div>
   <div class="headertitle">
 <h1>WindowHook类参考<br/>
 <small>
-[<a class="el" href="group___j_s_objects.php">LocalJS Advanced Objects</a>]</small>
+[<a class="el" href="group___j_s_objects.php">LocalJS 高级对象</a>]</small>
 </h1>  </div>
 </div>
 <div class="contents">
@@ -26,7 +26,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <p><a href="class_window_hook-members.php">所有成员的列表。</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
-Methods</h2></td></tr>
+方法</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_window_hook.php#a7ae2597fb98a0a318f2a9f6295c6bc17">hookMessage</a> (long message, Function handler)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Hook message processing with JavaScript function.  <a href="#a7ae2597fb98a0a318f2a9f6295c6bc17"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_window_hook.php#a1a92b100728f2a66ba2d2fe660857264">callDefaultWndProc</a> (long hWnd, long message, long wParam, long lParam)</td></tr>

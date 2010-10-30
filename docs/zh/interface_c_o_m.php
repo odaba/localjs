@@ -10,11 +10,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 --></script>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Methods</a>  </div>
+<a href="#pub-methods">方法</a>  </div>
   <div class="headertitle">
 <h1>COM类参考<br/>
 <small>
-[<a class="el" href="group___j_s_objects.php">LocalJS Advanced Objects</a>]</small>
+[<a class="el" href="group___j_s_objects.php">LocalJS 高级对象</a>]</small>
 </h1>  </div>
 </div>
 <div class="contents">
@@ -25,7 +25,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <p><a href="class_c_o_m-members.php">所有成员的列表。</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
-Methods</h2></td></tr>
+方法</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_c_o_m.php#a14285e3676c39b414cac2652046ec881">createObject</a> (String progID,[optional] String location)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Create COM object by ProgID, optionally specify object location.  <a href="#a14285e3676c39b414cac2652046ec881"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_c_o_m.php#aa5d75d3298d5de451ecbead91d92b32d">getObject</a> (String displayName,[optional] String progID)</td></tr>

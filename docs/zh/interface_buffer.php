@@ -10,12 +10,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 --></script>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Methods</a> &#124;
+<a href="#pub-methods">方法</a> &#124;
 <a href="#properties">属性</a>  </div>
   <div class="headertitle">
 <h1>Buffer类参考<br/>
 <small>
-[<a class="el" href="group___j_s_objects.php">LocalJS Advanced Objects</a>]</small>
+[<a class="el" href="group___j_s_objects.php">LocalJS 高级对象</a>]</small>
 </h1>  </div>
 </div>
 <div class="contents">
@@ -26,7 +26,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <p><a href="class_buffer-members.php">所有成员的列表。</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
-Methods</h2></td></tr>
+方法</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_buffer.php">Buffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_buffer.php#ae92cd8c68053b3cd5197dfdd93f39529">clone</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a new <a class="el" href="interface_buffer.php" title="Buffer object represents a fixed size buffer, used as parameters in Dll function call.">Buffer</a> object having same content.  <a href="#ae92cd8c68053b3cd5197dfdd93f39529"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="properties"></a>

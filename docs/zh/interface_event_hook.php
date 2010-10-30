@@ -10,11 +10,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 --></script>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Methods</a>  </div>
+<a href="#pub-methods">方法</a>  </div>
   <div class="headertitle">
 <h1>EventHook类参考<br/>
 <small>
-[<a class="el" href="group___j_s_objects.php">LocalJS Advanced Objects</a>]</small>
+[<a class="el" href="group___j_s_objects.php">LocalJS 高级对象</a>]</small>
 </h1>  </div>
 </div>
 <div class="contents">
@@ -25,7 +25,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <p><a href="class_event_hook-members.php">所有成员的列表。</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
-Methods</h2></td></tr>
+方法</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_event_hook.php#abe175fcf658475bc56e9d6fa02bc88ec">disconnect</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Disconnect COM events connected by <a class="el" href="interface_c_o_m.php#a03b548ce8da020a692d590d4a5b21247" title="Connect JavaScript functions to COM object events.">COM.connectEvents</a> method.  <a href="#abe175fcf658475bc56e9d6fa02bc88ec"></a><br/></td></tr>
 </table>

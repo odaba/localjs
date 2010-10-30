@@ -82,7 +82,7 @@ How to run my site as LocalJS application?</h3>
 <h3><a class="anchor" id="howto_access_objects"></a>
 How to start to use LocalJS objects in JavaScript?</h3>
 <p>To use <a class="el" href="group___j_s_src_objects.php">LocalJS 基本对象</a>, include the JavaScript files included in <a href="http://sourceforge.net/projects/localjs/files/" target="_blank">LocalJS Runtime</a> in your page.</p>
-<p>To use <a class="el" href="group___j_s_objects.php">LocalJS Advanced Objects</a> :</p>
+<p>To use <a class="el" href="group___j_s_objects.php">LocalJS 高级对象</a> :</p>
 <ul>
 <li>Root object <a class="el" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a> is globally available in LocalJS browser. </li>
 <li>All other LocalJS objects derive from properies of <a class="el" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a> object, or properies and methods of derived objects:</li>

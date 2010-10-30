@@ -10,11 +10,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 --></script>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Methods</a>  </div>
+<a href="#pub-methods">方法</a>  </div>
   <div class="headertitle">
 <h1>Enumerator类参考<br/>
 <small>
-[<a class="el" href="group___j_s_objects.php">LocalJS Advanced Objects</a>]</small>
+[<a class="el" href="group___j_s_objects.php">LocalJS 高级对象</a>]</small>
 </h1>  </div>
 </div>
 <div class="contents">
@@ -25,7 +25,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <p><a href="class_enumerator-members.php">所有成员的列表。</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
-Methods</h2></td></tr>
+方法</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_enumerator.php#ad8e6c6206cf37f968bbe6dbf187122ed">atEnd</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a Boolean value indicating if the enumerator is at the end of the collection.  <a href="#ad8e6c6206cf37f968bbe6dbf187122ed"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Object&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_enumerator.php#a7ceba38a65084b6f9b35b5c930ca0420">item</a> ()</td></tr>

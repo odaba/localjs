@@ -14,9 +14,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="contents">
 这里列出所有模块<ul>
-<li><a class="el" href="group___j_s_objects.php">LocalJS Advanced Objects</a></li>
-<li><a class="el" href="group___host_a_p_i.php">LocalJS Host API</a></li>
 <li><a class="el" href="group___j_s_src_objects.php">LocalJS 基本对象</a></li>
+<li><a class="el" href="group___host_a_p_i.php">LocalJS 运行库接口</a></li>
+<li><a class="el" href="group___j_s_objects.php">LocalJS 高级对象</a></li>
 </ul>
 </div>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>

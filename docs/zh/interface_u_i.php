@@ -23,7 +23,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <p><a href="class_u_i-members.php">所有成员的列表。</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
-Methods</h2></td></tr>
+方法</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Create and initialize new browser window</div></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_browser_window.php">BrowserWindow</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc">newWindow</a> (String url,[optional] int left,[optional] int top,[optional] int width,[optional] int height,[optional] int window_style,[optional] int parent_window,[optional] function initFunction,[optional] boolean leave_alone,[optional] boolean ie)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new browser window or standalone Internet Explorer and navigates to given url.  <a href="#a1affe0f3629c5b39d93ba05fd54fc3fc"></a><br/></td></tr>

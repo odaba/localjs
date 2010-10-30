@@ -2,7 +2,7 @@
 require_once('../../_config.php');
 include_once($base_path.'/_include/common_header_part1.php');
 ?>
-<title>LocalJS: LocalJS Advanced Objects</title>
+<title>LocalJS: LocalJS 高级对象</title>
 <?php include_once($base_path.'/_include/doxygen_header.php'); ?>
 <!-- 制作者 Doxygen 1.7.2 -->
 <script type="text/javascript"><!--
@@ -12,7 +12,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
   <div class="summary">
 <a href="#nested-classes">组合类型</a>  </div>
   <div class="headertitle">
-<h1>LocalJS Advanced Objects</h1>  </div>
+<h1>LocalJS 高级对象</h1>  </div>
 </div>
 <div class="contents">
 

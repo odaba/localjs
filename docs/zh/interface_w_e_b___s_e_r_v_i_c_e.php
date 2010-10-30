@@ -10,7 +10,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 --></script>
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Methods</a>  </div>
+<a href="#pub-methods">方法</a>  </div>
   <div class="headertitle">
 <h1>WEB_SERVICE类参考<br/>
 <small>
@@ -25,7 +25,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <p><a href="class_w_e_b___s_e_r_v_i_c_e-members.php">所有成员的列表。</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
-Methods</h2></td></tr>
+方法</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_w_e_b___s_e_r_v_i_c_e.php#a7eb6ada1e0326fa0119b999ab83efd55">callUrl</a> (String http_method, String url,[optional] Object callback,[optional] String request_body,[optional] String username,[optional] String password)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Call web service asynchronously.  <a href="#a7eb6ada1e0326fa0119b999ab83efd55"></a><br/></td></tr>
 </table>
