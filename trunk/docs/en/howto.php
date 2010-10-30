@@ -57,7 +57,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li><a class="el" href="howto.php#howto_enumerate">How to enumerate items in collection (e.g., Files) returned by system object (e.g., FileSystemObject)?</a></li>
 </ul>
 <div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_db">Local Database Access</a></div> <ul>
-<li><a class="el" href="howto.php#howto_access_db">How to access client side database?</a></li>
+<li><a class="el" href="howto.php#howto_access_db">How to access local database?</a></li>
 </ul>
 <div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_web_service">Call Web Service from any domain</a></div> <ul>
 <li><a class="el" href="howto.php#howto_call_ws">How to call web service from other domains?</a> </li>
@@ -311,7 +311,7 @@ How to enumerate items in collection (e.g., Files) returned by system object (e.
 </pre></div><h2><a class="anchor" id="howto_db"></a>
 Local Database Access</h2>
 <h3><a class="anchor" id="howto_access_db"></a>
-How to access client side database?</h3>
+How to access local database?</h3>
 <ul>
 <li>Create <a href="http://www.w3schools.com/ado/ado_ref_connection.asp" target="_blank">ADO Connection object</a> with <a class="el" href="interface_c_o_m.php#a14285e3676c39b414cac2652046ec881" title="Create COM object by ProgID, optionally specify object location.">COM.createObject</a>; </li>
 <li>Use properties and methods of <a href="http://www.w3schools.com/ado/ado_ref_connection.asp" target="_blank">ADO Connection object</a> to access database just like in other scripting languages.</li>
