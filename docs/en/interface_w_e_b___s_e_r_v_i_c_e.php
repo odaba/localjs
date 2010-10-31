@@ -1,5 +1,6 @@
 <?php
 require_once('../../_config.php');
+$doxygen_title = "LocalJS: WEB_SERVICE Class Reference";
 include_once($base_path.'/_include/common_header_part1.php');
 ?>
 <title>LocalJS: WEB_SERVICE Class Reference</title>

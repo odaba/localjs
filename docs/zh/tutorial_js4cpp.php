@@ -1,5 +1,6 @@
 <?php
 require_once('../../_config.php');
+$doxygen_title = "LocalJS: JavaScript Jump Start For C++ Programmers";
 include_once($base_path.'/_include/common_header_part1.php');
 ?>
 <title>LocalJS: JavaScript Jump Start For C++ Programmers</title>
