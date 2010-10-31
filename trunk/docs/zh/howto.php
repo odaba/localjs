@@ -26,20 +26,20 @@ div.jump_index a.el { font-weight:normal }
 <li><a class="el" href="howto.php#howto_access_objects">如何在JavaScript 代码中使用LocalJS 对象？</a> </li>
 <li><a class="el" href="howto.php#howto_debug">如何调试JavaScript？</a></li>
 </ul>
-<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_browser_wnd">控制浏览器窗口</a></div> <ul>
-<li><a class="el" href="howto.php#howto_move_wnd">如何用JavaScript 在桌面上移动浏览器窗口？</a> </li>
+<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_browser_wnd">控制页面窗口</a></div> <ul>
+<li><a class="el" href="howto.php#howto_move_wnd">如何用JavaScript 在桌面上移动页面窗口？</a> </li>
 <li><a class="el" href="howto.php#howto_change_wnd_style">如何用JavaScript 显示或隐藏页面窗口的标题栏？</a> </li>
-<li><a class="el" href="howto.php#howto_popup_msg">如何弹出一个比JavaScript 的alert好看些的消息框？</a> </li>
+<li><a class="el" href="howto.php#howto_popup_msg">如何弹出一个比JavaScript 的alert 好看些的消息框？</a> </li>
 <li><a class="el" href="howto.php#howto_close_wnd">如何用JavaScript 关闭页面窗口？</a> </li>
 <li><a class="el" href="howto.php#howto_confirm_close">如何在用户关闭页面窗口时弹出确认对话框？</a></li>
 </ul>
-<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_navigation">Navigate Back and Forth</a></div> <ul>
-<li><a class="el" href="howto.php#howto_get_webbrowser">How to get WebBrowser object of current browser window?</a> </li>
-<li><a class="el" href="howto.php#howto_nav_2_local">How to navigate from remote url to local url?</a> </li>
-<li><a class="el" href="howto.php#howto_cancel_nav">How to cancel a navigation?</a> </li>
-<li><a class="el" href="howto.php#howto_pass_para_2_nav_page">How to pass parameters to the next page navigate to?</a> </li>
-<li><a class="el" href="howto.php#howto_data_lost_reload">How to prevent data from lost when page is reloaded?</a> </li>
-<li><a class="el" href="howto.php#howto_f5">How to prevent page reloading caused by user pressing F5 key?</a></li>
+<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_navigation">在不同页面之间切换</a></div> <ul>
+<li><a class="el" href="howto.php#howto_get_webbrowser">如何得到当前页面窗口的WebBrowser 对象？</a> </li>
+<li><a class="el" href="howto.php#howto_nav_2_local">如何从web 页面切换到本地页面？</a> </li>
+<li><a class="el" href="howto.php#howto_cancel_nav">如何取消页面切换？</a> </li>
+<li><a class="el" href="howto.php#howto_pass_para_2_nav_page">如何给即将转去的页面传递参数？</a> </li>
+<li><a class="el" href="howto.php#howto_data_lost_reload">如何防止页面刷新的时候丢失数据？</a> </li>
+<li><a class="el" href="howto.php#howto_f5">如何防止用户按F5 键刷新页面？</a></li>
 </ul>
 <div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_new_wnd">Launching New Browser Window</a></div> <ul>
 <li><a class="el" href="howto.php#howto_new_wnd_by_js">How to launch a new LocalJS browser window from within JavaScript?</a> </li>
@@ -125,9 +125,9 @@ LocalJS 起步</h2>
 <dl class="note"><dt><b>注解:</b></dt><dd>如果你调用过函数 <a class="el" href="group___host_a_p_i.php#ga7474b7f77001b41241fdadc926054645" title="Change the default registry used by LocalJS browser window to save its own options.">setBrowserControlRegPath()</a> 改变了LocalJS 页面窗口用到的的注册表位置，你需要在你所设定的位置下创建 'Disable Script Debugger' 键值。</dd></dl>
 <dl class="see"><dt><b>参见:</b></dt><dd><a href="http://msdn.microsoft.com/en-us/library/k2h50zzs(VS.80).aspx" target="_blank">How to: Enable Client-Side Script Debugging</a></dd></dl>
 <h2><a class="anchor" id="howto_browser_wnd"></a>
-控制浏览器窗口</h2>
+控制页面窗口</h2>
 <h3><a class="anchor" id="howto_move_wnd"></a>
-如何用JavaScript 在桌面上移动浏览器窗口？</h3>
+如何用JavaScript 在桌面上移动页面窗口？</h3>
 <ul>
 <li>调用 <a class="el" href="interface_u_i.php#a48bb86d6512ddef0a89997f6f26b28bb">LOCALJS.UI.moveWindow</a></li>
 </ul>
@@ -137,7 +137,7 @@ LocalJS 起步</h2>
 <li>调用 <a class="el" href="interface_u_i.php#a8661d51c7e5389632e89177abfd92a45">LOCALJS.UI.showTitleBar</a></li>
 </ul>
 <h3><a class="anchor" id="howto_popup_msg"></a>
-如何弹出一个比JavaScript 的alert好看些的消息框？</h3>
+如何弹出一个比JavaScript 的alert 好看些的消息框？</h3>
 <ul>
 <li>在页面中包含localjs_ui.js。默认的JavaScript 函数<code>alert</code> 和 <code>confirm</code> 就会被替换为LocalJS 版本。 </li>
 <li>函数 <a class="el" href="interface_u_i.php#ae4029da3a7b30a44c2a93b186146e3ae">LOCALJS.UI.msgBox</a> 和 <a class="el" href="interface_u_i.php#a8e8c34b33f063c99f3c36b7916e396b9">LOCALJS.UI.confirm</a> 提供进一步的消息框选项。</li>
@@ -157,23 +157,23 @@ LocalJS 起步</h2>
 </ul>
 <p>示例代码参见 <a class="el" href="interface_u_i.php#a336a7e8690beb99db79da34c2a1f2810">LOCALJS.UI.exitCallback</a>.</p>
 <h2><a class="anchor" id="howto_navigation"></a>
-Navigate Back and Forth</h2>
+在不同页面之间切换</h2>
 <h3><a class="anchor" id="howto_get_webbrowser"></a>
-How to get WebBrowser object of current browser window?</h3>
+如何得到当前页面窗口的WebBrowser 对象？</h3>
 <ul>
-<li>It's quite straightforward with <a class="el" href="interfacelocal_j_s.php#a426d92f4370abff654c9a85a060c25c9" title="Readonly. Returns WebBrowser Object of current browser. Help transparently moving forth and back betw...">localJS.webBrowser</a> property:</li>
+<li>通过属性 <a class="el" href="interfacelocal_j_s.php#a426d92f4370abff654c9a85a060c25c9" title="Readonly. Returns WebBrowser Object of current browser. Help transparently moving forth and back betw...">localJS.webBrowser</a> 就可以：</li>
 </ul>
 <div class="fragment"><pre class="fragment">    var browser_obj = <a class="code" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.<a class="code" href="interfacelocal_j_s.php#a426d92f4370abff654c9a85a060c25c9" title="Readonly. Returns WebBrowser Object of current browser. Help transparently moving forth and back betw...">webBrowser</a>;
 </pre></div><h3><a class="anchor" id="howto_nav_2_local"></a>
-How to navigate from remote url to local url?</h3>
+如何从web 页面切换到本地页面？</h3>
 <ul>
-<li>Use <a href="http://msdn.microsoft.com/en-us/library/aa752093(VS.85).aspx" target="_blank">Navigate Method</a> of <a href="http://msdn.microsoft.com/en-us/library/aa752085(VS.85).aspx" target="_blank">WebBrowser Object</a>:</li>
+<li>调用 <a href="http://msdn.microsoft.com/en-us/library/aa752085(VS.85).aspx" target="_blank">WebBrowser 对象</a>的<a href="http://msdn.microsoft.com/en-us/library/aa752093(VS.85).aspx" target="_blank">Navigate 方法</a>：</li>
 </ul>
 <div class="fragment"><pre class="fragment">    <a class="code" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.<a class="code" href="interfacelocal_j_s.php#a426d92f4370abff654c9a85a060c25c9" title="Readonly. Returns WebBrowser Object of current browser. Help transparently moving forth and back betw...">webBrowser</a>.Navigate(<span class="stringliteral">&quot;file:///C:/test.html&quot;</span>);
 </pre></div><h3><a class="anchor" id="howto_cancel_nav"></a>
-How to cancel a navigation?</h3>
+如何取消页面切换？</h3>
 <ul>
-<li>Use <a class="el" href="interface_c_o_m.php#a03b548ce8da020a692d590d4a5b21247" title="Connect JavaScript functions to COM object events.">COM.connectEvents</a> method to connect to <a href="http://msdn.microsoft.com/en-us/library/aa768326(VS.85).aspx" target="_blank">BeforeNavigate2 event</a>, set <code>cancel.returnValue</code> to true:</li>
+<li>用方法 <a class="el" href="interface_c_o_m.php#a03b548ce8da020a692d590d4a5b21247" title="Connect JavaScript functions to COM object events.">COM.connectEvents</a> 把JavaScript 函数连接到<a href="http://msdn.microsoft.com/en-us/library/aa768326(VS.85).aspx" target="_blank">BeforeNavigate2 事件</a>，把<code>cancel.returnValue</code> 设为 <code>true:</code> </li>
 </ul>
 <div class="fragment"><pre class="fragment">    var onBeforeNavigate2 = function(disp, url, flags, target, postData, headers, cancel)
     {
@@ -181,16 +181,16 @@ How to cancel a navigation?</h3>
     };
     com.connectEvents(<a class="code" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.<a class="code" href="interfacelocal_j_s.php#a426d92f4370abff654c9a85a060c25c9" title="Readonly. Returns WebBrowser Object of current browser. Help transparently moving forth and back betw...">webBrowser</a>, {<span class="stringliteral">&#39;BeforeNavigate2&#39;</span>:onBeforeNavigate2});
 </pre></div><h3><a class="anchor" id="howto_pass_para_2_nav_page"></a>
-How to pass parameters to the next page navigate to?</h3>
-<p>When browser navigates, all JavaScript variables of the previous page are lost. But variables saved to <a class="el" href="interfacelocal_j_s.php#ad22e31bcafab13df9916ae10ec5ee3fa" title="ReadOnly. Returns a Dictionary Object associated with current browser window. An ideal persistent sto...">localJS.windowDict</a> remain unchanged.</p>
+如何给即将转去的页面传递参数？</h3>
+<p>当页面切换时，前一页面中所有的JavaScript 变量都不存在了。但是保存到 <a class="el" href="interfacelocal_j_s.php#ad22e31bcafab13df9916ae10ec5ee3fa" title="ReadOnly. Returns a Dictionary Object associated with current browser window. An ideal persistent sto...">localJS.windowDict</a> 中的变量依然存在。</p>
 <ul>
-<li>Save parameters to <a class="el" href="interfacelocal_j_s.php#ad22e31bcafab13df9916ae10ec5ee3fa" title="ReadOnly. Returns a Dictionary Object associated with current browser window. An ideal persistent sto...">localJS.windowDict</a> so the next page can access it.</li>
+<li>把参数保存在 <a class="el" href="interfacelocal_j_s.php#ad22e31bcafab13df9916ae10ec5ee3fa" title="ReadOnly. Returns a Dictionary Object associated with current browser window. An ideal persistent sto...">localJS.windowDict</a> 中，下个页面就能够访问到它们。</li>
 </ul>
 <h3><a class="anchor" id="howto_data_lost_reload"></a>
-How to prevent data from lost when page is reloaded?</h3>
-<p>When browser reloads, all JavaScript variables of the previous page are lost. But variables saved to <a class="el" href="interfacelocal_j_s.php#ad22e31bcafab13df9916ae10ec5ee3fa" title="ReadOnly. Returns a Dictionary Object associated with current browser window. An ideal persistent sto...">localJS.windowDict</a> remain unchanged.</p>
+如何防止页面刷新的时候丢失数据？</h3>
+<p>当页面刷新时，页面中所有的JavaScript 变量都不存在了。但是保存到 <a class="el" href="interfacelocal_j_s.php#ad22e31bcafab13df9916ae10ec5ee3fa" title="ReadOnly. Returns a Dictionary Object associated with current browser window. An ideal persistent sto...">localJS.windowDict</a> 中的变量依然不变。</p>
 <ul>
-<li>Use <a class="el" href="interfacelocal_j_s.php#ad22e31bcafab13df9916ae10ec5ee3fa" title="ReadOnly. Returns a Dictionary Object associated with current browser window. An ideal persistent sto...">localJS.windowDict</a> to prevent data from lost when page is reloaded:</li>
+<li>把数据保存在 <a class="el" href="interfacelocal_j_s.php#ad22e31bcafab13df9916ae10ec5ee3fa" title="ReadOnly. Returns a Dictionary Object associated with current browser window. An ideal persistent sto...">localJS.windowDict</a> 中就可以防止在页面刷新的时候丢失数据：</li>
 </ul>
 <div class="fragment"><pre class="fragment">    var persist_data;
 
@@ -206,10 +206,10 @@ How to prevent data from lost when page is reloaded?</h3>
         windowDict.Item(<span class="stringliteral">&quot;key_to_persist_data&quot;</span>) = persist_data;
     }};
 </pre></div><h3><a class="anchor" id="howto_f5"></a>
-How to prevent page reloading caused by user pressing F5 key?</h3>
-<p>Even with <a class="el" href="interfacelocal_j_s.php#ad22e31bcafab13df9916ae10ec5ee3fa" title="ReadOnly. Returns a Dictionary Object associated with current browser window. An ideal persistent sto...">localJS.windowDict</a>, it's still boring to handle unexpected page reloading caused by user pressing F5 key.</p>
+如何防止用户按F5 键刷新页面？</h3>
+<p>即使有了localJS.windowDict, 处理页面刷新的逻辑还是有点麻烦的。</p>
 <ul>
-<li>Set <a class="el" href="interfacelocal_j_s.php#a29a79e553fe87184f3a6ed6a9e0b270f" title="Get or set a boolean value to control whether pressing F5 key reloads HTML page. Ignored by standalon...">localJS.enableF5</a> to <code>false</code> disables F5 key from reloading page.</li>
+<li>把 <a class="el" href="interfacelocal_j_s.php#a29a79e553fe87184f3a6ed6a9e0b270f" title="Get or set a boolean value to control whether pressing F5 key reloads HTML page. Ignored by standalon...">localJS.enableF5</a> 设为<code>false</code> 就能防止用户按F5 键刷新页面。</li>
 </ul>
 <h2><a class="anchor" id="howto_new_wnd"></a>
 Launching New Browser Window</h2>
