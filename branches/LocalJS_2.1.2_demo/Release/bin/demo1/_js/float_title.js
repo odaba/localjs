@@ -1,0 +1,1 @@
+(function(){window.attachEvent("onload",function(){var a=$("#div_app_title").get(0);fnMove=function(){var b=$("div.width_marker").get(0).offsetWidth;if(b>200){a.style.width=b+"px"}};window.attachEvent("onresize",fnMove);fnMove()})})();
