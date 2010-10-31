@@ -47,7 +47,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <p>Hook messages of the specified window. </p>
 <p><a class="el" href="interface_window_hook.php" title="Hook messages of the specified window.">WindowHook</a> object is created by <a class="el" href="interface_c_o_m.php#a14285e3676c39b414cac2652046ec881" title="Create COM object by ProgID, optionally specify object location.">COM.createObject</a> method as following:</p>
 <div class="fragment"><pre class="fragment">    <span class="comment">// The second parameter is HWND handle to a window in same process:</span>
-    var hooker = <a class="code" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.<a class="code" href="interfacelocal_j_s.php#ac46dd82aca231ab33f6308ba12975594" title="Readonly. Returns object COM, which exposes methods to create COM object, connect COM events...">COM</a>.<a class="code" href="interface_c_o_m.php#a14285e3676c39b414cac2652046ec881" title="Create COM object by ProgID, optionally specify object location.">createObject</a>(<span class="stringliteral">&quot;WindowHook&quot;</span>, <a class="code" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.<a class="code" href="interfacelocal_j_s.php#aa05066bf1c7f31ea898c0d2aed29eedb" title="ReadOnly. Returns the HWND handle of current browser window.">hostWnd</a>);
+    var hook = <a class="code" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.<a class="code" href="interfacelocal_j_s.php#ac46dd82aca231ab33f6308ba12975594" title="Readonly. Returns object COM, which exposes methods to create COM object, connect COM events...">COM</a>.<a class="code" href="interface_c_o_m.php#a14285e3676c39b414cac2652046ec881" title="Create COM object by ProgID, optionally specify object location.">createObject</a>(<span class="stringliteral">&quot;WindowHook&quot;</span>, <a class="code" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.<a class="code" href="interfacelocal_j_s.php#aa05066bf1c7f31ea898c0d2aed29eedb" title="ReadOnly. Returns the HWND handle of current browser window.">hostWnd</a>);
 </pre></div><p>The handle of current hooked window can be retrieved through property <a class="el" href="interface_window_hook.php#a5c785feafd2dd03964acb3813cc605a8" title="ReadOnly. Returns handle of current hooked window.">WindowHook.hookedWnd</a>.</p>
 <p>A typical usage of object <a class="el" href="interface_window_hook.php" title="Hook messages of the specified window.">WindowHook</a> is to hook the current browser window to process <code>WM_CLOSE</code> message, to get a chance to prompt user to confirm closing the browser window. When user closes browser window through context menu of window title bar, or shortcut key Alt-F4, JavaScript event <code>onbeforeunload</code> is <em>NOT</em> triggerred, thus <a class="el" href="interface_window_hook.php" title="Hook messages of the specified window.">WindowHook</a> is the <em>ONLY</em> way to go.</p>
 <p>Sample code below demostrates how to hook <code>WM_CLOSE</code> of current browser window.</p>
@@ -73,24 +73,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <div class="fragment"><pre class="fragment">    <span class="comment">// Hook WM_CLOSE when user close the window through Alt-F4 or context menu of window title bar</span>
     <span class="comment">// JavaScript event onbeforeunload won&#39;t fire for browser control so we have to hook window procedure</span>
     <span class="comment">// WM_CLOSE is defined in global_functions.js</span>
-    var hooker = createObject(<span class="stringliteral">&quot;WindowHook&quot;</span>, hostWnd);
-    hooker.hookMessage(WM_CLOSE, function(hWnd, message, wParam, lParam)
+    var hook = createObject(<span class="stringliteral">&quot;WindowHook&quot;</span>, hostWnd);
+    hook.hookMessage(WM_CLOSE, function(hWnd, message, wParam, lParam)
     {
         <span class="keywordflow">if</span> (IDYES == messageBox(hostWnd, <span class="stringliteral">&quot;Are you sure to exit?&quot;</span>, doc.title, MB_ICONQUESTION | MB_YESNO | MB_DEFBUTTON2))
         {
-            <span class="keywordflow">return</span> hooker.CallOriginalWndProc(hWnd, message, wParam, lParam);
+            <span class="keywordflow">return</span> hook.CallOriginalWndProc(hWnd, message, wParam, lParam);
         }
 
         <span class="keywordflow">return</span> 0; <span class="comment">// to cancel window close, bypass original window procedure and directly return zero for WM_CLOSE message</span>
     });
 </pre></div><dl class="user"><dt><b></b></dt><dd>The same window could be hooked more than once by different <a class="el" href="interface_window_hook.php" title="Hook messages of the specified window.">WindowHook</a> objects, and multiple handler functions will be called by the sequence they are hooked. This makes multiple plugins can hook window without worrying about other hooks:</dd></dl>
-<div class="fragment"><pre class="fragment">    var hooker2 = createObject(<span class="stringliteral">&quot;WindowHook&quot;</span>, hostWnd);
-    hooker2.hookMessage(WM_CLOSE, function(hWnd, message, wParam, lParam)
+<div class="fragment"><pre class="fragment">    var hook2 = createObject(<span class="stringliteral">&quot;WindowHook&quot;</span>, hostWnd);
+    hook2.hookMessage(WM_CLOSE, function(hWnd, message, wParam, lParam)
     {
         <span class="keywordflow">if</span> (IDYES == messageBox(hostWnd, <span class="stringliteral">&quot;Do you still want to exit?&quot;</span>, doc.title, MB_ICONQUESTION | MB_YESNO | MB_DEFBUTTON2))
         {
             <span class="comment">// call default window procedure (which will destroy the window for WM_CLOSE message), bypassing all other handler hooked after this one.</span>
-            <span class="keywordflow">return</span> hooker2.callDefaultWndProc(hWnd, message, wParam, lParam);
+            <span class="keywordflow">return</span> hook2.callDefaultWndProc(hWnd, message, wParam, lParam);
         }
 
         <span class="keywordflow">return</span> 0; <span class="comment">// to cancel window close, bypass original window procedure and directly return zero for WM_CLOSE message</span>
@@ -98,8 +98,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </pre></div><dl class="user"><dt><b></b></dt><dd><em>It's recommended to unhook hooks installed at window <code>unload</code> event</em></dd></dl>
 <div class="fragment"><pre class="fragment">    window.attachEvent(<span class="stringliteral">&quot;onunload&quot;</span>, function()
     {
-        hooker.unhook();
-        hooker2.unhook();
+        hook.unhook();
+        hook2.unhook();
     });
 </pre></div><dl class="note"><dt><b>注解:</b></dt><dd>Only window in same process can be hooked. For standalone LocalJS Internet Explorer application, Internet Explorer runs in a process different from the process <a class="el" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a> objects exit, so <a class="el" href="interface_window_hook.php" title="Hook messages of the specified window.">WindowHook</a> cannot hook the Window procedure of the Internet Explorer window.</dd></dl>
 <dl class="user"><dt><b></b></dt><dd>However, JavaScript objects in Internet Explorer can still co-operate with JavaScript objects in other LocalJS browser windows (crossing process boundary).</dd></dl>
