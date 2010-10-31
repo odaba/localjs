@@ -14,17 +14,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="contents">
 <p>本页目录：</p>
+ 
+<style>
+h3 { font-weight:normal; color:blue }
+h2 { font-weight:normal; color:green }
+div.jump_index a.el { font-weight:normal }
+</style>
+<div class="jump_index">
 <div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_start_up">LocalJS 起步</a></div> <ul>
 <li><a class="el" href="howto.php#howto_start_local_js">如何把网站变成LocalJS 桌面程序？</a> </li>
 <li><a class="el" href="howto.php#howto_access_objects">如何在JavaScript 代码中使用LocalJS 对象？</a> </li>
-<li><a class="el" href="howto.php#howto_debug">How to debug JavaScript?</a></li>
+<li><a class="el" href="howto.php#howto_debug">如何调试JavaScript？</a></li>
 </ul>
-<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_browser_wnd">Play with Browser Window</a></div> <ul>
-<li><a class="el" href="howto.php#howto_move_wnd">How to move browser window around on desktop within JavaScript?</a> </li>
-<li><a class="el" href="howto.php#howto_change_wnd_style">How to hide or show browser window title bar from within JavaScript?</a> </li>
-<li><a class="el" href="howto.php#howto_popup_msg">How to popup a message dialog looks better than JavaScript alert?</a> </li>
-<li><a class="el" href="howto.php#howto_close_wnd">How to close browser window from within JavaScript?</a> </li>
-<li><a class="el" href="howto.php#howto_confirm_close">How to popup a confirm dialog when user closes browser window?</a></li>
+<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_browser_wnd">控制浏览器窗口</a></div> <ul>
+<li><a class="el" href="howto.php#howto_move_wnd">如何用JavaScript 在桌面上移动浏览器窗口？</a> </li>
+<li><a class="el" href="howto.php#howto_change_wnd_style">如何用JavaScript 显示或隐藏页面窗口的标题栏？</a> </li>
+<li><a class="el" href="howto.php#howto_popup_msg">如何弹出一个比JavaScript 的alert好看些的消息框？</a> </li>
+<li><a class="el" href="howto.php#howto_close_wnd">如何用JavaScript 关闭页面窗口？</a> </li>
+<li><a class="el" href="howto.php#howto_confirm_close">如何在用户关闭页面窗口时弹出确认对话框？</a></li>
 </ul>
 <div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_navigation">Navigate Back and Forth</a></div> <ul>
 <li><a class="el" href="howto.php#howto_get_webbrowser">How to get WebBrowser object of current browser window?</a> </li>
@@ -68,7 +75,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <li><a class="el" href="howto.php#howto_thread_end">How to tell if a thread has ended?</a> </li>
 <li><a class="el" href="howto.php#howto_thread_sync">How to synchronize data access among threads?</a></li>
 </ul>
-<h2><a class="anchor" id="howto_start_up"></a>
+ </div> <h2><a class="anchor" id="howto_start_up"></a>
 LocalJS 起步</h2>
 <h3><a class="anchor" id="howto_start_local_js"></a>
 如何把网站变成LocalJS 桌面程序？</h3>
@@ -93,62 +100,62 @@ LocalJS 起步</h2>
     var thr = <a class="code" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.<a class="code" href="interfacelocal_j_s.php#ac12d811a674c6cc7417b6f9a8d39736c" title="Readonly. Returns object Threading, which exposes methods to create new script thread, sleep, get thread id, etc.">threading</a>.<a class="code" href="interface_threading.php#ab83b569dcb6b1ed35d6e9f13a8376a64" title="Create new script thread with optional arguments. Returns Thread object represents the new thread...">newThread</a>(<span class="stringliteral">&#39;return true;&#39;</span>);
     var globalDict = <a class="code" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.<a class="code" href="interfacelocal_j_s.php#a3db8e9f0672a2aed8a468da67db3b2e1" title="ReadOnly. Returns a Dictionary Object globally available in the process. An ideal global persistent s...">globalDict</a>;
 </pre></div><h3><a class="anchor" id="howto_debug"></a>
-How to debug JavaScript?</h3>
-<p>There are several JavaScript debug tools on web. Here is one of the solutions using Microsoft IDE:</p>
+如何调试JavaScript？</h3>
+<p>网上有不少JavaScript 的调试工具。下面给出一个用微软的集成环境的方法：</p>
 <ul>
-<li>Install one of <a href="http://msdn.microsoft.com/en-us/library/5hs4b7a6.aspx" target="_blank">Just-In-Time</a> debuggers for JavaScript. For example, Visual Studio or <a href="http://msdn.microsoft.com/en-us/library/aa189846(office.10).aspx" target="_blank">Microsoft Script Editor</a>. <dl class="user"><dt><b></b></dt><dd><a href="http://msdn.microsoft.com/en-us/library/5hs4b7a6.aspx" target="_blank">Just-In-Time</a> means when a breakpoint is hit, the debugger will popup and prompt to attach to the script for debugging. </dd></dl>
+<li>安装一个<a href="http://msdn.microsoft.com/en-us/library/5hs4b7a6.aspx" target="_blank">Just-In-Time</a> JavaScript 调试器。比如，Visual Studio 或者 <a href="http://msdn.microsoft.com/en-us/library/aa189846(office.10).aspx" target="_blank">Microsoft Script Editor</a>。 <dl class="user"><dt><b></b></dt><dd><a href="http://msdn.microsoft.com/en-us/library/5hs4b7a6.aspx" target="_blank">Just-In-Time</a> 是指当程序遇到断点的时候，调试器会弹出窗口提示用户进行调试。 </dd></dl>
 </li>
-<li>In system registry, create a string type key <em>"Disable Script Debugger"</em> with value <em>"no"</em> under entry <em>HKEY_CURRENT_USER\Software\LocalJS\WebBrowser\Main</em>:</li>
+<li>在系统注册表中找到位置<em>HKEY_CURRENT_USER\Software\LocalJS\WebBrowser\Main</em>，在其下添加一个字符串类型的键<em>"Disable Script Debugger"</em>，键值为<em>"no"：</em> </li>
 </ul>
 <div align="center">
 <img src="debug_registry.JPG" alt="debug_registry.JPG"/>
-<p><strong>Registry Setting for Debug</strong></p></div>
-<ul>
-<li>Add <code>debugger</code> statement to code to set a breakpoint: <div class="fragment"><pre class="fragment">    (function()
+<p><strong>设置注册表以允许调试</strong></p></div>
+ <ul>
+<li>在代码里加入<code>debugger</code> 语句来设置断点： <div class="fragment"><pre class="fragment">    (function()
     {
         debugger;
     })();
 </pre></div> </li>
-<li>When <code>debugger</code> statement is executed, the <a href="http://msdn.microsoft.com/en-us/library/5hs4b7a6.aspx" target="_blank">Just-In-Time</a> debugger prompts for debugging as below:</li>
+<li>当 <code>debugger</code> 语句被执行到的时候，<a href="http://msdn.microsoft.com/en-us/library/5hs4b7a6.aspx" target="_blank">Just-In-Time</a> 调试器会弹出如下窗口：</li>
 </ul>
 <div align="center">
 <img src="debug_popup.JPG" alt="debug_popup.JPG"/>
-<p><strong>Prompt for Debug</strong></p></div>
- <dl class="user"><dt><b></b></dt><dd>Choose the debugger you want and click Yes to debug JavaScript with the IDE.</dd></dl>
-<dl class="note"><dt><b>注解:</b></dt><dd>If you called <a class="el" href="group___host_a_p_i.php#ga7474b7f77001b41241fdadc926054645" title="Change the default registry used by LocalJS browser window to save its own options.">setBrowserControlRegPath()</a> to change the registry entry for LocalJS browser, you will need to set the 'Disable Script Debugger' option under the registry postion you specified.</dd></dl>
+<p><strong>弹出的调试窗口</strong></p></div>
+ <dl class="user"><dt><b></b></dt><dd>选择调试器，点击 "Yes" 就可以在集成环境中调试JavaScript 了。</dd></dl>
+<dl class="note"><dt><b>注解:</b></dt><dd>如果你调用过函数 <a class="el" href="group___host_a_p_i.php#ga7474b7f77001b41241fdadc926054645" title="Change the default registry used by LocalJS browser window to save its own options.">setBrowserControlRegPath()</a> 改变了LocalJS 页面窗口用到的的注册表位置，你需要在你所设定的位置下创建 'Disable Script Debugger' 键值。</dd></dl>
 <dl class="see"><dt><b>参见:</b></dt><dd><a href="http://msdn.microsoft.com/en-us/library/k2h50zzs(VS.80).aspx" target="_blank">How to: Enable Client-Side Script Debugging</a></dd></dl>
 <h2><a class="anchor" id="howto_browser_wnd"></a>
-Play with Browser Window</h2>
+控制浏览器窗口</h2>
 <h3><a class="anchor" id="howto_move_wnd"></a>
-How to move browser window around on desktop within JavaScript?</h3>
+如何用JavaScript 在桌面上移动浏览器窗口？</h3>
 <ul>
-<li>Call <a class="el" href="interface_u_i.php#a48bb86d6512ddef0a89997f6f26b28bb">LOCALJS.UI.moveWindow</a>.</li>
+<li>调用 <a class="el" href="interface_u_i.php#a48bb86d6512ddef0a89997f6f26b28bb">LOCALJS.UI.moveWindow</a></li>
 </ul>
 <h3><a class="anchor" id="howto_change_wnd_style"></a>
-How to hide or show browser window title bar from within JavaScript?</h3>
+如何用JavaScript 显示或隐藏页面窗口的标题栏？</h3>
 <ul>
-<li>Call <a class="el" href="interface_u_i.php#a8661d51c7e5389632e89177abfd92a45">LOCALJS.UI.showTitleBar</a>.</li>
+<li>调用 <a class="el" href="interface_u_i.php#a8661d51c7e5389632e89177abfd92a45">LOCALJS.UI.showTitleBar</a></li>
 </ul>
 <h3><a class="anchor" id="howto_popup_msg"></a>
-How to popup a message dialog looks better than JavaScript alert?</h3>
+如何弹出一个比JavaScript 的alert好看些的消息框？</h3>
 <ul>
-<li>Include localjs_ui.js. The default <code>alert</code> and <code>confirm</code> JavaScript functions will be replaced by LocalJS version. </li>
-<li>Functions <a class="el" href="interface_u_i.php#ae4029da3a7b30a44c2a93b186146e3ae">LOCALJS.UI.msgBox</a> and <a class="el" href="interface_u_i.php#a8e8c34b33f063c99f3c36b7916e396b9">LOCALJS.UI.confirm</a> provide more options.</li>
+<li>在页面中包含localjs_ui.js。默认的JavaScript 函数<code>alert</code> 和 <code>confirm</code> 就会被替换为LocalJS 版本。 </li>
+<li>函数 <a class="el" href="interface_u_i.php#ae4029da3a7b30a44c2a93b186146e3ae">LOCALJS.UI.msgBox</a> 和 <a class="el" href="interface_u_i.php#a8e8c34b33f063c99f3c36b7916e396b9">LOCALJS.UI.confirm</a> 提供进一步的消息框选项。</li>
 </ul>
 <h3><a class="anchor" id="howto_close_wnd"></a>
-How to close browser window from within JavaScript?</h3>
+如何用JavaScript 关闭页面窗口？</h3>
 <ul>
-<li>Call method <a class="el" href="interfacelocal_j_s.php#ae0a273e38f45d2547157ddb6cfa6108c" title="Close the current browser window. NOT available in standalone Internet Explorer application.">localJS.closeWindow</a> to close browser window. </li>
-<li>Call <code>localJS.webBrowser.Quit()</code> to close standalone Internet Explorer application.</li>
+<li>调用方法 <a class="el" href="interfacelocal_j_s.php#ae0a273e38f45d2547157ddb6cfa6108c" title="Close the current browser window. NOT available in standalone Internet Explorer application.">localJS.closeWindow</a> 关闭页面窗口。 </li>
+<li>调用 <code>localJS.webBrowser.Quit()</code> 关闭Internet Explorer程序窗口。</li>
 </ul>
-<p>Refer to <a class="el" href="interfacelocal_j_s.php#ae0a273e38f45d2547157ddb6cfa6108c" title="Close the current browser window. NOT available in standalone Internet Explorer application.">localJS.closeWindow</a> for sample code.</p>
+<p>示例代码参见 <a class="el" href="interfacelocal_j_s.php#ae0a273e38f45d2547157ddb6cfa6108c" title="Close the current browser window. NOT available in standalone Internet Explorer application.">localJS.closeWindow</a>.</p>
 <h3><a class="anchor" id="howto_confirm_close"></a>
-How to popup a confirm dialog when user closes browser window?</h3>
+如何在用户关闭页面窗口时弹出确认对话框？</h3>
 <ul>
-<li>Assign a function to <a class="el" href="interface_u_i.php#a336a7e8690beb99db79da34c2a1f2810">LOCALJS.UI.exitCallback</a>. </li>
-<li>Call <a class="el" href="interface_u_i.php#a8e8c34b33f063c99f3c36b7916e396b9">LOCALJS.UI.confirm</a> in the function to prompt user.</li>
+<li>把一个自定义函数赋给 <a class="el" href="interface_u_i.php#a336a7e8690beb99db79da34c2a1f2810">LOCALJS.UI.exitCallback</a>。 </li>
+<li>在该自定义函数中，调用 <a class="el" href="interface_u_i.php#a8e8c34b33f063c99f3c36b7916e396b9">LOCALJS.UI.confirm</a> 弹出确认对话框。</li>
 </ul>
-<p>Refer to <a class="el" href="interface_u_i.php#a336a7e8690beb99db79da34c2a1f2810">LOCALJS.UI.exitCallback</a> for sample code.</p>
+<p>示例代码参见 <a class="el" href="interface_u_i.php#a336a7e8690beb99db79da34c2a1f2810">LOCALJS.UI.exitCallback</a>.</p>
 <h2><a class="anchor" id="howto_navigation"></a>
 Navigate Back and Forth</h2>
 <h3><a class="anchor" id="howto_get_webbrowser"></a>
