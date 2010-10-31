@@ -36,17 +36,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </ul>
 <div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_new_wnd">Launching New Browser Window</a></div> <ul>
 <li><a class="el" href="howto.php#howto_new_wnd_by_js">How to launch a new LocalJS browser window from within JavaScript?</a> </li>
-<li><a class="el" href="howto.php#howto_new_wnd_by_click">How to launch a new LocalJS browser window when user clicks a link?</a> </li>
+<li><a class="el" href="howto.php#howto_new_wnd_by_click">How to launch a customized LocalJS browser window when user tries to open a link in a new window?</a> </li>
 <li><a class="el" href="howto.php#howto_interop_other_wnd">How to interop with JavaScript in another LocalJS browser window?</a> </li>
 <li><a class="el" href="howto.php#howto_global_dict">How to make a variable global to JavaScript in all LocalJS browser windows?</a> </li>
 <li><a class="el" href="howto.php#howto_shell_exec">How to open a url in system default browser?</a></li>
 </ul>
-<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_file_access">Access Folders and Files</a></div> <ul>
+<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_file_access">Access Files and Folders</a></div> <ul>
 <li><a class="el" href="howto.php#howto_user_data_folder">How to retrieve user data folder?</a> </li>
 <li><a class="el" href="howto.php#howto_create_folder">How to create folder in disk?</a> </li>
 <li><a class="el" href="howto.php#howto_save_2_file">How to save settings to disk files?</a> </li>
 <li><a class="el" href="howto.php#howto_save_2_reg">How to save settings to registry?</a> </li>
-<li><a class="el" href="howto.php#howto_utf_8">How to access file in utf-8 format?</a> </li>
+<li><a class="el" href="howto.php#howto_utf_8">How to access text file in UTF-8 format?</a> </li>
 <li><a class="el" href="howto.php#howto_browse_file">How to browse for a file?</a> </li>
 <li><a class="el" href="howto.php#howto_browse_folder">How to browse for folder?</a> </li>
 <li><a class="el" href="howto.php#howto_enum_file">How to enumerate files in a folder?</a></li>
@@ -119,12 +119,12 @@ Play with Browser Window</h2>
 <h3><a class="anchor" id="howto_move_wnd"></a>
 How to move browser window around on desktop within JavaScript?</h3>
 <ul>
-<li>Call <a class="el" href="interface_u_i.php#a48bb86d6512ddef0a89997f6f26b28bb">LOCALJS.UI.moveWindow</a></li>
+<li>Call <a class="el" href="interface_u_i.php#a48bb86d6512ddef0a89997f6f26b28bb">LOCALJS.UI.moveWindow</a>.</li>
 </ul>
 <h3><a class="anchor" id="howto_change_wnd_style"></a>
 How to hide or show browser window title bar from within JavaScript?</h3>
 <ul>
-<li>Call <a class="el" href="interface_u_i.php#a8661d51c7e5389632e89177abfd92a45">LOCALJS.UI.showTitleBar</a></li>
+<li>Call <a class="el" href="interface_u_i.php#a8661d51c7e5389632e89177abfd92a45">LOCALJS.UI.showTitleBar</a>.</li>
 </ul>
 <h3><a class="anchor" id="howto_popup_msg"></a>
 How to popup a message dialog looks better than JavaScript alert?</h3>
@@ -209,22 +209,23 @@ How to launch a new LocalJS browser window from within JavaScript?</h3>
 <li>Call <a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc">LOCALJS.UI.newWindow</a>.</li>
 </ul>
 <h3><a class="anchor" id="howto_new_wnd_by_click"></a>
-How to launch a new LocalJS browser window when user clicks a link?</h3>
+How to launch a customized LocalJS browser window when user tries to open a link in a new window?</h3>
+<p>By default, a new browser window will be created to open the link when user opens a link in a new window, and the JavaScript in the new browser window page can initialize the new browser window: for instance, to set up titlebar, position, etc. But in some cases, you may want to initialize the new browser window before the new browser window opens the link. In this case, you can create a customized browser window and open the link inside it. </p>
 <ul>
 <li>Assign a function to <a class="el" href="interface_u_i.php#a474aa92c6232d183575e5986f50a35a2">LOCALJS.UI.newWindowCallback</a>. </li>
 <li>Create a new browser window with <a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc">LOCALJS.UI.newWindow</a> in the function.</li>
 </ul>
-<p>Refer to <a class="el" href="interface_u_i.php#a474aa92c6232d183575e5986f50a35a2">LOCALJS.UI.newWindowCallback</a> for an example.</p>
+<p>Refer to <a class="el" href="interface_u_i.php#a474aa92c6232d183575e5986f50a35a2">LOCALJS.UI.newWindowCallback</a> for an example. </p>
 <h3><a class="anchor" id="howto_interop_other_wnd"></a>
 How to interop with JavaScript in another LocalJS browser window?</h3>
 <ul>
 <li>Call <a class="el" href="interface_browser_window.php#a280f7ebe3df2ce474a5852d5cd2191d7" title="Returns the global variable or function defined in the browser window page by name.">BrowserWindow.getJSVariable</a> to get the global variable or function by name defined in another LocalJS browser window. </li>
-<li>Use the function or variable just like in same page.</li>
+<li>Use the function or variable just like in same page. </li>
 </ul>
 <h3><a class="anchor" id="howto_global_dict"></a>
 How to make a variable global to JavaScript in all LocalJS browser windows?</h3>
 <ul>
-<li>Save global variable to <a class="el" href="interfacelocal_j_s.php#a3db8e9f0672a2aed8a468da67db3b2e1" title="ReadOnly. Returns a Dictionary Object globally available in the process. An ideal global persistent s...">localJS.globalDict</a>.</li>
+<li>Save variable to <a class="el" href="interfacelocal_j_s.php#a3db8e9f0672a2aed8a468da67db3b2e1" title="ReadOnly. Returns a Dictionary Object globally available in the process. An ideal global persistent s...">localJS.globalDict</a> to make it accessable to JavaScript in all LocalJS browser windows. </li>
 </ul>
 <h3><a class="anchor" id="howto_shell_exec"></a>
 How to open a url in system default browser?</h3>
@@ -232,7 +233,7 @@ How to open a url in system default browser?</h3>
 <li>Call <a class="el" href="interface_f_i_l_e.php#a7c00c5f992f9567ec7b69d6e3cf25934">LOCALJS.FILE.exec</a>.</li>
 </ul>
 <h2><a class="anchor" id="howto_file_access"></a>
-Access Folders and Files</h2>
+Access Files and Folders</h2>
 <h3><a class="anchor" id="howto_user_data_folder"></a>
 How to retrieve user data folder?</h3>
 <ul>
@@ -247,16 +248,16 @@ How to create folder in disk?</h3>
 How to save settings to disk files?</h3>
 <ul>
 <li>To use INI file to save settings, call <a class="el" href="interface_f_i_l_e.php#ab82c10757856fbd93d04603ce226cb38">LOCALJS.FILE.iniWrite</a>. Read with functions <a class="el" href="interface_f_i_l_e.php#a0f1894aaa83f22c87ac4cfc0f3ff05be">LOCALJS.FILE.iniReadInt</a> and <a class="el" href="interface_f_i_l_e.php#a3130fd3652e1b86373b61cfc0348981e">LOCALJS.FILE.iniReadStr</a>. </li>
-<li>To save UTF8 format setting into files, call <a class="el" href="interface_f_i_l_e.php#a79aabfb4240680c61bf91440ff6e9823">LOCALJS.FILE.writeFileUTF8</a>. Read with function <a class="el" href="interface_f_i_l_e.php#af18bb442d4a17a21806d850fab3dcb99">LOCALJS.FILE.readFileUTF8</a>.</li>
+<li>To save UTF-8 format setting into files, call <a class="el" href="interface_f_i_l_e.php#a79aabfb4240680c61bf91440ff6e9823">LOCALJS.FILE.writeFileUTF8</a>. Read with function <a class="el" href="interface_f_i_l_e.php#af18bb442d4a17a21806d850fab3dcb99">LOCALJS.FILE.readFileUTF8</a>.</li>
 </ul>
 <h3><a class="anchor" id="howto_save_2_reg"></a>
 How to save settings to registry?</h3>
 <ul>
-<li>Call <a class="el" href="interface_f_i_l_e.php#a461f0e68e5dc507ba50ac94d56a2cfcd">LOCALJS.FILE.regWrite</a>. </li>
-<li>Read with function <a class="el" href="interface_f_i_l_e.php#ae283d76f4b92fd2f67e1db96f607e70c">LOCALJS.FILE.regRead</a>.</li>
+<li>Call <a class="el" href="interface_f_i_l_e.php#a461f0e68e5dc507ba50ac94d56a2cfcd">LOCALJS.FILE.regWrite</a> . </li>
+<li>Read with function <a class="el" href="interface_f_i_l_e.php#ae283d76f4b92fd2f67e1db96f607e70c">LOCALJS.FILE.regRead</a> .</li>
 </ul>
 <h3><a class="anchor" id="howto_utf_8"></a>
-How to access file in utf-8 format?</h3>
+How to access text file in UTF-8 format?</h3>
 <ul>
 <li>To write UTF8 format text files, call <a class="el" href="interface_f_i_l_e.php#a79aabfb4240680c61bf91440ff6e9823">LOCALJS.FILE.writeFileUTF8</a>. </li>
 <li>To read UTF8 format text files, call <a class="el" href="interface_f_i_l_e.php#af18bb442d4a17a21806d850fab3dcb99">LOCALJS.FILE.readFileUTF8</a>.</li>
@@ -294,9 +295,7 @@ How to get system information (for example, processors descriptions)?</h3>
 <h3><a class="anchor" id="howto_enumerate"></a>
 How to enumerate items in collection (e.g., Files) returned by system object (e.g., FileSystemObject)?</h3>
 <ul>
-<li>Create <a class="el" href="interface_enumerator.php" title="Similar to Enumerator object in JScript, providing access to items in Collection object.">Enumerator</a> object with <a class="el" href="interface_c_o_m.php#a14285e3676c39b414cac2652046ec881" title="Create COM object by ProgID, optionally specify object location.">COM.createObject</a> method to enumerate collection returned by system object.</li>
-</ul>
-<div class="fragment"><pre class="fragment">    var fso = <a class="code" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.<a class="code" href="interfacelocal_j_s.php#ac46dd82aca231ab33f6308ba12975594" title="Readonly. Returns object COM, which exposes methods to create COM object, connect COM events...">COM</a>.<a class="code" href="interface_c_o_m.php#a14285e3676c39b414cac2652046ec881" title="Create COM object by ProgID, optionally specify object location.">createObject</a>(<span class="stringliteral">&quot;Scripting.FileSystemObject&quot;</span>),
+<li>Create <a class="el" href="interface_enumerator.php" title="Similar to Enumerator object in JScript, providing access to items in Collection object.">Enumerator</a> object with <a class="el" href="interface_c_o_m.php#a14285e3676c39b414cac2652046ec881" title="Create COM object by ProgID, optionally specify object location.">COM.createObject</a> method to enumerate collection returned by system object. <div class="fragment"><pre class="fragment">    var fso = <a class="code" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.<a class="code" href="interfacelocal_j_s.php#ac46dd82aca231ab33f6308ba12975594" title="Readonly. Returns object COM, which exposes methods to create COM object, connect COM events...">COM</a>.<a class="code" href="interface_c_o_m.php#a14285e3676c39b414cac2652046ec881" title="Create COM object by ProgID, optionally specify object location.">createObject</a>(<span class="stringliteral">&quot;Scripting.FileSystemObject&quot;</span>),
         folder = fso.GetFolder(<a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.getProgramFolder()),
         fc = <a class="code" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.<a class="code" href="interfacelocal_j_s.php#ac46dd82aca231ab33f6308ba12975594" title="Readonly. Returns object COM, which exposes methods to create COM object, connect COM events...">COM</a>.<a class="code" href="interface_c_o_m.php#a14285e3676c39b414cac2652046ec881" title="Create COM object by ProgID, optionally specify object location.">createObject</a>(<span class="stringliteral">&quot;Enumerator&quot;</span>, folder.Files),
         s = <span class="stringliteral">&quot;&quot;</span>;
@@ -307,7 +306,9 @@ How to enumerate items in collection (e.g., Files) returned by system object (e.
         s += <span class="stringliteral">&quot;&lt;br/&gt;&quot;</span>;
     }
     alert(s);
-</pre></div><h2><a class="anchor" id="howto_db"></a>
+</pre></div></li>
+</ul>
+<h2><a class="anchor" id="howto_db"></a>
 Local Database Access</h2>
 <h3><a class="anchor" id="howto_access_db"></a>
 How to access local database?</h3>
@@ -338,19 +339,19 @@ Multithreading</h2>
 <h3><a class="anchor" id="howto_new_thread"></a>
 How to start a new thread?</h3>
 <ul>
-<li>Start new thread with method <a class="el" href="interface_threading.php#ab83b569dcb6b1ed35d6e9f13a8376a64" title="Create new script thread with optional arguments. Returns Thread object represents the new thread...">Threading.newThread</a>.</li>
+<li>Start new thread with method <a class="el" href="interface_threading.php#ab83b569dcb6b1ed35d6e9f13a8376a64" title="Create new script thread with optional arguments. Returns Thread object represents the new thread...">Threading.newThread</a>. </li>
 </ul>
 <h3><a class="anchor" id="howto_thread_end"></a>
 How to tell if a thread has ended?</h3>
 <ul>
-<li>Use property <a class="el" href="interface_thread.php#a2bb58b88ac256b165a95a806ae3b41e5" title="ReadOnly. Returns true if the thread is running, false if the thread has ended.">Thread.running</a>.</li>
+<li>Check property <a class="el" href="interface_thread.php#a2bb58b88ac256b165a95a806ae3b41e5" title="ReadOnly. Returns true if the thread is running, false if the thread has ended.">Thread.running</a>.</li>
 </ul>
 <h3><a class="anchor" id="howto_thread_sync"></a>
 How to synchronize data access among threads?</h3>
 <ul>
-<li>Thread synchronization becomes <em>EXTREMELY</em> <em>SIMPLE</em> for localJS script: you don't need to synchronize access to variables from different script threads; they will be synchronized automatically.</li>
+<li>Thread synchronization becomes <span class="red">EXTREMELY SIMPLE</span> for LocalJS script: you don't need to synchronize access to variables from different script threads; they will be synchronized automatically.</li>
 </ul>
-<p>Refer to section <em>Synchronization</em> of <a class="el" href="interface_threading.php#ab83b569dcb6b1ed35d6e9f13a8376a64" title="Create new script thread with optional arguments. Returns Thread object represents the new thread...">Threading.newThread</a> description. </p>
+<p>Refer to <a href="interface_threading.php#synchronization" class="el">Thread Synchronization</a>. </p>
 </div>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>
 </html>

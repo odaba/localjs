@@ -689,6 +689,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <div class="memdoc">
 
 <p>Callback function which is called when a link is clicked to open a url in a new window. </p>
+<p>newWindowCallback can be used to cancel the new window or create a customized browser window and open the link inside it.</p>
+<p>默认状态下，当用户在新窗口中打开链接的时候，LocalJS 会创建一个新的页面窗口来打开这个链接；这个新页面窗口中的JavaScript 代码可以初始化这个新的页面窗口，比如设置标题栏，窗口位置等。但是有时，你也许希望能在新页面窗口打开链接之前初始化它。这种情况下，你可以创建一个自定义的浏览器窗口，并在其中打开链接。</p>
 <p>Following code illustrates how to use newWindowCallback: </p>
 <div class="fragment"><pre class="fragment">    <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="Returns UI object, which provides methods for common UI operations. Include localjs_ui.js to use it.">UI</a>.newWindowCallback = function(disp, cancel, flags, url_context, url)
     {
