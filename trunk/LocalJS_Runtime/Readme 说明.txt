@@ -1,4 +1,4 @@
-LocalJS Runtime Release 2.1.1
+LocalJS Runtime Release 2.1.2
 
 For any issues, please contact me at martin@localjs.org.
 有问题请发邮件到 martin@localjs.org。
@@ -46,6 +46,9 @@ Folder list:
 		LocalJSBootstrap.exe 的源代码和 Visual C++ 6 工程文件。你可以自由地修改和使用它。
 
 Change History:
+
+2010-11-1
+	LocalJS 2.1.2 Small behavior fixes
 
 2010-10-20
 	LocalJS 2.1.1 rename localJS.browserHandle to localJS.browserWindowHandle
