@@ -1,5 +1,6 @@
 <?php
 require_once('../../_config.php');
+$doxygen_title = "LocalJS: LocalJS 运行库接口";
 include_once($base_path.'/_include/common_header_part1.php');
 ?>
 <title>LocalJS: LocalJS 运行库接口</title>
