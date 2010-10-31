@@ -41,39 +41,39 @@ div.jump_index a.el { font-weight:normal }
 <li><a class="el" href="howto.php#howto_data_lost_reload">如何防止页面刷新的时候丢失数据？</a> </li>
 <li><a class="el" href="howto.php#howto_f5">如何防止用户按F5 键刷新页面？</a></li>
 </ul>
-<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_new_wnd">Launching New Browser Window</a></div> <ul>
-<li><a class="el" href="howto.php#howto_new_wnd_by_js">How to launch a new LocalJS browser window from within JavaScript?</a> </li>
-<li><a class="el" href="howto.php#howto_new_wnd_by_click">How to launch a new LocalJS browser window when user clicks a link?</a> </li>
-<li><a class="el" href="howto.php#howto_interop_other_wnd">How to interop with JavaScript in another LocalJS browser window?</a> </li>
-<li><a class="el" href="howto.php#howto_global_dict">How to make a variable global to JavaScript in all LocalJS browser windows?</a> </li>
-<li><a class="el" href="howto.php#howto_shell_exec">How to open a url in system default browser?</a></li>
+<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_new_wnd">创建新的页面窗口</a></div> <ul>
+<li><a class="el" href="howto.php#howto_new_wnd_by_js">如何在JavaScript 中创建一个新的页面窗口？</a> </li>
+<li><a class="el" href="howto.php#howto_new_wnd_by_click">当用户在新窗口中打开链接的时候，如何创建自定义的浏览器窗口？</a> </li>
+<li><a class="el" href="howto.php#howto_interop_other_wnd">如何和其他页面窗口中的JavaScript 互操作？</a> </li>
+<li><a class="el" href="howto.php#howto_global_dict">如何在所有的页面窗口之间共享变量？</a> </li>
+<li><a class="el" href="howto.php#howto_shell_exec">如何在系统默认浏览器中打开一个url？</a></li>
 </ul>
-<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_file_access">Access Folders and Files</a></div> <ul>
-<li><a class="el" href="howto.php#howto_user_data_folder">How to retrieve user data folder?</a> </li>
-<li><a class="el" href="howto.php#howto_create_folder">How to create folder in disk?</a> </li>
-<li><a class="el" href="howto.php#howto_save_2_file">How to save settings to disk files?</a> </li>
-<li><a class="el" href="howto.php#howto_save_2_reg">How to save settings to registry?</a> </li>
-<li><a class="el" href="howto.php#howto_utf_8">How to access file in utf-8 format?</a> </li>
-<li><a class="el" href="howto.php#howto_browse_file">How to browse for a file?</a> </li>
-<li><a class="el" href="howto.php#howto_browse_folder">How to browse for folder?</a> </li>
-<li><a class="el" href="howto.php#howto_enum_file">How to enumerate files in a folder?</a></li>
+<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_file_access">访问文件和文件夹</a></div> <ul>
+<li><a class="el" href="howto.php#howto_user_data_folder">如何得到用户的个人数据文件夹？</a> </li>
+<li><a class="el" href="howto.php#howto_create_folder">如何创建本地文件夹？</a> </li>
+<li><a class="el" href="howto.php#howto_save_2_file">如何在本地文件中保存设置？</a> </li>
+<li><a class="el" href="howto.php#howto_save_2_reg">如何在注册表中保存设置？</a> </li>
+<li><a class="el" href="howto.php#howto_utf_8">如何读写UTF-8 格式的文本文件？</a> </li>
+<li><a class="el" href="howto.php#howto_browse_file">如何弹出一个文件选择对话框？</a> </li>
+<li><a class="el" href="howto.php#howto_browse_folder">如何弹出一个文件夹选择对话框？</a> </li>
+<li><a class="el" href="howto.php#howto_enum_file">如何得到文件夹中的文件列表？</a></li>
 </ul>
-<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_sys_info">Retrieve System Information</a></div> <ul>
-<li><a class="el" href="howto.php#howto_get_exe">How to get current exe file name?</a> </li>
-<li><a class="el" href="howto.php#howto_wmi">How to get system information (for example, processors descriptions)?</a> </li>
-<li><a class="el" href="howto.php#howto_enumerate">How to enumerate items in collection (e.g., Files) returned by system object (e.g., FileSystemObject)?</a></li>
+<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_sys_info">获取系统信息</a></div> <ul>
+<li><a class="el" href="howto.php#howto_get_exe">如何得到当前的可执行程序文件名？</a> </li>
+<li><a class="el" href="howto.php#howto_wmi">如何获取系统信息，比如处理器的描述？</a> </li>
+<li><a class="el" href="howto.php#howto_enumerate">某些系统对象（比如FileSystemObject）的属性（比如Files）返回集合对象（collection）。如何遍历集合对象中的内容？</a></li>
 </ul>
-<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_db">Local Database Access</a></div> <ul>
-<li><a class="el" href="howto.php#howto_access_db">How to access local database?</a></li>
+<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_db">本地数据库访问</a></div> <ul>
+<li><a class="el" href="howto.php#howto_access_db">如何访问本地数据库？</a></li>
 </ul>
-<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_web_service">Call Web Service from any domain</a></div> <ul>
-<li><a class="el" href="howto.php#howto_call_ws">How to call web service from other domains?</a> </li>
-<li><a class="el" href="howto.php#howto_json">How to parse JSON format web response?</a></li>
+<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_web_service">调用任意域的Web 服务</a></div> <ul>
+<li><a class="el" href="howto.php#howto_call_ws">如何调用其他域的Web 服务？</a> </li>
+<li><a class="el" href="howto.php#howto_json">如何解析web 服务返回的JSON 格式的字符串？</a></li>
 </ul>
-<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_thread">Multithreading</a></div> <ul>
-<li><a class="el" href="howto.php#howto_new_thread">How to start a new thread?</a> </li>
-<li><a class="el" href="howto.php#howto_thread_end">How to tell if a thread has ended?</a> </li>
-<li><a class="el" href="howto.php#howto_thread_sync">How to synchronize data access among threads?</a></li>
+<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_thread">多线程</a></div> <ul>
+<li><a class="el" href="howto.php#howto_new_thread">如何创建一个新线程？</a> </li>
+<li><a class="el" href="howto.php#howto_thread_end">如何知道一个线程是否已经结束？</a> </li>
+<li><a class="el" href="howto.php#howto_thread_sync">如何同步线程对共享数据的访问？</a></li>
 </ul>
  </div> <h2><a class="anchor" id="howto_start_up"></a>
 LocalJS 起步</h2>
@@ -129,12 +129,12 @@ LocalJS 起步</h2>
 <h3><a class="anchor" id="howto_move_wnd"></a>
 如何用JavaScript 在桌面上移动页面窗口？</h3>
 <ul>
-<li>调用 <a class="el" href="interface_u_i.php#a48bb86d6512ddef0a89997f6f26b28bb">LOCALJS.UI.moveWindow</a></li>
+<li>调用 <a class="el" href="interface_u_i.php#a48bb86d6512ddef0a89997f6f26b28bb">LOCALJS.UI.moveWindow</a>.</li>
 </ul>
 <h3><a class="anchor" id="howto_change_wnd_style"></a>
 如何用JavaScript 显示或隐藏页面窗口的标题栏？</h3>
 <ul>
-<li>调用 <a class="el" href="interface_u_i.php#a8661d51c7e5389632e89177abfd92a45">LOCALJS.UI.showTitleBar</a></li>
+<li>调用 <a class="el" href="interface_u_i.php#a8661d51c7e5389632e89177abfd92a45">LOCALJS.UI.showTitleBar</a>.</li>
 </ul>
 <h3><a class="anchor" id="howto_popup_msg"></a>
 如何弹出一个比JavaScript 的alert 好看些的消息框？</h3>
@@ -149,6 +149,10 @@ LocalJS 起步</h2>
 <li>调用 <code>localJS.webBrowser.Quit()</code> 关闭Internet Explorer程序窗口。</li>
 </ul>
 <p>示例代码参见 <a class="el" href="interfacelocal_j_s.php#ae0a273e38f45d2547157ddb6cfa6108c" title="Close the current browser window. NOT available in standalone Internet Explorer application.">localJS.closeWindow</a>.</p>
+<ul>
+<li>调用 <a class="el" href="interface_u_i.php#a8e8c34b33f063c99f3c36b7916e396b9">LOCALJS.UI.confirm</a> in the function to prompt user.</li>
+</ul>
+<p>Refer to <a class="el" href="interface_u_i.php#a336a7e8690beb99db79da34c2a1f2810">LOCALJS.UI.exitCallback</a> for sample code.</p>
 <h3><a class="anchor" id="howto_confirm_close"></a>
 如何在用户关闭页面窗口时弹出确认对话框？</h3>
 <ul>
@@ -212,99 +216,100 @@ LocalJS 起步</h2>
 <li>把 <a class="el" href="interfacelocal_j_s.php#a29a79e553fe87184f3a6ed6a9e0b270f" title="Get or set a boolean value to control whether pressing F5 key reloads HTML page. Ignored by standalon...">localJS.enableF5</a> 设为<code>false</code> 就能防止用户按F5 键刷新页面。</li>
 </ul>
 <h2><a class="anchor" id="howto_new_wnd"></a>
-Launching New Browser Window</h2>
+创建新的页面窗口</h2>
 <h3><a class="anchor" id="howto_new_wnd_by_js"></a>
-How to launch a new LocalJS browser window from within JavaScript?</h3>
+如何在JavaScript 中创建一个新的页面窗口？</h3>
 <ul>
-<li>Call <a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc">LOCALJS.UI.newWindow</a>.</li>
+<li>调用 <a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc">LOCALJS.UI.newWindow</a>.</li>
 </ul>
 <h3><a class="anchor" id="howto_new_wnd_by_click"></a>
-How to launch a new LocalJS browser window when user clicks a link?</h3>
+当用户在新窗口中打开链接的时候，如何创建自定义的浏览器窗口？</h3>
+<p>默认状态下，当用户在新窗口中打开链接的时候，LocalJS 会创建一个新的页面窗口来打开这个链接；这个新页面窗口中的JavaScript 代码可以初始化这个新的页面窗口，比如设置标题栏，窗口位置等。但是有时，你也许希望能在新页面窗口打开链接之前初始化它。这种情况下，你可以创建一个自定义的浏览器窗口，并在其中打开链接。</p>
 <ul>
-<li>Assign a function to <a class="el" href="interface_u_i.php#a474aa92c6232d183575e5986f50a35a2">LOCALJS.UI.newWindowCallback</a>. </li>
-<li>Create a new browser window with <a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc">LOCALJS.UI.newWindow</a> in the function.</li>
+<li>把一个自定义函数赋给 <a class="el" href="interface_u_i.php#a474aa92c6232d183575e5986f50a35a2">LOCALJS.UI.newWindowCallback</a>. </li>
+<li>在该自定义函数中用 <a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc">LOCALJS.UI.newWindow</a> 创建一个自定义的新窗口。</li>
 </ul>
-<p>Refer to <a class="el" href="interface_u_i.php#a474aa92c6232d183575e5986f50a35a2">LOCALJS.UI.newWindowCallback</a> for an example.</p>
+<p>示例代码参见 <a class="el" href="interface_u_i.php#a474aa92c6232d183575e5986f50a35a2">LOCALJS.UI.newWindowCallback</a>.</p>
 <h3><a class="anchor" id="howto_interop_other_wnd"></a>
-How to interop with JavaScript in another LocalJS browser window?</h3>
+如何和其他页面窗口中的JavaScript 互操作？</h3>
 <ul>
-<li>Call <a class="el" href="interface_browser_window.php#a280f7ebe3df2ce474a5852d5cd2191d7" title="Returns the global variable or function defined in the browser window page by name.">BrowserWindow.getJSVariable</a> to get the global variable or function by name defined in another LocalJS browser window. </li>
-<li>Use the function or variable just like in same page.</li>
+<li>调用 <a class="el" href="interface_browser_window.php#a280f7ebe3df2ce474a5852d5cd2191d7" title="Returns the global variable or function defined in the browser window page by name.">BrowserWindow.getJSVariable</a> 可以根据变量名得到其他页面窗口中定义的全局变量或函数。 </li>
+<li>可以像在同一页面中一样使用上一步得到的全局变量或函数。</li>
 </ul>
 <h3><a class="anchor" id="howto_global_dict"></a>
-How to make a variable global to JavaScript in all LocalJS browser windows?</h3>
+如何在所有的页面窗口之间共享变量？</h3>
 <ul>
-<li>Save global variable to <a class="el" href="interfacelocal_j_s.php#a3db8e9f0672a2aed8a468da67db3b2e1" title="ReadOnly. Returns a Dictionary Object globally available in the process. An ideal global persistent s...">localJS.globalDict</a>.</li>
+<li>把变量存入 <a class="el" href="interfacelocal_j_s.php#a3db8e9f0672a2aed8a468da67db3b2e1" title="ReadOnly. Returns a Dictionary Object globally available in the process. An ideal global persistent s...">localJS.globalDict</a>, 所有的页面窗口都能访问到它。</li>
 </ul>
 <h3><a class="anchor" id="howto_shell_exec"></a>
-How to open a url in system default browser?</h3>
+如何在系统默认浏览器中打开一个url？</h3>
 <ul>
-<li>Call <a class="el" href="interface_f_i_l_e.php#a7c00c5f992f9567ec7b69d6e3cf25934">LOCALJS.FILE.exec</a>.</li>
+<li>调用 <a class="el" href="interface_f_i_l_e.php#a7c00c5f992f9567ec7b69d6e3cf25934">LOCALJS.FILE.exec</a>.</li>
 </ul>
 <h2><a class="anchor" id="howto_file_access"></a>
-Access Folders and Files</h2>
+访问文件和文件夹</h2>
 <h3><a class="anchor" id="howto_user_data_folder"></a>
-How to retrieve user data folder?</h3>
+如何得到用户的个人数据文件夹？</h3>
 <ul>
-<li>Call <a class="el" href="interface_f_i_l_e.php#a6181d0579cb9654e86cd506737f0475f">LOCALJS.FILE.getAppDataFolder</a>.</li>
+<li>调用 <a class="el" href="interface_f_i_l_e.php#a6181d0579cb9654e86cd506737f0475f">LOCALJS.FILE.getAppDataFolder</a>.</li>
 </ul>
 <h3><a class="anchor" id="howto_create_folder"></a>
-How to create folder in disk?</h3>
+如何创建本地文件夹？</h3>
 <ul>
-<li>Call <a class="el" href="interface_f_i_l_e.php#a11c4eb341be6b3dcf3f2ce9d855b058e">LOCALJS.FILE.createFolder</a>.</li>
+<li>调用 <a class="el" href="interface_f_i_l_e.php#a11c4eb341be6b3dcf3f2ce9d855b058e">LOCALJS.FILE.createFolder</a>.</li>
 </ul>
 <h3><a class="anchor" id="howto_save_2_file"></a>
-How to save settings to disk files?</h3>
+如何在本地文件中保存设置？</h3>
 <ul>
-<li>To use INI file to save settings, call <a class="el" href="interface_f_i_l_e.php#ab82c10757856fbd93d04603ce226cb38">LOCALJS.FILE.iniWrite</a>. Read with functions <a class="el" href="interface_f_i_l_e.php#a0f1894aaa83f22c87ac4cfc0f3ff05be">LOCALJS.FILE.iniReadInt</a> and <a class="el" href="interface_f_i_l_e.php#a3130fd3652e1b86373b61cfc0348981e">LOCALJS.FILE.iniReadStr</a>. </li>
-<li>To save UTF8 format setting into files, call <a class="el" href="interface_f_i_l_e.php#a79aabfb4240680c61bf91440ff6e9823">LOCALJS.FILE.writeFileUTF8</a>. Read with function <a class="el" href="interface_f_i_l_e.php#af18bb442d4a17a21806d850fab3dcb99">LOCALJS.FILE.readFileUTF8</a>.</li>
+<li>如果要使用INI 文件保存设置，调用 <a class="el" href="interface_f_i_l_e.php#ab82c10757856fbd93d04603ce226cb38">LOCALJS.FILE.iniWrite</a>. 调用函数 <a class="el" href="interface_f_i_l_e.php#a0f1894aaa83f22c87ac4cfc0f3ff05be">LOCALJS.FILE.iniReadInt</a> 和 <a class="el" href="interface_f_i_l_e.php#a3130fd3652e1b86373b61cfc0348981e">LOCALJS.FILE.iniReadStr</a> 从INI 文件中读取设置。 </li>
+<li>如果要把UTF-8 格式的文本存入文件，调用 <a class="el" href="interface_f_i_l_e.php#a79aabfb4240680c61bf91440ff6e9823">LOCALJS.FILE.writeFileUTF8</a>. 调用函数 <a class="el" href="interface_f_i_l_e.php#af18bb442d4a17a21806d850fab3dcb99">LOCALJS.FILE.readFileUTF8</a> 读取文本。</li>
 </ul>
 <h3><a class="anchor" id="howto_save_2_reg"></a>
-How to save settings to registry?</h3>
+如何在注册表中保存设置？</h3>
 <ul>
-<li>Call <a class="el" href="interface_f_i_l_e.php#a461f0e68e5dc507ba50ac94d56a2cfcd">LOCALJS.FILE.regWrite</a>. </li>
-<li>Read with function <a class="el" href="interface_f_i_l_e.php#ae283d76f4b92fd2f67e1db96f607e70c">LOCALJS.FILE.regRead</a>.</li>
+<li>调用函数 <a class="el" href="interface_f_i_l_e.php#a461f0e68e5dc507ba50ac94d56a2cfcd">LOCALJS.FILE.regWrite</a> 写入注册表。 </li>
+<li>调用函数 <a class="el" href="interface_f_i_l_e.php#ae283d76f4b92fd2f67e1db96f607e70c">LOCALJS.FILE.regRead</a> 读注册表。</li>
 </ul>
 <h3><a class="anchor" id="howto_utf_8"></a>
-How to access file in utf-8 format?</h3>
+如何读写UTF-8 格式的文本文件？</h3>
 <ul>
-<li>To write UTF8 format text files, call <a class="el" href="interface_f_i_l_e.php#a79aabfb4240680c61bf91440ff6e9823">LOCALJS.FILE.writeFileUTF8</a>. </li>
-<li>To read UTF8 format text files, call <a class="el" href="interface_f_i_l_e.php#af18bb442d4a17a21806d850fab3dcb99">LOCALJS.FILE.readFileUTF8</a>.</li>
+<li>调用函数 <a class="el" href="interface_f_i_l_e.php#a79aabfb4240680c61bf91440ff6e9823">LOCALJS.FILE.writeFileUTF8</a> 把UTF-8 格式的文本写入文件。 </li>
+<li>调用函数 <a class="el" href="interface_f_i_l_e.php#af18bb442d4a17a21806d850fab3dcb99">LOCALJS.FILE.readFileUTF8</a> 从UTF-8 格式的文件中读取文本。</li>
 </ul>
 <h3><a class="anchor" id="howto_browse_file"></a>
-How to browse for a file?</h3>
+如何弹出一个文件选择对话框？</h3>
 <ul>
-<li>Call <a class="el" href="interface_f_i_l_e.php#a561e6ec182a20ebe1d85653d67b0ae44">LOCALJS.FILE.browseFile</a>.</li>
+<li>调用 <a class="el" href="interface_f_i_l_e.php#a561e6ec182a20ebe1d85653d67b0ae44">LOCALJS.FILE.browseFile</a>.</li>
 </ul>
 <h3><a class="anchor" id="howto_browse_folder"></a>
-How to browse for folder?</h3>
+如何弹出一个文件夹选择对话框？</h3>
 <ul>
-<li>Call <a class="el" href="interface_f_i_l_e.php#a5ddc249346092c53b6e0fadd644a0fb7">LOCALJS.FILE.browseFolder</a>.</li>
+<li>调用 <a class="el" href="interface_f_i_l_e.php#a5ddc249346092c53b6e0fadd644a0fb7">LOCALJS.FILE.browseFolder</a>.</li>
 </ul>
 <h3><a class="anchor" id="howto_enum_file"></a>
-How to enumerate files in a folder?</h3>
+如何得到文件夹中的文件列表？</h3>
 <ul>
-<li>Call <a class="el" href="interface_f_i_l_e.php#af20f5de0d692771dafbeef7fb57fc500">LOCALJS.FILE.listFolder</a>.</li>
+<li>调用 <a class="el" href="interface_f_i_l_e.php#af20f5de0d692771dafbeef7fb57fc500">LOCALJS.FILE.listFolder</a>.</li>
 </ul>
 <h2><a class="anchor" id="howto_sys_info"></a>
-Retrieve System Information</h2>
+获取系统信息</h2>
 <h3><a class="anchor" id="howto_get_exe"></a>
-How to get current exe file name?</h3>
+如何得到当前的可执行程序文件名？</h3>
 <ul>
-<li>Call <a class="el" href="interface_f_i_l_e.php#a943b822f2c3c6f32774e389330bd6a63">LOCALJS.FILE.getExeFilename</a>.</li>
+<li>调用 <a class="el" href="interface_f_i_l_e.php#a943b822f2c3c6f32774e389330bd6a63">LOCALJS.FILE.getExeFilename</a>.</li>
 </ul>
 <h3><a class="anchor" id="howto_wmi"></a>
-How to get system information (for example, processors descriptions)?</h3>
+如何获取系统信息，比如处理器的描述？</h3>
 <ul>
-<li>Get instance of <a href="http://technet.microsoft.com/en-us/library/bb684728.aspx" target="_blank">Windows Management Instrumentation (WMI) object</a> through <a class="el" href="interface_c_o_m.php#aa5d75d3298d5de451ecbead91d92b32d" title="Get reference to COM object by displayName, optionally specify ProgID for the object to be created...">COM.getObject</a>; </li>
-<li>Retrieve system information through <a href="http://technet.microsoft.com/en-us/library/bb684728.aspx" target="_blank">WMI object</a>; </li>
-<li>Create <a class="el" href="interface_enumerator.php" title="Similar to Enumerator object in JScript, providing access to items in Collection object.">Enumerator</a> object with <a class="el" href="interface_c_o_m.php#a14285e3676c39b414cac2652046ec881" title="Create COM object by ProgID, optionally specify object location.">COM.createObject</a> method to enumerate collection returned by <a href="http://technet.microsoft.com/en-us/library/bb684728.aspx" target="_blank">WMI object</a>.</li>
+<li>调用 <a class="el" href="interface_c_o_m.php#aa5d75d3298d5de451ecbead91d92b32d" title="Get reference to COM object by displayName, optionally specify ProgID for the object to be created...">COM.getObject</a> 方法得到<a href="http://technet.microsoft.com/en-us/library/bb684728.aspx" target="_blank">Windows Management Instrumentation (WMI) 对象</a>； </li>
+<li>调用<a href="http://technet.microsoft.com/en-us/library/bb684728.aspx" target="_blank">WMI 对象</a>获取系统信息; </li>
+<li>调用 <a class="el" href="interface_c_o_m.php#a14285e3676c39b414cac2652046ec881" title="Create COM object by ProgID, optionally specify object location.">COM.createObject</a> 方法创建 <a class="el" href="interface_enumerator.php" title="Similar to Enumerator object in JScript, providing access to items in Collection object.">Enumerator</a> 对象来遍历<a href="http://technet.microsoft.com/en-us/library/bb684728.aspx" target="_blank">WMI 对象</a>返回的集合对象（collection）中的内容。</li>
 </ul>
-<p>Refer to <a class="el" href="interface_c_o_m.php#aa5d75d3298d5de451ecbead91d92b32d" title="Get reference to COM object by displayName, optionally specify ProgID for the object to be created...">COM.getObject</a> for an example.</p>
+<p>示例代码参见 <a class="el" href="interface_c_o_m.php#aa5d75d3298d5de451ecbead91d92b32d" title="Get reference to COM object by displayName, optionally specify ProgID for the object to be created...">COM.getObject</a>.</p>
 <h3><a class="anchor" id="howto_enumerate"></a>
-How to enumerate items in collection (e.g., Files) returned by system object (e.g., FileSystemObject)?</h3>
+某些系统对象（比如FileSystemObject）的属性（比如Files）返回集合对象（collection）。如何遍历集合对象中的内容？</h3>
 <ul>
-<li>Create <a class="el" href="interface_enumerator.php" title="Similar to Enumerator object in JScript, providing access to items in Collection object.">Enumerator</a> object with <a class="el" href="interface_c_o_m.php#a14285e3676c39b414cac2652046ec881" title="Create COM object by ProgID, optionally specify object location.">COM.createObject</a> method to enumerate collection returned by system object.</li>
+<li>使用 <a class="el" href="interface_c_o_m.php#a14285e3676c39b414cac2652046ec881" title="Create COM object by ProgID, optionally specify object location.">COM.createObject</a> 方法创建 <a class="el" href="interface_enumerator.php" title="Similar to Enumerator object in JScript, providing access to items in Collection object.">Enumerator</a> 对象来遍历集合对象（collection）中的内容。</li>
 </ul>
 <div class="fragment"><pre class="fragment">    var fso = <a class="code" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.<a class="code" href="interfacelocal_j_s.php#ac46dd82aca231ab33f6308ba12975594" title="Readonly. Returns object COM, which exposes methods to create COM object, connect COM events...">COM</a>.<a class="code" href="interface_c_o_m.php#a14285e3676c39b414cac2652046ec881" title="Create COM object by ProgID, optionally specify object location.">createObject</a>(<span class="stringliteral">&quot;Scripting.FileSystemObject&quot;</span>),
         folder = fso.GetFolder(<a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.getProgramFolder()),
@@ -318,14 +323,14 @@ How to enumerate items in collection (e.g., Files) returned by system object (e.
     }
     alert(s);
 </pre></div><h2><a class="anchor" id="howto_db"></a>
-Local Database Access</h2>
+本地数据库访问</h2>
 <h3><a class="anchor" id="howto_access_db"></a>
-How to access local database?</h3>
+如何访问本地数据库？</h3>
 <ul>
-<li>Create <a href="http://www.w3schools.com/ado/ado_ref_connection.asp" target="_blank">ADO Connection object</a> with <a class="el" href="interface_c_o_m.php#a14285e3676c39b414cac2652046ec881" title="Create COM object by ProgID, optionally specify object location.">COM.createObject</a>; </li>
-<li>Use properties and methods of <a href="http://www.w3schools.com/ado/ado_ref_connection.asp" target="_blank">ADO Connection object</a> to access database just like in other scripting languages.</li>
+<li>调用 <a class="el" href="interface_c_o_m.php#a14285e3676c39b414cac2652046ec881" title="Create COM object by ProgID, optionally specify object location.">COM.createObject</a> 方法创建 <a href="http://www.w3schools.com/ado/ado_ref_connection.asp" target="_blank">ADO Connection 对象</a>； </li>
+<li>和其他script 语言一样，调用 <a href="http://www.w3schools.com/ado/ado_ref_connection.asp" target="_blank">ADO Connection 对象</a>的属性和方法访问数据库。</li>
 </ul>
-<p>Code below opens an <a href="http://www.w3schools.com/ado/ado_ref_connection.asp" target="_blank">ADO Connection</a> to an excel <a href="file:">file:</a></p>
+<p>下面的例子打开一个到Excel 文件的数据库连接：</p>
 <div class="fragment"><pre class="fragment">    var openExcelFile = function(excel_file)
     {
         var cn = <a class="code" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.<a class="code" href="interfacelocal_j_s.php#ac46dd82aca231ab33f6308ba12975594" title="Readonly. Returns object COM, which exposes methods to create COM object, connect COM events...">COM</a>.<a class="code" href="interface_c_o_m.php#a14285e3676c39b414cac2652046ec881" title="Create COM object by ProgID, optionally specify object location.">createObject</a>(<span class="stringliteral">&quot;ADODB.Connection&quot;</span>);
@@ -334,33 +339,33 @@ How to access local database?</h3>
         cn.Open();
     }
 </pre></div><h2><a class="anchor" id="howto_web_service"></a>
-Call Web Service from any domain</h2>
+调用任意域的Web 服务</h2>
 <h3><a class="anchor" id="howto_call_ws"></a>
-How to call web service from other domains?</h3>
+如何调用其他域的Web 服务？</h3>
 <ul>
-<li>Call <a class="el" href="interface_w_e_b___s_e_r_v_i_c_e.php#a7eb6ada1e0326fa0119b999ab83efd55">LOCALJS.WEB_SERVICE.callUrl</a>.</li>
+<li>调用 <a class="el" href="interface_w_e_b___s_e_r_v_i_c_e.php#a7eb6ada1e0326fa0119b999ab83efd55">LOCALJS.WEB_SERVICE.callUrl</a>.</li>
 </ul>
 <h3><a class="anchor" id="howto_json"></a>
-How to parse JSON format web response?</h3>
-<p>Refer to <a class="el" href="tutorial_js4cpp.php#js4cpp_json">Build in JSON Parser</a>.</p>
+如何解析web 服务返回的JSON 格式的字符串？</h3>
+<p>参见 <a class="el" href="tutorial_js4cpp.php#js4cpp_json">Build in JSON Parser</a>.</p>
 <h2><a class="anchor" id="howto_thread"></a>
-Multithreading</h2>
+多线程</h2>
 <h3><a class="anchor" id="howto_new_thread"></a>
-How to start a new thread?</h3>
+如何创建一个新线程？</h3>
 <ul>
-<li>Start new thread with method <a class="el" href="interface_threading.php#ab83b569dcb6b1ed35d6e9f13a8376a64" title="Create new script thread with optional arguments. Returns Thread object represents the new thread...">Threading.newThread</a>.</li>
+<li>调用 <a class="el" href="interface_threading.php#ab83b569dcb6b1ed35d6e9f13a8376a64" title="Create new script thread with optional arguments. Returns Thread object represents the new thread...">Threading.newThread</a> 创建新线程。</li>
 </ul>
 <h3><a class="anchor" id="howto_thread_end"></a>
-How to tell if a thread has ended?</h3>
+如何知道一个线程是否已经结束？</h3>
 <ul>
-<li>Use property <a class="el" href="interface_thread.php#a2bb58b88ac256b165a95a806ae3b41e5" title="ReadOnly. Returns true if the thread is running, false if the thread has ended.">Thread.running</a>.</li>
+<li>检查属性 <a class="el" href="interface_thread.php#a2bb58b88ac256b165a95a806ae3b41e5" title="ReadOnly. Returns true if the thread is running, false if the thread has ended.">Thread.running</a>.</li>
 </ul>
 <h3><a class="anchor" id="howto_thread_sync"></a>
-How to synchronize data access among threads?</h3>
+如何同步线程对共享数据的访问？</h3>
 <ul>
-<li>Thread synchronization becomes <em>EXTREMELY</em> <em>SIMPLE</em> for localJS script: you don't need to synchronize access to variables from different script threads; they will be synchronized automatically.</li>
+<li>LocalJS 的线程同步<span class="red">非常简单</span>：你不需要考虑同步问题；所有对共享数据的访问都会被自动同步。</li>
 </ul>
-<p>Refer to section <em>Synchronization</em> of <a class="el" href="interface_threading.php#ab83b569dcb6b1ed35d6e9f13a8376a64" title="Create new script thread with optional arguments. Returns Thread object represents the new thread...">Threading.newThread</a> description. </p>
+<p>参见<a href="interface_threading.php#synchronization" class="el">线程同步</a>. </p>
 </div>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>
 </html>
