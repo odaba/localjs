@@ -55,7 +55,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
     <span class="comment">// localJS.hostWnd returns handle of current browser window</span>
     messageBox(<a class="code" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.<a class="code" href="interfacelocal_j_s.php#aa05066bf1c7f31ea898c0d2aed29eedb" title="ReadOnly. Returns the HWND handle of current browser window.">hostWnd</a>, <span class="stringliteral">&quot;MessageBox popped by Windows API&quot;</span>, document.title, MB_ICONINFORMATION);
 </pre></div><dl class="see"><dt><b>参见:</b></dt><dd><a class="el" href="interface_c_o_m.php#a14285e3676c39b414cac2652046ec881" title="Create COM object by ProgID, optionally specify object location.">COM.createObject</a> | <a class="el" href="interface_buffer.php" title="Buffer object represents a fixed size buffer, used as parameters in Dll function call.">Buffer</a> | <a class="el" href="interface_structure.php" title="Structure object represents a C struct, used as parameters in Dll function call.">Structure</a> | <a href="http://msdn.microsoft.com/en-us/library/ms645505(VS.85).aspx" target="_blank">MessageBox Function</a> </dd></dl>
-<hr/><h2>Method Documentation</h2>
+<hr/><h2>方法文档</h2>
 <a class="anchor" id="ab6730ea57a7678c1f07953ce331edca0"></a><!-- doxytag: member="DllCall::add" ref="ab6730ea57a7678c1f07953ce331edca0" args="(String dllPath, String prototype,[optional] String renameTo)" -->
 <div class="memitem">
 <div class="memproto">

@@ -78,7 +78,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </table>
 <hr/><a name="_details"></a><h2>详细描述</h2>
 <p>Open source object. Provides methods for common UI operations. Include localjs_ui.js to use it. </p>
-<hr/><h2>Method Documentation</h2>
+<hr/><h2>方法文档</h2>
 <a class="anchor" id="a1affe0f3629c5b39d93ba05fd54fc3fc"></a><!-- doxytag: member="UI::newWindow" ref="a1affe0f3629c5b39d93ba05fd54fc3fc" args="(String url,[optional] int left,[optional] int top,[optional] int width,[optional] int height,[optional] int window_style,[optional] int parent_window,[optional] function initFunction,[optional] boolean leave_alone,[optional] boolean ie)" -->
 <div class="memitem">
 <div class="memproto">

@@ -41,7 +41,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <div class="fragment"><pre class="fragment">    var com = <a class="code" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.<a class="code" href="interfacelocal_j_s.php#ac46dd82aca231ab33f6308ba12975594" title="Readonly. Returns object COM, which exposes methods to create COM object, connect COM events...">COM</a>;
 </pre></div><dl class="see"><dt><b>参见:</b></dt><dd><a class="el" href="interface_c_o_m.php">Object COM</a> </dd></dl>
 <dl class="see"><dt><b>参见:</b></dt><dd><a class="el" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a> </dd></dl>
-<hr/><h2>Method Documentation</h2>
+<hr/><h2>方法文档</h2>
 <a class="anchor" id="a14285e3676c39b414cac2652046ec881"></a><!-- doxytag: member="COM::createObject" ref="a14285e3676c39b414cac2652046ec881" args="(String progID,[optional] String location)" -->
 <div class="memitem">
 <div class="memproto">

@@ -90,7 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </table>
 <hr/><a name="_details"></a><h2>详细描述</h2>
 <p>Open source object. Provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it. </p>
-<hr/><h2>Method Documentation</h2>
+<hr/><h2>方法文档</h2>
 <a class="anchor" id="a0f1894aaa83f22c87ac4cfc0f3ff05be"></a><!-- doxytag: member="FILE::iniReadInt" ref="a0f1894aaa83f22c87ac4cfc0f3ff05be" args="(String filename, String section, String key,[optional] int default_value)" -->
 <div class="memitem">
 <div class="memproto">

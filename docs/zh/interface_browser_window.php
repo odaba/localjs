@@ -46,7 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </table>
 <hr/><a name="_details"></a><h2>详细描述</h2>
 <p>Open source object. Represents a browser window. Returned by <a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="Creates a new browser window or standalone Internet Explorer and navigates to given url...">UI.newWindow</a>. Include localjs_ui.js to use it. </p>
-<hr/><h2>Method Documentation</h2>
+<hr/><h2>方法文档</h2>
 <a class="anchor" id="ad2d8da20a97eb156c4c54ae708c6a389"></a><!-- doxytag: member="BrowserWindow::getJSWindow" ref="ad2d8da20a97eb156c4c54ae708c6a389" args="([optional] int timout_seconds)" -->
 <div class="memitem">
 <div class="memproto">

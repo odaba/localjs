@@ -31,7 +31,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </table>
 <hr/><a name="_details"></a><h2>详细描述</h2>
 <p>Open source object. Provides method for web service call. Include localjs_webservice.js to use it. </p>
-<hr/><h2>Method Documentation</h2>
+<hr/><h2>方法文档</h2>
 <a class="anchor" id="a7eb6ada1e0326fa0119b999ab83efd55"></a><!-- doxytag: member="WEB_SERVICE::callUrl" ref="a7eb6ada1e0326fa0119b999ab83efd55" args="(String http_method, String url,[optional] Object callback,[optional] String request_body,[optional] String username,[optional] String password)" -->
 <div class="memitem">
 <div class="memproto">

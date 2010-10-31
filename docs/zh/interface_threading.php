@@ -42,7 +42,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <div class="fragment"><pre class="fragment">    var threading = <a class="code" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.<a class="code" href="interfacelocal_j_s.php#ac12d811a674c6cc7417b6f9a8d39736c" title="Readonly. Returns object Threading, which exposes methods to create new script thread, sleep, get thread id, etc.">threading</a>;
 </pre></div><dl class="see"><dt><b>参见:</b></dt><dd><a class="el" href="interface_threading.php">Object Threading</a> </dd></dl>
 <dl class="see"><dt><b>参见:</b></dt><dd><a class="el" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a> </dd></dl>
-<hr/><h2>Method Documentation</h2>
+<hr/><h2>方法文档</h2>
 <a class="anchor" id="ab83b569dcb6b1ed35d6e9f13a8376a64"></a><!-- doxytag: member="Threading::newThread" ref="ab83b569dcb6b1ed35d6e9f13a8376a64" args="(String code,[optional] String language,[optional] var arguments)" -->
 <div class="memitem">
 <div class="memproto">
