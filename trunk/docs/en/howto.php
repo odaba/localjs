@@ -94,46 +94,43 @@ How to start to use LocalJS objects in JavaScript?</h3>
     var globalDict = <a class="code" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.<a class="code" href="interfacelocal_j_s.php#a3db8e9f0672a2aed8a468da67db3b2e1" title="ReadOnly. Returns a Dictionary Object globally available in the process. An ideal global persistent s...">globalDict</a>;
 </pre></div><h3><a class="anchor" id="howto_debug"></a>
 How to debug JavaScript?</h3>
-<p>There are several JavaScript debug tools on web. Here is one of the solutions using Microsoft IDE:</p>
+<p>There are several JavaScript debug tools on web. Here is one of the solutions using Microsoft IDE: </p>
 <ul>
 <li>Install one of <a href="http://msdn.microsoft.com/en-us/library/5hs4b7a6.aspx" target="_blank">Just-In-Time</a> debuggers for JavaScript. For example, Visual Studio or <a href="http://msdn.microsoft.com/en-us/library/aa189846(office.10).aspx" target="_blank">Microsoft Script Editor</a>. <dl class="user"><dt><b></b></dt><dd><a href="http://msdn.microsoft.com/en-us/library/5hs4b7a6.aspx" target="_blank">Just-In-Time</a> means when a breakpoint is hit, the debugger will popup and prompt to attach to the script for debugging. </dd></dl>
 </li>
-<li>In system registry, create a string type key <em>"Disable Script Debugger"</em> with value <em>"no"</em> under entry <em>HKEY_CURRENT_USER\Software\LocalJS\WebBrowser\Main</em>:</li>
-</ul>
-<div align="center">
+<li>In system registry, create a string type key <em>"Disable Script Debugger"</em> with value <em>"no"</em> under entry <em>HKEY_CURRENT_USER\Software\LocalJS\WebBrowser\Main</em>: <div align="center">
 <img src="debug_registry.JPG" alt="debug_registry.JPG"/>
 <p><strong>Registry Setting for Debug</strong></p></div>
-<ul>
+ </li>
 <li>Add <code>debugger</code> statement to code to set a breakpoint: <div class="fragment"><pre class="fragment">    (function()
     {
         debugger;
     })();
 </pre></div> </li>
-<li>When <code>debugger</code> statement is executed, the <a href="http://msdn.microsoft.com/en-us/library/5hs4b7a6.aspx" target="_blank">Just-In-Time</a> debugger prompts for debugging as below:</li>
-</ul>
-<div align="center">
+<li>When <code>debugger</code> statement is executed, the <a href="http://msdn.microsoft.com/en-us/library/5hs4b7a6.aspx" target="_blank">Just-In-Time</a> debugger prompts for debugging as below: <div align="center">
 <img src="debug_popup.JPG" alt="debug_popup.JPG"/>
 <p><strong>Prompt for Debug</strong></p></div>
- <dl class="user"><dt><b></b></dt><dd>Choose the debugger you want and click Yes to debug JavaScript with the IDE.</dd></dl>
-<dl class="note"><dt><b>Note:</b></dt><dd>If you called <a class="el" href="group___host_a_p_i.php#ga7474b7f77001b41241fdadc926054645" title="Change the default registry used by LocalJS browser window to save its own options.">setBrowserControlRegPath()</a> to change the registry entry for LocalJS browser, you will need to set the 'Disable Script Debugger' option under the registry postion you specified.</dd></dl>
+ <dl class="user"><dt><b></b></dt><dd>Choose the debugger you want and click Yes to debug JavaScript with the IDE. If you called <a class="el" href="group___host_a_p_i.php#ga7474b7f77001b41241fdadc926054645" title="Change the default registry used by LocalJS browser window to save its own options.">setBrowserControlRegPath()</a> to change the registry entry for LocalJS browser window, you will need to set the 'Disable Script Debugger' option under the registry postion you specified.</dd></dl>
 <dl class="see"><dt><b>See also:</b></dt><dd><a href="http://msdn.microsoft.com/en-us/library/k2h50zzs(VS.80).aspx" target="_blank">How to: Enable Client-Side Script Debugging</a></dd></dl>
+</li>
+</ul>
 <h2><a class="anchor" id="howto_browser_wnd"></a>
 Play with Browser Window</h2>
 <h3><a class="anchor" id="howto_move_wnd"></a>
 How to move browser window around on desktop within JavaScript?</h3>
 <ul>
-<li>Call <a class="el" href="interface_u_i.php#a48bb86d6512ddef0a89997f6f26b28bb">LOCALJS.UI.moveWindow</a>.</li>
+<li>Call <a class="el" href="interface_u_i.php#a48bb86d6512ddef0a89997f6f26b28bb">LOCALJS.UI.moveWindow</a></li>
 </ul>
 <h3><a class="anchor" id="howto_change_wnd_style"></a>
 How to hide or show browser window title bar from within JavaScript?</h3>
 <ul>
-<li>Call <a class="el" href="interface_u_i.php#a8661d51c7e5389632e89177abfd92a45">LOCALJS.UI.showTitleBar</a>.</li>
+<li>Call <a class="el" href="interface_u_i.php#a8661d51c7e5389632e89177abfd92a45">LOCALJS.UI.showTitleBar</a></li>
 </ul>
 <h3><a class="anchor" id="howto_popup_msg"></a>
 How to popup a message dialog looks better than JavaScript alert?</h3>
 <ul>
 <li>Include localjs_ui.js. The default <code>alert</code> and <code>confirm</code> JavaScript functions will be replaced by LocalJS version. </li>
-<li>Functions <a class="el" href="interface_u_i.php#ae4029da3a7b30a44c2a93b186146e3ae">LOCALJS.UI.msgBox</a> and <a class="el" href="interface_u_i.php#a8e8c34b33f063c99f3c36b7916e396b9">LOCALJS.UI.confirm</a> provide more options.</li>
+<li>Functions <a class="el" href="interface_u_i.php#ae4029da3a7b30a44c2a93b186146e3ae">LOCALJS.UI.msgBox</a> and <a class="el" href="interface_u_i.php#a8e8c34b33f063c99f3c36b7916e396b9">LOCALJS.UI.confirm</a> provide more options. </li>
 </ul>
 <h3><a class="anchor" id="howto_close_wnd"></a>
 How to close browser window from within JavaScript?</h3>
@@ -141,7 +138,7 @@ How to close browser window from within JavaScript?</h3>
 <li>Call method <a class="el" href="interfacelocal_j_s.php#ae0a273e38f45d2547157ddb6cfa6108c" title="Close the current browser window. NOT available in standalone Internet Explorer application.">localJS.closeWindow</a> to close browser window. </li>
 <li>Call <code>localJS.webBrowser.Quit()</code> to close standalone Internet Explorer application.</li>
 </ul>
-<p>Refer to <a class="el" href="interfacelocal_j_s.php#ae0a273e38f45d2547157ddb6cfa6108c" title="Close the current browser window. NOT available in standalone Internet Explorer application.">localJS.closeWindow</a> for sample code.</p>
+<p>Refer to <a class="el" href="interfacelocal_j_s.php#ae0a273e38f45d2547157ddb6cfa6108c" title="Close the current browser window. NOT available in standalone Internet Explorer application.">localJS.closeWindow</a> for sample code. </p>
 <h3><a class="anchor" id="howto_confirm_close"></a>
 How to popup a confirm dialog when user closes browser window?</h3>
 <ul>
