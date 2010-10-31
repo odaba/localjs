@@ -14,6 +14,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <h1>进一步了解 LocalJS </h1>  </div>
 </div>
 <div class="contents">
+ 
+<style>h2{font-size:150%;font-weight:normal;color:blue}</style>
 <h2><a class="anchor" id="localjs_components"></a>
 LocalJS 包括三部分</h2>
 <div class="yui-gc"> <div class="yui-u first"> <div class="myli"> <a class="el" href="group___j_s_src_objects.php">LocalJS 基本对象</a>. 这一组对象封装了常用的本地操作。<b>LocalJS 基本对象能满足绝大多数的本地访问需求。</b> </p>

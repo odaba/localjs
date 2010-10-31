@@ -15,19 +15,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="contents">
 <p>Quick jump link:</p>
-<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_start_up">LocalJS Start Up</a></div> <ul>
+ 
+<style>
+h3{color:blue}
+h2{color:green}
+div.jump_index div.myli{margin-left:0}
+</style>
+<div class="jump_index">
+<div class="myli"><a class="el" href="howto.php#howto_start_up">LocalJS Start Up</a></div> <ul>
 <li><a class="el" href="howto.php#howto_start_local_js">How to run my site as LocalJS application?</a> </li>
 <li><a class="el" href="howto.php#howto_access_objects">How to start to use LocalJS objects in JavaScript?</a> </li>
 <li><a class="el" href="howto.php#howto_debug">How to debug JavaScript?</a></li>
 </ul>
-<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_browser_wnd">Play with Browser Window</a></div> <ul>
+<div class="myli"><a class="el" href="howto.php#howto_browser_wnd">Play with Browser Window</a></div> <ul>
 <li><a class="el" href="howto.php#howto_move_wnd">How to move browser window around on desktop within JavaScript?</a> </li>
 <li><a class="el" href="howto.php#howto_change_wnd_style">How to hide or show browser window title bar from within JavaScript?</a> </li>
 <li><a class="el" href="howto.php#howto_popup_msg">How to popup a message dialog looks better than JavaScript alert?</a> </li>
 <li><a class="el" href="howto.php#howto_close_wnd">How to close browser window from within JavaScript?</a> </li>
 <li><a class="el" href="howto.php#howto_confirm_close">How to popup a confirm dialog when user closes browser window?</a></li>
 </ul>
-<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_navigation">Navigate Back and Forth</a></div> <ul>
+<div class="myli"><a class="el" href="howto.php#howto_navigation">Navigate Back and Forth</a></div> <ul>
 <li><a class="el" href="howto.php#howto_get_webbrowser">How to get WebBrowser object of current browser window?</a> </li>
 <li><a class="el" href="howto.php#howto_nav_2_local">How to navigate from remote url to local url?</a> </li>
 <li><a class="el" href="howto.php#howto_cancel_nav">How to cancel a navigation?</a> </li>
@@ -35,14 +42,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li><a class="el" href="howto.php#howto_data_lost_reload">How to prevent data from lost when page is reloaded?</a> </li>
 <li><a class="el" href="howto.php#howto_f5">How to prevent page reloading caused by user pressing F5 key?</a></li>
 </ul>
-<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_new_wnd">Launching New Browser Window</a></div> <ul>
+<div class="myli"><a class="el" href="howto.php#howto_new_wnd">Launching New Browser Window</a></div> <ul>
 <li><a class="el" href="howto.php#howto_new_wnd_by_js">How to launch a new LocalJS browser window from within JavaScript?</a> </li>
 <li><a class="el" href="howto.php#howto_new_wnd_by_click">How to launch a customized LocalJS browser window when user tries to open a link in a new window?</a> </li>
 <li><a class="el" href="howto.php#howto_interop_other_wnd">How to interop with JavaScript in another LocalJS browser window?</a> </li>
 <li><a class="el" href="howto.php#howto_global_dict">How to make a variable global to JavaScript in all LocalJS browser windows?</a> </li>
 <li><a class="el" href="howto.php#howto_shell_exec">How to open a url in system default browser?</a></li>
 </ul>
-<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_file_access">Access Files and Folders</a></div> <ul>
+<div class="myli"><a class="el" href="howto.php#howto_file_access">Access Files and Folders</a></div> <ul>
 <li><a class="el" href="howto.php#howto_user_data_folder">How to retrieve user data folder?</a> </li>
 <li><a class="el" href="howto.php#howto_create_folder">How to create folder in disk?</a> </li>
 <li><a class="el" href="howto.php#howto_save_2_file">How to save settings to disk files?</a> </li>
@@ -52,24 +59,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li><a class="el" href="howto.php#howto_browse_folder">How to browse for folder?</a> </li>
 <li><a class="el" href="howto.php#howto_enum_file">How to enumerate files in a folder?</a></li>
 </ul>
-<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_sys_info">Retrieve System Information</a></div> <ul>
+<div class="myli"><a class="el" href="howto.php#howto_sys_info">Retrieve System Information</a></div> <ul>
 <li><a class="el" href="howto.php#howto_get_exe">How to get current exe file name?</a> </li>
 <li><a class="el" href="howto.php#howto_wmi">How to get system information (for example, processors descriptions)?</a> </li>
 <li><a class="el" href="howto.php#howto_enumerate">How to enumerate items in collection (e.g., Files) returned by system object (e.g., FileSystemObject)?</a></li>
 </ul>
-<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_db">Local Database Access</a></div> <ul>
+<div class="myli"><a class="el" href="howto.php#howto_db">Local Database Access</a></div> <ul>
 <li><a class="el" href="howto.php#howto_access_db">How to access local database?</a></li>
 </ul>
-<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_web_service">Call Web Service from any domain</a></div> <ul>
+<div class="myli"><a class="el" href="howto.php#howto_web_service">Call Web Service from any domain</a></div> <ul>
 <li><a class="el" href="howto.php#howto_call_ws">How to call web service from other domains?</a> </li>
 <li><a class="el" href="howto.php#howto_json">How to parse JSON format web response?</a></li>
 </ul>
-<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_thread">Multithreading</a></div> <ul>
+<div class="myli"><a class="el" href="howto.php#howto_thread">Multithreading</a></div> <ul>
 <li><a class="el" href="howto.php#howto_new_thread">How to start a new thread?</a> </li>
 <li><a class="el" href="howto.php#howto_thread_end">How to tell if a thread has ended?</a> </li>
 <li><a class="el" href="howto.php#howto_thread_sync">How to synchronize data access among threads?</a></li>
 </ul>
-<h2><a class="anchor" id="howto_start_up"></a>
+ </div> <h2><a class="anchor" id="howto_start_up"></a>
 LocalJS Start Up</h2>
 <h3><a class="anchor" id="howto_start_local_js"></a>
 How to run my site as LocalJS application?</h3>

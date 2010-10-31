@@ -17,24 +17,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <p>本页目录：</p>
  
 <style>
-h3 { font-weight:normal; color:blue }
-h2 { font-weight:normal; color:green }
-div.jump_index a.el { font-weight:normal }
+h3{font-weight:normal;}
+h2{font-weight:normal;}
+div.jump_index a.el{font-weight:normal}
+</style>
+ 
+<style>
+h3{color:blue}
+h2{color:green}
+div.jump_index div.myli{margin-left:0}
 </style>
 <div class="jump_index">
-<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_start_up">LocalJS 起步</a></div> <ul>
+<div class="myli"><a class="el" href="howto.php#howto_start_up">LocalJS 起步</a></div> <ul>
 <li><a class="el" href="howto.php#howto_start_local_js">如何把网站变成LocalJS 桌面程序？</a> </li>
 <li><a class="el" href="howto.php#howto_access_objects">如何在JavaScript 代码中使用LocalJS 对象？</a> </li>
 <li><a class="el" href="howto.php#howto_debug">如何调试JavaScript？</a></li>
 </ul>
-<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_browser_wnd">控制页面窗口</a></div> <ul>
+<div class="myli"><a class="el" href="howto.php#howto_browser_wnd">控制页面窗口</a></div> <ul>
 <li><a class="el" href="howto.php#howto_move_wnd">如何用JavaScript 在桌面上移动页面窗口？</a> </li>
 <li><a class="el" href="howto.php#howto_change_wnd_style">如何用JavaScript 显示或隐藏页面窗口的标题栏？</a> </li>
 <li><a class="el" href="howto.php#howto_popup_msg">如何弹出一个比JavaScript 的alert 好看些的消息框？</a> </li>
 <li><a class="el" href="howto.php#howto_close_wnd">如何用JavaScript 关闭页面窗口？</a> </li>
 <li><a class="el" href="howto.php#howto_confirm_close">如何在用户关闭页面窗口时弹出确认对话框？</a></li>
 </ul>
-<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_navigation">在不同页面之间切换</a></div> <ul>
+<div class="myli"><a class="el" href="howto.php#howto_navigation">在不同页面之间切换</a></div> <ul>
 <li><a class="el" href="howto.php#howto_get_webbrowser">如何得到当前页面窗口的WebBrowser 对象？</a> </li>
 <li><a class="el" href="howto.php#howto_nav_2_local">如何从web 页面切换到本地页面？</a> </li>
 <li><a class="el" href="howto.php#howto_cancel_nav">如何取消页面切换？</a> </li>
@@ -42,14 +48,14 @@ div.jump_index a.el { font-weight:normal }
 <li><a class="el" href="howto.php#howto_data_lost_reload">如何防止页面刷新的时候丢失数据？</a> </li>
 <li><a class="el" href="howto.php#howto_f5">如何防止用户按F5 键刷新页面？</a></li>
 </ul>
-<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_new_wnd">创建新的页面窗口</a></div> <ul>
+<div class="myli"><a class="el" href="howto.php#howto_new_wnd">创建新的页面窗口</a></div> <ul>
 <li><a class="el" href="howto.php#howto_new_wnd_by_js">如何在JavaScript 中创建一个新的页面窗口？</a> </li>
 <li><a class="el" href="howto.php#howto_new_wnd_by_click">当用户在新窗口中打开链接的时候，如何创建自定义的浏览器窗口？</a> </li>
 <li><a class="el" href="howto.php#howto_interop_other_wnd">如何和其他页面窗口中的JavaScript 互操作？</a> </li>
 <li><a class="el" href="howto.php#howto_global_dict">如何在所有的页面窗口之间共享变量？</a> </li>
 <li><a class="el" href="howto.php#howto_shell_exec">如何在系统默认浏览器中打开一个url？</a></li>
 </ul>
-<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_file_access">访问文件和文件夹</a></div> <ul>
+<div class="myli"><a class="el" href="howto.php#howto_file_access">访问文件和文件夹</a></div> <ul>
 <li><a class="el" href="howto.php#howto_user_data_folder">如何得到用户的个人数据文件夹？</a> </li>
 <li><a class="el" href="howto.php#howto_create_folder">如何创建本地文件夹？</a> </li>
 <li><a class="el" href="howto.php#howto_save_2_file">如何在本地文件中保存设置？</a> </li>
@@ -59,19 +65,19 @@ div.jump_index a.el { font-weight:normal }
 <li><a class="el" href="howto.php#howto_browse_folder">如何弹出一个文件夹选择对话框？</a> </li>
 <li><a class="el" href="howto.php#howto_enum_file">如何得到文件夹中的文件列表？</a></li>
 </ul>
-<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_sys_info">获取系统信息</a></div> <ul>
+<div class="myli"><a class="el" href="howto.php#howto_sys_info">获取系统信息</a></div> <ul>
 <li><a class="el" href="howto.php#howto_get_exe">如何得到当前的可执行程序文件名？</a> </li>
 <li><a class="el" href="howto.php#howto_wmi">如何获取系统信息，比如处理器的描述？</a> </li>
 <li><a class="el" href="howto.php#howto_enumerate">某些系统对象（比如FileSystemObject）的属性（比如Files）返回集合对象（collection）。如何遍历集合对象中的内容？</a></li>
 </ul>
-<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_db">本地数据库访问</a></div> <ul>
+<div class="myli"><a class="el" href="howto.php#howto_db">本地数据库访问</a></div> <ul>
 <li><a class="el" href="howto.php#howto_access_db">如何访问本地数据库？</a></li>
 </ul>
-<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_web_service">调用任意域的Web 服务</a></div> <ul>
+<div class="myli"><a class="el" href="howto.php#howto_web_service">调用任意域的Web 服务</a></div> <ul>
 <li><a class="el" href="howto.php#howto_call_ws">如何调用其他域的Web 服务？</a> </li>
 <li><a class="el" href="howto.php#howto_json">如何解析web 服务返回的JSON 格式的字符串？</a></li>
 </ul>
-<div class="myli" style="padding-left:1.5em"><a class="el" href="howto.php#howto_thread">多线程</a></div> <ul>
+<div class="myli"><a class="el" href="howto.php#howto_thread">多线程</a></div> <ul>
 <li><a class="el" href="howto.php#howto_new_thread">如何创建一个新线程？</a> </li>
 <li><a class="el" href="howto.php#howto_thread_end">如何知道一个线程是否已经结束？</a> </li>
 <li><a class="el" href="howto.php#howto_thread_sync">如何同步线程对共享数据的访问？</a></li>

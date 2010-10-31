@@ -14,6 +14,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <h1>More about LocalJS </h1>  </div>
 </div>
 <div class="contents">
+ 
+<style>h2{font-size:150%;font-weight:normal;color:blue}</style>
 <h2><a class="anchor" id="localjs_components"></a>
 LocalJS Components</h2>
 <p>LocalJS is composed of:</p>
