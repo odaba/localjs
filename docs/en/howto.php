@@ -163,7 +163,7 @@ How to navigate from remote url to local url?</h3>
 </pre></div><h3><a class="anchor" id="howto_cancel_nav"></a>
 How to cancel a navigation?</h3>
 <ul>
-<li>Use <a class="el" href="interface_c_o_m.php#a03b548ce8da020a692d590d4a5b21247" title="Connect JavaScript functions to COM object events.">COM.connectEvents</a> method to connect to <a href="http://msdn.microsoft.com/en-us/library/aa768326(VS.85).aspx" target="_blank">BeforeNavigate2 event</a>, set <code>cancel.returnValue</code> to true:</li>
+<li>Use <a class="el" href="interface_c_o_m.php#a03b548ce8da020a692d590d4a5b21247" title="Connect JavaScript functions to COM object events.">COM.connectEvents</a> method to connect to <a href="http://msdn.microsoft.com/en-us/library/aa768326(VS.85).aspx" target="_blank">BeforeNavigate2 event</a>, set <code>cancel.returnValue</code> to <code>true:</code> </li>
 </ul>
 <div class="fragment"><pre class="fragment">    var onBeforeNavigate2 = function(disp, url, flags, target, postData, headers, cancel)
     {
@@ -172,13 +172,13 @@ How to cancel a navigation?</h3>
     com.connectEvents(<a class="code" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.<a class="code" href="interfacelocal_j_s.php#a426d92f4370abff654c9a85a060c25c9" title="Readonly. Returns WebBrowser Object of current browser. Help transparently moving forth and back betw...">webBrowser</a>, {<span class="stringliteral">&#39;BeforeNavigate2&#39;</span>:onBeforeNavigate2});
 </pre></div><h3><a class="anchor" id="howto_pass_para_2_nav_page"></a>
 How to pass parameters to the next page navigate to?</h3>
-<p>When browser navigates, all JavaScript variables of the previous page are lost. But variables saved to <a class="el" href="interfacelocal_j_s.php#ad22e31bcafab13df9916ae10ec5ee3fa" title="ReadOnly. Returns a Dictionary Object associated with current browser window. An ideal persistent sto...">localJS.windowDict</a> remain unchanged.</p>
+<p>When browser navigates, all JavaScript variables of the previous page are lost. But variables saved to <a class="el" href="interfacelocal_j_s.php#ad22e31bcafab13df9916ae10ec5ee3fa" title="ReadOnly. Returns a Dictionary Object associated with current browser window. An ideal persistent sto...">localJS.windowDict</a> remain unchanged. </p>
 <ul>
-<li>Save parameters to <a class="el" href="interfacelocal_j_s.php#ad22e31bcafab13df9916ae10ec5ee3fa" title="ReadOnly. Returns a Dictionary Object associated with current browser window. An ideal persistent sto...">localJS.windowDict</a> so the next page can access it.</li>
+<li>Save parameters to <a class="el" href="interfacelocal_j_s.php#ad22e31bcafab13df9916ae10ec5ee3fa" title="ReadOnly. Returns a Dictionary Object associated with current browser window. An ideal persistent sto...">localJS.windowDict</a> so the next page can access them. </li>
 </ul>
 <h3><a class="anchor" id="howto_data_lost_reload"></a>
 How to prevent data from lost when page is reloaded?</h3>
-<p>When browser reloads, all JavaScript variables of the previous page are lost. But variables saved to <a class="el" href="interfacelocal_j_s.php#ad22e31bcafab13df9916ae10ec5ee3fa" title="ReadOnly. Returns a Dictionary Object associated with current browser window. An ideal persistent sto...">localJS.windowDict</a> remain unchanged.</p>
+<p>When browser reloads, all JavaScript variables of the page are lost. But variables saved to <a class="el" href="interfacelocal_j_s.php#ad22e31bcafab13df9916ae10ec5ee3fa" title="ReadOnly. Returns a Dictionary Object associated with current browser window. An ideal persistent sto...">localJS.windowDict</a> remain unchanged. </p>
 <ul>
 <li>Use <a class="el" href="interfacelocal_j_s.php#ad22e31bcafab13df9916ae10ec5ee3fa" title="ReadOnly. Returns a Dictionary Object associated with current browser window. An ideal persistent sto...">localJS.windowDict</a> to prevent data from lost when page is reloaded:</li>
 </ul>
@@ -197,9 +197,9 @@ How to prevent data from lost when page is reloaded?</h3>
     }};
 </pre></div><h3><a class="anchor" id="howto_f5"></a>
 How to prevent page reloading caused by user pressing F5 key?</h3>
-<p>Even with <a class="el" href="interfacelocal_j_s.php#ad22e31bcafab13df9916ae10ec5ee3fa" title="ReadOnly. Returns a Dictionary Object associated with current browser window. An ideal persistent sto...">localJS.windowDict</a>, it's still boring to handle unexpected page reloading caused by user pressing F5 key.</p>
+<p>Even with <a class="el" href="interfacelocal_j_s.php#ad22e31bcafab13df9916ae10ec5ee3fa" title="ReadOnly. Returns a Dictionary Object associated with current browser window. An ideal persistent sto...">localJS.windowDict</a>, it's still boring to handle unexpected page reloading caused by user pressing F5 key. </p>
 <ul>
-<li>Set <a class="el" href="interfacelocal_j_s.php#a29a79e553fe87184f3a6ed6a9e0b270f" title="Get or set a boolean value to control whether pressing F5 key reloads HTML page. Ignored by standalon...">localJS.enableF5</a> to <code>false</code> disables F5 key from reloading page.</li>
+<li>Set <a class="el" href="interfacelocal_j_s.php#a29a79e553fe87184f3a6ed6a9e0b270f" title="Get or set a boolean value to control whether pressing F5 key reloads HTML page. Ignored by standalon...">localJS.enableF5</a> to <code>false</code> disables F5 key from reloading page. </li>
 </ul>
 <h2><a class="anchor" id="howto_new_wnd"></a>
 Launching New Browser Window</h2>
