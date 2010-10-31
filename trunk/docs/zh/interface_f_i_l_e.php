@@ -579,7 +579,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </dl>
 <dl class="return"><dt><b>返回:</b></dt><dd>The combined path. The path doesn't have to exist and wonn't be created if not existed.</dd></dl>
 <p>The following code illustrates how to use the buildPath method:</p>
-<div class="fragment"><pre class="fragment">    var path = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.buildPath(<span class="stringliteral">&quot;C:\\Program Files&quot;</span>, <span class="stringliteral">&quot;LocalJS&quot;</span>); <span class="comment">// return C:\Program Files\\LocalJS</span>
+<div class="fragment"><pre class="fragment">    var path = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.buildPath(<span class="stringliteral">&quot;C:\\Program Files&quot;</span>, <span class="stringliteral">&quot;LocalJS&quot;</span>); <span class="comment">// return C:\Program Files\LocalJS</span>
 </pre></div> 
 </div>
 </div>
