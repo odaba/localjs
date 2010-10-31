@@ -40,7 +40,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <hr/><a name="_details"></a><h2>详细描述</h2>
 <p>Open source object. Provides method for multi-languages support. Include localjs_localization.js, localjs_file.js, localjs_ui.js and localjs_webservice.js to use it. </p>
 <p><a class="el" href="interface_l_o_c_a_l_i_z_a_t_i_o_n.php" title="Open source object. Provides method for multi-languages support. Include localjs_localization.js, localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">LOCALIZATION</a> module uses <a class="el" href="interfacelocal_j_s.php#a3db8e9f0672a2aed8a468da67db3b2e1" title="ReadOnly. Returns a Dictionary Object globally available in the process. An ideal global persistent s...">localJS.globalDict</a> to save the language strings for current language, so the whole process only need to keep one copy of all the strings, which can be shared by all browser windows. The strings for current language are saved in <a class="el" href="interfacelocal_j_s.php#a3db8e9f0672a2aed8a468da67db3b2e1" title="ReadOnly. Returns a Dictionary Object globally available in the process. An ideal global persistent s...">localJS.globalDict</a> with key 'LOCALJS.LOCALIZATION.CURRENT_LANG'. </p>
-<hr/><h2>Method Documentation</h2>
+<hr/><h2>方法文档</h2>
 <a class="anchor" id="a494b7408816f0e6545fe409d7f14a1a6"></a><!-- doxytag: member="LOCALIZATION::setPath" ref="a494b7408816f0e6545fe409d7f14a1a6" args="(String path,[optional] boolean reload)" -->
 <div class="memitem">
 <div class="memproto">

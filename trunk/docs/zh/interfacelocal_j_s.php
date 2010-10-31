@@ -74,7 +74,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <li>.Net object will be available in future version</li>
 </ul>
 <p>Those objects above are <em>ONLY</em> available in LocalJS browsers (browsers hosted by LocalJS) and LocalJS Internet Explorer (standalone Internet Explorer application launched by LocalJS). They are not available to any other applications or browsers. </p>
- <hr/><h2>Method Documentation</h2>
+ <hr/><h2>方法文档</h2>
 <a class="anchor" id="a638f18884615ddd3e7cc901a3302f931"></a><!-- doxytag: member="localJS::trust" ref="a638f18884615ddd3e7cc901a3302f931" args="(String trusted_source,...)" -->
 <div class="memitem">
 <div class="memproto">

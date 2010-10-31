@@ -33,7 +33,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <p>Returned by method <a class="el" href="interface_c_o_m.php#a03b548ce8da020a692d590d4a5b21247" title="Connect JavaScript functions to COM object events.">COM.connectEvents</a>, used to disconnect COM event connected. </p>
 <p><a class="el" href="interface_event_hook.php" title="Returned by method COM.connectEvents, used to disconnect COM event connected.">EventHook</a> object is returned by <a class="el" href="interface_c_o_m.php#a03b548ce8da020a692d590d4a5b21247" title="Connect JavaScript functions to COM object events.">COM.connectEvents</a> method. It has only one method <a class="el" href="interface_event_hook.php#abe175fcf658475bc56e9d6fa02bc88ec">disconnect</a>, which disconnects COM events connected.</p>
 <p>Refer to <a class="el" href="interface_c_o_m.php#a03b548ce8da020a692d590d4a5b21247" title="Connect JavaScript functions to COM object events.">COM.connectEvents</a> for sample code using <a class="el" href="interface_event_hook.php" title="Returned by method COM.connectEvents, used to disconnect COM event connected.">EventHook</a> object. </p>
-<hr/><h2>Method Documentation</h2>
+<hr/><h2>方法文档</h2>
 <a class="anchor" id="abe175fcf658475bc56e9d6fa02bc88ec"></a><!-- doxytag: member="EventHook::disconnect" ref="abe175fcf658475bc56e9d6fa02bc88ec" args="()" -->
 <div class="memitem">
 <div class="memproto">
