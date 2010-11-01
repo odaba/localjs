@@ -36,7 +36,7 @@ LocalJS 包括三部分</h2>
 <h2><a class="anchor" id="localjs_why"></a>
 为什么选择 LocalJS?</h2>
 <p><span class="blue" style="font-size:115%">轻巧，简单，低成本。</span></p>
-<div class="myli">LocalJS 非常小，启动快，运行快</div> <div class="myli">LocalJS 不依赖于任何其他库就能运行</div> <div class="myli">HTML/CSS/JavaScript 易用易学，在网上很容易找到相关教程</div> <div class="myli">无论用 HTML/CSS/JavaScript 建立程序原型还是正式开发，不但非常快，而且容易修改</div> <div class="myli">像<a href="http://jQuery.com/" target="_blank">jQuery</a> 一类的<span class="red">免费</span>JavaScript 库进一步简化了JavaScript 的建模和代码实现</div> <div class="myli">像<a href="http://developer.yahoo.com/yui/" target="_blank">YUI</a> 一类的开源JavaScript 库<span class="red">免费</span>提供了大量用户界面控件</div> <div class="myli">从Web 上分发和升级桌面程序比传统的分发升级方式简单许多</div><div class="big_separator"></div><h2><a class="anchor" id="localjs_safe"></a>
+<div class="myli">LocalJS 桌面程序可以很方便地从Web 上分发和升级</div> <div class="myli">LocalJS 非常小，启动快，运行快</div> <div class="myli">LocalJS 不依赖于任何其他库就能运行</div> <div class="myli">HTML/CSS/JavaScript 易用易学，在网上很容易找到相关教程</div> <div class="myli">无论用 HTML/CSS/JavaScript 建立程序原型还是正式开发，不但非常快，而且容易修改</div> <div class="myli">像<a href="http://jQuery.com/" target="_blank">jQuery</a> 一类的<span class="red">免费</span>JavaScript 库进一步简化了JavaScript 的建模和代码实现</div> <div class="myli">像<a href="http://developer.yahoo.com/yui/" target="_blank">YUI</a> 一类的开源JavaScript 库<span class="red">免费</span>提供了大量用户界面控件</div><div class="big_separator"></div><h2><a class="anchor" id="localjs_safe"></a>
 LocalJS 安全吗?</h2>
 <p>如果你担心 JavaScript 源码泄漏代码的秘密：</p>
 <div class="myli">使用JavaScript 压缩程序，例如<a href="http://developer.yahoo.com/yui/compressor/" target="_blank">YUI compressor</a>，能够很好地压缩和扰乱JavaScript 代码。</div> <div class="myli">把秘密封装成Web Service、Dll 或者Exe。LocalJS 可以很容易地和它们互相调用。</div><p>如果你担心系统的安全性会受到影响：</p>
