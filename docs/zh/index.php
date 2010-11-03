@@ -42,7 +42,7 @@ LocalJS 安全吗?</h2>
 <div class="myli">使用JavaScript 压缩程序，例如<a href="http://developer.yahoo.com/yui/compressor/" target="_blank">YUI compressor</a>，能够很好地压缩和扰乱JavaScript 代码。</div> <div class="myli">把秘密封装成Web Service、Dll 或者Exe。LocalJS 可以很容易地和它们互相调用。</div><p>如果你担心系统的安全性会受到影响：</p>
 <div class="myli">LocalJS 是<span class="green"><b>绿色</b></span>软件。它不向系统中注册任何COM 对象或浏览器插件。</div> <div class="myli">所有的LocalJS 对象只在LocalJS 程序中存在，其他的浏览器无法访问。</div> <div class="myli">不同的LocalJS 程序中的对象互相不能访问。</div><div class="big_separator"></div><h2><a class="anchor" id="localjs_patforms"></a>
 LocalJS 支持哪些平台?</h2>
-<p>目前 LocalJS 支持 Windows XP 或 Windows Server 2003 及之后的平台。LocalJS 本身是一个 32 位的 DLL。</p>
+<p>目前 LocalJS 支持 Windows XP 或 Windows Server 2003 及之后的平台。LocalJS 运行库本身是一个 32 位的 DLL。</p>
  
 <a href="howto.php" style="color:MediumBlue"><div class="btm_next link" style="width:10.5em;padding-right:0em;margin-left:9.5em">动手写JavaScript！</div></a>
  </div>
