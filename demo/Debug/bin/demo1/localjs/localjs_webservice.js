@@ -20,20 +20,42 @@
 	localjs_namespace.WEB_SERVICE = {};
 
 	var localjs_ws = localjs_namespace.WEB_SERVICE,
-	
+
 		local_js = localJS,
 		com = local_js.COM,
 		createObject = com.createObject;
-		
+
 	localjs_ws.callUrl = function(http_method, url, callback, request_body, username, password)
 	{
 		var oHttp = createObject("Microsoft.XMLHTTP");
 
+		// this is the way to use onreadystatechange but avoid memory leak.
+		oHttp.onreadystatechange = function()
+		{
+			if (4 == oHttp.readyState)
+			{
+				oHttp.onreadystatechange = function() {};
+
+				if (200 == oHttp.status)
+				{
+					if (callback && callback.ok)
+						callback.ok(oHttp.responseText, oHttp);
+				}
+				else
+				{
+					if (callback && callback.fail)
+						callback.fail(oHttp.status, oHttp);
+				}
+
+				oHttp = null; // this statement is a must to clear memory leak
+			}
+		}
+		
 		oHttp.open(http_method, url, true, username, password);
 		oHttp.send(request_body);
 
-		// Note: DO NOT use onreadystatechange event of XMLHttp Object. It will cause memory leak.
-		var fnPullReadyState = function()
+		// The poll way to avoid memory leak
+		/*var fnPullReadyState = function()
 		{
 			if (4 == oHttp.readyState)
 			{
@@ -52,6 +74,6 @@
 				setTimeout(fnPullReadyState, 500);
 		};
 
-		setTimeout(fnPullReadyState, 500);
+		setTimeout(fnPullReadyState, 500);*/
 	}
 })();
