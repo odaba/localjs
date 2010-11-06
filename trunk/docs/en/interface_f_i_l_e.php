@@ -18,7 +18,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="contents">
 <!-- doxytag: class="FILE" -->
-<p>Open source object. Provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.  
+<p>JavaScript Object open sourced. Provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.  
 <a href="#_details">More...</a></p>
 
 <p><a href="class_f_i_l_e-members.php">List of all members.</a></p>
@@ -90,7 +90,7 @@ Methods</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns normalized url of current document (remove trailing query strings), optionally append a relative url.  <a href="#a841b182f6e93f43af7ba128d020dcea7"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
-<p>Open source object. Provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it. </p>
+<p>JavaScript Object open sourced. Provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it. </p>
 <hr/><h2>Method Documentation</h2>
 <a class="anchor" id="a0f1894aaa83f22c87ac4cfc0f3ff05be"></a><!-- doxytag: member="FILE::iniReadInt" ref="a0f1894aaa83f22c87ac4cfc0f3ff05be" args="(String filename, String section, String key,[optional] int default_value)" -->
 <div class="memitem">
@@ -240,8 +240,8 @@ Methods</h2></td></tr>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>INI file name to write to </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">section</td><td>Section in INI file </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>Key of the value to write </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Optional. String value to write to. <em>vlaue</em> will be converted to string if it's not. If <em>value</em> is omitted or cannot be converted to a string (e.g., pass in <code>undefined</code>), the key will be deleted from INI file.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>Key of the value to write or delete </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Optional. String value to write to. <em>vlaue</em> will be converted to string if it's not. If <em>value</em> is omitted or cannot be converted to a string (e.g., pass in <code>undefined</code>), the <em>key</em> will be deleted from INI file.</td></tr>
   </table>
   </dd>
 </dl>
