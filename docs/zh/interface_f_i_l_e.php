@@ -18,26 +18,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="contents">
 <!-- doxytag: class="FILE" -->
-<p>Open source object. Provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.  
+<p>开源的 JavaScript 对象。提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。  
 <a href="#_details">更多...</a></p>
 
 <p><a href="class_f_i_l_e-members.php">所有成员的列表。</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 方法</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader">INI and registry access</div></td></tr>
+<tr><td colspan="2"><div class="groupHeader">访问INI 文件和注册表</div></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a0f1894aaa83f22c87ac4cfc0f3ff05be">iniReadInt</a> (String filename, String section, String key,[optional] int default_value)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Read an integer from INI file.  <a href="#a0f1894aaa83f22c87ac4cfc0f3ff05be"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">从 INI 文件中读一个整数  <a href="#a0f1894aaa83f22c87ac4cfc0f3ff05be"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a3130fd3652e1b86373b61cfc0348981e">iniReadStr</a> (String filename, String section, String key,[optional] String default_value)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a string from INI file.  <a href="#a3130fd3652e1b86373b61cfc0348981e"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">从 INI 文件中读一个字符串  <a href="#a3130fd3652e1b86373b61cfc0348981e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#ab82c10757856fbd93d04603ce226cb38">iniWrite</a> (String filename, String section, String key,[optional] var value)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Write an entry to INI file or delete the entry from INI file.  <a href="#ab82c10757856fbd93d04603ce226cb38"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">向 INI 文件中写入字符串或从 INI 文件中删除一项。  <a href="#ab82c10757856fbd93d04603ce226cb38"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">var&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#ae283d76f4b92fd2f67e1db96f607e70c">regRead</a> (String reg_path)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the value of a key or value-name from the registry.  <a href="#ae283d76f4b92fd2f67e1db96f607e70c"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">读取注册表中的值。  <a href="#ae283d76f4b92fd2f67e1db96f607e70c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a461f0e68e5dc507ba50ac94d56a2cfcd">regWrite</a> (String reg_path, var val,[optional] String strType)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new key, adds another value-name to an existing key (and assigns it a value), or changes the value of an existing value-name.  <a href="#a461f0e68e5dc507ba50ac94d56a2cfcd"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">在注册表中创建新的键值或更改已有的键值。  <a href="#a461f0e68e5dc507ba50ac94d56a2cfcd"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#aa9ccfdf0c38f87f504a5ae2f763977b7">regDelete</a> (String reg_path)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes a key or one of its values from the registry.  <a href="#aa9ccfdf0c38f87f504a5ae2f763977b7"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">从注册表中删除一项。  <a href="#aa9ccfdf0c38f87f504a5ae2f763977b7"></a><br/></td></tr>
 <tr><td colspan="2"><div class="groupHeader">File and folder operations</div></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#af3294a406276bff3baad8bcb719aab66">fileExists</a> (String filename)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if a specified file exists; <code>false</code> if it does not.  <a href="#af3294a406276bff3baad8bcb719aab66"></a><br/></td></tr>
@@ -90,7 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns normalized url of current document (remove trailing query strings), optionally append a relative url.  <a href="#a841b182f6e93f43af7ba128d020dcea7"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>详细描述</h2>
-<p>Open source object. Provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it. </p>
+<p>开源的 JavaScript 对象。提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。 </p>
 <hr/><h2>方法文档</h2>
 <a class="anchor" id="a0f1894aaa83f22c87ac4cfc0f3ff05be"></a><!-- doxytag: member="FILE::iniReadInt" ref="a0f1894aaa83f22c87ac4cfc0f3ff05be" args="(String filename, String section, String key,[optional] int default_value)" -->
 <div class="memitem">
@@ -129,18 +129,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Read an integer from INI file. </p>
+<p>从 INI 文件中读一个整数 </p>
 <dl><dt><b>参数:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>INI file name to read from </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">section</td><td>Section in INI file </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>Key of the value to read from </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">default_value</td><td>Optional. default value to be returned if the section and key do not exist. Zero is assumed if omitted.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>要读取的 INI 文件名 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">section</td><td>INI 中的 section 名 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>INI 中的 Key 名 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">default_value</td><td>可选参数。当 section 和 key 不存在的时候所返回的值。缺省值为0。</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>返回:</b></dt><dd>The integer read from INI file, or <em>default_value</em> if the section and key do not exist.</dd></dl>
-<p>Code below read an integer from INI file; if not found, return -1: </p>
+<dl class="return"><dt><b>返回:</b></dt><dd>从 INI 文件中读出的整数。如果 section 和 key 不存在，返回 <em>default_value。</em> </dd></dl>
+<p>下面的例子从 INI 文件中读一个整数，如果没找到 section_name 和 key_name，返回 -1： </p>
 <div class="fragment"><pre class="fragment">    var intVal = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.iniReadInt(<span class="stringliteral">&quot;c:\\settings.ini&quot;</span>, <span class="stringliteral">&quot;section_name&quot;</span>, <span class="stringliteral">&quot;key_name&quot;</span>, -1);
 </pre></div> 
 </div>
@@ -182,18 +182,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Read a string from INI file. </p>
+<p>从 INI 文件中读一个字符串 </p>
 <dl><dt><b>参数:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>INI file name to read from </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">section</td><td>Section in INI file </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>Key of the value to read from </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">default_value</td><td>Optional. default value to be returned if the section and key do not exist. "" is assumed if omitted.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>要读取的 INI 文件名 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">section</td><td>INI 中的 section 名 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>INI 中的 Key 名 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">default_value</td><td>可选参数。当 section 和 key 不存在的时候所返回的值。缺省值为 ""。</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>返回:</b></dt><dd>The string read from INI file, or <em>default_value</em> if the section and key do not exist.</dd></dl>
-<p>Code below read a string from INI file; if not found, return an empty string: </p>
+<dl class="return"><dt><b>返回:</b></dt><dd>从 INI 文件中读出的字符串。如果 section 和 key 不存在，返回 <em>default_value。</em> </dd></dl>
+<p>下面的例子从 INI 文件中读一个整数，如果没找到 section_name 和 key_name，返回空字符串： </p>
 <div class="fragment"><pre class="fragment">    var strVal = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.iniReadStr(<span class="stringliteral">&quot;c:\\settings.ini&quot;</span>, <span class="stringliteral">&quot;section_name&quot;</span>, <span class="stringliteral">&quot;key_name&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);
 </pre></div> 
 </div>
@@ -235,19 +235,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Write an entry to INI file or delete the entry from INI file. </p>
+<p>向 INI 文件中写入字符串或从 INI 文件中删除一项。 </p>
 <dl><dt><b>参数:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>INI file name to write to </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">section</td><td>Section in INI file </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>Key of the value to write </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>Optional. String value to write to. <em>vlaue</em> will be converted to string if it's not. If <em>value</em> is omitted or cannot be converted to a string (e.g., pass in <code>undefined</code>), the key will be deleted from INI file.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>要写入的 INI 文件名 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">section</td><td>INI 中的 section 名 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>INI 中的 Key 名 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">value</td><td>可选参数。要写入的字符串值。<em>value</em> 如果不是字符串，将会被转成字符串类型。如果 <em>value</em> 被省略或者不能被转成字符串类型（例如，传入 <code>undefined），<em>key</em> 将被从</code> INI 文件中删除。</td></tr>
   </table>
   </dd>
 </dl>
-<p>Code below saves settings to INI <a href="file:">file:</a> </p>
+<p>下面的代码把设置存入 INI 文件： </p>
 <div class="fragment"><pre class="fragment">    <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.iniWrite(<span class="stringliteral">&quot;c:\\settings.ini&quot;</span>, <span class="stringliteral">&quot;section_name&quot;</span>, <span class="stringliteral">&quot;key_name&quot;</span>, <span class="stringliteral">&quot;value&quot;</span>);
-</pre></div><p>To remove an entry from ini <a href="file:">file:</a></p>
+</pre></div><p>从 INI 文件中删除一项：</p>
 <div class="fragment"><pre class="fragment">    <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.iniWrite(<span class="stringliteral">&quot;c:\\settings.ini&quot;</span>, <span class="stringliteral">&quot;section_name&quot;</span>, <span class="stringliteral">&quot;key_name&quot;</span>, undefined);
 </pre></div> 
 </div>
@@ -267,16 +267,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Returns the value of a key or value-name from the registry. </p>
+<p>读取注册表中的值。 </p>
 <dl><dt><b>参数:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">reg_path</td><td>String value indicating the key or value-name whose value you want.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reg_path</td><td>注册表中的路径字符串。</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>返回:</b></dt><dd>The value read from registry.</dd></dl>
-<p>This method simply wraps up <a href="http://msdn.microsoft.com/en-us/library/x05fawxd(VS.85).aspx" target="_blank">RegRead method of WshShell Object</a>. Refer to <a href="http://msdn.microsoft.com/en-us/library/x05fawxd(VS.85).aspx" target="_blank">RegRead</a> for more detail.</p>
-<p>Code below reads registry:</p>
+<dl class="return"><dt><b>返回:</b></dt><dd>从注册表中读取的值。</dd></dl>
+<p>本方法是 <a href="http://msdn.microsoft.com/en-us/library/x05fawxd(VS.85).aspx" target="_blank">WshShell 对象的 RegRead 方法</a>的简单封装。更多细节参见 <a href="http://msdn.microsoft.com/en-us/library/x05fawxd(VS.85).aspx" target="_blank">RegRead 方法</a>。</p>
+<p>下面的代码从注册表中读取一项：</p>
 <div class="fragment"><pre class="fragment">    var value = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.regRead(<span class="stringliteral">&quot;HKCU\\Software\\ACME\\FortuneTeller\\MindReader&quot;</span>);
 </pre></div> 
 </div>
@@ -312,17 +312,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Creates a new key, adds another value-name to an existing key (and assigns it a value), or changes the value of an existing value-name. </p>
+<p>在注册表中创建新的键值或更改已有的键值。 </p>
 <dl><dt><b>参数:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">reg_path</td><td>String value indicating the key-name, value-name, or value you want to create, add, or change. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>The name of the new key you want to create, the name of the value you want to add to an existing key, or the new value you want to assign to an existing value-name. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">strType</td><td>Optional. String value indicating the value's data type. Refer to <a href="http://msdn.microsoft.com/en-us/library/yfdfhz1b(VS.85).aspx" target="_blank">RegWrite method of WshShell Object</a> for detail.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reg_path</td><td>要更改或添加的注册表路径。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">val</td><td>要更改或添加的新值。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">strType</td><td>可选参数。用不同的字符串表示要更改或添加的值的类型。细节参见 <a href="http://msdn.microsoft.com/en-us/library/yfdfhz1b(VS.85).aspx" target="_blank">WshShell 对象的 RegWrite 方法</a>。</td></tr>
   </table>
   </dd>
 </dl>
-<p>This method simply wraps up <a href="http://msdn.microsoft.com/en-us/library/yfdfhz1b(VS.85).aspx" target="_blank">RegWrite method of WshShell Object</a>. Refer to <a href="http://msdn.microsoft.com/en-us/library/yfdfhz1b(VS.85).aspx" target="_blank">RegWrite</a> for more detail.</p>
-<p>Code below writes a value to registry:</p>
+<p>本方法是 <a href="http://msdn.microsoft.com/en-us/library/yfdfhz1b(VS.85).aspx" target="_blank">WshShell 对象的 RegWrite 方法</a>的简单封装。更多细节参见 <a href="http://msdn.microsoft.com/en-us/library/yfdfhz1b(VS.85).aspx" target="_blank">RegWrite 方法</a>。</p>
+<p>下面的代码向注册表中写入一项：</p>
 <div class="fragment"><pre class="fragment">    <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.regWrite(<span class="stringliteral">&quot;HKCU\\Software\\ACME\\FortuneTeller\\MindReader&quot;</span>, <span class="stringliteral">&quot;Goocher!&quot;</span>, <span class="stringliteral">&quot;REG_SZ&quot;</span>);
 </pre></div> 
 </div>
@@ -342,15 +342,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Deletes a key or one of its values from the registry. </p>
+<p>从注册表中删除一项。 </p>
 <dl><dt><b>参数:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">reg_path</td><td>String value indicating the name of the registry key or key value you want to delete.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">reg_path</td><td>要删除的注册表路径。</td></tr>
   </table>
   </dd>
 </dl>
-<p>This method simply wraps up <a href="http://msdn.microsoft.com/en-us/library/293bt9hh(VS.85).aspx" target="_blank">RegDelete method of WshShell Object</a>. Refer to <a href="http://msdn.microsoft.com/en-us/library/293bt9hh(VS.85).aspx" target="_blank">RegDelete</a> for more detail.</p>
-<p>Code below deletes a value from registry:</p>
+<p>本方法是 <a href="http://msdn.microsoft.com/en-us/library/293bt9hh(VS.85).aspx" target="_blank">WshShell 对象的 RegDelete 方法</a>的简单封装。更多细节参见 <a href="http://msdn.microsoft.com/en-us/library/293bt9hh(VS.85).aspx" target="_blank">RegDelete 方法</a>。</p>
+<p>下面的代码从注册表中删除一项：</p>
 <div class="fragment"><pre class="fragment">    <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.regDelete(<span class="stringliteral">&quot;HKCU\\Software\\ACME\\FortuneTeller\\MindReader&quot;</span>);
 </pre></div> 
 </div>
