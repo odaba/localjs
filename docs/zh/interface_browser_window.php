@@ -71,7 +71,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
   </dd>
 </dl>
 <p>You can use <a href="http://www.javascriptkit.com/jsref/window.shtml" target="_blank">window object</a> to attach JavaScript function in current page to the event in the browser window:</p>
-<div class="fragment"><pre class="fragment">    var browser_window = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="Returns UI object, which provides methods for common UI operations. Include localjs_ui.js to use it.">UI</a>.newWindow(<span class="stringliteral">&quot;http://example.com/exampleApp/&quot;</span>),
+<div class="fragment"><pre class="fragment">    var browser_window = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="返回 UI object，它提供了常用的 UI 操作。需要包含 localjs_ui.js。">UI</a>.newWindow(<span class="stringliteral">&quot;http://example.com/exampleApp/&quot;</span>),
         browser_jswindow = browser_window.getJSWindow();
     <span class="keywordflow">if</span> (browser_jswindow)
         browser_jswindow.attachEvent(<span class="stringliteral">&quot;onunload&quot;</span>, function() { alert(<span class="stringliteral">&quot;ByeBye&quot;</span>); });
@@ -113,7 +113,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
   </dd>
 </dl>
 <p>You can access a global function or variable defined in the browser window page from current page:</p>
-<div class="fragment"><pre class="fragment">    var browser_window = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="Returns UI object, which provides methods for common UI operations. Include localjs_ui.js to use it.">UI</a>.newWindow(<span class="stringliteral">&quot;http://example.com/exampleApp/&quot;</span>),
+<div class="fragment"><pre class="fragment">    var browser_window = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="返回 UI object，它提供了常用的 UI 操作。需要包含 localjs_ui.js。">UI</a>.newWindow(<span class="stringliteral">&quot;http://example.com/exampleApp/&quot;</span>),
         browser_function = browser_window.getJSVariable(<span class="stringliteral">&quot;global_function_name&quot;</span>);
     <span class="keywordflow">if</span> (browser_function)
         browser_function(<span class="stringliteral">&quot;I got you!&quot;</span>);

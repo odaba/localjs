@@ -141,7 +141,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </dl>
 <dl class="return"><dt><b>返回:</b></dt><dd>The integer read from INI file, or <em>default_value</em> if the section and key do not exist.</dd></dl>
 <p>Code below read an integer from INI file; if not found, return -1: </p>
-<div class="fragment"><pre class="fragment">    var intVal = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.iniReadInt(<span class="stringliteral">&quot;c:\\settings.ini&quot;</span>, <span class="stringliteral">&quot;section_name&quot;</span>, <span class="stringliteral">&quot;key_name&quot;</span>, -1);
+<div class="fragment"><pre class="fragment">    var intVal = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.iniReadInt(<span class="stringliteral">&quot;c:\\settings.ini&quot;</span>, <span class="stringliteral">&quot;section_name&quot;</span>, <span class="stringliteral">&quot;key_name&quot;</span>, -1);
 </pre></div> 
 </div>
 </div>
@@ -194,7 +194,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </dl>
 <dl class="return"><dt><b>返回:</b></dt><dd>The string read from INI file, or <em>default_value</em> if the section and key do not exist.</dd></dl>
 <p>Code below read a string from INI file; if not found, return an empty string: </p>
-<div class="fragment"><pre class="fragment">    var strVal = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.iniReadStr(<span class="stringliteral">&quot;c:\\settings.ini&quot;</span>, <span class="stringliteral">&quot;section_name&quot;</span>, <span class="stringliteral">&quot;key_name&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);
+<div class="fragment"><pre class="fragment">    var strVal = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.iniReadStr(<span class="stringliteral">&quot;c:\\settings.ini&quot;</span>, <span class="stringliteral">&quot;section_name&quot;</span>, <span class="stringliteral">&quot;key_name&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);
 </pre></div> 
 </div>
 </div>
@@ -246,9 +246,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
   </dd>
 </dl>
 <p>Code below saves settings to INI <a href="file:">file:</a> </p>
-<div class="fragment"><pre class="fragment">    <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.iniWrite(<span class="stringliteral">&quot;c:\\settings.ini&quot;</span>, <span class="stringliteral">&quot;section_name&quot;</span>, <span class="stringliteral">&quot;key_name&quot;</span>, <span class="stringliteral">&quot;value&quot;</span>);
+<div class="fragment"><pre class="fragment">    <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.iniWrite(<span class="stringliteral">&quot;c:\\settings.ini&quot;</span>, <span class="stringliteral">&quot;section_name&quot;</span>, <span class="stringliteral">&quot;key_name&quot;</span>, <span class="stringliteral">&quot;value&quot;</span>);
 </pre></div><p>To remove an entry from ini <a href="file:">file:</a></p>
-<div class="fragment"><pre class="fragment">    <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.iniWrite(<span class="stringliteral">&quot;c:\\settings.ini&quot;</span>, <span class="stringliteral">&quot;section_name&quot;</span>, <span class="stringliteral">&quot;key_name&quot;</span>, undefined);
+<div class="fragment"><pre class="fragment">    <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.iniWrite(<span class="stringliteral">&quot;c:\\settings.ini&quot;</span>, <span class="stringliteral">&quot;section_name&quot;</span>, <span class="stringliteral">&quot;key_name&quot;</span>, undefined);
 </pre></div> 
 </div>
 </div>
@@ -277,7 +277,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <dl class="return"><dt><b>返回:</b></dt><dd>The value read from registry.</dd></dl>
 <p>This method simply wraps up <a href="http://msdn.microsoft.com/en-us/library/x05fawxd(VS.85).aspx" target="_blank">RegRead method of WshShell Object</a>. Refer to <a href="http://msdn.microsoft.com/en-us/library/x05fawxd(VS.85).aspx" target="_blank">RegRead</a> for more detail.</p>
 <p>Code below reads registry:</p>
-<div class="fragment"><pre class="fragment">    var value = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.regRead(<span class="stringliteral">&quot;HKCU\\Software\\ACME\\FortuneTeller\\MindReader&quot;</span>);
+<div class="fragment"><pre class="fragment">    var value = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.regRead(<span class="stringliteral">&quot;HKCU\\Software\\ACME\\FortuneTeller\\MindReader&quot;</span>);
 </pre></div> 
 </div>
 </div>
@@ -323,7 +323,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </dl>
 <p>This method simply wraps up <a href="http://msdn.microsoft.com/en-us/library/yfdfhz1b(VS.85).aspx" target="_blank">RegWrite method of WshShell Object</a>. Refer to <a href="http://msdn.microsoft.com/en-us/library/yfdfhz1b(VS.85).aspx" target="_blank">RegWrite</a> for more detail.</p>
 <p>Code below writes a value to registry:</p>
-<div class="fragment"><pre class="fragment">    <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.regWrite(<span class="stringliteral">&quot;HKCU\\Software\\ACME\\FortuneTeller\\MindReader&quot;</span>, <span class="stringliteral">&quot;Goocher!&quot;</span>, <span class="stringliteral">&quot;REG_SZ&quot;</span>);
+<div class="fragment"><pre class="fragment">    <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.regWrite(<span class="stringliteral">&quot;HKCU\\Software\\ACME\\FortuneTeller\\MindReader&quot;</span>, <span class="stringliteral">&quot;Goocher!&quot;</span>, <span class="stringliteral">&quot;REG_SZ&quot;</span>);
 </pre></div> 
 </div>
 </div>
@@ -351,7 +351,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </dl>
 <p>This method simply wraps up <a href="http://msdn.microsoft.com/en-us/library/293bt9hh(VS.85).aspx" target="_blank">RegDelete method of WshShell Object</a>. Refer to <a href="http://msdn.microsoft.com/en-us/library/293bt9hh(VS.85).aspx" target="_blank">RegDelete</a> for more detail.</p>
 <p>Code below deletes a value from registry:</p>
-<div class="fragment"><pre class="fragment">    <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.regDelete(<span class="stringliteral">&quot;HKCU\\Software\\ACME\\FortuneTeller\\MindReader&quot;</span>);
+<div class="fragment"><pre class="fragment">    <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.regDelete(<span class="stringliteral">&quot;HKCU\\Software\\ACME\\FortuneTeller\\MindReader&quot;</span>);
 </pre></div> 
 </div>
 </div>
@@ -380,7 +380,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <dl class="return"><dt><b>返回:</b></dt><dd><code>true</code> if a specified file exists; <code>false</code> if it does not.</dd></dl>
 <p>This method simply wraps up <a href="http://msdn.microsoft.com/en-us/library/x23stk5t(VS.85).aspx" target="_blank">FileExists method of FileSystemObject Object</a>. Refer to <a href="http://msdn.microsoft.com/en-us/library/x23stk5t(VS.85).aspx" target="_blank">FileExists</a> for more detail.</p>
 <p>The following code illustrates how to check if a file exists or not:</p>
-<div class="fragment"><pre class="fragment">    var exists = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.fileExists(<span class="stringliteral">&quot;C:\\test.ini&quot;</span>);
+<div class="fragment"><pre class="fragment">    var exists = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.fileExists(<span class="stringliteral">&quot;C:\\test.ini&quot;</span>);
 </pre></div> 
 </div>
 </div>
@@ -409,7 +409,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <dl class="return"><dt><b>返回:</b></dt><dd><code>true</code> if a specified folder exists; <code>false</code> if it does not.</dd></dl>
 <p>This method simply wraps up <a href="http://msdn.microsoft.com/en-us/library/5xc78d8d(VS.85).aspx" target="_blank">FolderExists method of FileSystemObject Object</a>. Refer to <a href="http://msdn.microsoft.com/en-us/library/5xc78d8d(VS.85).aspx" target="_blank">FolderExists</a> for more detail.</p>
 <p>The following code illustrates how to check if a folder exists or not:</p>
-<div class="fragment"><pre class="fragment">    var exists = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.folderExists(<span class="stringliteral">&quot;C:\\Documents and Settings&quot;</span>);
+<div class="fragment"><pre class="fragment">    var exists = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.folderExists(<span class="stringliteral">&quot;C:\\Documents and Settings&quot;</span>);
 </pre></div> 
 </div>
 </div>
@@ -437,8 +437,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </dl>
 <dl class="return"><dt><b>返回:</b></dt><dd>User data folder if <em>sub_folder</em> is omitted; if <em>sub_folder</em> presents, returns the sub folder under user data folder.</dd></dl>
 <p>The following code illustrates how to use the getAppDataFolder method:</p>
-<div class="fragment"><pre class="fragment">    var app_data_folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.getAppDataFolder(); <span class="comment">// On Windows XP, return C:\Documents and Settings\Username\Application Data</span>
-    var app_data_sub_folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.getAppDataFolder(<span class="stringliteral">&quot;LocalJS&quot;</span>); <span class="comment">// On Windows XP, return C:\Documents and Settings\Username\Application Data\LocalJS</span>
+<div class="fragment"><pre class="fragment">    var app_data_folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.getAppDataFolder(); <span class="comment">// On Windows XP, return C:\Documents and Settings\Username\Application Data</span>
+    var app_data_sub_folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.getAppDataFolder(<span class="stringliteral">&quot;LocalJS&quot;</span>); <span class="comment">// On Windows XP, return C:\Documents and Settings\Username\Application Data\LocalJS</span>
 </pre></div><dl class="note"><dt><b>注解:</b></dt><dd>The getAppDataFolder method doesn't create the sub folder if it doesn't exists. </dd></dl>
 
 </div>
@@ -467,8 +467,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </dl>
 <dl class="return"><dt><b>返回:</b></dt><dd>Program Files folder if <em>sub_folder</em> is omitted; if <em>sub_folder</em> presents, returns the sub folder under Program Files folder.</dd></dl>
 <p>The following code illustrates how to use the getProgramFolder method:</p>
-<div class="fragment"><pre class="fragment">    var program_folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.getProgramFolder(); <span class="comment">// return C:\Program Files</span>
-    var program_folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.getProgramFolder(<span class="stringliteral">&quot;LocalJS&quot;</span>); <span class="comment">// return C:\Program Files\LocalJS</span>
+<div class="fragment"><pre class="fragment">    var program_folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.getProgramFolder(); <span class="comment">// return C:\Program Files</span>
+    var program_folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.getProgramFolder(<span class="stringliteral">&quot;LocalJS&quot;</span>); <span class="comment">// return C:\Program Files\LocalJS</span>
 </pre></div><dl class="note"><dt><b>注解:</b></dt><dd>The getProgramFolder method doesn't create the sub folder if it doesn't exists. </dd></dl>
 
 </div>
@@ -490,7 +490,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <p>Get full filename of current exe file. </p>
 <dl class="return"><dt><b>返回:</b></dt><dd>Full filename of current exe file.</dd></dl>
 <p>The following code illustrates how to use the getExeFilename method:</p>
-<div class="fragment"><pre class="fragment">    var exe_name = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.getExeFilename(); <span class="comment">// for example, return C:\Program Files\LocalJS\app.exe</span>
+<div class="fragment"><pre class="fragment">    var exe_name = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.getExeFilename(); <span class="comment">// for example, return C:\Program Files\LocalJS\app.exe</span>
 </pre></div> 
 </div>
 </div>
@@ -511,7 +511,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <p>Get folder where current exe file exists. </p>
 <dl class="return"><dt><b>返回:</b></dt><dd>Folder where current exe file exists.</dd></dl>
 <p>The following code illustrates how to use the getExeFolder method:</p>
-<div class="fragment"><pre class="fragment">    var exe_folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.getExeFolder(); <span class="comment">// for example, return C:\Program Files\LocalJS</span>
+<div class="fragment"><pre class="fragment">    var exe_folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.getExeFolder(); <span class="comment">// for example, return C:\Program Files\LocalJS</span>
 </pre></div> 
 </div>
 </div>
@@ -539,7 +539,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </dl>
 <dl class="return"><dt><b>返回:</b></dt><dd>A string containing the name of the parent folder of the last component in a specified path.</dd></dl>
 <p>The following code illustrates how to use the getParentFolder method:</p>
-<div class="fragment"><pre class="fragment">    var parent_folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.getParentFolder(<span class="stringliteral">&quot;C:\\Program Files\\LocalJS&quot;</span>); <span class="comment">// return C:\Program Files</span>
+<div class="fragment"><pre class="fragment">    var parent_folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.getParentFolder(<span class="stringliteral">&quot;C:\\Program Files\\LocalJS&quot;</span>); <span class="comment">// return C:\Program Files</span>
 </pre></div><dl class="note"><dt><b>注解:</b></dt><dd>The getParentFolder method works only on the provided path string. It does not attempt to resolve the path, nor does it check for the existence of the specified path. </dd></dl>
 
 </div>
@@ -579,7 +579,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </dl>
 <dl class="return"><dt><b>返回:</b></dt><dd>The combined path. The path doesn't have to exist and wonn't be created if not existed.</dd></dl>
 <p>The following code illustrates how to use the buildPath method:</p>
-<div class="fragment"><pre class="fragment">    var path = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.buildPath(<span class="stringliteral">&quot;C:\\Program Files&quot;</span>, <span class="stringliteral">&quot;LocalJS&quot;</span>); <span class="comment">// return C:\Program Files\LocalJS</span>
+<div class="fragment"><pre class="fragment">    var path = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.buildPath(<span class="stringliteral">&quot;C:\\Program Files&quot;</span>, <span class="stringliteral">&quot;LocalJS&quot;</span>); <span class="comment">// return C:\Program Files\LocalJS</span>
 </pre></div> 
 </div>
 </div>
@@ -608,7 +608,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <dl class="return"><dt><b>返回:</b></dt><dd>Content of the file as string, or false if read fails. Use <code>false</code> <code>===</code> to test if reading fails.</dd></dl>
 <dl class="note"><dt><b>注解:</b></dt><dd>The UTF8 file should not have the leading BOM.</dd></dl>
 <p>The following code illustrates how to use the readFileUTF8 method to read file in:</p>
-<div class="fragment"><pre class="fragment">    var content = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.readFileUTF8(<span class="stringliteral">&quot;C:\\settings.ini&quot;</span>);
+<div class="fragment"><pre class="fragment">    var content = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.readFileUTF8(<span class="stringliteral">&quot;C:\\settings.ini&quot;</span>);
     <span class="keywordflow">if</span> (<span class="keyword">false</span> === content)
         alert(<span class="stringliteral">&quot;Reading failed!&quot;</span>);
 </pre></div> 
@@ -650,7 +650,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <p>The text will be saved to file in UTF8 format. No leading BOM is prepended to the file.</p>
 <p>An error will be generated if write fails.</p>
 <p>The following code illustrates how to use the writeFileUTF8 method to save text to a <a href="file:">file:</a></p>
-<div class="fragment"><pre class="fragment">    <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.writeFileUTF8(<span class="stringliteral">&quot;C:\\settings.ini&quot;</span>, <span class="stringliteral">&quot;LocalJS&quot;</span>);
+<div class="fragment"><pre class="fragment">    <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.writeFileUTF8(<span class="stringliteral">&quot;C:\\settings.ini&quot;</span>, <span class="stringliteral">&quot;LocalJS&quot;</span>);
 </pre></div> 
 </div>
 </div>
@@ -689,7 +689,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </dl>
 <p>An error occurs if no matching files are found. The deleteFile method stops on the first error it encounters. No attempt is made to roll back or undo any changes that were made before an error occurred.</p>
 <p>The following example illustrates the use of the deleteFile method.</p>
-<div class="fragment"><pre class="fragment">    <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.deleteFile(<span class="stringliteral">&quot;C:\\settings.ini&quot;</span>);
+<div class="fragment"><pre class="fragment">    <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.deleteFile(<span class="stringliteral">&quot;C:\\settings.ini&quot;</span>);
 </pre></div> 
 </div>
 </div>
@@ -717,7 +717,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </dl>
 <p>If the folder already exists, this method simply returns without generating an error.</p>
 <p>The following code illustrates how to use the createFolder method to create a folder.</p>
-<div class="fragment"><pre class="fragment">    var a = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.createFolder(<span class="stringliteral">&quot;c:\\new folder&quot;</span>);
+<div class="fragment"><pre class="fragment">    var a = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.createFolder(<span class="stringliteral">&quot;c:\\new folder&quot;</span>);
 </pre></div> 
 </div>
 </div>
@@ -757,7 +757,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <p>The deleteFolder method does not distinguish between folders that have contents and those that do not. The specified folder is deleted regardless of whether or not it has contents.</p>
 <p>An error occurs if no matching folders are found. The deleteFolder method stops on the first error it encounters. No attempt is made to roll back or undo any changes that were made before an error occurred.</p>
 <p>The following example illustrates the use of the deleteFolder method.</p>
-<div class="fragment"><pre class="fragment">    <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.deleteFolder(<span class="stringliteral">&quot;C:\\Program Files\\LocalJS&quot;</span>);
+<div class="fragment"><pre class="fragment">    <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.deleteFolder(<span class="stringliteral">&quot;C:\\Program Files\\LocalJS&quot;</span>);
 </pre></div> 
 </div>
 </div>
@@ -785,13 +785,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </dl>
 <p>The listFolder method wraps up <a href="http://msdn.microsoft.com/en-us/library/18b41306(VS.85).aspx" target="_blank">Files Property of Folder object</a>, refer to <a href="http://msdn.microsoft.com/en-us/library/18b41306(VS.85).aspx" target="_blank">Files Property</a> for more detail.</p>
 <p>The following code illustrates how to use the listFolder method:</p>
-<div class="fragment"><pre class="fragment">    var file_array = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.listFolder(<span class="stringliteral">&quot;C:\\Program Files&quot;</span>), s = <span class="stringliteral">&quot;&quot;</span>;
+<div class="fragment"><pre class="fragment">    var file_array = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.listFolder(<span class="stringliteral">&quot;C:\\Program Files&quot;</span>), s = <span class="stringliteral">&quot;&quot;</span>;
     <span class="keywordflow">for</span> (var i = 0; i &lt; file_array.length; ++i)
     {
         s += file_array[i].name;
         s += <span class="stringliteral">&quot;&lt;br/&gt;&quot;</span>;
     }
-    <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.writeFileUTF8(<span class="stringliteral">&quot;C:\\test.html&quot;</span>, s);
+    <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.writeFileUTF8(<span class="stringliteral">&quot;C:\\test.html&quot;</span>, s);
 </pre></div> 
 </div>
 </div>
@@ -859,7 +859,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <dl class="return"><dt><b>返回:</b></dt><dd>The filename user selected, or false if user cancels the dialog. Use <code>false</code> <code>===</code> to check if the dialog is canceled.</dd></dl>
 <p>Parameter <em>strFilter</em> has to be ended by <code>"\0"</code>. The sub strings separated by <code>"\0"</code> have to be in pairs: they are in <code>"Filter name displayed\0Filter\0Filter name displayed\0Filter"</code> format. If you feel confused, it's OK. Simply try the sample code below you will understand it.</p>
 <p>The following code illustrates how to use the browseFile method:</p>
-<div class="fragment"><pre class="fragment">    var filename = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.browseFile(<span class="stringliteral">&quot;C:\\Program Files\\LocalJS&quot;</span>,
+<div class="fragment"><pre class="fragment">    var filename = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.browseFile(<span class="stringliteral">&quot;C:\\Program Files\\LocalJS&quot;</span>,
                                            <span class="stringliteral">&quot;Text Files\0*.TXT\0Document Files\0*.TXT;*.DOC;*.BAK\0All Files\0*.*\0&quot;</span>,
                                            <span class="stringliteral">&quot;Please choose the file&quot;</span>, <span class="stringliteral">&quot;txt&quot;</span>, <span class="stringliteral">&quot;settings.txt&quot;</span>);
     <span class="keywordflow">if</span> (<span class="keyword">false</span> === filename)
@@ -905,7 +905,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </dl>
 <dl class="return"><dt><b>返回:</b></dt><dd>The path to the selected folder, false if user cancels the dialog, or "" if user doesn't select a file system folder (for example, "My Computer"). Use <code>false</code> <code>===</code> to check if the dialog is canceled.</dd></dl>
 <p>The following code illustrates how to use the browseFolder method:</p>
-<div class="fragment"><pre class="fragment">    var folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.browseFolder(<span class="stringliteral">&quot;Please choose a folder&quot;</span>);
+<div class="fragment"><pre class="fragment">    var folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.browseFolder(<span class="stringliteral">&quot;Please choose a folder&quot;</span>);
     <span class="keywordflow">if</span> (<span class="keyword">false</span> === folder)
         alert(<span class="stringliteral">&quot;The folder dialog was canceled&quot;</span>);
     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="stringliteral">&quot;&quot;</span> == folder)
@@ -939,7 +939,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
   </dd>
 </dl>
 <p>The following code illustrates how to use the exec method:</p>
-<div class="fragment"><pre class="fragment">    <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.exec(<span class="stringliteral">&quot;http://localjs.org/&quot;</span>); <span class="comment">// Open the site at user default browser.</span>
+<div class="fragment"><pre class="fragment">    <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.exec(<span class="stringliteral">&quot;http://localjs.org/&quot;</span>); <span class="comment">// Open the site at user default browser.</span>
 </pre></div> 
 </div>
 </div>
@@ -967,7 +967,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </dl>
 <dl class="return"><dt><b>返回:</b></dt><dd>The url points to the local file, or <code>false</code> if cannot get the url. Use <code>false</code> <code>===</code> to check if the convert fails.</dd></dl>
 <p>The following code illustrates how to use the pathToUrl method:</p>
-<div class="fragment"><pre class="fragment">    var url = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.pathToUrl(<span class="stringliteral">&quot;C:\\test.ini&quot;</span>); <span class="comment">// return file:///C:/test.ini</span>
+<div class="fragment"><pre class="fragment">    var url = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.pathToUrl(<span class="stringliteral">&quot;C:\\test.ini&quot;</span>); <span class="comment">// return file:///C:/test.ini</span>
 </pre></div> 
 </div>
 </div>
@@ -995,7 +995,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </dl>
 <dl class="return"><dt><b>返回:</b></dt><dd>The local file path from the url, or <code>false</code> if fails to convert. Use <code>false</code> <code>===</code> to check if the convert fails.</dd></dl>
 <p>The following code illustrates how to use the urlToPath method:</p>
-<div class="fragment"><pre class="fragment">    var path = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.urlToPath(<span class="stringliteral">&quot;file:///C:/test.ini&quot;</span>); <span class="comment">// return C:\test.ini</span>
+<div class="fragment"><pre class="fragment">    var path = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.urlToPath(<span class="stringliteral">&quot;file:///C:/test.ini&quot;</span>); <span class="comment">// return C:\test.ini</span>
 </pre></div> 
 </div>
 </div>
@@ -1023,8 +1023,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </dl>
 <dl class="return"><dt><b>返回:</b></dt><dd><code>true</code> if the url given is a valid url, <code>false</code> if it's not.</dd></dl>
 <p>The following code illustrates how to use the isUrl method:</p>
-<div class="fragment"><pre class="fragment">    var ok = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.isUrl(<span class="stringliteral">&quot;http://localjs.org/&quot;</span>); <span class="comment">// a valid url</span>
-    var error = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.isUrl(<span class="stringliteral">&quot;localjs.org&quot;</span>);  <span class="comment">// not a valid url</span>
+<div class="fragment"><pre class="fragment">    var ok = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.isUrl(<span class="stringliteral">&quot;http://localjs.org/&quot;</span>); <span class="comment">// a valid url</span>
+    var error = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.isUrl(<span class="stringliteral">&quot;localjs.org&quot;</span>);  <span class="comment">// not a valid url</span>
 </pre></div> 
 </div>
 </div>
@@ -1053,8 +1053,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <dl class="return"><dt><b>返回:</b></dt><dd><code>true</code> if the url given is a file system url, <code>false</code> if it's not.</dd></dl>
 <p>The file or folder pointed by the url doesn't have to exist.</p>
 <p>The following code illustrates how to use the isFileUrl method:</p>
-<div class="fragment"><pre class="fragment">    var ok = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.isFileUrl(<span class="stringliteral">&quot;file:///C:\\Windows\\system32\\notepad.exe&quot;</span>); <span class="comment">// a file system url</span>
-    var error = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.isFileUrl(<span class="stringliteral">&quot;http://localjs.org/&quot;</span>);  <span class="comment">// a http url</span>
+<div class="fragment"><pre class="fragment">    var ok = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.isFileUrl(<span class="stringliteral">&quot;file:///C:\\Windows\\system32\\notepad.exe&quot;</span>); <span class="comment">// a file system url</span>
+    var error = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.isFileUrl(<span class="stringliteral">&quot;http://localjs.org/&quot;</span>);  <span class="comment">// a http url</span>
 </pre></div> 
 </div>
 </div>
@@ -1103,7 +1103,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <li>If <em>url</em> is a web url, then <em>callback</em> is same as the <em>callback</em> parameter passed to LOCALJS.WEB_SERVICE.callUrl. Refer to LOCALJS.WEB_SERVICE.callUrl for more detail.</li>
 </ul>
 <p>The following code illustrates how to use the readUrl method:</p>
-<div class="fragment"><pre class="fragment">    var content = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.readUrl(<span class="stringliteral">&quot;file:///C:\\settings.txt&quot;</span>); <span class="comment">// synchronized read</span>
+<div class="fragment"><pre class="fragment">    var content = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.readUrl(<span class="stringliteral">&quot;file:///C:\\settings.txt&quot;</span>); <span class="comment">// synchronized read</span>
 
     <span class="comment">// asynchronized read</span>
     var onOK = function(contentText)
@@ -1116,7 +1116,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
         alert(<span class="stringliteral">&quot;Read failed, the error status is &quot;</span> + statusCode;
     };
 
-    <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.readUrl(<span class="stringliteral">&quot;http://example.com/example.php&quot;</span>, {<span class="stringliteral">&#39;ok&#39;</span>: onOK, <span class="stringliteral">&#39;fail&#39;</span>: onFail});
+    <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.readUrl(<span class="stringliteral">&quot;http://example.com/example.php&quot;</span>, {<span class="stringliteral">&#39;ok&#39;</span>: onOK, <span class="stringliteral">&#39;fail&#39;</span>: onFail});
 </pre></div> 
 </div>
 </div>
@@ -1155,7 +1155,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </dl>
 <dl class="return"><dt><b>返回:</b></dt><dd>The combined url, or <code>false</code> if the parameters are incorrect.</dd></dl>
 <p>The following code illustrates how to use the buildUrl method:</p>
-<div class="fragment"><pre class="fragment">    var url = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.buildUrl(<span class="stringliteral">&quot;http://example.com/app/index.php&quot;</span>, <span class="stringliteral">&quot;../go.php&quot;</span>); <span class="comment">// return &quot;http://example.com/go.php&quot;</span>
+<div class="fragment"><pre class="fragment">    var url = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.buildUrl(<span class="stringliteral">&quot;http://example.com/app/index.php&quot;</span>, <span class="stringliteral">&quot;../go.php&quot;</span>); <span class="comment">// return &quot;http://example.com/go.php&quot;</span>
 </pre></div> 
 </div>
 </div>
@@ -1184,8 +1184,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <dl class="return"><dt><b>返回:</b></dt><dd>Normalized url.</dd></dl>
 <p>The following code illustrates how to use the normalizeUrl method:</p>
 <div class="fragment"><pre class="fragment">    <span class="comment">// assume current url is http://example.com/index.php?id=10&quot;</span>
-    var url = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.normalizeUrl(); <span class="comment">// return &quot;http://example.com/index.php&quot;</span>
-    var url2 = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.normalizeUrl(<span class="stringliteral">&quot;app/go.php&quot;</span>); <span class="comment">// return &quot;http://example.com/app/go.php&quot;</span>
+    var url = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.normalizeUrl(); <span class="comment">// return &quot;http://example.com/index.php&quot;</span>
+    var url2 = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.normalizeUrl(<span class="stringliteral">&quot;app/go.php&quot;</span>); <span class="comment">// return &quot;http://example.com/app/go.php&quot;</span>
 </pre></div> 
 </div>
 </div>
