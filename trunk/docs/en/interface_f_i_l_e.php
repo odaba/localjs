@@ -70,12 +70,12 @@ Methods</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a561e6ec182a20ebe1d85653d67b0ae44">browseFile</a> (String initialDir, String strFilter, String title, String defExt,[optional] String initialFile,[optional] boolean readOnly)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Open file dialig to browse to a file, return path to the select file, or false if the dialog is canceled.  <a href="#a561e6ec182a20ebe1d85653d67b0ae44"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a5ddc249346092c53b6e0fadd644a0fb7">browseFolder</a> (String title,[optional] String rootFolder)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a dialog box that enables the user to select a folder and then returns the path to the selected folder, false if the dialog is canceled, or "" if user doesn't select a file system folder.  <a href="#a5ddc249346092c53b6e0fadd644a0fb7"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a dialog box that enables the user to select a folder and then returns the path to the selected folder, <code>false</code> if the dialog is canceled, or "" if user doesn't select a file system folder.  <a href="#a5ddc249346092c53b6e0fadd644a0fb7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a7c00c5f992f9567ec7b69d6e3cf25934">exec</a> (String file)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute a executable file, open a url in user default browser, or open a file with system default application.  <a href="#a7c00c5f992f9567ec7b69d6e3cf25934"></a><br/></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Url operations</div></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#ad6e821755d0d8b859a69853bb8b3144d">pathToUrl</a> (String path)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the url points to a local file, returns false if fails.  <a href="#ad6e821755d0d8b859a69853bb8b3144d"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the url points to a local file, returns <code>false</code> if fails.  <a href="#ad6e821755d0d8b859a69853bb8b3144d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#af4d5763f007ae57760e4903712f323f3">urlToPath</a> (String url)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the local file path from a url, return false if fails.  <a href="#af4d5763f007ae57760e4903712f323f3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a58b7576336d5c990156ccc211bc09c3a">isUrl</a> (String url)</td></tr>
@@ -779,7 +779,7 @@ Methods</h2></td></tr>
 <p>Returns an array of all File objects contained in the specified folder, including those with hidden and system file attributes set. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">folder</td><td>name whose content to be listed.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">folder</td><td>folder name whose content to be listed.</td></tr>
   </table>
   </dd>
 </dl>
@@ -895,7 +895,7 @@ Methods</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Creates a dialog box that enables the user to select a folder and then returns the path to the selected folder, false if the dialog is canceled, or "" if user doesn't select a file system folder. </p>
+<p>Creates a dialog box that enables the user to select a folder and then returns the path to the selected folder, <code>false</code> if the dialog is canceled, or "" if user doesn't select a file system folder. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">title</td><td>A String value that represents the title displayed inside the Browse dialog box. </td></tr>
@@ -958,10 +958,10 @@ Methods</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Returns the url points to a local file, returns false if fails. </p>
+<p>Returns the url points to a local file, returns <code>false</code> if fails. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>The path to the local file</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>The path to the local file.</td></tr>
   </table>
   </dd>
 </dl>
