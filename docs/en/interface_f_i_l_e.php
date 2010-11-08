@@ -83,11 +83,11 @@ Methods</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a0c351eaed10231b01698938550e31cbe">isFileUrl</a> (String url)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <code>true</code> if the url given is a file system url, <code>false</code> if it's not.  <a href="#a0c351eaed10231b01698938550e31cbe"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a755585f93d7b4fdc84e455fe334a7e29">readUrl</a> (String url,[optional] Object callback)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">One single function to read both local and remote files, synchronized or asynchronized.  <a href="#a755585f93d7b4fdc84e455fe334a7e29"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">One single function to read both local and web files, synchronized or asynchronized.  <a href="#a755585f93d7b4fdc84e455fe334a7e29"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#ab7cbd8e35cc7111c289225daf4696cea">buildUrl</a> (String baseUrl, String relativeUrl)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">When provided with a relative URL and its base, returns a URL in canonical form, or <code>false</code> if the parameters are incorrect.  <a href="#ab7cbd8e35cc7111c289225daf4696cea"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a841b182f6e93f43af7ba128d020dcea7">normalizeUrl</a> ([optional], String relativeUrl)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns normalized url of current document (remove trailing query strings), optionally append a relative url.  <a href="#a841b182f6e93f43af7ba128d020dcea7"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns normalized url of current document (remove trailing query strings), optionally appended with a relative url.  <a href="#a841b182f6e93f43af7ba128d020dcea7"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
 <p>JavaScript Object open sourced. Provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it. </p>
@@ -1017,7 +1017,7 @@ Methods</h2></td></tr>
 <p>Return <code>true</code> if the url given is a valid url, <code>false</code> if it's not. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>The url to be checked</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>The url to be checked.</td></tr>
   </table>
   </dd>
 </dl>
@@ -1046,7 +1046,7 @@ Methods</h2></td></tr>
 <p>Return <code>true</code> if the url given is a file system url, <code>false</code> if it's not. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>The url to be checked</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>The url to be checked.</td></tr>
   </table>
   </dd>
 </dl>
@@ -1083,17 +1083,17 @@ Methods</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>One single function to read both local and remote files, synchronized or asynchronized. </p>
+<p>One single function to read both local and web files, synchronized or asynchronized. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>The url to be read. Can be a file url or http url </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>The url to be read. Can be a file url or web url. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>Optional. Details are discussed below.</td></tr>
   </table>
   </dd>
 </dl>
 <p>If <em>callback</em> is omitted, the readUrl method waits until the read operation ends and returns the content of the url. If read fails, readUrl returns <code>false</code>. Use <code>false</code> <code>===</code> to check if the read fails.</p>
-<p>If <em>callback</em> is not omitted, then readUrl method returns immediately and read result are passed to functions in callback object.</p>
-<p>The callback object should have two properties <code>ok</code> and <code>fail</code>, each be a function:</p>
+<p>If <em>callback</em> is not omitted, then readUrl method returns immediately and read result are passed to functions in <code>callback</code> object.</p>
+<p>The <code>callback</code> object should have two properties <code>ok</code> and <code>fail</code>, each be a function:</p>
 <div class="fragment"><pre class="fragment">    var callback = {<span class="stringliteral">&#39;ok&#39;</span> : function(contentText, oHttp) { <span class="comment">/* read ok handling */</span> },
                     <span class="stringliteral">&#39;fail&#39;</span> : function(statusCode, oHttp) { <span class="comment">/* error handling */</span> } };
 </pre></div><ul>
@@ -1103,7 +1103,7 @@ Methods</h2></td></tr>
 <li>If <em>url</em> is a web url, then <em>callback</em> is same as the <em>callback</em> parameter passed to LOCALJS.WEB_SERVICE.callUrl. Refer to LOCALJS.WEB_SERVICE.callUrl for more detail.</li>
 </ul>
 <p>The following code illustrates how to use the readUrl method:</p>
-<div class="fragment"><pre class="fragment">    var content = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.readUrl(<span class="stringliteral">&quot;file:///C:\\settings.txt&quot;</span>); <span class="comment">// synchronized read</span>
+<div class="fragment"><pre class="fragment">    var content = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.readUrl(<span class="stringliteral">&quot;file:///C:\\settings.txt&quot;</span>); <span class="comment">// synchronized read: readUrl methods returns after read operation ends.</span>
 
     <span class="comment">// asynchronized read</span>
     var onOK = function(contentText)
@@ -1148,8 +1148,8 @@ Methods</h2></td></tr>
 <p>When provided with a relative URL and its base, returns a URL in canonical form, or <code>false</code> if the parameters are incorrect. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">baseUrl</td><td>The base url </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">relativeUrl</td><td>The relative url</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">baseUrl</td><td>The base url. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">relativeUrl</td><td>The relative url.</td></tr>
   </table>
   </dd>
 </dl>
@@ -1174,14 +1174,14 @@ Methods</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Returns normalized url of current document (remove trailing query strings), optionally append a relative url. </p>
+<p>Returns normalized url of current document (remove trailing query strings), optionally appended with a relative url. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">relativeUrl</td><td>Optional. If present, the relative url will be appended to result url.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>Normalized url.</dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>Normalized url, optionally appended with a relative url.</dd></dl>
 <p>The following code illustrates how to use the normalizeUrl method:</p>
 <div class="fragment"><pre class="fragment">    <span class="comment">// assume current url is http://example.com/index.php?id=10&quot;</span>
     var url = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.normalizeUrl(); <span class="comment">// return &quot;http://example.com/index.php&quot;</span>
