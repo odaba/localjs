@@ -75,19 +75,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">执行一个可执行文件，在用户的默认浏览器中打开一个 url，或者用默认应用程序打开一个文件。  <a href="#a7c00c5f992f9567ec7b69d6e3cf25934"></a><br/></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Url 操作</div></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#ad6e821755d0d8b859a69853bb8b3144d">pathToUrl</a> (String path)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">返回指向一个本地文件的 url。如果失败，返回 <code>false。</code>  <a href="#ad6e821755d0d8b859a69853bb8b3144d"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">返回指向给定本地文件的 url。如果失败，返回 <code>false。</code>  <a href="#ad6e821755d0d8b859a69853bb8b3144d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#af4d5763f007ae57760e4903712f323f3">urlToPath</a> (String url)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the local file path from a url, return false if fails.  <a href="#af4d5763f007ae57760e4903712f323f3"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">返回对应于给定 url 的本地文件名。如果失败，返回 <code>false。</code>  <a href="#af4d5763f007ae57760e4903712f323f3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a58b7576336d5c990156ccc211bc09c3a">isUrl</a> (String url)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <code>true</code> if the url given is a valid url, <code>false</code> if it's not.  <a href="#a58b7576336d5c990156ccc211bc09c3a"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">如果给定字符串是合法的 url，返回 <code>true；否则返回</code> <code>false。</code>  <a href="#a58b7576336d5c990156ccc211bc09c3a"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a0c351eaed10231b01698938550e31cbe">isFileUrl</a> (String url)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Return <code>true</code> if the url given is a file system url, <code>false</code> if it's not.  <a href="#a0c351eaed10231b01698938550e31cbe"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">如果给定 url 指向本地文件或文件夹，返回 <code>true；否则返回</code> <code>false。</code>  <a href="#a0c351eaed10231b01698938550e31cbe"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a755585f93d7b4fdc84e455fe334a7e29">readUrl</a> (String url,[optional] Object callback)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">One single function to read both local and remote files, synchronized or asynchronized.  <a href="#a755585f93d7b4fdc84e455fe334a7e29"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">以同步或异步方式读取本地或 web 服务器上的文件。  <a href="#a755585f93d7b4fdc84e455fe334a7e29"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#ab7cbd8e35cc7111c289225daf4696cea">buildUrl</a> (String baseUrl, String relativeUrl)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">When provided with a relative URL and its base, returns a URL in canonical form, or <code>false</code> if the parameters are incorrect.  <a href="#ab7cbd8e35cc7111c289225daf4696cea"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">把基本 url 和相对 url 组合成一个新的 url。返回 <code>false</code> 如果参数不正确。  <a href="#ab7cbd8e35cc7111c289225daf4696cea"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a841b182f6e93f43af7ba128d020dcea7">normalizeUrl</a> ([optional], String relativeUrl)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns normalized url of current document (remove trailing query strings), optionally append a relative url.  <a href="#a841b182f6e93f43af7ba128d020dcea7"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">返回格式化（去掉 url 的查询部分）后的当前页面的 url，或者当前页面的 url 和一个相对 url 的组合。  <a href="#a841b182f6e93f43af7ba128d020dcea7"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>详细描述</h2>
 <p>开源的 JavaScript 对象。提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。 </p>
@@ -958,7 +958,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>返回指向一个本地文件的 url。如果失败，返回 <code>false。</code> </p>
+<p>返回指向给定本地文件的 url。如果失败，返回 <code>false。</code> </p>
 <dl><dt><b>参数:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>本地文件的路径名。</td></tr>
@@ -986,16 +986,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Returns the local file path from a url, return false if fails. </p>
+<p>返回对应于给定 url 的本地文件名。如果失败，返回 <code>false。</code> </p>
 <dl><dt><b>参数:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>The url whose local file path will be returned.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>给定的 url。</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>返回:</b></dt><dd>The local file path from the url, or <code>false</code> if fails to convert. Use <code>false</code> <code>===</code> to check if the convert fails.</dd></dl>
-<p>The following code illustrates how to use the urlToPath method:</p>
-<div class="fragment"><pre class="fragment">    var path = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.urlToPath(<span class="stringliteral">&quot;file:///C:/test.ini&quot;</span>); <span class="comment">// return C:\test.ini</span>
+<dl class="return"><dt><b>返回:</b></dt><dd>对应于给定 url 的本地文件名。如果失败，返回 <code>false。要判断是否失败，用</code> <code>false</code> <code>===</code> 。</dd></dl>
+<p>参见下面的示例代码：</p>
+<div class="fragment"><pre class="fragment">    var path = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.urlToPath(<span class="stringliteral">&quot;file:///C:/test.ini&quot;</span>); <span class="comment">// 返回 C:\test.ini</span>
 </pre></div> 
 </div>
 </div>
@@ -1014,17 +1014,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Return <code>true</code> if the url given is a valid url, <code>false</code> if it's not. </p>
+<p>如果给定字符串是合法的 url，返回 <code>true；否则返回</code> <code>false。</code> </p>
 <dl><dt><b>参数:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>The url to be checked</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>给定字符串。</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>返回:</b></dt><dd><code>true</code> if the url given is a valid url, <code>false</code> if it's not.</dd></dl>
-<p>The following code illustrates how to use the isUrl method:</p>
-<div class="fragment"><pre class="fragment">    var ok = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.isUrl(<span class="stringliteral">&quot;http://localjs.org/&quot;</span>); <span class="comment">// a valid url</span>
-    var error = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.isUrl(<span class="stringliteral">&quot;localjs.org&quot;</span>);  <span class="comment">// not a valid url</span>
+<dl class="return"><dt><b>返回:</b></dt><dd>如果给定字符串是合法的 url，返回 <code>true；否则返回</code> <code>false。</code> </dd></dl>
+<p>参见下面的示例代码：</p>
+<div class="fragment"><pre class="fragment">    var ok = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.isUrl(<span class="stringliteral">&quot;http://localjs.org/&quot;</span>); <span class="comment">// 是有效的 url</span>
+    var error = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.isUrl(<span class="stringliteral">&quot;localjs.org&quot;</span>);  <span class="comment">// 不是有效的 url</span>
 </pre></div> 
 </div>
 </div>
@@ -1043,18 +1043,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Return <code>true</code> if the url given is a file system url, <code>false</code> if it's not. </p>
+<p>如果给定 url 指向本地文件或文件夹，返回 <code>true；否则返回</code> <code>false。</code> </p>
 <dl><dt><b>参数:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>The url to be checked</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>给定 url。</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>返回:</b></dt><dd><code>true</code> if the url given is a file system url, <code>false</code> if it's not.</dd></dl>
-<p>The file or folder pointed by the url doesn't have to exist.</p>
-<p>The following code illustrates how to use the isFileUrl method:</p>
-<div class="fragment"><pre class="fragment">    var ok = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.isFileUrl(<span class="stringliteral">&quot;file:///C:\\Windows\\system32\\notepad.exe&quot;</span>); <span class="comment">// a file system url</span>
-    var error = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.isFileUrl(<span class="stringliteral">&quot;http://localjs.org/&quot;</span>);  <span class="comment">// a http url</span>
+<dl class="return"><dt><b>返回:</b></dt><dd>如果给定 url 指向本地文件或文件夹，返回 <code>true；否则返回</code> <code>false。</code> </dd></dl>
+<p>所指向的本地文件或文件夹不一定要存在。</p>
+<p>参见下面的示例代码：</p>
+<div class="fragment"><pre class="fragment">    var ok = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.isFileUrl(<span class="stringliteral">&quot;file:///C:\\Windows\\system32\\notepad.exe&quot;</span>); <span class="comment">// 指向本地文件的 url</span>
+    var error = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.isFileUrl(<span class="stringliteral">&quot;http://localjs.org/&quot;</span>);  <span class="comment">// http url</span>
 </pre></div> 
 </div>
 </div>
@@ -1083,29 +1083,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>One single function to read both local and remote files, synchronized or asynchronized. </p>
+<p>以同步或异步方式读取本地或 web 服务器上的文件。 </p>
 <dl><dt><b>参数:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>The url to be read. Can be a file url or http url </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>Optional. Details are discussed below.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>要读取的 url。可以指向本地文件或 web 服务器上的文件。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">callback</td><td>可选参数。细节见下面。</td></tr>
   </table>
   </dd>
 </dl>
-<p>If <em>callback</em> is omitted, the readUrl method waits until the read operation ends and returns the content of the url. If read fails, readUrl returns <code>false</code>. Use <code>false</code> <code>===</code> to check if the read fails.</p>
-<p>If <em>callback</em> is not omitted, then readUrl method returns immediately and read result are passed to functions in callback object.</p>
-<p>The callback object should have two properties <code>ok</code> and <code>fail</code>, each be a function:</p>
-<div class="fragment"><pre class="fragment">    var callback = {<span class="stringliteral">&#39;ok&#39;</span> : function(contentText, oHttp) { <span class="comment">/* read ok handling */</span> },
-                    <span class="stringliteral">&#39;fail&#39;</span> : function(statusCode, oHttp) { <span class="comment">/* error handling */</span> } };
+<p>如果 <em>callback</em> 参数被省略，readUrl 方法等待读操作结束，并返回 url 的内容。如果读操作失败，返回 <code>false。要判断是否失败，用</code> <code>false</code> <code>===。</code> </p>
+<p>如果 <em>callback</em> 参数没有被省略，readUrl 方法启动读操作之后就返回。读操作的结果由 <em>callback</em> 对象中的函数返回。</p>
+<p><code>callback</code> 对象需要有两个属性：<code>ok</code> 和 <code>fail，每个属性都是一个函数：</code> </p>
+<div class="fragment"><pre class="fragment">    var callback = {<span class="stringliteral">&#39;ok&#39;</span> : function(contentText, oHttp) { <span class="comment">/* 读操作成功的后续处理 */</span> },
+                    <span class="stringliteral">&#39;fail&#39;</span> : function(statusCode, oHttp) { <span class="comment">/* 读操作失败的后续处理 */</span> } };
 </pre></div><ul>
-<li>If <em>url</em> is a file system url, only <em>contentText</em> is used, which is the file content if read succeeded. Other parameters in callback functions are not used.</li>
+<li>如果 <em>url</em> 指向本地文件，仅参数 <em>contentText</em> 有意义：当读操作成功时，所读取的文件内容。其他参数都没有意义。</li>
 </ul>
 <ul>
-<li>If <em>url</em> is a web url, then <em>callback</em> is same as the <em>callback</em> parameter passed to LOCALJS.WEB_SERVICE.callUrl. Refer to LOCALJS.WEB_SERVICE.callUrl for more detail.</li>
+<li>如果 <em>url</em> 指向 web 服务器，<em>callback</em> 参数和 LOCALJS.WEB_SERVICE.callUrl 的 <em>callback</em> 参数一样。更多细节参见 LOCALJS.WEB_SERVICE.callUrl.</li>
 </ul>
-<p>The following code illustrates how to use the readUrl method:</p>
-<div class="fragment"><pre class="fragment">    var content = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.readUrl(<span class="stringliteral">&quot;file:///C:\\settings.txt&quot;</span>); <span class="comment">// synchronized read</span>
+<p>示例代码如下：</p>
+<div class="fragment"><pre class="fragment">    var content = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.readUrl(<span class="stringliteral">&quot;file:///C:\\settings.txt&quot;</span>); <span class="comment">// 同步的读操作：readUrl 等待读操作结束之后返回</span>
 
-    <span class="comment">// asynchronized read</span>
+    <span class="comment">// 异步的读操作</span>
     var onOK = function(contentText)
     {
         alert(contentText);
@@ -1113,7 +1113,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 
     var onFail = function(statusCode)
     {
-        alert(<span class="stringliteral">&quot;Read failed, the error status is &quot;</span> + statusCode;
+        alert(<span class="stringliteral">&quot;读操作失败。错误码是 &quot;</span> + statusCode;
     };
 
     <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.readUrl(<span class="stringliteral">&quot;http://example.com/example.php&quot;</span>, {<span class="stringliteral">&#39;ok&#39;</span>: onOK, <span class="stringliteral">&#39;fail&#39;</span>: onFail});
@@ -1145,17 +1145,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>When provided with a relative URL and its base, returns a URL in canonical form, or <code>false</code> if the parameters are incorrect. </p>
+<p>把基本 url 和相对 url 组合成一个新的 url。返回 <code>false</code> 如果参数不正确。 </p>
 <dl><dt><b>参数:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">baseUrl</td><td>The base url </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">relativeUrl</td><td>The relative url</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">baseUrl</td><td>基本 url。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">relativeUrl</td><td>相对 url。</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>返回:</b></dt><dd>The combined url, or <code>false</code> if the parameters are incorrect.</dd></dl>
-<p>The following code illustrates how to use the buildUrl method:</p>
-<div class="fragment"><pre class="fragment">    var url = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.buildUrl(<span class="stringliteral">&quot;http://example.com/app/index.php&quot;</span>, <span class="stringliteral">&quot;../go.php&quot;</span>); <span class="comment">// return &quot;http://example.com/go.php&quot;</span>
+<dl class="return"><dt><b>返回:</b></dt><dd>组合得到的新 url。如果参数不正确，返回 <code>false。</code> </dd></dl>
+<p>参见下面的示例代码：</p>
+<div class="fragment"><pre class="fragment">    var url = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.buildUrl(<span class="stringliteral">&quot;http://example.com/app/index.php&quot;</span>, <span class="stringliteral">&quot;../go.php&quot;</span>); <span class="comment">// 返回 &quot;http://example.com/go.php&quot;</span>
 </pre></div> 
 </div>
 </div>
@@ -1174,18 +1174,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Returns normalized url of current document (remove trailing query strings), optionally append a relative url. </p>
+<p>返回格式化（去掉 url 的查询部分）后的当前页面的 url，或者当前页面的 url 和一个相对 url 的组合。 </p>
 <dl><dt><b>参数:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">relativeUrl</td><td>Optional. If present, the relative url will be appended to result url.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">relativeUrl</td><td>可选参数。相对 url。</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>返回:</b></dt><dd>Normalized url.</dd></dl>
-<p>The following code illustrates how to use the normalizeUrl method:</p>
+<dl class="return"><dt><b>返回:</b></dt><dd>格式化（去掉 url 的查询部分）后的当前页面的 url，或者当前页面的 url 和一个相对 url 的组合。</dd></dl>
+<p>参见下面的示例代码：</p>
 <div class="fragment"><pre class="fragment">    <span class="comment">// assume current url is http://example.com/index.php?id=10&quot;</span>
-    var url = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.normalizeUrl(); <span class="comment">// return &quot;http://example.com/index.php&quot;</span>
-    var url2 = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.normalizeUrl(<span class="stringliteral">&quot;app/go.php&quot;</span>); <span class="comment">// return &quot;http://example.com/app/go.php&quot;</span>
+    var url = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.normalizeUrl(); <span class="comment">// 返回 &quot;http://example.com/index.php&quot;</span>
+    var url2 = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.normalizeUrl(<span class="stringliteral">&quot;app/go.php&quot;</span>); <span class="comment">// 返回 &quot;http://example.com/app/go.php&quot;</span>
 </pre></div> 
 </div>
 </div>
