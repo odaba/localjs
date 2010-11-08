@@ -44,9 +44,9 @@ Methods</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a93e2667c7fe3288e3e2db065fcc9f063">folderExists</a> (String foldername)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if a specified folder exists; <code>false</code> if it does not.  <a href="#a93e2667c7fe3288e3e2db065fcc9f063"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a6181d0579cb9654e86cd506737f0475f">getAppDataFolder</a> ([optional] String sub_folder)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get user data folder, optionally provide a sub folder name.  <a href="#a6181d0579cb9654e86cd506737f0475f"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get full pathname of user data folder, optionally provide a sub folder name.  <a href="#a6181d0579cb9654e86cd506737f0475f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a42f314c1d5c8bc86abf76ecb850039c0">getProgramFolder</a> ([optional] String sub_folder)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Program Files folder, optionally provide a sub folder name.  <a href="#a42f314c1d5c8bc86abf76ecb850039c0"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Full pathname of Program Files folder, optionally provide a sub folder name.  <a href="#a42f314c1d5c8bc86abf76ecb850039c0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a943b822f2c3c6f32774e389330bd6a63">getExeFilename</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get full filename of current exe file.  <a href="#a943b822f2c3c6f32774e389330bd6a63"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#ad1a8f26a2cf973ae0ddffc624a479e62">getExeFolder</a> ()</td></tr>
@@ -56,7 +56,7 @@ Methods</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#ab2be2bfa8a34bf9e4cc76064213c9240">buildPath</a> (String parent, String child)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a name to an existing path.  <a href="#ab2be2bfa8a34bf9e4cc76064213c9240"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#af18bb442d4a17a21806d850fab3dcb99">readFileUTF8</a> (String filename)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Read UTF8 format file and return the content, or false if read fails.  <a href="#af18bb442d4a17a21806d850fab3dcb99"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Read UTF8 format file and return the content, or <code>false</code> if read fails.  <a href="#af18bb442d4a17a21806d850fab3dcb99"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a79aabfb4240680c61bf91440ff6e9823">writeFileUTF8</a> (String filename, String text)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Save text to file in UTF8 format. Existing content will be overwritten. A new file will be created if not exists.  <a href="#a79aabfb4240680c61bf91440ff6e9823"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#ae422d3995ad20fae50da0a6a5667654f">deleteFile</a> (String filespec,[optional] boolean force)</td></tr>
@@ -428,17 +428,17 @@ Methods</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get user data folder, optionally provide a sub folder name. </p>
+<p>Get full pathname of user data folder, optionally provide a sub folder name. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">sub_folder</td><td>Optional. If present, return sub folder name under user data folder.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sub_folder</td><td>Optional. If present, the method returns sub folder name under user data folder.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>User data folder if <em>sub_folder</em> is omitted; if <em>sub_folder</em> presents, returns the sub folder under user data folder.</dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>Full pathname of user data folder if <em>sub_folder</em> is omitted; if <em>sub_folder</em> presents, returns the sub folder under user data folder.</dd></dl>
 <p>The following code illustrates how to use the getAppDataFolder method:</p>
-<div class="fragment"><pre class="fragment">    var app_data_folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.getAppDataFolder(); <span class="comment">// On Windows XP, return C:\Documents and Settings\Username\Application Data</span>
-    var app_data_sub_folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.getAppDataFolder(<span class="stringliteral">&quot;LocalJS&quot;</span>); <span class="comment">// On Windows XP, return C:\Documents and Settings\Username\Application Data\LocalJS</span>
+<div class="fragment"><pre class="fragment">    var app_data_folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.getAppDataFolder(); <span class="comment">// On Windows XP, returns C:\Documents and Settings\Username\Application Data</span>
+    var app_data_sub_folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.getAppDataFolder(<span class="stringliteral">&quot;LocalJS&quot;</span>); <span class="comment">// On Windows XP, returns C:\Documents and Settings\Username\Application Data\LocalJS</span>
 </pre></div><dl class="note"><dt><b>Note:</b></dt><dd>The getAppDataFolder method doesn't create the sub folder if it doesn't exists. </dd></dl>
 
 </div>
@@ -458,17 +458,17 @@ Methods</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Get Program Files folder, optionally provide a sub folder name. </p>
+<p>Get Full pathname of Program Files folder, optionally provide a sub folder name. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">sub_folder</td><td>Optional. If present, return sub folder name under user Program Files folder.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>Program Files folder if <em>sub_folder</em> is omitted; if <em>sub_folder</em> presents, returns the sub folder under Program Files folder.</dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>Full pathname of Program Files folder if <em>sub_folder</em> is omitted; if <em>sub_folder</em> presents, returns the sub folder under Program Files folder.</dd></dl>
 <p>The following code illustrates how to use the getProgramFolder method:</p>
-<div class="fragment"><pre class="fragment">    var program_folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.getProgramFolder(); <span class="comment">// return C:\Program Files</span>
-    var program_folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.getProgramFolder(<span class="stringliteral">&quot;LocalJS&quot;</span>); <span class="comment">// return C:\Program Files\LocalJS</span>
+<div class="fragment"><pre class="fragment">    var program_folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.getProgramFolder(); <span class="comment">// returns C:\Program Files</span>
+    var program_folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.getProgramFolder(<span class="stringliteral">&quot;LocalJS&quot;</span>); <span class="comment">// returns C:\Program Files\LocalJS</span>
 </pre></div><dl class="note"><dt><b>Note:</b></dt><dd>The getProgramFolder method doesn't create the sub folder if it doesn't exists. </dd></dl>
 
 </div>
@@ -490,7 +490,7 @@ Methods</h2></td></tr>
 <p>Get full filename of current exe file. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>Full filename of current exe file.</dd></dl>
 <p>The following code illustrates how to use the getExeFilename method:</p>
-<div class="fragment"><pre class="fragment">    var exe_name = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.getExeFilename(); <span class="comment">// for example, return C:\Program Files\LocalJS\app.exe</span>
+<div class="fragment"><pre class="fragment">    var exe_name = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.getExeFilename(); <span class="comment">// for example, returns C:\Program Files\LocalJS\app.exe</span>
 </pre></div> 
 </div>
 </div>
@@ -511,7 +511,7 @@ Methods</h2></td></tr>
 <p>Get folder where current exe file exists. </p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>Folder where current exe file exists.</dd></dl>
 <p>The following code illustrates how to use the getExeFolder method:</p>
-<div class="fragment"><pre class="fragment">    var exe_folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.getExeFolder(); <span class="comment">// for example, return C:\Program Files\LocalJS</span>
+<div class="fragment"><pre class="fragment">    var exe_folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.getExeFolder(); <span class="comment">// for example, returns C:\Program Files\LocalJS</span>
 </pre></div> 
 </div>
 </div>
@@ -577,7 +577,7 @@ Methods</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>Returns:</b></dt><dd>The combined path. The path doesn't have to exist and wonn't be created if not existed.</dd></dl>
+<dl class="return"><dt><b>Returns:</b></dt><dd>The combined path. The path doesn't have to exist and won't be created if not existed.</dd></dl>
 <p>The following code illustrates how to use the buildPath method:</p>
 <div class="fragment"><pre class="fragment">    var path = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.buildPath(<span class="stringliteral">&quot;C:\\Program Files&quot;</span>, <span class="stringliteral">&quot;LocalJS&quot;</span>); <span class="comment">// return C:\Program Files\LocalJS</span>
 </pre></div> 
@@ -598,7 +598,7 @@ Methods</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Read UTF8 format file and return the content, or false if read fails. </p>
+<p>Read UTF8 format file and return the content, or <code>false</code> if read fails. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>The UTF8 format file to read.</td></tr>
@@ -642,7 +642,7 @@ Methods</h2></td></tr>
 <p>Save text to file in UTF8 format. Existing content will be overwritten. A new file will be created if not exists. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>the name of file to write to </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>the name of file to write to. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">text</td><td>the text to write to.</td></tr>
   </table>
   </dd>
@@ -688,7 +688,7 @@ Methods</h2></td></tr>
   </dd>
 </dl>
 <p>An error occurs if no matching files are found. The deleteFile method stops on the first error it encounters. No attempt is made to roll back or undo any changes that were made before an error occurred.</p>
-<p>The following example illustrates the use of the deleteFile method.</p>
+<p>The following example illustrates the use of the deleteFile method:</p>
 <div class="fragment"><pre class="fragment">    <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.deleteFile(<span class="stringliteral">&quot;C:\\settings.ini&quot;</span>);
 </pre></div> 
 </div>
