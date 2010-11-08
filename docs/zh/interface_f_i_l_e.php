@@ -66,16 +66,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#ac37bcb6da1316d7792a5491a2f7801a6">deleteFolder</a> (String folderspec,[optional] boolean force)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">删除指定文件夹及其内容。  <a href="#ac37bcb6da1316d7792a5491a2f7801a6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Array&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#af20f5de0d692771dafbeef7fb57fc500">listFolder</a> (String folder)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an array of all File objects contained in the specified folder, including those with hidden and system file attributes set.  <a href="#af20f5de0d692771dafbeef7fb57fc500"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">返回指定文件夹中所有的文件对象。  <a href="#af20f5de0d692771dafbeef7fb57fc500"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a561e6ec182a20ebe1d85653d67b0ae44">browseFile</a> (String initialDir, String strFilter, String title, String defExt,[optional] String initialFile,[optional] boolean readOnly)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Open file dialig to browse to a file, return path to the select file, or false if the dialog is canceled.  <a href="#a561e6ec182a20ebe1d85653d67b0ae44"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a5ddc249346092c53b6e0fadd644a0fb7">browseFolder</a> (String title,[optional] String rootFolder)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a dialog box that enables the user to select a folder and then returns the path to the selected folder, false if the dialog is canceled, or "" if user doesn't select a file system folder.  <a href="#a5ddc249346092c53b6e0fadd644a0fb7"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">弹出文件夹选择对话框。返回用户所选择文件夹的路径。如果用户取消对话框，返回 <code>false。如果用户选择了虚拟文件夹，返回</code> ""。  <a href="#a5ddc249346092c53b6e0fadd644a0fb7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a7c00c5f992f9567ec7b69d6e3cf25934">exec</a> (String file)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute a executable file, open a url in user default browser, or open a file with system default application.  <a href="#a7c00c5f992f9567ec7b69d6e3cf25934"></a><br/></td></tr>
-<tr><td colspan="2"><div class="groupHeader">Url operations</div></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">执行一个可执行文件，在用户的默认浏览器中打开一个 url，或者用默认应用程序打开一个文件。  <a href="#a7c00c5f992f9567ec7b69d6e3cf25934"></a><br/></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Url 操作</div></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#ad6e821755d0d8b859a69853bb8b3144d">pathToUrl</a> (String path)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the url points to a local file, returns false if fails.  <a href="#ad6e821755d0d8b859a69853bb8b3144d"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">返回指向一个本地文件的 url。如果失败，返回 <code>false。</code>  <a href="#ad6e821755d0d8b859a69853bb8b3144d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#af4d5763f007ae57760e4903712f323f3">urlToPath</a> (String url)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the local file path from a url, return false if fails.  <a href="#af4d5763f007ae57760e4903712f323f3"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a58b7576336d5c990156ccc211bc09c3a">isUrl</a> (String url)</td></tr>
@@ -776,15 +776,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Returns an array of all File objects contained in the specified folder, including those with hidden and system file attributes set. </p>
+<p>返回指定文件夹中所有的文件对象。 </p>
 <dl><dt><b>参数:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">folder</td><td>name whose content to be listed.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">folder</td><td>指定文件夹。</td></tr>
   </table>
   </dd>
 </dl>
-<p>The listFolder method wraps up <a href="http://msdn.microsoft.com/en-us/library/18b41306(VS.85).aspx" target="_blank">Files Property of Folder object</a>, refer to <a href="http://msdn.microsoft.com/en-us/library/18b41306(VS.85).aspx" target="_blank">Files Property</a> for more detail.</p>
-<p>The following code illustrates how to use the listFolder method:</p>
+<p>listFolder 方法封装了 <a href="http://msdn.microsoft.com/en-us/library/18b41306(VS.85).aspx" target="_blank">Folder 对象的 Files 属性</a>，更多细节参见 <a href="http://msdn.microsoft.com/en-us/library/18b41306(VS.85).aspx" target="_blank">Files 属性</a>。</p>
+<p>示例代码如下：</p>
 <div class="fragment"><pre class="fragment">    var file_array = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.listFolder(<span class="stringliteral">&quot;C:\\Program Files&quot;</span>), s = <span class="stringliteral">&quot;&quot;</span>;
     <span class="keywordflow">for</span> (var i = 0; i &lt; file_array.length; ++i)
     {
@@ -895,24 +895,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Creates a dialog box that enables the user to select a folder and then returns the path to the selected folder, false if the dialog is canceled, or "" if user doesn't select a file system folder. </p>
+<p>弹出文件夹选择对话框。返回用户所选择文件夹的路径。如果用户取消对话框，返回 <code>false。如果用户选择了虚拟文件夹，返回</code> ""。 </p>
 <dl><dt><b>参数:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">title</td><td>A String value that represents the title displayed inside the Browse dialog box. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">rootFolder</td><td>Optional. The root folder to use in the dialog box. The user cannot browse higher in the tree than this folder. If this value is not specified, the root folder used in the dialog box is the desktop.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">title</td><td>文件夹选择对话框的标题。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rootFolder</td><td>可选参数。文件夹选择对话框的根文件夹。用户只能选择此文件夹的子文件夹。如果该参数被省略，文件夹选择对话框的根文件夹为桌面文件夹。</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>返回:</b></dt><dd>The path to the selected folder, false if user cancels the dialog, or "" if user doesn't select a file system folder (for example, "My Computer"). Use <code>false</code> <code>===</code> to check if the dialog is canceled.</dd></dl>
-<p>The following code illustrates how to use the browseFolder method:</p>
-<div class="fragment"><pre class="fragment">    var folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.browseFolder(<span class="stringliteral">&quot;Please choose a folder&quot;</span>);
+<dl class="return"><dt><b>返回:</b></dt><dd>用户所选择文件夹的路径。如果用户取消对话框，返回 <code>false。如果用户选择了虚拟文件夹（例如，“我的电脑”），返回</code> ""。要判断用户是否取消了对话框，用 <code>false</code> <code>===</code> 。</dd></dl>
+<p>参见下面的示例代码：</p>
+<div class="fragment"><pre class="fragment">    var folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.browseFolder(<span class="stringliteral">&quot;请选择一个文件夹&quot;</span>);
     <span class="keywordflow">if</span> (<span class="keyword">false</span> === folder)
-        alert(<span class="stringliteral">&quot;The folder dialog was canceled&quot;</span>);
+        alert(<span class="stringliteral">&quot;您取消了文件夹对话框。&quot;</span>);
     <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<span class="stringliteral">&quot;&quot;</span> == folder)
-        alert(<span class="stringliteral">&quot;Please reselect the folder&quot;</span>);
+        alert(<span class="stringliteral">&quot;请重新选择文件夹。&quot;</span>);
     <span class="keywordflow">else</span>
         alert(folder);
-</pre></div><dl class="note"><dt><b>注解:</b></dt><dd>The browseFolder method wraps up <a href="http://msdn.microsoft.com/en-us/library/bb774065(VS.85).aspx" target="_blank">Shell.BrowseForFolder Method</a>. If you are interested at more detail, refer to the source code of browseFolder method in localjs_file.js, and <a href="http://msdn.microsoft.com/en-us/library/bb774065(VS.85).aspx" target="_blank">Shell.BrowseForFolder Method</a>. </dd></dl>
+</pre></div><dl class="note"><dt><b>注解:</b></dt><dd>browseFolder 方法封装了 <a href="http://msdn.microsoft.com/en-us/library/bb774065(VS.85).aspx" target="_blank">Shell.BrowseForFolder 方法</a>。如果你对更多细节感兴趣，参见 localjs_file.js 中 browseFolder 方法的源代码，以及 <a href="http://msdn.microsoft.com/en-us/library/bb774065(VS.85).aspx" target="_blank">Shell.BrowseForFolder 方法</a>。 </dd></dl>
 
 </div>
 </div>
@@ -931,15 +931,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Execute a executable file, open a url in user default browser, or open a file with system default application. </p>
+<p>执行一个可执行文件，在用户的默认浏览器中打开一个 url，或者用默认应用程序打开一个文件。 </p>
 <dl><dt><b>参数:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">file</td><td>The executable filename, or a url, or a file to be opened by system default application.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">file</td><td>可执行文件，url，或者要用默认应用程序打开的文件。</td></tr>
   </table>
   </dd>
 </dl>
-<p>The following code illustrates how to use the exec method:</p>
-<div class="fragment"><pre class="fragment">    <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.exec(<span class="stringliteral">&quot;http://localjs.org/&quot;</span>); <span class="comment">// Open the site at user default browser.</span>
+<p>参见下面的示例代码：</p>
+<div class="fragment"><pre class="fragment">    <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.exec(<span class="stringliteral">&quot;http://localjs.org/&quot;</span>); <span class="comment">// 在默认浏览器中打开该站点。</span>
 </pre></div> 
 </div>
 </div>
@@ -958,16 +958,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Returns the url points to a local file, returns false if fails. </p>
+<p>返回指向一个本地文件的 url。如果失败，返回 <code>false。</code> </p>
 <dl><dt><b>参数:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>The path to the local file</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">path</td><td>本地文件的路径名。</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>返回:</b></dt><dd>The url points to the local file, or <code>false</code> if cannot get the url. Use <code>false</code> <code>===</code> to check if the convert fails.</dd></dl>
-<p>The following code illustrates how to use the pathToUrl method:</p>
-<div class="fragment"><pre class="fragment">    var url = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.pathToUrl(<span class="stringliteral">&quot;C:\\test.ini&quot;</span>); <span class="comment">// return file:///C:/test.ini</span>
+<dl class="return"><dt><b>返回:</b></dt><dd>指向本地文件的 url。如果失败，返回 <code>false。要判断是否失败，用</code> <code>false</code> <code>===</code> 。</dd></dl>
+<p>参见下面的示例代码：</p>
+<div class="fragment"><pre class="fragment">    var url = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.pathToUrl(<span class="stringliteral">&quot;C:\\test.ini&quot;</span>); <span class="comment">// 返回 file:///C:/test.ini</span>
 </pre></div> 
 </div>
 </div>
