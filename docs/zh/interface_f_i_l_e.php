@@ -38,33 +38,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">在注册表中创建新的键值或更改已有的键值。  <a href="#a461f0e68e5dc507ba50ac94d56a2cfcd"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#aa9ccfdf0c38f87f504a5ae2f763977b7">regDelete</a> (String reg_path)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">从注册表中删除一项。  <a href="#aa9ccfdf0c38f87f504a5ae2f763977b7"></a><br/></td></tr>
-<tr><td colspan="2"><div class="groupHeader">File and folder operations</div></td></tr>
+<tr><td colspan="2"><div class="groupHeader">文件系统操作</div></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#af3294a406276bff3baad8bcb719aab66">fileExists</a> (String filename)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if a specified file exists; <code>false</code> if it does not.  <a href="#af3294a406276bff3baad8bcb719aab66"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">如果文件存在，返回 <code>true，否则返回</code> <code>false。</code>  <a href="#af3294a406276bff3baad8bcb719aab66"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a93e2667c7fe3288e3e2db065fcc9f063">folderExists</a> (String foldername)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if a specified folder exists; <code>false</code> if it does not.  <a href="#a93e2667c7fe3288e3e2db065fcc9f063"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">如果文件夹存在，返回 <code>true，否则返回</code> <code>false。</code>  <a href="#a93e2667c7fe3288e3e2db065fcc9f063"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a6181d0579cb9654e86cd506737f0475f">getAppDataFolder</a> ([optional] String sub_folder)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get user data folder, optionally provide a sub folder name.  <a href="#a6181d0579cb9654e86cd506737f0475f"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">返回用户的个人程序数据文件夹的全路径名，或个人程序数据文件夹下的一个子文件夹的全路径名。  <a href="#a6181d0579cb9654e86cd506737f0475f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a42f314c1d5c8bc86abf76ecb850039c0">getProgramFolder</a> ([optional] String sub_folder)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Program Files folder, optionally provide a sub folder name.  <a href="#a42f314c1d5c8bc86abf76ecb850039c0"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">返回应用程序文件夹的全路径名，或应用程序文件夹下的一个子文件夹的全路径名。  <a href="#a42f314c1d5c8bc86abf76ecb850039c0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a943b822f2c3c6f32774e389330bd6a63">getExeFilename</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get full filename of current exe file.  <a href="#a943b822f2c3c6f32774e389330bd6a63"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">得到当前可执行文件的全路径名。  <a href="#a943b822f2c3c6f32774e389330bd6a63"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#ad1a8f26a2cf973ae0ddffc624a479e62">getExeFolder</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get folder where current exe file exists.  <a href="#ad1a8f26a2cf973ae0ddffc624a479e62"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">得到当前可执行文件所在的文件夹的全路径名。  <a href="#ad1a8f26a2cf973ae0ddffc624a479e62"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a7366dfecccd6c0170f9fe6c4709aad25">getParentFolder</a> (String folder)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string containing the name of the parent folder of the last component in a specified path.  <a href="#a7366dfecccd6c0170f9fe6c4709aad25"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">返回给定文件夹的上一级文件夹的路径名。  <a href="#a7366dfecccd6c0170f9fe6c4709aad25"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#ab2be2bfa8a34bf9e4cc76064213c9240">buildPath</a> (String parent, String child)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Appends a name to an existing path.  <a href="#ab2be2bfa8a34bf9e4cc76064213c9240"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">把基本路径和相对路径组合成一个新的路径。  <a href="#ab2be2bfa8a34bf9e4cc76064213c9240"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#af18bb442d4a17a21806d850fab3dcb99">readFileUTF8</a> (String filename)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Read UTF8 format file and return the content, or false if read fails.  <a href="#af18bb442d4a17a21806d850fab3dcb99"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">返回UTF8格式的文件内容。如果读文件失败，返回 <code>false。</code>  <a href="#af18bb442d4a17a21806d850fab3dcb99"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a79aabfb4240680c61bf91440ff6e9823">writeFileUTF8</a> (String filename, String text)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Save text to file in UTF8 format. Existing content will be overwritten. A new file will be created if not exists.  <a href="#a79aabfb4240680c61bf91440ff6e9823"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">以UTF8格式存储文件。已有的文件内容将被重写。如果文件名不存在，会创建一个新文件。  <a href="#a79aabfb4240680c61bf91440ff6e9823"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#ae422d3995ad20fae50da0a6a5667654f">deleteFile</a> (String filespec,[optional] boolean force)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes a specified file.  <a href="#ae422d3995ad20fae50da0a6a5667654f"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">删除指定文件。  <a href="#ae422d3995ad20fae50da0a6a5667654f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a11c4eb341be6b3dcf3f2ce9d855b058e">createFolder</a> (String foldername)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a folder.  <a href="#a11c4eb341be6b3dcf3f2ce9d855b058e"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">创建一个文件夹。  <a href="#a11c4eb341be6b3dcf3f2ce9d855b058e"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#ac37bcb6da1316d7792a5491a2f7801a6">deleteFolder</a> (String folderspec,[optional] boolean force)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes a specified folder and its contents.  <a href="#ac37bcb6da1316d7792a5491a2f7801a6"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">删除指定文件夹及其内容。  <a href="#ac37bcb6da1316d7792a5491a2f7801a6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Array&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#af20f5de0d692771dafbeef7fb57fc500">listFolder</a> (String folder)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an array of all File objects contained in the specified folder, including those with hidden and system file attributes set.  <a href="#af20f5de0d692771dafbeef7fb57fc500"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a561e6ec182a20ebe1d85653d67b0ae44">browseFile</a> (String initialDir, String strFilter, String title, String defExt,[optional] String initialFile,[optional] boolean readOnly)</td></tr>
@@ -370,16 +370,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Returns <code>true</code> if a specified file exists; <code>false</code> if it does not. </p>
+<p>如果文件存在，返回 <code>true，否则返回</code> <code>false。</code> </p>
 <dl><dt><b>参数:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>The name of the file whose existence is to be determined. A complete path specification (either absolute or relative) must be provided if the file isn't expected to exist in the current folder. Wildcard characters (*, ?, and so on) are not supported.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>文件名，可以是绝对路径或相对路径。不支持 * ? 之类的文件名通配符。</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>返回:</b></dt><dd><code>true</code> if a specified file exists; <code>false</code> if it does not.</dd></dl>
-<p>This method simply wraps up <a href="http://msdn.microsoft.com/en-us/library/x23stk5t(VS.85).aspx" target="_blank">FileExists method of FileSystemObject Object</a>. Refer to <a href="http://msdn.microsoft.com/en-us/library/x23stk5t(VS.85).aspx" target="_blank">FileExists</a> for more detail.</p>
-<p>The following code illustrates how to check if a file exists or not:</p>
+<dl class="return"><dt><b>返回:</b></dt><dd>如果文件存在，返回 <code>true，否则返回</code> <code>false。</code> </dd></dl>
+<p>本方法是 <a href="http://msdn.microsoft.com/en-us/library/x23stk5t(VS.85).aspx" target="_blank">FileSystemObject 对象的 FileExists 方法</a>的简单封装。更多细节参见 <a href="http://msdn.microsoft.com/en-us/library/x23stk5t(VS.85).aspx" target="_blank">FileExists 方法</a>。</p>
+<p>下面的代码检查文件是否存在：</p>
 <div class="fragment"><pre class="fragment">    var exists = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.fileExists(<span class="stringliteral">&quot;C:\\test.ini&quot;</span>);
 </pre></div> 
 </div>
@@ -399,16 +399,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Returns <code>true</code> if a specified folder exists; <code>false</code> if it does not. </p>
+<p>如果文件夹存在，返回 <code>true，否则返回</code> <code>false。</code> </p>
 <dl><dt><b>参数:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">foldername</td><td>The name of the folder whose existence is to be determined. A complete path specification (either absolute or relative) must be provided if the folder isn't expected to exist in the current folder.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">foldername</td><td>文件夹名，可以是绝对路径或相对路径。不支持 * ? 之类的文件名通配符。</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>返回:</b></dt><dd><code>true</code> if a specified folder exists; <code>false</code> if it does not.</dd></dl>
-<p>This method simply wraps up <a href="http://msdn.microsoft.com/en-us/library/5xc78d8d(VS.85).aspx" target="_blank">FolderExists method of FileSystemObject Object</a>. Refer to <a href="http://msdn.microsoft.com/en-us/library/5xc78d8d(VS.85).aspx" target="_blank">FolderExists</a> for more detail.</p>
-<p>The following code illustrates how to check if a folder exists or not:</p>
+<dl class="return"><dt><b>返回:</b></dt><dd>如果文件夹存在，返回 <code>true，否则返回</code> <code>false。</code> </dd></dl>
+<p>本方法是 <a href="http://msdn.microsoft.com/en-us/library/5xc78d8d(VS.85).aspx" target="_blank">FileSystemObject 对象的 FolderExists 方法</a>的简单封装。更多细节参见 <a href="http://msdn.microsoft.com/en-us/library/5xc78d8d(VS.85).aspx" target="_blank">FolderExists 方法</a>。</p>
+<p>下面的代码检查文件夹是否存在：</p>
 <div class="fragment"><pre class="fragment">    var exists = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.folderExists(<span class="stringliteral">&quot;C:\\Documents and Settings&quot;</span>);
 </pre></div> 
 </div>
@@ -428,18 +428,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Get user data folder, optionally provide a sub folder name. </p>
+<p>返回用户的个人程序数据文件夹的全路径名，或个人程序数据文件夹下的一个子文件夹的全路径名。 </p>
 <dl><dt><b>参数:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">sub_folder</td><td>Optional. If present, return sub folder name under user data folder.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sub_folder</td><td>可选参数。子文件夹名。</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>返回:</b></dt><dd>User data folder if <em>sub_folder</em> is omitted; if <em>sub_folder</em> presents, returns the sub folder under user data folder.</dd></dl>
-<p>The following code illustrates how to use the getAppDataFolder method:</p>
-<div class="fragment"><pre class="fragment">    var app_data_folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.getAppDataFolder(); <span class="comment">// On Windows XP, return C:\Documents and Settings\Username\Application Data</span>
-    var app_data_sub_folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.getAppDataFolder(<span class="stringliteral">&quot;LocalJS&quot;</span>); <span class="comment">// On Windows XP, return C:\Documents and Settings\Username\Application Data\LocalJS</span>
-</pre></div><dl class="note"><dt><b>注解:</b></dt><dd>The getAppDataFolder method doesn't create the sub folder if it doesn't exists. </dd></dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>如果 <em>sub_folder</em> 被省略，返回用户的个人程序数据文件夹的全路径名；如果 <em>sub_folder</em> 没有被省略，返回个人程序数据文件夹下的该子文件夹的全路径名。</dd></dl>
+<p>参见下面的示例代码：</p>
+<div class="fragment"><pre class="fragment">    var app_data_folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.getAppDataFolder(); <span class="comment">// 在 Windows XP 上，返回 C:\Documents and Settings\Username\Application Data</span>
+    var app_data_sub_folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.getAppDataFolder(<span class="stringliteral">&quot;LocalJS&quot;</span>); <span class="comment">// 在 Windows XP 上，返回 C:\Documents and Settings\Username\Application Data\LocalJS</span>
+</pre></div><dl class="note"><dt><b>注解:</b></dt><dd>如果子文件夹不存在，getAppDataFolder 方法不会创建它。 </dd></dl>
 
 </div>
 </div>
@@ -458,18 +458,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Get Program Files folder, optionally provide a sub folder name. </p>
+<p>返回应用程序文件夹的全路径名，或应用程序文件夹下的一个子文件夹的全路径名。 </p>
 <dl><dt><b>参数:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">sub_folder</td><td>Optional. If present, return sub folder name under user Program Files folder.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sub_folder</td><td>可选参数。子文件夹名。</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>返回:</b></dt><dd>Program Files folder if <em>sub_folder</em> is omitted; if <em>sub_folder</em> presents, returns the sub folder under Program Files folder.</dd></dl>
-<p>The following code illustrates how to use the getProgramFolder method:</p>
-<div class="fragment"><pre class="fragment">    var program_folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.getProgramFolder(); <span class="comment">// return C:\Program Files</span>
-    var program_folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.getProgramFolder(<span class="stringliteral">&quot;LocalJS&quot;</span>); <span class="comment">// return C:\Program Files\LocalJS</span>
-</pre></div><dl class="note"><dt><b>注解:</b></dt><dd>The getProgramFolder method doesn't create the sub folder if it doesn't exists. </dd></dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>如果 <em>sub_folder</em> 被省略，返回应用程序文件夹的全路径名；如果 <em>sub_folder</em> 没有被省略，返回应用程序文件夹下的该子文件夹的全路径名。</dd></dl>
+<p>参见下面的示例代码：</p>
+<div class="fragment"><pre class="fragment">    var program_folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.getProgramFolder(); <span class="comment">// 返回 C:\Program Files</span>
+    var program_folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.getProgramFolder(<span class="stringliteral">&quot;LocalJS&quot;</span>); <span class="comment">// 返回 C:\Program Files\LocalJS</span>
+</pre></div><dl class="note"><dt><b>注解:</b></dt><dd>如果子文件夹不存在，getProgramFolder 方法不会创建它。 </dd></dl>
 
 </div>
 </div>
@@ -487,10 +487,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Get full filename of current exe file. </p>
-<dl class="return"><dt><b>返回:</b></dt><dd>Full filename of current exe file.</dd></dl>
-<p>The following code illustrates how to use the getExeFilename method:</p>
-<div class="fragment"><pre class="fragment">    var exe_name = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.getExeFilename(); <span class="comment">// for example, return C:\Program Files\LocalJS\app.exe</span>
+<p>得到当前可执行文件的全路径名。 </p>
+<dl class="return"><dt><b>返回:</b></dt><dd>当前可执行文件的全路径名。</dd></dl>
+<p>参见下面的示例代码：</p>
+<div class="fragment"><pre class="fragment">    var exe_name = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.getExeFilename(); <span class="comment">// 例如，返回 C:\Program Files\LocalJS\app.exe</span>
 </pre></div> 
 </div>
 </div>
@@ -508,10 +508,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Get folder where current exe file exists. </p>
-<dl class="return"><dt><b>返回:</b></dt><dd>Folder where current exe file exists.</dd></dl>
-<p>The following code illustrates how to use the getExeFolder method:</p>
-<div class="fragment"><pre class="fragment">    var exe_folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.getExeFolder(); <span class="comment">// for example, return C:\Program Files\LocalJS</span>
+<p>得到当前可执行文件所在的文件夹的全路径名。 </p>
+<dl class="return"><dt><b>返回:</b></dt><dd>当前可执行文件所在的文件夹的全路径名。</dd></dl>
+<p>参见下面的示例代码：</p>
+<div class="fragment"><pre class="fragment">    var exe_folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.getExeFolder(); <span class="comment">// 例如，返回 C:\Program Files\LocalJS</span>
 </pre></div> 
 </div>
 </div>
@@ -530,17 +530,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Returns a string containing the name of the parent folder of the last component in a specified path. </p>
+<p>返回给定文件夹的上一级文件夹的路径名。 </p>
 <dl><dt><b>参数:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">folder</td><td>The path specification for the component whose parent folder name is to be returned.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">folder</td><td>给定文件夹的路径。</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>返回:</b></dt><dd>A string containing the name of the parent folder of the last component in a specified path.</dd></dl>
-<p>The following code illustrates how to use the getParentFolder method:</p>
-<div class="fragment"><pre class="fragment">    var parent_folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.getParentFolder(<span class="stringliteral">&quot;C:\\Program Files\\LocalJS&quot;</span>); <span class="comment">// return C:\Program Files</span>
-</pre></div><dl class="note"><dt><b>注解:</b></dt><dd>The getParentFolder method works only on the provided path string. It does not attempt to resolve the path, nor does it check for the existence of the specified path. </dd></dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>给定文件夹的上一级文件夹的路径名。</dd></dl>
+<p>参见下面的示例代码：</p>
+<div class="fragment"><pre class="fragment">    var parent_folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.getParentFolder(<span class="stringliteral">&quot;C:\\Program Files\\LocalJS&quot;</span>); <span class="comment">// 返回 C:\Program Files</span>
+</pre></div><dl class="note"><dt><b>注解:</b></dt><dd>getParentFolder 方法仅仅分析给定的文件夹路径。它不试图验证路径的有效性或者文件夹是否存在。 </dd></dl>
 
 </div>
 </div>
@@ -569,17 +569,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Appends a name to an existing path. </p>
+<p>把基本路径和相对路径组合成一个新的路径。 </p>
 <dl><dt><b>参数:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">parent</td><td>Existing path to which name is appended. Path can be absolute or relative and need not specify an existing folder. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">child</td><td>Name being appended to the existing path.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">parent</td><td>基本路径。可以是绝对或相对路径。该路径可以不代表实际存在的文件夹。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">child</td><td>相对路径。</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>返回:</b></dt><dd>The combined path. The path doesn't have to exist and wonn't be created if not existed.</dd></dl>
-<p>The following code illustrates how to use the buildPath method:</p>
-<div class="fragment"><pre class="fragment">    var path = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.buildPath(<span class="stringliteral">&quot;C:\\Program Files&quot;</span>, <span class="stringliteral">&quot;LocalJS&quot;</span>); <span class="comment">// return C:\Program Files\LocalJS</span>
+<dl class="return"><dt><b>返回:</b></dt><dd>组合得到的新路径。该路径可以不实际存在；如果不存在也不会被创建。</dd></dl>
+<p>参见下面的示例代码：</p>
+<div class="fragment"><pre class="fragment">    var path = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.buildPath(<span class="stringliteral">&quot;C:\\Program Files&quot;</span>, <span class="stringliteral">&quot;LocalJS&quot;</span>); <span class="comment">// 返回 C:\Program Files\LocalJS</span>
 </pre></div> 
 </div>
 </div>
@@ -598,19 +598,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Read UTF8 format file and return the content, or false if read fails. </p>
+<p>返回UTF8格式的文件内容。如果读文件失败，返回 <code>false。</code> </p>
 <dl><dt><b>参数:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>The UTF8 format file to read.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>要读取的文件名。</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>返回:</b></dt><dd>Content of the file as string, or false if read fails. Use <code>false</code> <code>===</code> to test if reading fails.</dd></dl>
-<dl class="note"><dt><b>注解:</b></dt><dd>The UTF8 file should not have the leading BOM.</dd></dl>
-<p>The following code illustrates how to use the readFileUTF8 method to read file in:</p>
+<dl class="return"><dt><b>返回:</b></dt><dd>UTF8 格式的文件内容。如果读文件失败，返回 <code>false。要判断读文件是否失败，用</code> <code>false</code> <code>===</code> .</dd></dl>
+<dl class="note"><dt><b>注解:</b></dt><dd>UTF8 文件不能以 BOM 开头。</dd></dl>
+<p>参见下面的示例代码：</p>
 <div class="fragment"><pre class="fragment">    var content = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.readFileUTF8(<span class="stringliteral">&quot;C:\\settings.ini&quot;</span>);
     <span class="keywordflow">if</span> (<span class="keyword">false</span> === content)
-        alert(<span class="stringliteral">&quot;Reading failed!&quot;</span>);
+        alert(<span class="stringliteral">&quot;读文件失败！&quot;</span>);
 </pre></div> 
 </div>
 </div>
@@ -639,17 +639,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Save text to file in UTF8 format. Existing content will be overwritten. A new file will be created if not exists. </p>
+<p>以UTF8格式存储文件。已有的文件内容将被重写。如果文件名不存在，会创建一个新文件。 </p>
 <dl><dt><b>参数:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>the name of file to write to </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">text</td><td>the text to write to.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>要存入的文件名。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">text</td><td>要写入的内容。</td></tr>
   </table>
   </dd>
 </dl>
-<p>The text will be saved to file in UTF8 format. No leading BOM is prepended to the file.</p>
-<p>An error will be generated if write fails.</p>
-<p>The following code illustrates how to use the writeFileUTF8 method to save text to a <a href="file:">file:</a></p>
+<p>以UTF8格式存储文件。不包括前导 BOM。</p>
+<p>如果写入失败，将产生一个错误。</p>
+<p>参见下面的示例代码：</p>
 <div class="fragment"><pre class="fragment">    <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.writeFileUTF8(<span class="stringliteral">&quot;C:\\settings.ini&quot;</span>, <span class="stringliteral">&quot;LocalJS&quot;</span>);
 </pre></div> 
 </div>
@@ -679,16 +679,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Deletes a specified file. </p>
+<p>删除指定文件。 </p>
 <dl><dt><b>参数:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">filespec</td><td>The name of the file to delete. The <em>filespec</em> can contain wildcard characters in the last path component. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">force</td><td>Optional. Boolean value that is <code>true</code> if files with the read-only attribute set are to be deleted; <code>false</code> (default) if they are not.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filespec</td><td>要删除的文件名。文件名的最后一部分可以包含文件名通配符。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">force</td><td>可选参数。如果为 <code>true，将删除只读文件；如果为</code> <code>false，将不删除只读文件。</code> </td></tr>
   </table>
   </dd>
 </dl>
-<p>An error occurs if no matching files are found. The deleteFile method stops on the first error it encounters. No attempt is made to roll back or undo any changes that were made before an error occurred.</p>
-<p>The following example illustrates the use of the deleteFile method.</p>
+<p>如果指定文件不存在，将产生一个错误。deleteFile 方法遇到第一个错误之后就停止执行，但是并不恢复已经被删除的文件。</p>
+<p>参见下面的示例代码：</p>
 <div class="fragment"><pre class="fragment">    <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.deleteFile(<span class="stringliteral">&quot;C:\\settings.ini&quot;</span>);
 </pre></div> 
 </div>
@@ -708,15 +708,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Creates a folder. </p>
+<p>创建一个文件夹。 </p>
 <dl><dt><b>参数:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">foldername</td><td>String expression that identifies the folder to create.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">foldername</td><td>要创建的文件夹名。</td></tr>
   </table>
   </dd>
 </dl>
-<p>If the folder already exists, this method simply returns without generating an error.</p>
-<p>The following code illustrates how to use the createFolder method to create a folder.</p>
+<p>如果文件夹存在，createFolder 方法立刻返回，不产生错误。</p>
+<p>参见下面的示例代码：</p>
 <div class="fragment"><pre class="fragment">    var a = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.createFolder(<span class="stringliteral">&quot;c:\\new folder&quot;</span>);
 </pre></div> 
 </div>
@@ -746,17 +746,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Deletes a specified folder and its contents. </p>
+<p>删除指定文件夹及其内容。 </p>
 <dl><dt><b>参数:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">folderspec</td><td>The name of the folder to delete. The folderspec can contain wildcard characters in the last path component. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">force</td><td>Boolean value that is <code>true</code> if folders with the read-only attribute set are to be deleted; <code>false</code> (default) if they are not.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">folderspec</td><td>要删除的文件夹的路径名。路径名的最后一部分可以包含通配符。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">force</td><td>可选参数。如果为 <code>true，将删除只读文件夹。如果为</code> <code>false，不删除只读文件夹。</code> </td></tr>
   </table>
   </dd>
 </dl>
-<p>The deleteFolder method does not distinguish between folders that have contents and those that do not. The specified folder is deleted regardless of whether or not it has contents.</p>
-<p>An error occurs if no matching folders are found. The deleteFolder method stops on the first error it encounters. No attempt is made to roll back or undo any changes that were made before an error occurred.</p>
-<p>The following example illustrates the use of the deleteFolder method.</p>
+<p>无论文件夹有无内容，deleteFolder 方法都将删除文件夹。</p>
+<p>如果指定文件夹不存在，deleteFolder 方法将产生一个错误。deleteFolder 方法遇到第一个错误之后就停止执行，但是并不恢复已经被删除的文件。</p>
+<p>参见下面的示例代码：</p>
 <div class="fragment"><pre class="fragment">    <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.deleteFolder(<span class="stringliteral">&quot;C:\\Program Files\\LocalJS&quot;</span>);
 </pre></div> 
 </div>
