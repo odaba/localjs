@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head profile="http://www.w3.org/2005/10/profile">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>LocalJS 演示：多窗口互操作</title>
+<link rel="stylesheet" type="text/css" href="_css/main.css"/>
+</head>
+<!-- to hide scrollbar, set scroll="no" -->
+<body scroll="auto">
+
+<select style="width:100px;position:relative;left:20px"><option value="0">远足</option><option value="1">骑行</option><option value="2">登山</option><option value="3">野营</option><option value="4">户外</option></select>
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+(function()
+{
+	var hookSelects = function(sel1, sel2)
+	{
+		var syncSelect = function(sel_from, sel_to)
+		{
+			var options_from = sel_from.options,
+				options_to = sel_to.options,
+				changed = false;
+
+			for (var i = 0; i < options_from.length; ++i)
+			{
+				var option_from = options_from[i],
+					option_to = options_to[i];
+
+				if (option_from.selected != option_to.selected)
+				{
+					option_to.selected = option_from.selected;
+					changed = true;
+				}
+			}
+			
+			if (changed)
+				sel_to.fireEvent("onchange");
+		};
+
+		sel1.attachEvent("onchange", function()
+		{
+			syncSelect(sel1, sel2);
+		});
+
+		sel2.attachEvent("onchange", function()
+		{
+			syncSelect(sel2, sel1);
+		});
+	};
+
+	// hookSelects becomes a global function in this page since call be called by other pages as window.hookOtherSelect().
+	// Note that the window obejct should refer to the window object of this HTML page.
+	//
+	// you may realize that this function doesn't have to be defined in the new page. True.
+	// Function hookSelects can be defined and called in calling page
+	// Here we define it here to just demostrate how to call functions across pages.
+	hookOtherSelect = function(selOthers)
+	{
+		hookSelects(document.getElementsByTagName("select")[0], selOthers);
+	};
+})();
+
+</script>
