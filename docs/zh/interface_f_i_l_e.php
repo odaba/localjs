@@ -67,8 +67,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">删除指定文件夹及其内容。  <a href="#ac37bcb6da1316d7792a5491a2f7801a6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Array&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#af20f5de0d692771dafbeef7fb57fc500">listFolder</a> (String folder)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">返回指定文件夹中所有的文件对象。  <a href="#af20f5de0d692771dafbeef7fb57fc500"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#af5c1df26a65e2ba2aab9500ccdf23495">browseFile</a> (boolean forSave, String initialDir, String strFilter, String title, String defExt,[optional] String initialFile,[optional] boolean readOnly)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">弹出文件选择对话框。返回所选文件的全路径名。如果用户取消了对话框，返回 <code>false。</code>  <a href="#af5c1df26a65e2ba2aab9500ccdf23495"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a787193f9ec08e83c99a8134527355335">browseFile</a> ([optional] boolean forSave,[optional] String initialDir,[optional] String strFilter,[optional] String title,[optional] String defExt,[optional] String initialFile,[optional] boolean readOnly)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">弹出文件选择对话框。返回所选文件的全路径名。如果用户取消了对话框，返回 <code>false。</code>  <a href="#a787193f9ec08e83c99a8134527355335"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a5ddc249346092c53b6e0fadd644a0fb7">browseFolder</a> (String title,[optional] String rootFolder)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">弹出文件夹选择对话框。返回用户所选择文件夹的路径。如果用户取消了对话框，返回 <code>false。如果用户选择了虚拟文件夹，返回</code> ""。  <a href="#a5ddc249346092c53b6e0fadd644a0fb7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a7c00c5f992f9567ec7b69d6e3cf25934">exec</a> (String file)</td></tr>
@@ -795,38 +795,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </pre></div> 
 </div>
 </div>
-<a class="anchor" id="af5c1df26a65e2ba2aab9500ccdf23495"></a><!-- doxytag: member="FILE::browseFile" ref="af5c1df26a65e2ba2aab9500ccdf23495" args="(boolean forSave, String initialDir, String strFilter, String title, String defExt,[optional] String initialFile,[optional] boolean readOnly)" -->
+<a class="anchor" id="a787193f9ec08e83c99a8134527355335"></a><!-- doxytag: member="FILE::browseFile" ref="a787193f9ec08e83c99a8134527355335" args="([optional] boolean forSave,[optional] String initialDir,[optional] String strFilter,[optional] String title,[optional] String defExt,[optional] String initialFile,[optional] boolean readOnly)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">String browseFile </td>
           <td>(</td>
-          <td class="paramtype">boolean&#160;</td>
+          <td class="paramtype">[optional] boolean&#160;</td>
           <td class="paramname"> <em>forSave</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">String&#160;</td>
+          <td class="paramtype">[optional] String&#160;</td>
           <td class="paramname"> <em>initialDir</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">String&#160;</td>
+          <td class="paramtype">[optional] String&#160;</td>
           <td class="paramname"> <em>strFilter</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">String&#160;</td>
+          <td class="paramtype">[optional] String&#160;</td>
           <td class="paramname"> <em>title</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">String&#160;</td>
+          <td class="paramtype">[optional] String&#160;</td>
           <td class="paramname"> <em>defExt</em>, </td>
         </tr>
         <tr>
