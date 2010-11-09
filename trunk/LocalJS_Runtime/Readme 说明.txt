@@ -1,4 +1,4 @@
-LocalJS Runtime Release 2.1.2
+LocalJS Runtime Release 2.1.3
 
 For any issues, please contact me at martin@localjs.org.
 有问题请发邮件到 martin@localjs.org。
@@ -47,6 +47,10 @@ Folder list:
 
 Change History:
 
+2010-11-9
+	LocalJS 2.1.3 Add forSave parameter to method LOCALJS.FILE.browseFile
+				  Use onreadystatechange property of XMLHttp object while still avoid IE memory leak.
+
 2010-11-1
 	LocalJS 2.1.2 Small behavior fixes
 
@@ -58,7 +62,7 @@ Change History:
 
 2010-10-18
 	LocalJS 2.1.0 remove url_pattern parameter from C function createBrowserWindow, add localJS.trust method.
-		add LOCALJS.LOCALIZATION.getAcceptLanguages 
+		add LOCALJS.LOCALIZATION.getAcceptLanguages
 
 2010-10-17
 	LocalJS 2.0.3 rename C functions exported by LocalJS.Dll for better readability.
@@ -71,6 +75,6 @@ Change History:
 
 2010-10-10
 	LocalJS 2.0 released along with demo application
-	
+
 Agreement:
 	For security reason, LocalJS will send information about program hosting LocalJS to LocalJS server, to identify what program is using LocalJS. LocalJS doesn't collect any user personal information.
