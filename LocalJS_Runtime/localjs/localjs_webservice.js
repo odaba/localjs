@@ -14,10 +14,7 @@
 
     var localjs_namespace = LOCALJS;
 
-	if ("undefined" != typeof (localjs_namespace.WEB_SERVICE))
-		return;
-
-	localjs_namespace.WEB_SERVICE = {};
+	localjs_namespace.WEB_SERVICE = localjs_namespace.WEB_SERVICE || {};
 
 	var localjs_ws = localjs_namespace.WEB_SERVICE,
 
@@ -50,7 +47,7 @@
 				oHttp = null; // this statement is a must to clear memory leak
 			}
 		}
-		
+
 		oHttp.open(http_method, url, true, username, password);
 		oHttp.send(request_body);
 

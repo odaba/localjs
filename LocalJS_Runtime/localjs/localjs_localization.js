@@ -14,10 +14,7 @@
 
     var localjs_namespace = LOCALJS;
 
-	if ("undefined" != typeof (localjs_namespace.LOCALIZATION))
-		return;
-
-	localjs_namespace.LOCALIZATION = {};
+	localjs_namespace.LOCALIZATION = localjs_namespace.LOCALIZATION || {};
 
 	var localjs_localization = localjs_namespace.LOCALIZATION,
 		globalDict = localJS.globalDict,

@@ -14,10 +14,7 @@
 
     var localjs_namespace = LOCALJS;
 
-	if ("undefined" != typeof (localjs_namespace.FILE))
-		return;
-
-	localjs_namespace.FILE = {};
+	localjs_namespace.FILE = localjs_namespace.FILE || {};
 
     // common variables of this closure
     var false_value = false, // this variable is used to make false be compressed by compressor.
@@ -72,6 +69,7 @@
 	addFunc("Kernel32.dll", "BOOL WINAPI WritePrivateProfileString(__in LPCTSTR lpAppName,__in LPCTSTR lpKeyName,__in LPCTSTR lpString,__in LPCTSTR lpFileName);");
 	addFunc("kernel32.dll", "DWORD WINAPI GetModuleFileName(__in_opt HMODULE hModule,__out LPTSTR lpFilename,__in DWORD nSize);");
 	addFunc("comdlg32.dll", "BOOL WINAPI GetOpenFileName(__inout LPOPENFILENAME lpofn);");
+	addFunc("comdlg32.dll", "BOOL WINAPI GetSaveFileName(__inout LPOPENFILENAME lpofn);");
 	addFunc("shlwapi.dll", "HRESULT UrlCombine(LPCTSTR pszBase,LPCTSTR pszRelative,LPTSTR pszCombined,LPDWORD pcchCombined,DWORD dwFlags);");
 	addFunc("urlmon.dll", "STDAPI CoInternetParseUrl(LPCWSTR pwzUrl,PARSEACTION ParseAction,DWORD dwFlags,LPWSTR pszResult,DWORD cchResult,DWORD *pcchResult,DWORD dwReserved);", "parseUrl");
 	addFunc("shlwapi.dll", "BOOL UrlIs(LPCTSTR pszUrl,URLIS UrlIs);");
@@ -84,6 +82,7 @@
 		writePrivateProfileString = dllCall.WritePrivateProfileString,
 		getModuleFileName = dllCall.GetModuleFileName,
 		getOpenFileName = dllCall.GetOpenFileName,
+		getSaveFileName = dllCall.GetSaveFileName,
 		urlCombine = dllCall.UrlCombine,
 		parseUrl = dllCall.parseUrl,
 		urlIs = dllCall.UrlIs,
@@ -280,7 +279,7 @@
 		}
 
 		// browser for file
-		localjs_file.browseFile = function(initialDir, strFilter, title, defExt, initialFile, readOnly)
+		localjs_file.browseFile = function(initialDir, forSave, strFilter, title, defExt, initialFile, readOnly)
 		{
 			// this is to demostrate GetOpenFileName. the steps to initialize a OPENFILENAME look complex for the first glance, but:
 			// 1. In C++, similar steps have to be taken to initialize the structure.
@@ -366,7 +365,7 @@
 				openfilename.lpstrFile = initialFile;
 			openfilename.nMaxFile = openfilename.lpstrFile.size >> 1; // size in WCHAR
 
-			if (getOpenFileName(openfilename))
+			if (forSave ? getSaveFileName(openfilename) : getOpenFileName(openfilename))
 				return openfilename.lpstrFile.asStringW;
 			return false_value;
 		}
