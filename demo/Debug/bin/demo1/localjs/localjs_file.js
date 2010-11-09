@@ -14,10 +14,7 @@
 
     var localjs_namespace = LOCALJS;
 
-	if ("undefined" != typeof (localjs_namespace.FILE))
-		return;
-
-	localjs_namespace.FILE = {};
+	localjs_namespace.FILE = localjs_namespace.FILE || {};
 
     // common variables of this closure
     var false_value = false, // this variable is used to make false be compressed by compressor.
