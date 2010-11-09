@@ -279,7 +279,7 @@
 		}
 
 		// browser for file
-		localjs_file.browseFile = function(initialDir, forSave, strFilter, title, defExt, initialFile, readOnly)
+		localjs_file.browseFile = function(forSave, initialDir, strFilter, title, defExt, initialFile, readOnly)
 		{
 			// this is to demostrate GetOpenFileName. the steps to initialize a OPENFILENAME look complex for the first glance, but:
 			// 1. In C++, similar steps have to be taken to initialize the structure.
