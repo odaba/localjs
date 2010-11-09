@@ -67,10 +67,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">删除指定文件夹及其内容。  <a href="#ac37bcb6da1316d7792a5491a2f7801a6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Array&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#af20f5de0d692771dafbeef7fb57fc500">listFolder</a> (String folder)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">返回指定文件夹中所有的文件对象。  <a href="#af20f5de0d692771dafbeef7fb57fc500"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a561e6ec182a20ebe1d85653d67b0ae44">browseFile</a> (String initialDir, String strFilter, String title, String defExt,[optional] String initialFile,[optional] boolean readOnly)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Open file dialig to browse to a file, return path to the select file, or false if the dialog is canceled.  <a href="#a561e6ec182a20ebe1d85653d67b0ae44"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#af5c1df26a65e2ba2aab9500ccdf23495">browseFile</a> (boolean forSave, String initialDir, String strFilter, String title, String defExt,[optional] String initialFile,[optional] boolean readOnly)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">弹出文件选择对话框。返回所选文件的全路径名。如果用户取消了对话框，返回 <code>false。</code>  <a href="#af5c1df26a65e2ba2aab9500ccdf23495"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a5ddc249346092c53b6e0fadd644a0fb7">browseFolder</a> (String title,[optional] String rootFolder)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">弹出文件夹选择对话框。返回用户所选择文件夹的路径。如果用户取消对话框，返回 <code>false。如果用户选择了虚拟文件夹，返回</code> ""。  <a href="#a5ddc249346092c53b6e0fadd644a0fb7"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">弹出文件夹选择对话框。返回用户所选择文件夹的路径。如果用户取消了对话框，返回 <code>false。如果用户选择了虚拟文件夹，返回</code> ""。  <a href="#a5ddc249346092c53b6e0fadd644a0fb7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a7c00c5f992f9567ec7b69d6e3cf25934">exec</a> (String file)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">执行一个可执行文件，在用户的默认浏览器中打开一个 url，或者用默认应用程序打开一个文件。  <a href="#a7c00c5f992f9567ec7b69d6e3cf25934"></a><br/></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Url 操作</div></td></tr>
@@ -795,13 +795,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </pre></div> 
 </div>
 </div>
-<a class="anchor" id="a561e6ec182a20ebe1d85653d67b0ae44"></a><!-- doxytag: member="FILE::browseFile" ref="a561e6ec182a20ebe1d85653d67b0ae44" args="(String initialDir, String strFilter, String title, String defExt,[optional] String initialFile,[optional] boolean readOnly)" -->
+<a class="anchor" id="af5c1df26a65e2ba2aab9500ccdf23495"></a><!-- doxytag: member="FILE::browseFile" ref="af5c1df26a65e2ba2aab9500ccdf23495" args="(boolean forSave, String initialDir, String strFilter, String title, String defExt,[optional] String initialFile,[optional] boolean readOnly)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">String browseFile </td>
           <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"> <em>forSave</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">String&#160;</td>
           <td class="paramname"> <em>initialDir</em>, </td>
         </tr>
@@ -844,29 +850,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Open file dialig to browse to a file, return path to the select file, or false if the dialog is canceled. </p>
+<p>弹出文件选择对话框。返回所选文件的全路径名。如果用户取消了对话框，返回 <code>false。</code> </p>
 <dl><dt><b>参数:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">initialDir</td><td>The initial directory the dialog opens at </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">strFilter</td><td>A string like <code>"Text Files\0*.TXT\0Document Files\0*.TXT;*.DOC;*.BAK\0All Files\0*.*\0"</code> to specify file filter of the dialog. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">title</td><td>The title for the dialog. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">defExt</td><td>The default extension appended to the file name if the user fails to type an extension. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">initialFile</td><td>Optional. The initial filename displayed in edit control of the file dialog. If omitted, the edit control is left empty. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">readOnly</td><td>Optional. If <code>true</code>, the Read Only check box will be initially checked; <code>false</code> (default value) to not check it.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">forSave</td><td>可选参数。为 <code>true</code> 则弹出文件保存对话框，为 <code>false</code> 或省略则弹出文件打开对话框。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">initialDir</td><td>可选参数。文件选择对话框的初始打开路径。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">strFilter</td><td>可选参数。文件名过滤字符串。例如：<code>"文本文件\0*.TXT\0文档文件\0*.TXT;*.DOC;*.BAK\0所有文件\0*.*\0"</code> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">title</td><td>可选参数。对话框的标题。如果省略，对话框的标题和当前页面的标题一样。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">defExt</td><td>可选参数。当用户没有输入文件后缀名时自动附加的默认文件后缀名。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">initialFile</td><td>可选参数。文件选择对话框中显示的初始文件名。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">readOnly</td><td>可选参数。如果为 <code>true，文件打开对话框中的只读选项会被默认选择，为</code> <code>false</code> 或省略则默认不选择。只在 <em>forSave</em> 为 <code>false</code> 的时候起作用。</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>返回:</b></dt><dd>The filename user selected, or false if user cancels the dialog. Use <code>false</code> <code>===</code> to check if the dialog is canceled.</dd></dl>
-<p>Parameter <em>strFilter</em> has to be ended by <code>"\0"</code>. The sub strings separated by <code>"\0"</code> have to be in pairs: they are in <code>"Filter name displayed\0Filter\0Filter name displayed\0Filter"</code> format. If you feel confused, it's OK. Simply try the sample code below you will understand it.</p>
-<p>The following code illustrates how to use the browseFile method:</p>
-<div class="fragment"><pre class="fragment">    var filename = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.browseFile(<span class="stringliteral">&quot;C:\\Program Files\\LocalJS&quot;</span>,
-                                           <span class="stringliteral">&quot;Text Files\0*.TXT\0Document Files\0*.TXT;*.DOC;*.BAK\0All Files\0*.*\0&quot;</span>,
-                                           <span class="stringliteral">&quot;Please choose the file&quot;</span>, <span class="stringliteral">&quot;txt&quot;</span>, <span class="stringliteral">&quot;settings.txt&quot;</span>);
+<dl class="return"><dt><b>返回:</b></dt><dd>所选文件的全路径名。如果用户取消了对话框，返回 <code>false。要判断是否用户取消了对话框，用</code> <code>false</code> <code>===</code> 。</dd></dl>
+<p>参数 <em>strFilter</em> 必须以 <code>"\0"</code> 结尾。被 <code>"\0"</code> 所分成的子字符串必须成对：它们的意义是：<code>"过滤条件的显示名称\0过滤条件通配符\0过滤条件的显示名称\0过滤条件通配符\0"</code>。如果你觉得不太明白，不要紧，试试看下面的示例代码就明白了。</p>
+<div class="fragment"><pre class="fragment">    var filename = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.browseFile(<span class="keyword">false</span>, <span class="stringliteral">&quot;C:\\Program Files\\LocalJS&quot;</span>,
+                                           <span class="stringliteral">&quot;文本文件\0*.TXT\0文档文件\0*.TXT;*.DOC;*.BAK\0所有文件\0*.*\0&quot;</span>,
+                                           <span class="stringliteral">&quot;请选择要打开的文件&quot;</span>, <span class="stringliteral">&quot;txt&quot;</span>, <span class="stringliteral">&quot;settings.txt&quot;</span>);
     <span class="keywordflow">if</span> (<span class="keyword">false</span> === filename)
-        alert(<span class="stringliteral">&quot;The file dialog was canceled&quot;</span>);
+        alert(<span class="stringliteral">&quot;您取消了文件对话框。&quot;</span>);
     <span class="keywordflow">else</span>
         alert(filename);
-</pre></div><dl class="note"><dt><b>注解:</b></dt><dd>The browseFile method wraps up Windows API <a href="http://msdn.microsoft.com/en-us/library/ms646927(VS.85).aspx" target="_blank">GetOpenFileName Function</a>. If you are interested at more detail, refer to the source code of browseFile method in localjs_file.js, <a href="http://msdn.microsoft.com/en-us/library/ms646927(VS.85).aspx" target="_blank">GetOpenFileName Function</a> and <a href="http://msdn.microsoft.com/en-us/library/ms646839(VS.85).aspx" target="_blank">OPENFILENAME Structure</a>. </dd></dl>
+</pre></div><dl class="note"><dt><b>注解:</b></dt><dd>browseFile 方法封装了 Windows API <a href="http://msdn.microsoft.com/en-us/library/ms646927(VS.85).aspx" target="_blank">GetOpenFileName Function</a> 和 <a href="http://msdn.microsoft.com/en-us/library/ms646928(VS.85).aspx" target="_blank">GetSaveFileName Function</a>。如果你对更多细节感兴趣，参见 localjs_file.js 文件中 browseFile 方法的源码，<a href="http://msdn.microsoft.com/en-us/library/ms646927(VS.85).aspx" target="_blank">GetOpenFileName Function</a>，<a href="http://msdn.microsoft.com/en-us/library/ms646928(VS.85).aspx" target="_blank">GetSaveFileName Function</a>，以及 <a href="http://msdn.microsoft.com/en-us/library/ms646839(VS.85).aspx" target="_blank">OPENFILENAME Structure</a>。 </dd></dl>
 
 </div>
 </div>
@@ -895,7 +901,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>弹出文件夹选择对话框。返回用户所选择文件夹的路径。如果用户取消对话框，返回 <code>false。如果用户选择了虚拟文件夹，返回</code> ""。 </p>
+<p>弹出文件夹选择对话框。返回用户所选择文件夹的路径。如果用户取消了对话框，返回 <code>false。如果用户选择了虚拟文件夹，返回</code> ""。 </p>
 <dl><dt><b>参数:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">title</td><td>文件夹选择对话框的标题。 </td></tr>
@@ -903,7 +909,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>返回:</b></dt><dd>用户所选择文件夹的路径。如果用户取消对话框，返回 <code>false。如果用户选择了虚拟文件夹（例如，“我的电脑”），返回</code> ""。要判断用户是否取消了对话框，用 <code>false</code> <code>===</code> 。</dd></dl>
+<dl class="return"><dt><b>返回:</b></dt><dd>用户所选择文件夹的路径。如果用户取消了对话框，返回 <code>false。如果用户选择了虚拟文件夹（例如，“我的电脑”），返回</code> ""。要判断用户是否取消了对话框，用 <code>false</code> <code>===</code> 。</dd></dl>
 <p>参见下面的示例代码：</p>
 <div class="fragment"><pre class="fragment">    var folder = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="返回 FILE 对象，它提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。">FILE</a>.browseFolder(<span class="stringliteral">&quot;请选择一个文件夹&quot;</span>);
     <span class="keywordflow">if</span> (<span class="keyword">false</span> === folder)

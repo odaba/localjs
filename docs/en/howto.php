@@ -273,7 +273,7 @@ How to access text file in UTF-8 format?</h3>
 <h3><a class="anchor" id="howto_browse_file"></a>
 How to browse for a file?</h3>
 <ul>
-<li>Call <a class="el" href="interface_f_i_l_e.php#a561e6ec182a20ebe1d85653d67b0ae44">LOCALJS.FILE.browseFile</a>.</li>
+<li>Call <a class="el" href="interface_f_i_l_e.php#af5c1df26a65e2ba2aab9500ccdf23495">LOCALJS.FILE.browseFile</a>.</li>
 </ul>
 <h3><a class="anchor" id="howto_browse_folder"></a>
 How to browse for folder?</h3>
