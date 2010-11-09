@@ -95,7 +95,7 @@ Here is a list of all documented class members with links to the class documenta
 : <a class="el" href="interface_u_i.php#ab4f615fc494a1630d85d58ca37deb01a">UI</a>
 </li>
 <li>browseFile()
-: <a class="el" href="interface_f_i_l_e.php#af5c1df26a65e2ba2aab9500ccdf23495">FILE</a>
+: <a class="el" href="interface_f_i_l_e.php#a787193f9ec08e83c99a8134527355335">FILE</a>
 </li>
 <li>browseFolder()
 : <a class="el" href="interface_f_i_l_e.php#a5ddc249346092c53b6e0fadd644a0fb7">FILE</a>
