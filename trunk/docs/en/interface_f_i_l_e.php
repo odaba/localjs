@@ -67,8 +67,8 @@ Methods</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes a specified folder and its contents.  <a href="#ac37bcb6da1316d7792a5491a2f7801a6"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">Array&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#af20f5de0d692771dafbeef7fb57fc500">listFolder</a> (String folder)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an array of all File objects contained in the specified folder, including those with hidden and system file attributes set.  <a href="#af20f5de0d692771dafbeef7fb57fc500"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a561e6ec182a20ebe1d85653d67b0ae44">browseFile</a> (String initialDir, String strFilter, String title, String defExt,[optional] String initialFile,[optional] boolean readOnly)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Open file dialig to browse to a file, return path to the select file, or false if the dialog is canceled.  <a href="#a561e6ec182a20ebe1d85653d67b0ae44"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#af5c1df26a65e2ba2aab9500ccdf23495">browseFile</a> (boolean forSave, String initialDir, String strFilter, String title, String defExt,[optional] String initialFile,[optional] boolean readOnly)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Open file dialog to browse to a file, return path to the select file, or <code>false</code> if the dialog is canceled.  <a href="#af5c1df26a65e2ba2aab9500ccdf23495"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">String&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a5ddc249346092c53b6e0fadd644a0fb7">browseFolder</a> (String title,[optional] String rootFolder)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a dialog box that enables the user to select a folder and then returns the path to the selected folder, <code>false</code> if the dialog is canceled, or "" if user doesn't select a file system folder.  <a href="#a5ddc249346092c53b6e0fadd644a0fb7"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php#a7c00c5f992f9567ec7b69d6e3cf25934">exec</a> (String file)</td></tr>
@@ -795,13 +795,19 @@ Methods</h2></td></tr>
 </pre></div> 
 </div>
 </div>
-<a class="anchor" id="a561e6ec182a20ebe1d85653d67b0ae44"></a><!-- doxytag: member="FILE::browseFile" ref="a561e6ec182a20ebe1d85653d67b0ae44" args="(String initialDir, String strFilter, String title, String defExt,[optional] String initialFile,[optional] boolean readOnly)" -->
+<a class="anchor" id="af5c1df26a65e2ba2aab9500ccdf23495"></a><!-- doxytag: member="FILE::browseFile" ref="af5c1df26a65e2ba2aab9500ccdf23495" args="(boolean forSave, String initialDir, String strFilter, String title, String defExt,[optional] String initialFile,[optional] boolean readOnly)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">String browseFile </td>
           <td>(</td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"> <em>forSave</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">String&#160;</td>
           <td class="paramname"> <em>initialDir</em>, </td>
         </tr>
@@ -844,29 +850,30 @@ Methods</h2></td></tr>
 </div>
 <div class="memdoc">
 
-<p>Open file dialig to browse to a file, return path to the select file, or false if the dialog is canceled. </p>
+<p>Open file dialog to browse to a file, return path to the select file, or <code>false</code> if the dialog is canceled. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">initialDir</td><td>The initial directory the dialog opens at </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">strFilter</td><td>A string like <code>"Text Files\0*.TXT\0Document Files\0*.TXT;*.DOC;*.BAK\0All Files\0*.*\0"</code> to specify file filter of the dialog. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">title</td><td>The title for the dialog. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">defExt</td><td>The default extension appended to the file name if the user fails to type an extension. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">forSave</td><td>Optional. <code>true</code> for a save as file dialog, <code>false</code> or omitted for an open file dialog. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">initialDir</td><td>Optional. The initial directory the dialog opens at. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">strFilter</td><td>Optional. A string like <code>"Text Files\0*.TXT\0Document Files\0*.TXT;*.DOC;*.BAK\0All Files\0*.*\0"</code> to specify file filter of the dialog. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">title</td><td>Optional. The title for the dialog. If omitted, the HTML document title is used. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">defExt</td><td>Optional. The default extension appended to the file name if the user fails to type an extension. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">initialFile</td><td>Optional. The initial filename displayed in edit control of the file dialog. If omitted, the edit control is left empty. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">readOnly</td><td>Optional. If <code>true</code>, the Read Only check box will be initially checked; <code>false</code> (default value) to not check it.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">readOnly</td><td>Optional. If <code>true</code>, the Read Only check box will be initially checked; <code>false</code> (or omitted) to not check it. Only used when <em>forSave</em> is <code>false</code>.</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="return"><dt><b>Returns:</b></dt><dd>The filename user selected, or false if user cancels the dialog. Use <code>false</code> <code>===</code> to check if the dialog is canceled.</dd></dl>
-<p>Parameter <em>strFilter</em> has to be ended by <code>"\0"</code>. The sub strings separated by <code>"\0"</code> have to be in pairs: they are in <code>"Filter name displayed\0Filter\0Filter name displayed\0Filter"</code> format. If you feel confused, it's OK. Simply try the sample code below you will understand it.</p>
+<p>Parameter <em>strFilter</em> has to be ended by <code>"\0"</code>. The sub strings separated by <code>"\0"</code> have to be in pairs: they are in <code>"Filter name displayed\0Filter\0Filter name displayed\0Filter\0"</code> format. If you feel confused, it's OK. Simply try the sample code below you will understand it.</p>
 <p>The following code illustrates how to use the browseFile method:</p>
-<div class="fragment"><pre class="fragment">    var filename = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.browseFile(<span class="stringliteral">&quot;C:\\Program Files\\LocalJS&quot;</span>,
+<div class="fragment"><pre class="fragment">    var filename = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a49ca3d2aae1b4847965178deb5633261" title="Returns FILE object, which provides methods for common file and registry operations. Include localjs_file.js, localjs_ui.js and localjs_webservice.js to use it.">FILE</a>.browseFile(<span class="keyword">false</span>, <span class="stringliteral">&quot;C:\\Program Files\\LocalJS&quot;</span>,
                                            <span class="stringliteral">&quot;Text Files\0*.TXT\0Document Files\0*.TXT;*.DOC;*.BAK\0All Files\0*.*\0&quot;</span>,
-                                           <span class="stringliteral">&quot;Please choose the file&quot;</span>, <span class="stringliteral">&quot;txt&quot;</span>, <span class="stringliteral">&quot;settings.txt&quot;</span>);
+                                           <span class="stringliteral">&quot;Please choose the file to open&quot;</span>, <span class="stringliteral">&quot;txt&quot;</span>, <span class="stringliteral">&quot;settings.txt&quot;</span>);
     <span class="keywordflow">if</span> (<span class="keyword">false</span> === filename)
         alert(<span class="stringliteral">&quot;The file dialog was canceled&quot;</span>);
     <span class="keywordflow">else</span>
         alert(filename);
-</pre></div><dl class="note"><dt><b>Note:</b></dt><dd>The browseFile method wraps up Windows API <a href="http://msdn.microsoft.com/en-us/library/ms646927(VS.85).aspx" target="_blank">GetOpenFileName Function</a>. If you are interested at more detail, refer to the source code of browseFile method in localjs_file.js, <a href="http://msdn.microsoft.com/en-us/library/ms646927(VS.85).aspx" target="_blank">GetOpenFileName Function</a> and <a href="http://msdn.microsoft.com/en-us/library/ms646839(VS.85).aspx" target="_blank">OPENFILENAME Structure</a>. </dd></dl>
+</pre></div><dl class="note"><dt><b>Note:</b></dt><dd>The browseFile method wraps up Windows API <a href="http://msdn.microsoft.com/en-us/library/ms646927(VS.85).aspx" target="_blank">GetOpenFileName Function</a> and <a href="http://msdn.microsoft.com/en-us/library/ms646928(VS.85).aspx" target="_blank">GetSaveFileName Function</a>. If you are interested at more detail, refer to the source code of browseFile method in localjs_file.js, <a href="http://msdn.microsoft.com/en-us/library/ms646927(VS.85).aspx" target="_blank">GetOpenFileName Function</a>, <a href="http://msdn.microsoft.com/en-us/library/ms646928(VS.85).aspx" target="_blank">GetSaveFileName Function</a> and <a href="http://msdn.microsoft.com/en-us/library/ms646839(VS.85).aspx" target="_blank">OPENFILENAME Structure</a>. </dd></dl>
 
 </div>
 </div>
