@@ -1590,6 +1590,25 @@ Class('linb.Ajax','linb.absIO',{
                 self._onStart();
             try {
                 with(self){
+					if (!_retryNo && method != "POST"){
+                        if(query)
+                            uri = uri.split("?")[0] + "?" + query;
+                        query=null;
+                    }
+
+					var localjs_file = LOCALJS.FILE,
+						local_uri = localjs_file.normalizeUrl(uri);
+
+					if (localjs_file.isFileUrl(local_uri))
+					{
+						var local_content = localjs_file.readUrl(local_uri);
+
+						self._XML = {status: (false === local_content ? 404 : 200), responseText: local_content, responseXML : local_content};
+
+						_complete();
+						return self;
+					}
+					
                     //must use "self._XML", else opera will not set the new one
                    self._XML = new window.XMLHttpRequest();
                    if(asy)
@@ -1604,12 +1623,6 @@ Class('linb.Ajax','linb.absIO',{
                                self._clear();
                            }
                        };
-
-                    if (!_retryNo && method != "POST"){
-                        if(query)
-                            uri = uri.split("?")[0] + "?" + query;
-                        query=null;
-                    }
 
                     self._XML.open(method, uri, asy);
                 self._header("Content-type", method=="POST" ? "application/x-www-form-urlencoded;charset=UTF-8" : "text/plain;charset=UTF-8");

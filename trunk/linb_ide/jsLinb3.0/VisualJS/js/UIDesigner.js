@@ -37,7 +37,7 @@ Class('UIDesigner', 'linb.Com',{
                         zIndex:100, left:'auto', top:6, right:130,  width:68, height:54, type:'custom', border:true, renderer:function(item){return '<img src=img/save.gif /><br />' + item.caption;}},
                     {onClick:function(p,e,src){
                         self.popSave.updateItem('savetoserver',{disabled:!self.$url || linb.absIO.isCrossDomain(self.$url)});
-                        
+
                         if(self.popSave.$lang!=linb.getLang()){
                             self.popSave.$lang=linb.getLang();
                             self.popSave.refresh();
@@ -60,12 +60,30 @@ Class('UIDesigner', 'linb.Com',{
                             linb.message(linb.getRes('VisualJS.classtool.noClass'));
                             return false;
                         }
-                        linb.Dom.submit(CONF.testphpPath,{
-                            clsName:clsName,
-                            content:content,
-                            theme:linb.UI.getTheme(),
-                            lang:linb.getLang()
-                        },'post');
+
+						var localjs_file = LOCALJS.FILE,
+							localjs_linb = LOCALJS.LINB;
+
+						if (localjs_linb.isLocal())
+						{
+							var test_html_file = localjs_file.buildPath(localjs_file.getExeFolder(), 'UIBuilder.run.html');
+							if (LOCALJS.LINB.saveTemplateFile('singledebug.html',
+									{'clsName': clsName, 'theme': linb.UI.getTheme(),
+									 'lang': linb.getLang(), 'content': content},
+									test_html_file))
+								LOCALJS.UI.newWindow(localjs_file.pathToUrl(test_html_file), 10, 10, 1200, 800, LOCALJS.UI.WS_CLOSE_ONLY, localJS.hostWnd);
+							else
+								alert('Failed to write to file ' + test_html_file);
+						}
+						else
+						{
+							linb.Dom.submit(CONF.testphpPath,{
+								clsName:clsName,
+								content:content,
+								theme:linb.UI.getTheme(),
+								lang:linb.getLang()
+							},'post');
+						}
                     }
                     })
                 );
@@ -190,7 +208,7 @@ Class('UIDesigner', 'linb.Com',{
             if(url)
                 self.$url=url;
             var dis=self.$url?!linb.absIO.isCrossDomain(self.$url)?'':'none':'none';
-  
+
             self.$dirty=false;
         },
         _pop_onmenuselected:function (profile, item, src) {
@@ -205,27 +223,27 @@ Class('UIDesigner', 'linb.Com',{
         iniComponents:function(){
             // [[code created by jsLinb UI Builder
             var host=this, children=[], append=function(child){children.push(child.get(0))};
-            
+
             append(
                 (new linb.UI.PopMenu)
                 .setHost(host,"popLang")
                 .onMenuSelected("_pop_onmenuselected")
             );
-            
+
             append(
                 (new linb.UI.PopMenu)
                 .setHost(host,"popSave")
                 .setItems([{"id":"savetoserver", "caption":"$VisualJS.builder.savetoserver"},{"id":"savetolocal", "caption":"$VisualJS.builder.savetolocal"}, {"id":"saveashtml", "caption":"$VisualJS.builder.saveashtml"}, {"id":"saveaszip", "caption":"$VisualJS.builder.saveaszip"}])
                 .onMenuSelected("_popsave_onmenusel")
             );
-            
+
             append(
                 (new linb.UI.PopMenu)
                 .setHost(host,"popMenu")
                 .setItems([{"id":"default", "caption":"$VisualJS.builder.themeDft"}, {"id":"aqua", "caption":"$VisualJS.builder.themeAqua"}, {"id":"vista", "caption":"$VisualJS.builder.themeVista"}])
                 .onMenuSelected("_onmenusel")
             );
-            
+
             append(
                 (new linb.UI.Pane)
                 .setHost(host,"appRoot")
@@ -235,7 +253,7 @@ Class('UIDesigner', 'linb.Com',{
                 .setDockMinW(800)
                 .setDockMinH(400)
             );
-            
+
             host.appRoot.append(
                 (new linb.UI.Image)
                 .setHost(host,"image1")
@@ -244,7 +262,7 @@ Class('UIDesigner', 'linb.Com',{
                 .setZIndex(2)
                 .setSrc("img/builder.gif")
             );
-            
+
             host.appRoot.append(
                 (new linb.UI.MenuBar)
                 .setHost(host,"ctl_menubar1")
@@ -269,7 +287,7 @@ Class('UIDesigner', 'linb.Com',{
                             {id:"codesnipt", caption:"$VisualJS.spabuilder.menubar.codesnipt"},
                             {id:"cookbook", caption:"$VisualJS.spabuilder.menubar.cookbook"},
                             {type:'split'},
-                            {id:"jsoneditor", caption:"$VisualJS.spabuilder.menubar.jsoneditor"} 
+                            {id:"jsoneditor", caption:"$VisualJS.spabuilder.menubar.jsoneditor"}
                         ]
                     },
                     {id:"servicetester", caption:"<strong>$VisualJS.spabuilder.menubar.servicetester</strong>"},
@@ -284,7 +302,7 @@ Class('UIDesigner', 'linb.Com',{
                 .onMenuSelected('_menubar_selected')
                 .setZIndex(5)
             )
-                        
+
             return children;
             // ]]code created by jsLinb UI Builder
         },
@@ -302,7 +320,7 @@ Class('UIDesigner', 'linb.Com',{
                     });
                     break;
                 case 'video':
-                    linb.Dom.submit(CONF.path_video);          
+                    linb.Dom.submit(CONF.path_video);
                     break;
             }
         },
@@ -365,31 +383,71 @@ Class('UIDesigner', 'linb.Com',{
                 return false;
             }
 
+			var localjs_file = LOCALJS.FILE,
+				localjs_ui = LOCALJS.UI,
+				localjs_linb = LOCALJS.LINB;
+
             if(id=='savetolocal'){
-                if(!linb.Dom.byId(ifrid))
-                    linb('body').append(linb.create('<iframe id="'+ifrid+'" name="'+ifrid+'" style="display:none;"/>'));
-                var hash={
-                    key:CONF.requestKey,
-                    para:{
-                        action:'downloadjs',
-                        content:content
-                    }
-                };
-                linb.Dom.submit(CONF.phpPath, hash, 'post', ifrid);
+				if (localjs_linb.isLocal())
+				{
+					var js_file_name = localjs_file.browseFile(true, "Save As JavaScript File", localjs_file.getExeFolder(), "JavaScript File\0*.js\0", "js");
+					if (false === js_file_name)
+						return;
+					if (localjs_file.fileExists(js_file_name) && !confirm(js_file_name + " already exists. Do you want to overwrite?"))
+						return;
+					try
+					{
+						localjs_file.writeFileUTF8(js_file_name, content);
+					}
+					catch (e)
+					{
+						alert('Failed to write to file ' + js_file_name);
+					}
+				}
+				else
+				{
+					if(!linb.Dom.byId(ifrid))
+						linb('body').append(linb.create('<iframe id="'+ifrid+'" name="'+ifrid+'" style="display:none;"/>'));
+					var hash={
+						key:CONF.requestKey,
+						para:{
+							action:'downloadjs',
+							content:content
+						}
+					};
+					linb.Dom.submit(CONF.phpPath, hash, 'post', ifrid);
+				}
             }else if(id=='saveashtml'){
-                if(!linb.Dom.byId(ifrid))
-                    linb('body').append(linb.create('<iframe id="'+ifrid+'" name="'+ifrid+'" style="display:none;"/>'));
-                var hash={
-                    key:CONF.requestKey,
-                    para:{
-                        action:'downloadhtml',
-                        content:content,
-                        clsName:clsName,
-                        theme:linb.UI.getTheme(),
-                        lang:linb.getLang()
-                    }
-                };
-                linb.Dom.submit(CONF.phpPath, hash, 'post', ifrid);
+				if (localjs_linb.isLocal())
+				{
+					var html_file_name = localjs_file.browseFile(true, "Save As HTML File", localjs_file.getExeFolder(), "HTML File\0*.html;*.htm\0", "html");
+					if (false === html_file_name)
+						return;
+					if (localjs_file.fileExists(html_file_name) && !confirm(html_file_name + " already exists. Do you want to overwrite?"))
+						return;
+						
+					if (!LOCALJS.LINB.saveTemplateFile('singledebug.html',
+									{'clsName': clsName, 'theme': linb.UI.getTheme(),
+									 'lang': linb.getLang(), 'content': content},
+									html_file_name))
+						alert('Failed to write to file ' + html_file_name);
+				}
+				else
+				{
+					if(!linb.Dom.byId(ifrid))
+						linb('body').append(linb.create('<iframe id="'+ifrid+'" name="'+ifrid+'" style="display:none;"/>'));
+					var hash={
+						key:CONF.requestKey,
+						para:{
+							action:'downloadhtml',
+							content:content,
+							clsName:clsName,
+							theme:linb.UI.getTheme(),
+							lang:linb.getLang()
+						}
+					};
+					linb.Dom.submit(CONF.phpPath, hash, 'post', ifrid);
+				}
             }else if(id=='saveaszip'){
                 if(!linb.Dom.byId(ifrid))
                     linb('body').append(linb.create('<iframe id="'+ifrid+'" name="'+ifrid+'" style="display:none;"/>'));
