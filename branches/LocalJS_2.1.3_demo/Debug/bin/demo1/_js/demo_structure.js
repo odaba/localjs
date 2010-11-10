@@ -43,10 +43,10 @@
 		demoOpenFile.attachEvent("onclick", function()
 		{
 			localjs_ui.msgBox(localization_get("Next, a file open dialog will be popped up, special for iexplore.exe"));
-			var filename = localjs_file.browseFile(false, localjs_file.getProgramFolder('Internet Explorer'),
-											   localization_get("Internet Explorer Executable File") + "\0iexplore.exe\0",
-											   localization_get("Please Choose Executable File of Internet Explorer"),
-											   "exe", "iexplore.exe", true);
+			var filename = localjs_file.browseFile(false, localization_get("Please Choose Executable File of Internet Explorer"),
+													localjs_file.getProgramFolder('Internet Explorer'),
+													localization_get("Internet Explorer Executable File") + "\0iexplore.exe\0",
+													"exe", "iexplore.exe", true);
 			if (false === filename)
 				localjs_ui.msgBox(localization_get("The file open dialog was canceled"));
 			else
