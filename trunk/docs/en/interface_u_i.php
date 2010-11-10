@@ -18,7 +18,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 <div class="contents">
 <!-- doxytag: class="UI" -->
-<p>Open source object. Provides methods for common UI operations. Include localjs_ui.js to use it.  
+<p>JavaScript Object open sourced. Provides methods for common UI operations. Include localjs_ui.js to use it.  
 <a href="#_details">More...</a></p>
 
 <p><a href="class_u_i-members.php">List of all members.</a></p>
@@ -78,7 +78,7 @@ Properties</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if current page is loaded by standalone Internet Explorer, <code>false</code> if by LocalJS browser window.  <a href="#a862ffbf6976d63755adc1fc78f1a0354"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>Detailed Description</h2>
-<p>Open source object. Provides methods for common UI operations. Include localjs_ui.js to use it. </p>
+<p>JavaScript Object open sourced. Provides methods for common UI operations. Include localjs_ui.js to use it. </p>
 <hr/><h2>Method Documentation</h2>
 <a class="anchor" id="a1affe0f3629c5b39d93ba05fd54fc3fc"></a><!-- doxytag: member="UI::newWindow" ref="a1affe0f3629c5b39d93ba05fd54fc3fc" args="(String url,[optional] int left,[optional] int top,[optional] int width,[optional] int height,[optional] int window_style,[optional] int parent_window,[optional] function initFunction,[optional] boolean leave_alone,[optional] boolean ie)" -->
 <div class="memitem">
@@ -156,30 +156,30 @@ Properties</h2></td></tr>
 <p>Creates a new browser window or standalone Internet Explorer and navigates to given url. </p>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>The url the new browser window or standalone Internet Explorer navigates to. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">left</td><td>Optional. The initial horizontal position of the window. Refer to parameter <em>x</em> of <a href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx" target="_blank">CreateWindow Function</a>. If omitted, the default value is to center the window on the screen. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">top</td><td>Optional. The initial vertical position of the window. Refer to parameter <em>y</em> of <a href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx" target="_blank">CreateWindow Function</a>. If omitted, the default value is to center the window on the screen. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>Optional. The width, in device units, of the window. Refer to parameter <em>nWidth</em> of <a href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx" target="_blank">CreateWindow Function</a>. If omitted, the default value is 300. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>Optional. The height, in device units, of the window. Refer to parameter <em>nHeight</em> of <a href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx" target="_blank">CreateWindow Function</a>. If omitted, the default value is 180. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>The url the new browser window or standalone Internet Explorer navigates to.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">left</td><td>Optional. The initial horizontal position of the window. Refer to parameter <em>x</em> of <a href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx" target="_blank">CreateWindow Function</a>. If omitted, the default value is to center the window on the screen.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">top</td><td>Optional. The initial vertical position of the window. Refer to parameter <em>y</em> of <a href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx" target="_blank">CreateWindow Function</a>. If omitted, the default value is to center the window on the screen.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>Optional. The width, in device units, of the window. Refer to parameter <em>nWidth</em> of <a href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx" target="_blank">CreateWindow Function</a>. If omitted, the default value is 300.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>Optional. The height, in device units, of the window. Refer to parameter <em>nHeight</em> of <a href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx" target="_blank">CreateWindow Function</a>. If omitted, the default value is 180.</td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">window_style</td><td>Optional. The style of the window being created, ignored by standalone Internet Explorer. Refer to parameter <em>dwStyle</em> of <a href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx" target="_blank">CreateWindow Function</a>. <a class="el" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="Returns UI object, which provides methods for common UI operations. Include localjs_ui.js to use it.">LOCALJS.UI</a> predefines some predefined window style: </p>
 <ul>
 <li>LOCALJS.UI.WS_CLOSE_ONLY: The browser window has only a close button on the title bar. </li>
 <li>LOCALJS.UI.WS_NO_TITLE_BAR: The browser window doesn't have a title bar. </li>
-<li>LOCALJS.UI.WS_NORMAL: The browser window has a normal title bar. This is the default value if <em>window_style</em> is omitted. </li>
+<li>LOCALJS.UI.WS_NORMAL: The browser window has a normal title bar. This is the default value if <em>window_style</em> is omitted.</li>
 </ul>
 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">parent_window</td><td>Optional. The HWND handle to the parent or owner window of the browser window being created, ignored by standalone Internet Explorer. To use the HWND handle of the current browser window, pass in <a class="el" href="interfacelocal_j_s.php#aa05066bf1c7f31ea898c0d2aed29eedb" title="ReadOnly. Returns the HWND handle of current browser window.">localJS.hostWnd</a>. If omitted, the default value is zero. Refer to parameter <em>hWndParent</em> of <a href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx" target="_blank">CreateWindow Function</a>. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">parent_window</td><td>Optional. The HWND handle to the parent or owner window of the browser window being created, ignored by standalone Internet Explorer. To use the HWND handle of the current browser window, pass in <code><a class="el" href="interfacelocal_j_s.php#aa05066bf1c7f31ea898c0d2aed29eedb" title="ReadOnly. Returns the HWND handle of current browser window.">localJS.hostWnd</a></code>. If omitted, the default value is zero. Refer to parameter <em>hWndParent</em> of <a href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx" target="_blank">CreateWindow Function</a>.</td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">initFunction</td><td>Optional. A JavaScript function which will be executed when the new browser window or standalone Internet Explorer loads page. </p>
 <ul>
-<li>The JavaScript function will be passed with the JavaScript window object of the browser window page as parameter. <div class="fragment"><pre class="fragment">    var initFunction = function(new_jswindow)
+<li>The JavaScript function will be passed with the JavaScript window object of the browser window (or Internet Explorer) page as parameter. <div class="fragment"><pre class="fragment">    var initFunction = function(new_jswindow)
     {
         <span class="comment">// code to operate DOM or JavaScript objects defined in the new page.</span>
     };
-</pre></div> </li>
+</pre></div></li>
 </ul>
 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">leave_alone</td><td>Optional. If set to <code>false</code>, the new browser window or standalone Internet Explorer will be closed when current browser window reloads page or is closed. It set to <code>true</code>, the new browser window or standalone Internet Explorer is not closed when current browser window reloads page or is closed. The default value is <code>false</code> if omitted. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">ie</td><td>Optional. If set to <code>true</code>, a standalone Internet Explorer will be created. If set to <code>false</code>, a LocalJS browser window will be created. The default value is <code>false</code> if omitted.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">leave_alone</td><td>Optional. If set to <code>false</code>, the new browser window or standalone Internet Explorer will be closed when current browser window reloads page or is closed. If set to <code>true</code>, the new browser window or standalone Internet Explorer is not closed when current browser window reloads page or is closed. The default value is <code>false</code> if omitted.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ie</td><td>Optional. If set to <code>true</code>, a standalone Internet Explorer will be created. If set to <code>false</code>, a new LocalJS browser window will be created. The default value is <code>false</code> if omitted.</td></tr>
   </table>
   </dd>
 </dl>
@@ -190,12 +190,12 @@ Properties</h2></td></tr>
 </pre></div><p>To inject a JavaScript function to the new created browser window: </p>
 <div class="fragment"><pre class="fragment">    var funcInjected = function(new_jswindow)
     {
-        <span class="comment">// access the DOM node of the new browser window page:</span>
+        <span class="comment">// access the DOM HTML node of the new browser window page:</span>
         var new_html = new_jswindow.document.getElementsByTagName(<span class="stringliteral">&#39;html&#39;</span>)[0];
     };
 
     var browser_window = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="Returns UI object, which provides methods for common UI operations. Include localjs_ui.js to use it.">UI</a>.newWindow(<span class="stringliteral">&quot;http://myapp.com/&quot;</span>, 20, 30, 400, 300, <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="Returns UI object, which provides methods for common UI operations. Include localjs_ui.js to use it.">UI</a>.WS_NO_TITLE_BAR, <a class="code" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.<a class="code" href="interfacelocal_j_s.php#aa05066bf1c7f31ea898c0d2aed29eedb" title="ReadOnly. Returns the HWND handle of current browser window.">hostWnd</a>, funcInjected);
-</pre></div><dl class="attention"><dt><b>Attention:</b></dt><dd>If <em>parent_window</em> is <a class="el" href="interfacelocal_j_s.php#aa05066bf1c7f31ea898c0d2aed29eedb" title="ReadOnly. Returns the HWND handle of current browser window.">localJS.hostWnd</a> and <em>ie</em> is false or omitted, the new created browser window will always be closed when current browser window is closed.</dd></dl>
+</pre></div><dl class="attention"><dt><b>Attention:</b></dt><dd>If <em>parent_window</em> is <a class="el" href="interfacelocal_j_s.php#aa05066bf1c7f31ea898c0d2aed29eedb" title="ReadOnly. Returns the HWND handle of current browser window.">localJS.hostWnd</a> and <em>ie</em> is <code>false</code> or omitted, the new created browser window will always be closed when current browser window is closed. </dd></dl>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_browser_window.php" title="Open source object. Represents a browser window. Returned by UI.newWindow. Include localjs_ui...">BrowserWindow</a> | <a class="el" href="interface_u_i.php#a48bb86d6512ddef0a89997f6f26b28bb" title="Move current browser window to postion on screen specified by given parameters.">UI.moveWindow</a> | <a class="el" href="interface_u_i.php#a23574b724ef4f4142a333c96a2cc59df" title="Moves the browser window to the center of the screen, with width specified by cx and height specified...">UI.centerWindow</a> | <a href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx" target="_blank">CreateWindow Function</a> </dd></dl>
 
 </div>

@@ -136,7 +136,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </ul>
 <div class="fragment"><pre class="fragment">    thr.detach();
 </pre></div><dl class="user"><dt><b></b></dt><dd>Then the thread will run until script in thread exits, or process ends. There is also no more control to the thread.</dd></dl>
-<p>Refer to <a class="el" href="interface_thread.php#a2bb58b88ac256b165a95a806ae3b41e5" title="ReadOnly. Returns true if the thread is running, false if the thread has ended.">Thread.running</a> for a sample of wait until thread ends without blocking all <a class="el" href="interface_u_i.php" title="Open source object. Provides methods for common UI operations. Include localjs_ui.js to use it.">UI</a> actions.</p>
+<p>Refer to <a class="el" href="interface_thread.php#a2bb58b88ac256b165a95a806ae3b41e5" title="ReadOnly. Returns true if the thread is running, false if the thread has ended.">Thread.running</a> for a sample of wait until thread ends without blocking all UI actions.</p>
 <dl class="see"><dt><b>参见:</b></dt><dd><a class="el" href="interface_thread.php#a2bb58b88ac256b165a95a806ae3b41e5" title="ReadOnly. Returns true if the thread is running, false if the thread has ended.">Thread.running</a> | <a class="el" href="interface_thread.php#aa4c7e8ce5147b0a22d6f2543c017a937" title="Detach the underlying thread apart from the Thread object.">Thread.detach</a></dd></dl>
 <h3> <a id="synchronization"></a>  线程同步</h3>
 <p>Thread synchronization becomes <span class="red">EXTREMELY SIMPLE</span> for localJS script: you don't need to synchronize access to variables from different script threads; they will be synchronized automatically.</p>

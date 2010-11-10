@@ -31,7 +31,7 @@ Classes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_l_o_c_a_l_j_s.php">LOCALJS</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Source Library to be available.  <a href="interface_l_o_c_a_l_j_s.php#_details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_u_i.php">UI</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Open source object. Provides methods for common UI operations. Include localjs_ui.js to use it.  <a href="interface_u_i.php#_details">More...</a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">JavaScript Object open sourced. Provides methods for common UI operations. Include localjs_ui.js to use it.  <a href="interface_u_i.php#_details">More...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_w_e_b___s_e_r_v_i_c_e.php">WEB_SERVICE</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Open source object. Provides method for web service call. Include localjs_webservice.js to use it.  <a href="interface_w_e_b___s_e_r_v_i_c_e.php#_details">More...</a><br/></td></tr>
 </table>
