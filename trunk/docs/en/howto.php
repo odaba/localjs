@@ -273,12 +273,12 @@ How to access text file in UTF-8 format?</h3>
 <h3><a class="anchor" id="howto_browse_file"></a>
 How to browse for a file?</h3>
 <ul>
-<li>Call <a class="el" href="interface_f_i_l_e.php#a787193f9ec08e83c99a8134527355335">LOCALJS.FILE.browseFile</a>.</li>
+<li>Call <a class="el" href="interface_f_i_l_e.php#a9f38cdfedb32bebacfaf1759228a61ea">LOCALJS.FILE.browseFile</a>.</li>
 </ul>
 <h3><a class="anchor" id="howto_browse_folder"></a>
 How to browse for folder?</h3>
 <ul>
-<li>Call <a class="el" href="interface_f_i_l_e.php#a5ddc249346092c53b6e0fadd644a0fb7">LOCALJS.FILE.browseFolder</a>.</li>
+<li>Call <a class="el" href="interface_f_i_l_e.php#a4d5cb0d3bb58d2653ca5a28eb35ee84a">LOCALJS.FILE.browseFolder</a>.</li>
 </ul>
 <h3><a class="anchor" id="howto_enum_file"></a>
 How to enumerate files in a folder?</h3>

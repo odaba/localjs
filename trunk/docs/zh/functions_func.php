@@ -73,10 +73,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 : <a class="el" href="interface_u_i.php#ab4f615fc494a1630d85d58ca37deb01a">UI</a>
 </li>
 <li>browseFile()
-: <a class="el" href="interface_f_i_l_e.php#a787193f9ec08e83c99a8134527355335">FILE</a>
+: <a class="el" href="interface_f_i_l_e.php#a9f38cdfedb32bebacfaf1759228a61ea">FILE</a>
 </li>
 <li>browseFolder()
-: <a class="el" href="interface_f_i_l_e.php#a5ddc249346092c53b6e0fadd644a0fb7">FILE</a>
+: <a class="el" href="interface_f_i_l_e.php#a4d5cb0d3bb58d2653ca5a28eb35ee84a">FILE</a>
 </li>
 <li>buildPath()
 : <a class="el" href="interface_f_i_l_e.php#ab2be2bfa8a34bf9e4cc76064213c9240">FILE</a>
