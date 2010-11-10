@@ -26,7 +26,9 @@ LocalJS 包括三部分</h2>
 <div class="download" style="padding-top:0.5em">   <a href="<?php echo $release_zip_link; ?>" target="_blank"><span class="download link" style="width:5.8em">下载运行库</span><span class="download_end link">&nbsp;</span></a>   </div>
 <div class="ver">
  当前版本：  
-<?php echo $version; ?></div>
+<?php echo $version; ?><br/>
+ <a href="http://code.google.com/p/localjs/source/browse/trunk/LocalJS_Runtime/Readme%20%E8%AF%B4%E6%98%8E.txt" target="_blank">发布说明</a>  
+</div>
   
 <a href="howto.php" style="color:MediumBlue"><div class="next link" style="width:11em;padding-left:0em;margin-left:2em;margin-top:1em;">动手写JavaScript！</div></a>
  </div> </div><p>下面是LocalJS 各部分之间的关系图： </p>

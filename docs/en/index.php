@@ -27,9 +27,11 @@ LocalJS Components</h2>
 <div class="download" style="padding-top:0.5em">   <a href="<?php echo $release_zip_link; ?>" target="_blank"><span class="download link">Download Runtime</span><span class="download_end link">&nbsp;</span></a>   </div>
 <div class="ver">
  Current Release:  
-<?php echo $version; ?></div>
+<?php echo $version; ?><br/>
+ <a href="http://code.google.com/p/localjs/source/browse/trunk/LocalJS_Runtime/Readme%20%E8%AF%B4%E6%98%8E.txt" target="_blank">Release Notes</a>  
+</div>
   
-<a href="howto.php" style="color:MediumBlue"><div class="next link" style="width:12.5em;padding-left:0em;margin-left:1.5em;margin-top:1em;">Try Some JavaScript</div></a>
+<a href="howto.php" style="color:MediumBlue"><div class="next link" style="width:12.5em;padding-left:0em;margin-left:1.5em;margin-top:0.7em;">Try Some JavaScript</div></a>
 </div></div><div class="yui-gc"><div class="yui-u"></div> </div><p>Diagram below shows relationship among LocalJS components: </p>
 <div align="center">
 <img src="overview.png" alt="overview.png"/>
