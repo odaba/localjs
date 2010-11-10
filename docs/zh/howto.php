@@ -286,12 +286,12 @@ LocalJS 起步</h2>
 <h3><a class="anchor" id="howto_browse_file"></a>
 如何弹出一个文件选择对话框？</h3>
 <ul>
-<li>调用 <a class="el" href="interface_f_i_l_e.php#a787193f9ec08e83c99a8134527355335">LOCALJS.FILE.browseFile</a>.</li>
+<li>调用 <a class="el" href="interface_f_i_l_e.php#a9f38cdfedb32bebacfaf1759228a61ea">LOCALJS.FILE.browseFile</a>.</li>
 </ul>
 <h3><a class="anchor" id="howto_browse_folder"></a>
 如何弹出一个文件夹选择对话框？</h3>
 <ul>
-<li>调用 <a class="el" href="interface_f_i_l_e.php#a5ddc249346092c53b6e0fadd644a0fb7">LOCALJS.FILE.browseFolder</a>.</li>
+<li>调用 <a class="el" href="interface_f_i_l_e.php#a4d5cb0d3bb58d2653ca5a28eb35ee84a">LOCALJS.FILE.browseFolder</a>.</li>
 </ul>
 <h3><a class="anchor" id="howto_enum_file"></a>
 如何得到文件夹中的文件列表？</h3>

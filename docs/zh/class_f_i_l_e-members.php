@@ -15,8 +15,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="contents">
 成员的完整列表，这些成员属于<a class="el" href="interface_f_i_l_e.php">FILE</a>，包括所有继承而来的成员<table>
-  <tr class="memlist"><td><a class="el" href="interface_f_i_l_e.php#a787193f9ec08e83c99a8134527355335">browseFile</a>([optional] boolean forSave,[optional] String initialDir,[optional] String strFilter,[optional] String title,[optional] String defExt,[optional] String initialFile,[optional] boolean readOnly)</td><td><a class="el" href="interface_f_i_l_e.php">FILE</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="interface_f_i_l_e.php#a5ddc249346092c53b6e0fadd644a0fb7">browseFolder</a>(String title,[optional] String rootFolder)</td><td><a class="el" href="interface_f_i_l_e.php">FILE</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="interface_f_i_l_e.php#a9f38cdfedb32bebacfaf1759228a61ea">browseFile</a>([optional] boolean forSave,[optional] String title,[optional] String initialDir,[optional] String strFilter,[optional] String defExt,[optional] String initialFile,[optional] boolean readOnly)</td><td><a class="el" href="interface_f_i_l_e.php">FILE</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="interface_f_i_l_e.php#a4d5cb0d3bb58d2653ca5a28eb35ee84a">browseFolder</a>([optional] String title,[optional] String rootFolder)</td><td><a class="el" href="interface_f_i_l_e.php">FILE</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="interface_f_i_l_e.php#ab2be2bfa8a34bf9e4cc76064213c9240">buildPath</a>(String parent, String child)</td><td><a class="el" href="interface_f_i_l_e.php">FILE</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="interface_f_i_l_e.php#ab7cbd8e35cc7111c289225daf4696cea">buildUrl</a>(String baseUrl, String relativeUrl)</td><td><a class="el" href="interface_f_i_l_e.php">FILE</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="interface_f_i_l_e.php#a11c4eb341be6b3dcf3f2ce9d855b058e">createFolder</a>(String foldername)</td><td><a class="el" href="interface_f_i_l_e.php">FILE</a></td><td></td></tr>
