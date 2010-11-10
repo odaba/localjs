@@ -18,16 +18,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="contents">
 <!-- doxytag: class="UI" -->
-<p>Open source object. Provides methods for common UI operations. Include localjs_ui.js to use it.  
+<p>开源的 JavaScript 对象。提供了常用的界面操作。需要包含localjs_ui.js。  
 <a href="#_details">更多...</a></p>
 
 <p><a href="class_u_i-members.php">所有成员的列表。</a></p>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 方法</h2></td></tr>
-<tr><td colspan="2"><div class="groupHeader">Create and initialize new browser window</div></td></tr>
+<tr><td colspan="2"><div class="groupHeader">创建和初始化新的页面窗口</div></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_browser_window.php">BrowserWindow</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc">newWindow</a> (String url,[optional] int left,[optional] int top,[optional] int width,[optional] int height,[optional] int window_style,[optional] int parent_window,[optional] function initFunction,[optional] boolean leave_alone,[optional] boolean ie)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new browser window or standalone Internet Explorer and navigates to given url.  <a href="#a1affe0f3629c5b39d93ba05fd54fc3fc"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">创建新的页面窗口或者启动一个 Internet Explorer 并转向给定的 url。  <a href="#a1affe0f3629c5b39d93ba05fd54fc3fc"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_u_i.php#a8661d51c7e5389632e89177abfd92a45">showTitleBar</a> ([optional] boolean hide)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Shows or hides the title bar of current browser window.  <a href="#a8661d51c7e5389632e89177abfd92a45"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_u_i.php#a733cb08eb4bc17051512573d8d67d388">updateTitle</a> ()</td></tr>
@@ -68,17 +68,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback function which is called when a link is clicked to open a url in a new window.  <a href="#a474aa92c6232d183575e5986f50a35a2"></a><br/></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Predefined window styles.</div></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_u_i.php#a80375f6cbd4820b29a2a99a0fd75f8e0">WS_CLOSE_ONLY</a><code> [get]</code></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Predefined window style used by <a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="Creates a new browser window or standalone Internet Explorer and navigates to given url...">UI.newWindow</a>. The browser window has only a close button on the title bar with this style.  <a href="#a80375f6cbd4820b29a2a99a0fd75f8e0"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Predefined window style used by <a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="创建新的页面窗口或者启动一个 Internet Explorer 并转向给定的 url。">UI.newWindow</a>. The browser window has only a close button on the title bar with this style.  <a href="#a80375f6cbd4820b29a2a99a0fd75f8e0"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_u_i.php#a427576c9d7c9ec954db20eadde150301">WS_NO_TITLE_BAR</a><code> [get]</code></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Predefined window style used by <a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="Creates a new browser window or standalone Internet Explorer and navigates to given url...">UI.newWindow</a>. The browser window doesn't have a title bar with this style.  <a href="#a427576c9d7c9ec954db20eadde150301"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Predefined window style used by <a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="创建新的页面窗口或者启动一个 Internet Explorer 并转向给定的 url。">UI.newWindow</a>. The browser window doesn't have a title bar with this style.  <a href="#a427576c9d7c9ec954db20eadde150301"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_u_i.php#a3f568fbb10b5e9901afe81d86c5d5989">WS_NORMAL</a><code> [get]</code></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Predefined window style used by <a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="Creates a new browser window or standalone Internet Explorer and navigates to given url...">UI.newWindow</a>. The browser window has a normal title bar with this style.  <a href="#a3f568fbb10b5e9901afe81d86c5d5989"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Predefined window style used by <a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="创建新的页面窗口或者启动一个 Internet Explorer 并转向给定的 url。">UI.newWindow</a>. The browser window has a normal title bar with this style.  <a href="#a3f568fbb10b5e9901afe81d86c5d5989"></a><br/></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Miscellaneous</div></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_u_i.php#a862ffbf6976d63755adc1fc78f1a0354">isIE</a><code> [get]</code></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if current page is loaded by standalone Internet Explorer, <code>false</code> if by LocalJS browser window.  <a href="#a862ffbf6976d63755adc1fc78f1a0354"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>详细描述</h2>
-<p>Open source object. Provides methods for common UI operations. Include localjs_ui.js to use it. </p>
+<p>开源的 JavaScript 对象。提供了常用的界面操作。需要包含localjs_ui.js。 </p>
 <hr/><h2>方法文档</h2>
 <a class="anchor" id="a1affe0f3629c5b39d93ba05fd54fc3fc"></a><!-- doxytag: member="UI::newWindow" ref="a1affe0f3629c5b39d93ba05fd54fc3fc" args="(String url,[optional] int left,[optional] int top,[optional] int width,[optional] int height,[optional] int window_style,[optional] int parent_window,[optional] function initFunction,[optional] boolean leave_alone,[optional] boolean ie)" -->
 <div class="memitem">
@@ -153,50 +153,50 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Creates a new browser window or standalone Internet Explorer and navigates to given url. </p>
+<p>创建新的页面窗口或者启动一个 Internet Explorer 并转向给定的 url。 </p>
 <dl><dt><b>参数:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>The url the new browser window or standalone Internet Explorer navigates to. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">left</td><td>Optional. The initial horizontal position of the window. Refer to parameter <em>x</em> of <a href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx" target="_blank">CreateWindow Function</a>. If omitted, the default value is to center the window on the screen. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">top</td><td>Optional. The initial vertical position of the window. Refer to parameter <em>y</em> of <a href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx" target="_blank">CreateWindow Function</a>. If omitted, the default value is to center the window on the screen. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>Optional. The width, in device units, of the window. Refer to parameter <em>nWidth</em> of <a href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx" target="_blank">CreateWindow Function</a>. If omitted, the default value is 300. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>Optional. The height, in device units, of the window. Refer to parameter <em>nHeight</em> of <a href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx" target="_blank">CreateWindow Function</a>. If omitted, the default value is 180. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">window_style</td><td>Optional. The style of the window being created, ignored by standalone Internet Explorer. Refer to parameter <em>dwStyle</em> of <a href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx" target="_blank">CreateWindow Function</a>. <a class="el" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="返回 UI object，它提供了常用的 UI 操作。需要包含 localjs_ui.js。">LOCALJS.UI</a> predefines some predefined window style: </p>
+    <tr><td class="paramdir">[in]</td><td class="paramname">url</td><td>新的页面窗口或者 Internet Explorer 要转向的 url。</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">left</td><td>可选参数。窗口的左边位置。参见 <a href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx" target="_blank">CreateWindow 函数</a>的参数 <em>x。如果省略此参数，newWindow</em> 函数将尽量把窗口移到屏幕正中。</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">top</td><td>可选参数。窗口的上边位置。参见 <a href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx" target="_blank">CreateWindow 函数</a>的参数 <em>y。如果省略此参数，newWindow</em> 函数将尽量把窗口移到屏幕正中。</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">width</td><td>可选参数。窗口的宽度。参见 <a href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx" target="_blank">CreateWindow 函数</a>的参数 <em>nWidth。如果省略此参数，缺省值是300。</em> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">height</td><td>可选参数。窗口的高度。参见 <a href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx" target="_blank">CreateWindow 函数</a>的参数 <em>nHeight。如果省略此参数，缺省值是180。</em> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">window_style</td><td>可选参数。要创建的页面窗口的风格。创建Internet Explorer 时忽略此参数。参见 <a href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx" target="_blank">CreateWindow 函数</a>的参数 <em>dwStyle。LOCALJS.UI</em> 预定义了以下几种窗口风格： </p>
 <ul>
-<li>LOCALJS.UI.WS_CLOSE_ONLY: The browser window has only a close button on the title bar. </li>
-<li>LOCALJS.UI.WS_NO_TITLE_BAR: The browser window doesn't have a title bar. </li>
-<li>LOCALJS.UI.WS_NORMAL: The browser window has a normal title bar. This is the default value if <em>window_style</em> is omitted. </li>
+<li>LOCALJS.UI.WS_CLOSE_ONLY: 页面窗口的标题栏上只有一个关闭按钮。 </li>
+<li>LOCALJS.UI.WS_NO_TITLE_BAR: 页面窗口没有标题栏。 </li>
+<li>LOCALJS.UI.WS_NORMAL: 页面窗口有一个正常的标题栏。如果 <em>window_style</em> 被省略，它的缺省值就是 LOCALJS.UI.WS_NORMAL。</li>
 </ul>
 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">parent_window</td><td>Optional. The HWND handle to the parent or owner window of the browser window being created, ignored by standalone Internet Explorer. To use the HWND handle of the current browser window, pass in <a class="el" href="interfacelocal_j_s.php#aa05066bf1c7f31ea898c0d2aed29eedb" title="ReadOnly. Returns the HWND handle of current browser window.">localJS.hostWnd</a>. If omitted, the default value is zero. Refer to parameter <em>hWndParent</em> of <a href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx" target="_blank">CreateWindow Function</a>. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">initFunction</td><td>Optional. A JavaScript function which will be executed when the new browser window or standalone Internet Explorer loads page. </p>
+    <tr><td class="paramdir">[in]</td><td class="paramname">parent_window</td><td>可选参数。要创建的页面窗口的父窗口（或拥有者窗口）的 HWND 句柄。创建 Internet Explorer 时忽略此参数。要使用当前页面窗口的 HWND 句柄，传入 <code>localJS.hostWnd。如果省略此参数，缺省值是</code> 0。参见 <a href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx" target="_blank">CreateWindow 函数</a>的参数 <em>hWndParent。</em> </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">initFunction</td><td>可选参数。一个在新页面窗口或 Internet Explorer 加载页面的时候执行的 JavaScript 函数。 </p>
 <ul>
-<li>The JavaScript function will be passed with the JavaScript window object of the browser window page as parameter. <div class="fragment"><pre class="fragment">    var initFunction = function(new_jswindow)
+<li>这个函数被调用的时候会有一个参数：新页面窗口或者 Internet Explorer 的页面的 JavaScript window 对象。 <div class="fragment"><pre class="fragment">    var initFunction = function(new_jswindow)
     {
-        <span class="comment">// code to operate DOM or JavaScript objects defined in the new page.</span>
+        <span class="comment">// 这里的代码可以操作新页面中的 DOM 或 JavaScript 对象。</span>
     };
-</pre></div> </li>
+</pre></div></li>
 </ul>
 </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">leave_alone</td><td>Optional. If set to <code>false</code>, the new browser window or standalone Internet Explorer will be closed when current browser window reloads page or is closed. It set to <code>true</code>, the new browser window or standalone Internet Explorer is not closed when current browser window reloads page or is closed. The default value is <code>false</code> if omitted. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">ie</td><td>Optional. If set to <code>true</code>, a standalone Internet Explorer will be created. If set to <code>false</code>, a LocalJS browser window will be created. The default value is <code>false</code> if omitted.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">leave_alone</td><td>可选参数。如果为 <code>false</code> 或被省略，在当前页面窗口关闭的时候，所创建的新的页面窗口或者 Internet Explorer 也会被关闭。如果为 <code>true，在当前页面窗口关闭的时候，所创建的新的页面窗口或者</code> Internet Explorer 不会被关闭。</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ie</td><td>可选参数。如果为 <code>true，创建</code> Internet Explorer。如果为 <code>false</code> 或省略此参数，创建新的页面窗口。</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="return"><dt><b>返回:</b></dt><dd>The <a class="el" href="interface_browser_window.php" title="Open source object. Represents a browser window. Returned by UI.newWindow. Include localjs_ui...">BrowserWindow</a> object for the new created browser window or standalone Internet Explorer.</dd></dl>
-<p>You don't have to calculate the position of the new browser window in <a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="Creates a new browser window or standalone Internet Explorer and navigates to given url...">UI.newWindow</a> method. It might be better to initialize the new browser window position at the page loaded by the created browser window with methods <a class="el" href="interface_u_i.php#a48bb86d6512ddef0a89997f6f26b28bb" title="Move current browser window to postion on screen specified by given parameters.">UI.moveWindow</a> or <a class="el" href="interface_u_i.php#a23574b724ef4f4142a333c96a2cc59df" title="Moves the browser window to the center of the screen, with width specified by cx and height specified...">UI.centerWindow</a>, in which case each browser window initializes themselves.</p>
-<p>To create a new browser window without title bar: </p>
+<dl class="return"><dt><b>返回:</b></dt><dd>新创建的页面窗口或者 Internet Explorer 的 <a class="el" href="interface_browser_window.php" title="Open source object. Represents a browser window. Returned by UI.newWindow. Include localjs_ui...">BrowserWindow</a> 对象。</dd></dl>
+<p>不一定要在 <a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="创建新的页面窗口或者启动一个 Internet Explorer 并转向给定的 url。">UI.newWindow</a> 方法中指定新页面窗口的位置。可以在新页面窗口加载的页面中用 <a class="el" href="interface_u_i.php#a48bb86d6512ddef0a89997f6f26b28bb" title="Move current browser window to postion on screen specified by given parameters.">UI.moveWindow</a> 或者 <a class="el" href="interface_u_i.php#a23574b724ef4f4142a333c96a2cc59df" title="Moves the browser window to the center of the screen, with width specified by cx and height specified...">UI.centerWindow</a> 方法来初始化页面窗口的位置。这样，每个页面窗口自己初始化自己，逻辑更清晰。</p>
+<p>下面的示例代码创建一个没有标题栏的页面窗口： </p>
 <div class="fragment"><pre class="fragment">    var browser_window = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="返回 UI object，它提供了常用的 UI 操作。需要包含 localjs_ui.js。">UI</a>.newWindow(<span class="stringliteral">&quot;http://myapp.com/&quot;</span>, 20, 30, 400, 300, <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="返回 UI object，它提供了常用的 UI 操作。需要包含 localjs_ui.js。">UI</a>.WS_NO_TITLE_BAR);
-</pre></div><p>To inject a JavaScript function to the new created browser window: </p>
+</pre></div><p>向新创建的页面窗口中插入一个 JavaScript 函数： </p>
 <div class="fragment"><pre class="fragment">    var funcInjected = function(new_jswindow)
     {
-        <span class="comment">// access the DOM node of the new browser window page:</span>
+        <span class="comment">// 得到新页面窗口中的 DOM HTML 对象：</span>
         var new_html = new_jswindow.document.getElementsByTagName(<span class="stringliteral">&#39;html&#39;</span>)[0];
     };
 
     var browser_window = <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="返回 UI object，它提供了常用的 UI 操作。需要包含 localjs_ui.js。">UI</a>.newWindow(<span class="stringliteral">&quot;http://myapp.com/&quot;</span>, 20, 30, 400, 300, <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="返回 UI object，它提供了常用的 UI 操作。需要包含 localjs_ui.js。">UI</a>.WS_NO_TITLE_BAR, <a class="code" href="interfacelocal_j_s.php" title="The root object of all advanced JavaScript objects. Available directly in JavaScript.">localJS</a>.<a class="code" href="interfacelocal_j_s.php#aa05066bf1c7f31ea898c0d2aed29eedb" title="ReadOnly. Returns the HWND handle of current browser window.">hostWnd</a>, funcInjected);
-</pre></div><dl class="attention"><dt><b>注意:</b></dt><dd>If <em>parent_window</em> is <a class="el" href="interfacelocal_j_s.php#aa05066bf1c7f31ea898c0d2aed29eedb" title="ReadOnly. Returns the HWND handle of current browser window.">localJS.hostWnd</a> and <em>ie</em> is false or omitted, the new created browser window will always be closed when current browser window is closed.</dd></dl>
-<dl class="see"><dt><b>参见:</b></dt><dd><a class="el" href="interface_browser_window.php" title="Open source object. Represents a browser window. Returned by UI.newWindow. Include localjs_ui...">BrowserWindow</a> | <a class="el" href="interface_u_i.php#a48bb86d6512ddef0a89997f6f26b28bb" title="Move current browser window to postion on screen specified by given parameters.">UI.moveWindow</a> | <a class="el" href="interface_u_i.php#a23574b724ef4f4142a333c96a2cc59df" title="Moves the browser window to the center of the screen, with width specified by cx and height specified...">UI.centerWindow</a> | <a href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx" target="_blank">CreateWindow Function</a> </dd></dl>
+</pre></div><dl class="attention"><dt><b>注意:</b></dt><dd>如果 <em>parent_window</em> 是 <a class="el" href="interfacelocal_j_s.php#aa05066bf1c7f31ea898c0d2aed29eedb" title="ReadOnly. Returns the HWND handle of current browser window.">localJS.hostWnd</a> 并且 <em>ie</em> 是 <code>false</code> 或者被省略，在当前页面窗口被关闭的时候，新创建的页面窗口总是会被关闭。</dd></dl>
+<dl class="see"><dt><b>参见:</b></dt><dd><a class="el" href="interface_browser_window.php" title="Open source object. Represents a browser window. Returned by UI.newWindow. Include localjs_ui...">BrowserWindow</a> | <a class="el" href="interface_u_i.php#a48bb86d6512ddef0a89997f6f26b28bb" title="Move current browser window to postion on screen specified by given parameters.">UI.moveWindow</a> | <a class="el" href="interface_u_i.php#a23574b724ef4f4142a333c96a2cc59df" title="Moves the browser window to the center of the screen, with width specified by cx and height specified...">UI.centerWindow</a> | <a href="http://msdn.microsoft.com/en-us/library/ms632679(VS.85).aspx" target="_blank">CreateWindow 函数</a> </dd></dl>
 
 </div>
 </div>
@@ -477,8 +477,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
     {
         <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="返回 UI object，它提供了常用的 UI 操作。需要包含 localjs_ui.js。">UI</a>.centerWindow(300, 180);
     });
-</pre></div><p>You don't have to calculate the position of the new browser window in <a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="Creates a new browser window or standalone Internet Explorer and navigates to given url...">UI.newWindow</a> method. It might be better to initialize the new browser window position at the page loaded by the created browser window with methods <a class="el" href="interface_u_i.php#a48bb86d6512ddef0a89997f6f26b28bb" title="Move current browser window to postion on screen specified by given parameters.">UI.moveWindow</a> or <a class="el" href="interface_u_i.php#a23574b724ef4f4142a333c96a2cc59df" title="Moves the browser window to the center of the screen, with width specified by cx and height specified...">UI.centerWindow</a>, in which case each browser window initializes themselves.</p>
-<dl class="see"><dt><b>参见:</b></dt><dd><a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="Creates a new browser window or standalone Internet Explorer and navigates to given url...">UI.newWindow</a> | <a class="el" href="interface_u_i.php#a48bb86d6512ddef0a89997f6f26b28bb" title="Move current browser window to postion on screen specified by given parameters.">UI.moveWindow</a> </dd></dl>
+</pre></div><p>You don't have to calculate the position of the new browser window in <a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="创建新的页面窗口或者启动一个 Internet Explorer 并转向给定的 url。">UI.newWindow</a> method. It might be better to initialize the new browser window position at the page loaded by the created browser window with methods <a class="el" href="interface_u_i.php#a48bb86d6512ddef0a89997f6f26b28bb" title="Move current browser window to postion on screen specified by given parameters.">UI.moveWindow</a> or <a class="el" href="interface_u_i.php#a23574b724ef4f4142a333c96a2cc59df" title="Moves the browser window to the center of the screen, with width specified by cx and height specified...">UI.centerWindow</a>, in which case each browser window initializes themselves.</p>
+<dl class="see"><dt><b>参见:</b></dt><dd><a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="创建新的页面窗口或者启动一个 Internet Explorer 并转向给定的 url。">UI.newWindow</a> | <a class="el" href="interface_u_i.php#a48bb86d6512ddef0a89997f6f26b28bb" title="Move current browser window to postion on screen specified by given parameters.">UI.moveWindow</a> </dd></dl>
 
 </div>
 </div>
@@ -558,9 +558,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
     {
         <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="返回 UI object，它提供了常用的 UI 操作。需要包含 localjs_ui.js。">UI</a>.moveWindow(0, 0, 100, 50);
     }):
-</pre></div><p>You don't have to calculate the position of the new browser window in <a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="Creates a new browser window or standalone Internet Explorer and navigates to given url...">UI.newWindow</a> method. It might be better to initialize the new browser window position at the page loaded by the created browser window with methods <a class="el" href="interface_u_i.php#a48bb86d6512ddef0a89997f6f26b28bb" title="Move current browser window to postion on screen specified by given parameters.">UI.moveWindow</a> or <a class="el" href="interface_u_i.php#a23574b724ef4f4142a333c96a2cc59df" title="Moves the browser window to the center of the screen, with width specified by cx and height specified...">UI.centerWindow</a>, in which case each browser window initializes themselves.</p>
+</pre></div><p>You don't have to calculate the position of the new browser window in <a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="创建新的页面窗口或者启动一个 Internet Explorer 并转向给定的 url。">UI.newWindow</a> method. It might be better to initialize the new browser window position at the page loaded by the created browser window with methods <a class="el" href="interface_u_i.php#a48bb86d6512ddef0a89997f6f26b28bb" title="Move current browser window to postion on screen specified by given parameters.">UI.moveWindow</a> or <a class="el" href="interface_u_i.php#a23574b724ef4f4142a333c96a2cc59df" title="Moves the browser window to the center of the screen, with width specified by cx and height specified...">UI.centerWindow</a>, in which case each browser window initializes themselves.</p>
 <dl class="note"><dt><b>注解:</b></dt><dd>If the current browser window is created as child window with window style WS_CHILD, then the position is relative to it's parent window, not to the screen. By default all browser window are not created as child window.</dd></dl>
-<dl class="see"><dt><b>参见:</b></dt><dd><a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="Creates a new browser window or standalone Internet Explorer and navigates to given url...">UI.newWindow</a> | <a class="el" href="interface_u_i.php#a23574b724ef4f4142a333c96a2cc59df" title="Moves the browser window to the center of the screen, with width specified by cx and height specified...">UI.centerWindow</a> </dd></dl>
+<dl class="see"><dt><b>参见:</b></dt><dd><a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="创建新的页面窗口或者启动一个 Internet Explorer 并转向给定的 url。">UI.newWindow</a> | <a class="el" href="interface_u_i.php#a23574b724ef4f4142a333c96a2cc59df" title="Moves the browser window to the center of the screen, with width specified by cx and height specified...">UI.centerWindow</a> </dd></dl>
 
 </div>
 </div>
@@ -729,7 +729,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
   </dd>
 </dl>
 <p>If newWindowCallback returns <code>true</code>, <a class="el" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="返回 UI object，它提供了常用的 UI 操作。需要包含 localjs_ui.js。">LOCALJS.UI</a> will not do future prcessing about the new window opening; if newWindowCallback is not set or returns <code>false</code>, <a class="el" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="返回 UI object，它提供了常用的 UI 操作。需要包含 localjs_ui.js。">LOCALJS.UI</a> will open a small new browser window centered at screen to open the url.</p>
-<dl class="see"><dt><b>参见:</b></dt><dd><a class="el" href="interface_browser_window.php" title="Open source object. Represents a browser window. Returned by UI.newWindow. Include localjs_ui...">BrowserWindow</a> | <a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="Creates a new browser window or standalone Internet Explorer and navigates to given url...">UI.newWindow</a> | <a href="http://msdn.microsoft.com/en-us/library/aa768337(VS.85).aspx" target="_blank">NewWindow3 Event</a> | <a href="http://msdn.microsoft.com/en-us/library/aa752085(VS.85).aspx" target="_blank">WebBrowser Object</a> | <a href="http://msdn.microsoft.com/en-us/library/bb762518(VS.85).aspx" target="_blank">NWMF enumeration</a> </dd></dl>
+<dl class="see"><dt><b>参见:</b></dt><dd><a class="el" href="interface_browser_window.php" title="Open source object. Represents a browser window. Returned by UI.newWindow. Include localjs_ui...">BrowserWindow</a> | <a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="创建新的页面窗口或者启动一个 Internet Explorer 并转向给定的 url。">UI.newWindow</a> | <a href="http://msdn.microsoft.com/en-us/library/aa768337(VS.85).aspx" target="_blank">NewWindow3 Event</a> | <a href="http://msdn.microsoft.com/en-us/library/aa752085(VS.85).aspx" target="_blank">WebBrowser Object</a> | <a href="http://msdn.microsoft.com/en-us/library/bb762518(VS.85).aspx" target="_blank">NWMF enumeration</a> </dd></dl>
 
 </div>
 </div>
@@ -744,9 +744,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Predefined window style used by <a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="Creates a new browser window or standalone Internet Explorer and navigates to given url...">UI.newWindow</a>. The browser window has only a close button on the title bar with this style. </p>
+<p>Predefined window style used by <a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="创建新的页面窗口或者启动一个 Internet Explorer 并转向给定的 url。">UI.newWindow</a>. The browser window has only a close button on the title bar with this style. </p>
 <p>The definition of this style is WS_POPUP | WS_THICKFRAME | WS_CAPTION | WS_SYSMENU | WS_VISIBLE</p>
-<dl class="see"><dt><b>参见:</b></dt><dd><a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="Creates a new browser window or standalone Internet Explorer and navigates to given url...">UI.newWindow</a> | <a href="http://msdn.microsoft.com/en-us/library/ms632600(VS.85).aspx" target="_blank">Window Styles</a> </dd></dl>
+<dl class="see"><dt><b>参见:</b></dt><dd><a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="创建新的页面窗口或者启动一个 Internet Explorer 并转向给定的 url。">UI.newWindow</a> | <a href="http://msdn.microsoft.com/en-us/library/ms632600(VS.85).aspx" target="_blank">Window Styles</a> </dd></dl>
 
 </div>
 </div>
@@ -761,9 +761,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Predefined window style used by <a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="Creates a new browser window or standalone Internet Explorer and navigates to given url...">UI.newWindow</a>. The browser window doesn't have a title bar with this style. </p>
+<p>Predefined window style used by <a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="创建新的页面窗口或者启动一个 Internet Explorer 并转向给定的 url。">UI.newWindow</a>. The browser window doesn't have a title bar with this style. </p>
 <p>The definition of this style is WS_POPUP | WS_VISIBLE | WS_SYSMENU</p>
-<dl class="see"><dt><b>参见:</b></dt><dd><a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="Creates a new browser window or standalone Internet Explorer and navigates to given url...">UI.newWindow</a> | <a href="http://msdn.microsoft.com/en-us/library/ms632600(VS.85).aspx" target="_blank">Window Styles</a> </dd></dl>
+<dl class="see"><dt><b>参见:</b></dt><dd><a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="创建新的页面窗口或者启动一个 Internet Explorer 并转向给定的 url。">UI.newWindow</a> | <a href="http://msdn.microsoft.com/en-us/library/ms632600(VS.85).aspx" target="_blank">Window Styles</a> </dd></dl>
 
 </div>
 </div>
@@ -778,9 +778,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Predefined window style used by <a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="Creates a new browser window or standalone Internet Explorer and navigates to given url...">UI.newWindow</a>. The browser window has a normal title bar with this style. </p>
+<p>Predefined window style used by <a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="创建新的页面窗口或者启动一个 Internet Explorer 并转向给定的 url。">UI.newWindow</a>. The browser window has a normal title bar with this style. </p>
 <p>The definition of this style is WS_OVERLAPPEDWINDOW | WS_VISIBLE</p>
-<dl class="see"><dt><b>参见:</b></dt><dd><a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="Creates a new browser window or standalone Internet Explorer and navigates to given url...">UI.newWindow</a> | <a href="http://msdn.microsoft.com/en-us/library/ms632600(VS.85).aspx" target="_blank">Window Styles</a> </dd></dl>
+<dl class="see"><dt><b>参见:</b></dt><dd><a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="创建新的页面窗口或者启动一个 Internet Explorer 并转向给定的 url。">UI.newWindow</a> | <a href="http://msdn.microsoft.com/en-us/library/ms632600(VS.85).aspx" target="_blank">Window Styles</a> </dd></dl>
 
 </div>
 </div>

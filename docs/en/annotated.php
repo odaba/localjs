@@ -28,7 +28,7 @@ Here are the classes, structs, unions and interfaces with brief descriptions:<ta
   <tr><td class="indexkey"><a class="el" href="interface_structure.php">Structure</a></td><td class="indexvalue"><a class="el" href="interface_structure.php" title="Structure object represents a C struct, used as parameters in Dll function call.">Structure</a> object represents a C struct, used as parameters in Dll function call </td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_thread.php">Thread</a></td><td class="indexvalue">Represent a script thread </td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_threading.php">Threading</a></td><td class="indexvalue"><a class="el" href="interface_threading.php" title="Threading object exposes methods to create new script thread, sleep, get thread id, etc.">Threading</a> object exposes methods to create new script thread, sleep, get thread id, etc </td></tr>
-  <tr><td class="indexkey"><a class="el" href="interface_u_i.php">UI</a></td><td class="indexvalue">Open source object. Provides methods for common UI operations. Include localjs_ui.js to use it </td></tr>
+  <tr><td class="indexkey"><a class="el" href="interface_u_i.php">UI</a></td><td class="indexvalue">JavaScript Object open sourced. Provides methods for common UI operations. Include localjs_ui.js to use it </td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_w_e_b___s_e_r_v_i_c_e.php">WEB_SERVICE</a></td><td class="indexvalue">Open source object. Provides method for web service call. Include localjs_webservice.js to use it </td></tr>
   <tr><td class="indexkey"><a class="el" href="interface_window_hook.php">WindowHook</a></td><td class="indexvalue">Hook messages of the specified window </td></tr>
 </table>

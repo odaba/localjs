@@ -23,7 +23,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr><td colspan="2"><h2><a name="nested-classes"></a>
 组合类型</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_browser_window.php">BrowserWindow</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Open source object. Represents a browser window. Returned by <a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="Creates a new browser window or standalone Internet Explorer and navigates to given url...">UI.newWindow</a>. Include localjs_ui.js to use it.  <a href="interface_browser_window.php#_details">更多...</a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Open source object. Represents a browser window. Returned by <a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="创建新的页面窗口或者启动一个 Internet Explorer 并转向给定的 url。">UI.newWindow</a>. Include localjs_ui.js to use it.  <a href="interface_browser_window.php#_details">更多...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_f_i_l_e.php">FILE</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">开源的 JavaScript 对象。提供了常用的文件和注册表操作。需要包含localjs_file.js，localjs_ui.js 和 localjs_webservice.js。  <a href="interface_f_i_l_e.php#_details">更多...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_l_o_c_a_l_i_z_a_t_i_o_n.php">LOCALIZATION</a></td></tr>
@@ -31,7 +31,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_l_o_c_a_l_j_s.php">LOCALJS</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。  <a href="interface_l_o_c_a_l_j_s.php#_details">更多...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_u_i.php">UI</a></td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Open source object. Provides methods for common UI operations. Include localjs_ui.js to use it.  <a href="interface_u_i.php#_details">更多...</a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">开源的 JavaScript 对象。提供了常用的界面操作。需要包含localjs_ui.js。  <a href="interface_u_i.php#_details">更多...</a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_w_e_b___s_e_r_v_i_c_e.php">WEB_SERVICE</a></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Open source object. Provides method for web service call. Include localjs_webservice.js to use it.  <a href="interface_w_e_b___s_e_r_v_i_c_e.php#_details">更多...</a><br/></td></tr>
 </table>

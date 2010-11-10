@@ -21,7 +21,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="contents">
 <!-- doxytag: class="BrowserWindow" -->
-<p>Open source object. Represents a browser window. Returned by <a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="Creates a new browser window or standalone Internet Explorer and navigates to given url...">UI.newWindow</a>. Include localjs_ui.js to use it.  
+<p>Open source object. Represents a browser window. Returned by <a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="创建新的页面窗口或者启动一个 Internet Explorer 并转向给定的 url。">UI.newWindow</a>. Include localjs_ui.js to use it.  
 <a href="#_details">更多...</a></p>
 
 <p><a href="class_browser_window-members.php">所有成员的列表。</a></p>
@@ -46,7 +46,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if the <a class="el" href="interface_browser_window.php" title="Open source object. Represents a browser window. Returned by UI.newWindow. Include localjs_ui...">BrowserWindow</a> object refers to a standalone Internet Explorer, <code>false</code> for LocalJS browser window.  <a href="#a862ffbf6976d63755adc1fc78f1a0354"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>详细描述</h2>
-<p>Open source object. Represents a browser window. Returned by <a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="Creates a new browser window or standalone Internet Explorer and navigates to given url...">UI.newWindow</a>. Include localjs_ui.js to use it. </p>
+<p>Open source object. Represents a browser window. Returned by <a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc" title="创建新的页面窗口或者启动一个 Internet Explorer 并转向给定的 url。">UI.newWindow</a>. Include localjs_ui.js to use it. </p>
 <hr/><h2>方法文档</h2>
 <a class="anchor" id="ad2d8da20a97eb156c4c54ae708c6a389"></a><!-- doxytag: member="BrowserWindow::getJSWindow" ref="ad2d8da20a97eb156c4c54ae708c6a389" args="([optional] int timout_seconds)" -->
 <div class="memitem">
