@@ -29,15 +29,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="interface_browser_window.php">BrowserWindow</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_u_i.php#a1affe0f3629c5b39d93ba05fd54fc3fc">newWindow</a> (String url,[optional] int left,[optional] int top,[optional] int width,[optional] int height,[optional] int window_style,[optional] int parent_window,[optional] function initFunction,[optional] boolean leave_alone,[optional] boolean ie)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">创建新的页面窗口或者启动一个 Internet Explorer 并转向给定的 url。  <a href="#a1affe0f3629c5b39d93ba05fd54fc3fc"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_u_i.php#a8661d51c7e5389632e89177abfd92a45">showTitleBar</a> ([optional] boolean hide)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Shows or hides the title bar of current browser window.  <a href="#a8661d51c7e5389632e89177abfd92a45"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">显示或隐藏页面窗口的标题栏。  <a href="#a8661d51c7e5389632e89177abfd92a45"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_u_i.php#a733cb08eb4bc17051512573d8d67d388">updateTitle</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the title of the browser window to the value of TITLE tag inside current page.  <a href="#a733cb08eb4bc17051512573d8d67d388"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">把页面窗口的标题设为和页面的 HTML TITLE 一样。  <a href="#a733cb08eb4bc17051512573d8d67d388"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_u_i.php#aed53a5a22874b3433e67982678c0d531">addDraggable</a> (var el,...)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a html element to an internal dragging list maintained by <a class="el" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="返回 UI object，它提供了常用的 UI 操作。需要包含 localjs_ui.js。">LOCALJS.UI</a>. Drag the items in the list will drag the browser window.  <a href="#aed53a5a22874b3433e67982678c0d531"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">向 <a class="el" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="返回 UI object，它提供了常用的 UI 操作。需要包含 localjs_ui.js。">LOCALJS.UI</a> 内部的可拖拽列表中添加一个 HTML 节点。拖拽该列表中的 HTML 节点可以拖动页面窗口。  <a href="#aed53a5a22874b3433e67982678c0d531"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">array&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_u_i.php#a036ec67a95716f85c0be9e723ac4782d">getDraggables</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the internal dragging list maintained by <a class="el" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="返回 UI object，它提供了常用的 UI 操作。需要包含 localjs_ui.js。">LOCALJS.UI</a> as an array of HTML DOM elements. Drag the items in the list will drag the browser window.  <a href="#a036ec67a95716f85c0be9e723ac4782d"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">返回 <a class="el" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="返回 UI object，它提供了常用的 UI 操作。需要包含 localjs_ui.js。">LOCALJS.UI</a> 内部的可拖拽列表，是一个 HTML 节点的数组。拖拽该列表中的 HTML 节点可以拖动页面窗口。  <a href="#a036ec67a95716f85c0be9e723ac4782d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_u_i.php#a07804c8c056dedcec3467bc1c9470db4">setDraggables</a> (array el_draggable_array)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the internal dragging list maintained by <a class="el" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="返回 UI object，它提供了常用的 UI 操作。需要包含 localjs_ui.js。">LOCALJS.UI</a>. Drag the items in the list will drag the browser window.  <a href="#a07804c8c056dedcec3467bc1c9470db4"></a><br/></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">用给定的包含 HTML 节点的数组替代 <a class="el" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="返回 UI object，它提供了常用的 UI 操作。需要包含 localjs_ui.js。">LOCALJS.UI</a> 内部的可拖拽列表。拖拽该列表中的 HTML 节点可以拖动页面窗口。  <a href="#a07804c8c056dedcec3467bc1c9470db4"></a><br/></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Popup message box</div></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_u_i.php#ae4029da3a7b30a44c2a93b186146e3ae">msgBox</a> (String msg,[optional] boolean error)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Pops up a system message box with an information icon or error icon.  <a href="#ae4029da3a7b30a44c2a93b186146e3ae"></a><br/></td></tr>
@@ -215,14 +215,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Shows or hides the title bar of current browser window. </p>
+<p>显示或隐藏页面窗口的标题栏。 </p>
 <dl><dt><b>参数:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">hide</td><td>Optional. Set to <code>true</code> to hide the title bar of the browser window, <code>false</code> to show the title bar. <code>false</code> is the default value if omitted.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hide</td><td>可选参数。为 <code>true</code> 隐藏标题栏，为 <code>false</code> 或省略则显示标题栏。</td></tr>
   </table>
   </dd>
 </dl>
-<p>To hide the title bar of current browser window: </p>
+<p>下面的示例代码隐藏页面窗口的标题栏： </p>
 <div class="fragment"><pre class="fragment">    <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="返回 UI object，它提供了常用的 UI 操作。需要包含 localjs_ui.js。">UI</a>.showTitleBar(<span class="keyword">true</span>);
 </pre></div> 
 </div>
@@ -241,9 +241,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Updates the title of the browser window to the value of TITLE tag inside current page. </p>
-<p>When a page is loaded, LocalJS sets the browser window title to the value of TITLE tag of the paged loaded. However, if the page title is changed later by JavaScript, you can call <code>updateTitle</code> to synchronize the changes to the browser window title. For instance:</p>
-<div class="fragment"><pre class="fragment">    document.title = <span class="stringliteral">&quot;New HTML Title&quot;</span>;
+<p>把页面窗口的标题设为和页面的 HTML TITLE 一样。 </p>
+<p>当页面被加载的时候，LocalJS 会把页面窗口的标题设为和页面的 HTML TITLE 一样。之后，如果 JavaScript 更改了页面的 HTML TITLE，可以调用 <code>updateTitle</code> 更改页面窗口的标题。例如：</p>
+<div class="fragment"><pre class="fragment">    document.title = <span class="stringliteral">&quot;新的页面标题&quot;</span>;
     <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="返回 UI object，它提供了常用的 UI 操作。需要包含 localjs_ui.js。">UI</a>.updateTitle();
 </pre></div> 
 </div>
@@ -273,19 +273,19 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Adds a html element to an internal dragging list maintained by <a class="el" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="返回 UI object，它提供了常用的 UI 操作。需要包含 localjs_ui.js。">LOCALJS.UI</a>. Drag the items in the list will drag the browser window. </p>
+<p>向 <a class="el" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="返回 UI object，它提供了常用的 UI 操作。需要包含 localjs_ui.js。">LOCALJS.UI</a> 内部的可拖拽列表中添加一个 HTML 节点。拖拽该列表中的 HTML 节点可以拖动页面窗口。 </p>
 <dl><dt><b>参数:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">el</td><td>The HTML DOM element to be added to the internal dragging list, or id of the HTML DOM element. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">...</td><td>Optional. More HTML DOM elements to be added to the internal dragging list, or id of the HTML DOM element.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">el</td><td>要加入的 HTML DOM 节点，或者该节点的 ID。 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">...</td><td>可选参数。其他的要加入的 HTML DOM 节点，或者节点的 ID。</td></tr>
   </table>
   </dd>
 </dl>
-<p>This method is typically used to make a HTML element act as title bar of the browser window. For example, if you want to create a COOL title bar, you can hide the title bar of browser window, and use one or more HTML elements to act as title bar:</p>
+<p>本方法主要用于让一个 HTML 节点起到页面窗口标题栏的作用。例如，如果你想创建一个酷酷的标题栏，你可以隐藏页面窗口的标题栏，然后让一个或多个 HTML 节点起到标题栏的作用。</p>
 <div class="fragment"><pre class="fragment">    <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="返回 UI object，它提供了常用的 UI 操作。需要包含 localjs_ui.js。">UI</a>.showTitleBar(<span class="keyword">true</span>);
     <a class="code" href="interface_l_o_c_a_l_j_s.php" title="所有 LocalJS 基本对象的根对象。要使用 LocalJS 基本对象，在 HTML 页面里包含 LocalJS Open Source Library 中的 JavaScript 文件。...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="返回 UI object，它提供了常用的 UI 操作。需要包含 localjs_ui.js。">UI</a>.addDraggable(<span class="stringliteral">&#39;id_of_title_bar_element&#39;</span>, <span class="stringliteral">&#39;id_of_title_bar_element2&#39;</span>);
-</pre></div><dl class="note"><dt><b>注解:</b></dt><dd>By default <a class="el" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="返回 UI object，它提供了常用的 UI 操作。需要包含 localjs_ui.js。">LOCALJS.UI</a> adds HTML and BODY elements to the internal dragging list.</dd></dl>
-<dl class="see"><dt><b>参见:</b></dt><dd><a class="el" href="interface_u_i.php#a036ec67a95716f85c0be9e723ac4782d" title="Returns the internal dragging list maintained by LOCALJS.UI as an array of HTML DOM elements...">UI.getDraggables</a> | <a class="el" href="interface_u_i.php#a07804c8c056dedcec3467bc1c9470db4" title="Sets the internal dragging list maintained by LOCALJS.UI. Drag the items in the list will drag the br...">UI.setDraggables</a> </dd></dl>
+</pre></div><dl class="note"><dt><b>注解:</b></dt><dd><a class="el" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="返回 UI object，它提供了常用的 UI 操作。需要包含 localjs_ui.js。">LOCALJS.UI</a> 的内部可拖拽列表默认情况下包括 HTML 和 BODY 节点。</dd></dl>
+<dl class="see"><dt><b>参见:</b></dt><dd><a class="el" href="interface_u_i.php#a036ec67a95716f85c0be9e723ac4782d" title="返回 LOCALJS.UI 内部的可拖拽列表，是一个 HTML 节点的数组。拖拽该列表中的 HTML 节点可以拖动页面窗口。">UI.getDraggables</a> | <a class="el" href="interface_u_i.php#a07804c8c056dedcec3467bc1c9470db4" title="用给定的包含 HTML 节点的数组替代 LOCALJS.UI 内部的可拖拽列表。拖拽该列表中的 HTML 节点可以拖动页面窗口。">UI.setDraggables</a> </dd></dl>
 
 </div>
 </div>
@@ -303,9 +303,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Returns the internal dragging list maintained by <a class="el" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="返回 UI object，它提供了常用的 UI 操作。需要包含 localjs_ui.js。">LOCALJS.UI</a> as an array of HTML DOM elements. Drag the items in the list will drag the browser window. </p>
-<p>In most cases, you only need to call <a class="el" href="interface_u_i.php#aed53a5a22874b3433e67982678c0d531" title="Adds a html element to an internal dragging list maintained by LOCALJS.UI. Drag the items in the list...">UI.addDraggable</a>. <a class="el" href="interface_u_i.php#a036ec67a95716f85c0be9e723ac4782d" title="Returns the internal dragging list maintained by LOCALJS.UI as an array of HTML DOM elements...">UI.getDraggables</a> is provided in case you want to modify the internal list directly.</p>
-<dl class="see"><dt><b>参见:</b></dt><dd><a class="el" href="interface_u_i.php#aed53a5a22874b3433e67982678c0d531" title="Adds a html element to an internal dragging list maintained by LOCALJS.UI. Drag the items in the list...">UI.addDraggable</a> | <a class="el" href="interface_u_i.php#a07804c8c056dedcec3467bc1c9470db4" title="Sets the internal dragging list maintained by LOCALJS.UI. Drag the items in the list will drag the br...">UI.setDraggables</a> </dd></dl>
+<p>返回 <a class="el" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="返回 UI object，它提供了常用的 UI 操作。需要包含 localjs_ui.js。">LOCALJS.UI</a> 内部的可拖拽列表，是一个 HTML 节点的数组。拖拽该列表中的 HTML 节点可以拖动页面窗口。 </p>
+<p>大多数情况下，你只需要调用 <a class="el" href="interface_u_i.php#aed53a5a22874b3433e67982678c0d531" title="向 LOCALJS.UI 内部的可拖拽列表中添加一个 HTML 节点。拖拽该列表中的 HTML 节点可以拖动页面窗口。">UI.addDraggable</a>. 只有当你确实需要直接修改 <a class="el" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="返回 UI object，它提供了常用的 UI 操作。需要包含 localjs_ui.js。">LOCALJS.UI</a> 内部的可拖拽列表时才需要调用 <a class="el" href="interface_u_i.php#a036ec67a95716f85c0be9e723ac4782d" title="返回 LOCALJS.UI 内部的可拖拽列表，是一个 HTML 节点的数组。拖拽该列表中的 HTML 节点可以拖动页面窗口。">UI.getDraggables</a>.</p>
+<dl class="see"><dt><b>参见:</b></dt><dd><a class="el" href="interface_u_i.php#aed53a5a22874b3433e67982678c0d531" title="向 LOCALJS.UI 内部的可拖拽列表中添加一个 HTML 节点。拖拽该列表中的 HTML 节点可以拖动页面窗口。">UI.addDraggable</a> | <a class="el" href="interface_u_i.php#a07804c8c056dedcec3467bc1c9470db4" title="用给定的包含 HTML 节点的数组替代 LOCALJS.UI 内部的可拖拽列表。拖拽该列表中的 HTML 节点可以拖动页面窗口。">UI.setDraggables</a> </dd></dl>
 
 </div>
 </div>
@@ -324,15 +324,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 </div>
 <div class="memdoc">
 
-<p>Sets the internal dragging list maintained by <a class="el" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="返回 UI object，它提供了常用的 UI 操作。需要包含 localjs_ui.js。">LOCALJS.UI</a>. Drag the items in the list will drag the browser window. </p>
+<p>用给定的包含 HTML 节点的数组替代 <a class="el" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="返回 UI object，它提供了常用的 UI 操作。需要包含 localjs_ui.js。">LOCALJS.UI</a> 内部的可拖拽列表。拖拽该列表中的 HTML 节点可以拖动页面窗口。 </p>
 <dl><dt><b>参数:</b></dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">el_draggable_array</td><td>An array of HTML DOM elements which will replace the previous internal list maintained by <a class="el" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="返回 UI object，它提供了常用的 UI 操作。需要包含 localjs_ui.js。">LOCALJS.UI</a>.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">el_draggable_array</td><td>包含 HTML 节点的数组，用于替代 <a class="el" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="返回 UI object，它提供了常用的 UI 操作。需要包含 localjs_ui.js。">LOCALJS.UI</a> 内部的可拖拽列表。</td></tr>
   </table>
   </dd>
 </dl>
-<p>In most cases, you only need to call <a class="el" href="interface_u_i.php#aed53a5a22874b3433e67982678c0d531" title="Adds a html element to an internal dragging list maintained by LOCALJS.UI. Drag the items in the list...">UI.addDraggable</a>. <a class="el" href="interface_u_i.php#a07804c8c056dedcec3467bc1c9470db4" title="Sets the internal dragging list maintained by LOCALJS.UI. Drag the items in the list will drag the br...">UI.setDraggables</a> is provided in case you want to modify the internal list directly.</p>
-<dl class="see"><dt><b>参见:</b></dt><dd><a class="el" href="interface_u_i.php#aed53a5a22874b3433e67982678c0d531" title="Adds a html element to an internal dragging list maintained by LOCALJS.UI. Drag the items in the list...">UI.addDraggable</a> | <a class="el" href="interface_u_i.php#a036ec67a95716f85c0be9e723ac4782d" title="Returns the internal dragging list maintained by LOCALJS.UI as an array of HTML DOM elements...">UI.getDraggables</a> </dd></dl>
+<p>大多数情况下，你只需要调用 <a class="el" href="interface_u_i.php#aed53a5a22874b3433e67982678c0d531" title="向 LOCALJS.UI 内部的可拖拽列表中添加一个 HTML 节点。拖拽该列表中的 HTML 节点可以拖动页面窗口。">UI.addDraggable</a>. 只有当你确实需要直接修改 <a class="el" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="返回 UI object，它提供了常用的 UI 操作。需要包含 localjs_ui.js。">LOCALJS.UI</a> 内部的可拖拽列表时才需要调用 <a class="el" href="interface_u_i.php#a07804c8c056dedcec3467bc1c9470db4" title="用给定的包含 HTML 节点的数组替代 LOCALJS.UI 内部的可拖拽列表。拖拽该列表中的 HTML 节点可以拖动页面窗口。">UI.setDraggables</a>.</p>
+<dl class="see"><dt><b>参见:</b></dt><dd><a class="el" href="interface_u_i.php#aed53a5a22874b3433e67982678c0d531" title="向 LOCALJS.UI 内部的可拖拽列表中添加一个 HTML 节点。拖拽该列表中的 HTML 节点可以拖动页面窗口。">UI.addDraggable</a> | <a class="el" href="interface_u_i.php#a036ec67a95716f85c0be9e723ac4782d" title="返回 LOCALJS.UI 内部的可拖拽列表，是一个 HTML 节点的数组。拖拽该列表中的 HTML 节点可以拖动页面窗口。">UI.getDraggables</a> </dd></dl>
 
 </div>
 </div>
