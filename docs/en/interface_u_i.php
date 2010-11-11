@@ -277,11 +277,11 @@ Properties</h2></td></tr>
 <dl><dt><b>Parameters:</b></dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">el</td><td>The HTML DOM element to be added to the internal dragging list, or id of the HTML DOM element. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">...</td><td>Optional. More HTML DOM elements to be added to the internal dragging list, or id of the HTML DOM element.</td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">...</td><td>Optional. More HTML DOM elements to be added to the internal dragging list, or id of the HTML DOM elements.</td></tr>
   </table>
   </dd>
 </dl>
-<p>This method is typically used to make a HTML element act as title bar of the browser window. For example, if you want to create a COOL title bar, you can hide the title bar of browser window, and use one or more HTML elements to act as title bar:</p>
+<p>This method is typically used to make a HTML element act as title bar of the browser window. For example, if you want to create a COOL title bar, you can hide the title bar of browser window, and use one or more HTML elements to act as title bar: </p>
 <div class="fragment"><pre class="fragment">    <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="Returns UI object, which provides methods for common UI operations. Include localjs_ui.js to use it.">UI</a>.showTitleBar(<span class="keyword">true</span>);
     <a class="code" href="interface_l_o_c_a_l_j_s.php" title="The root object of all LocalJS Basic objects. Need to include JavaScript files from LOCALJS Open Sour...">LOCALJS</a>.<a class="code" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="Returns UI object, which provides methods for common UI operations. Include localjs_ui.js to use it.">UI</a>.addDraggable(<span class="stringliteral">&#39;id_of_title_bar_element&#39;</span>, <span class="stringliteral">&#39;id_of_title_bar_element2&#39;</span>);
 </pre></div><dl class="note"><dt><b>Note:</b></dt><dd>By default <a class="el" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="Returns UI object, which provides methods for common UI operations. Include localjs_ui.js to use it.">LOCALJS.UI</a> adds HTML and BODY elements to the internal dragging list.</dd></dl>
@@ -304,7 +304,7 @@ Properties</h2></td></tr>
 <div class="memdoc">
 
 <p>Returns the internal dragging list maintained by <a class="el" href="interface_l_o_c_a_l_j_s.php#a88c39a8606c41168abfe2e3d8d0198c9" title="Returns UI object, which provides methods for common UI operations. Include localjs_ui.js to use it.">LOCALJS.UI</a> as an array of HTML DOM elements. Drag the items in the list will drag the browser window. </p>
-<p>In most cases, you only need to call <a class="el" href="interface_u_i.php#aed53a5a22874b3433e67982678c0d531" title="Adds a html element to an internal dragging list maintained by LOCALJS.UI. Drag the items in the list...">UI.addDraggable</a>. <a class="el" href="interface_u_i.php#a036ec67a95716f85c0be9e723ac4782d" title="Returns the internal dragging list maintained by LOCALJS.UI as an array of HTML DOM elements...">UI.getDraggables</a> is provided in case you want to modify the internal list directly.</p>
+<p>In most cases, you only need to call <a class="el" href="interface_u_i.php#aed53a5a22874b3433e67982678c0d531" title="Adds a html element to an internal dragging list maintained by LOCALJS.UI. Drag the items in the list...">UI.addDraggable</a>. <a class="el" href="interface_u_i.php#a036ec67a95716f85c0be9e723ac4782d" title="Returns the internal dragging list maintained by LOCALJS.UI as an array of HTML DOM elements...">UI.getDraggables</a> is provided in case you want to modify the internal list directly. </p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_u_i.php#aed53a5a22874b3433e67982678c0d531" title="Adds a html element to an internal dragging list maintained by LOCALJS.UI. Drag the items in the list...">UI.addDraggable</a> | <a class="el" href="interface_u_i.php#a07804c8c056dedcec3467bc1c9470db4" title="Sets the internal dragging list maintained by LOCALJS.UI. Drag the items in the list will drag the br...">UI.setDraggables</a> </dd></dl>
 
 </div>
@@ -331,7 +331,7 @@ Properties</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p>In most cases, you only need to call <a class="el" href="interface_u_i.php#aed53a5a22874b3433e67982678c0d531" title="Adds a html element to an internal dragging list maintained by LOCALJS.UI. Drag the items in the list...">UI.addDraggable</a>. <a class="el" href="interface_u_i.php#a07804c8c056dedcec3467bc1c9470db4" title="Sets the internal dragging list maintained by LOCALJS.UI. Drag the items in the list will drag the br...">UI.setDraggables</a> is provided in case you want to modify the internal list directly.</p>
+<p>In most cases, you only need to call <a class="el" href="interface_u_i.php#aed53a5a22874b3433e67982678c0d531" title="Adds a html element to an internal dragging list maintained by LOCALJS.UI. Drag the items in the list...">UI.addDraggable</a>. <a class="el" href="interface_u_i.php#a07804c8c056dedcec3467bc1c9470db4" title="Sets the internal dragging list maintained by LOCALJS.UI. Drag the items in the list will drag the br...">UI.setDraggables</a> is provided in case you want to modify the internal list directly. </p>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_u_i.php#aed53a5a22874b3433e67982678c0d531" title="Adds a html element to an internal dragging list maintained by LOCALJS.UI. Drag the items in the list...">UI.addDraggable</a> | <a class="el" href="interface_u_i.php#a036ec67a95716f85c0be9e723ac4782d" title="Returns the internal dragging list maintained by LOCALJS.UI as an array of HTML DOM elements...">UI.getDraggables</a> </dd></dl>
 
 </div>
