@@ -62,18 +62,26 @@ Class('UIDesigner', 'linb.Com',{
                         }
 
 						var localjs_file = LOCALJS.FILE,
+							localjs_ui = LOCALJS.UI,
 							localjs_linb = LOCALJS.LINB;
 
 						if (localjs_linb.isLocal())
 						{
-							var test_html_file = localjs_file.buildPath(localjs_file.getExeFolder(), 'UIBuilder.run.html');
-							if (LOCALJS.LINB.saveTemplateFile('singledebug.html',
-									{'clsName': clsName, 'theme': linb.UI.getTheme(),
-									 'lang': linb.getLang(), 'content': content},
-									test_html_file))
-								LOCALJS.UI.newWindow(localjs_file.pathToUrl(test_html_file), 10, 10, 1200, 800, LOCALJS.UI.WS_CLOSE_ONLY, localJS.hostWnd);
-							else
-								alert('Failed to write to file ' + test_html_file);
+							var run_js = localjs_linb.callTemplateFile('single.js.tmpl', {'clsName': clsName, 'theme': linb.UI.getTheme(), 'lang': linb.getLang(), 'content': content});
+							localjs_ui.newWindow(localjs_file.normalizeUrl('template/single.html'), 10, 10, 900, 600, localjs_ui.WS_NORMAL, localJS.hostWnd, function(new_window)
+							{
+								/*var html = new_window.document.getElementsByTagName("html")[0];
+								alert(html.scrollWidth);
+								alert(html.offsetWidth);
+
+								var new_doc = new_window.document,
+									new_elHead = new_doc.getElementsByTagName("head")[0],
+									new_js = new_doc.createElement('script');
+
+								new_js.type = 'text/javascript';
+								new_js.text = run_js;
+								new_elHead.appendChild(new_js);*/
+							});
 						}
 						else
 						{
@@ -425,7 +433,7 @@ Class('UIDesigner', 'linb.Com',{
 						return;
 					if (localjs_file.fileExists(html_file_name) && !confirm(html_file_name + " already exists. Do you want to overwrite?"))
 						return;
-						
+
 					if (!LOCALJS.LINB.saveTemplateFile('singledebug.html',
 									{'clsName': clsName, 'theme': linb.UI.getTheme(),
 									 'lang': linb.getLang(), 'content': content},

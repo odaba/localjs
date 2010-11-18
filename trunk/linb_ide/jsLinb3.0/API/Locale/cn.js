@@ -1940,7 +1940,7 @@ _.set(linb.Locale,["cn","app"], {
             ]
         },
         keyboardHook :{
-            $desc:" 添加/移除一个全局的键盘事件钩子.",
+            $desc:" 添加/移除一个全局的键盘事件钩子到keyDown事件.",
             $rtn:'[self]',
             $paras:[
                 "key [必需参数] : String, 被监视的键.",
@@ -1957,6 +1957,19 @@ _.set(linb.Locale,["cn","app"], {
                 "//'Run' the code, and You can't input 'a' in this input! \n"+
                 "if(!linb.Dom.byId('linb.temp.1')){this.prepend(linb.create('<div><input /><button id=\"linb.temp.1\" onclick=\"linb.Event.keyboardHook(\\\'a\\\');linb(this).parent().remove()\">remove this example</button></div>'));}" +
                 "linb.Event.keyboardHook('a',0,0,0,function(){return false;});"
+            ]
+        },
+        keyboardHookUp :{
+            $desc:" 添加/移除一个全局的键盘事件钩子到keyUp事件.",
+            $rtn:'[self]',
+            $paras:[
+                "key [必需参数] : String, 被监视的键.",
+                "ctrl [可选参数] : Boolean, 指示是否监视'CTRL'键. 默认为 [false].",
+                "shift [可选参数] : Boolean, 指示是否监视'SHIFT'键. 默认为 [false].",
+                "alt [可选参数] : Boolean, 指示是否监视'ALT'键. 默认为 [false].",
+                "fun [可选参数] : Function, 用户按下热键后要执行的函数. 如果不指定该参数, 或传入非function变量, 这个键[key](keyboard name)上的钩子将被移除.",
+                "args [可选参数]: Array, 函数的参数. 默认为 []",
+                "scope [可选参数]: Object, [fun]的this指针(哪个对象的函数). 默认为 [window]"
             ]
         },
         popTabOutTrigger:{
@@ -13202,6 +13215,18 @@ _.set(linb.Locale,["cn","app"], {
                     "}"
                 ]
             },
+            getCursor:{
+                $desc:"获取图像的鼠标状态",
+                $rtn:"String"
+            },
+            setCursor:{
+                $desc:"设置图像的鼠标状态.",
+                $rtn:"[self]",
+                $paras:[
+                    "value [必需参数] : String.",
+                    "force [可选参数] : Boolean, 强制设置该属性值,即使属性已经设置为该值. 默认为[false]."
+                ]
+            },
             getRate:{
                 $desc:"获取图像的比率(实际大小 / 显示大小)",
                 $rtn:"Number",
@@ -16180,15 +16205,82 @@ _.set(linb.Locale,["cn","app"], {
             }
         }
     });
+
+    _.set(linb.Locale,["cn","doc","linb","UI","Flash"], {
+        KEY:{$desc:"本类名"},
+        $desc:"linb.UI.Flash 类",
+        constructor:{
+            $desc:"生成一个linb.UI.Flash对象."
+        },
+        getFlashVersion:{
+            $desc:"得到当前浏览器的Flash插件版本.",
+            $rtn:"String"
+        },
+        prototype:{
+            KEY:{$desc:"本类名"},
+            getParameters:{
+                $desc:"得到 Flash 的参数.",
+                $rtn:'Object'
+            },
+            setParameters:{
+                $desc:"设置  Flash 的参数.",
+                $rtn:"[self]",
+                $paras:[
+                    "value [必需参数] : Object.",
+                    "force [可选参数] : Boolean, 强制设置该属性值,即使属性已经设置为该值. 默认为[false]."
+                ]
+            },
+            getFlashvars:{
+                $desc:"得到 Flash 的变量.",
+                $rtn:'Object'
+            },
+            setFlashvars:{
+                $desc:"设置  Flash 的变量.",
+                $rtn:"[self]",
+                $paras:[
+                    "value [必需参数] : Object.",
+                    "force [可选参数] : Boolean, 强制设置该属性值,即使属性已经设置为该值. 默认为[false]."
+                ]
+            },
+            getFlash:{
+                $desc:"获取Flash对象",
+                $rtn:"Object"
+            },
+            getSrc:{
+                $desc:"获取Flash的src值",
+                $rtn:"String"
+            },
+            setSrc:{
+                $desc:"设置Flash的src值, 并刷新界面.",
+                $rtn:"[self]",
+                $paras:[
+                    "value [必需参数] : String.",
+                    "force [可选参数] : Boolean, 强制设置该属性值,即使属性已经设置为该值. 默认为[false]."
+                ]
+            },
+            getCover:{
+                $desc:"得到 Flash 上面是否覆盖了一个div.",
+                $rtn:"Boolean"
+            },
+            setCover:{
+                $desc:"设置 Flash 上面是否覆盖了一个div.",
+                $rtn:"[self]",
+                $paras:[
+                    "value [必需参数] : Boolean.",
+                    "force [可选参数] : Boolean, 强制设置该属性值,即使属性已经设置为该值. 默认为[false]."
+                ]
+            },
+            refreshFlash:{
+                $desc:"刷新Flash."
+            }
+        }
+    });    
+    
     _.set(linb.Locale,["cn","doc","linb","UI","FusionChartFree"], {
         KEY:{$desc:"本类名"},
         $desc:"linb.UI.FusionChartFree 类",
         constructor:{
             $desc:"生成一个linb.UI.FusionChartFree对象."
-        },
-        getFlashVersion:{
-            $desc:"得到当前浏览器的Flash插件版本.",
-            $rtn:"String"
         },
         replaceSpecialChars:{
             $desc:"FusionChart需要的特殊字符替换函数.",
@@ -16197,11 +16289,11 @@ _.set(linb.Locale,["cn","app"], {
         prototype:{
             KEY:{$desc:"本类名"},
             getFC_attrs:{
-                $desc:"得到 FusionChar 的图表属性.",
+                $desc:"得到 FusionChart 的图表属性.",
                 $rtn:'Object'
             },
             setFC_attrs:{
-                $desc:"设置  FusionChar 的图表属性.",
+                $desc:"设置  FusionChart 的图表属性.",
                 $rtn:"[self]",
                 $paras:[
                     "value [必需参数] : Object.",
@@ -16209,11 +16301,11 @@ _.set(linb.Locale,["cn","app"], {
                 ]
             },
             getFC_eventHandler:{
-                $desc:"得到FusionChar是否支持事件.",
+                $desc:"得到FusionChart是否支持事件.",
                 $rtn:'Boolean'
             },
             setFC_eventHandler:{
-                $desc:"设置FusionChar是否支持事件, 并刷新界面.",
+                $desc:"设置FusionChart是否支持事件, 并刷新界面.",
                 $rtn:"[self]",
                 $paras:[
                     "value [必需参数] : Boolean.",
@@ -16221,11 +16313,11 @@ _.set(linb.Locale,["cn","app"], {
                 ]
             },
             getFC_chartType:{
-                $desc:"得到 FusionChar 的图表类型.",
+                $desc:"得到 FusionChart 的图表类型.",
                 $rtn:'String'
             },
             setFC_chartType:{
-                $desc:"设置 FusionChar 的图表类型,并刷新图表.",
+                $desc:"设置 FusionChart 的图表类型,并刷新图表.",
                 $rtn:"[self]",
                 $paras:[
                     "value [必需参数] : String.",
@@ -16233,11 +16325,11 @@ _.set(linb.Locale,["cn","app"], {
                 ]
             },
             getFC_data:{
-                $desc:"得到 FusionChar 的json数据.",
+                $desc:"得到 FusionChart 的json数据.",
                 $rtn:'Object'
             },
             setFC_data:{
-                $desc:"设置 FusionChar 的json数据, 并刷新图表.",
+                $desc:"设置 FusionChart 的json数据, 并刷新图表.",
                 $rtn:"[self]",
                 $paras:[
                     "value [必需参数] : Object.",
@@ -16245,11 +16337,11 @@ _.set(linb.Locale,["cn","app"], {
                 ]
             },
             getFC_demoDataPath:{
-                $desc:"得到 FusionChar 的示例数据文件路径.",
+                $desc:"得到 FusionChart 的示例数据文件路径.",
                 $rtn:'String'
             },
             setFC_demoDataPath:{
-                $desc:"设置  FusionChar 的示例数据文件路径",
+                $desc:"设置  FusionChart 的示例数据文件路径",
                 $rtn:"[self]",
                 $paras:[
                     "value [必需参数] : String.",
@@ -16257,11 +16349,11 @@ _.set(linb.Locale,["cn","app"], {
                 ]
             },
             getFC_labels:{
-                $desc:"得到 FusionChar 的显示值定义.",
+                $desc:"得到 FusionChart 的显示值定义.",
                 $rtn:'Object'
             },
             setFC_labels:{
-                $desc:"设置 FusionChar 的显示值定义",
+                $desc:"设置 FusionChart 的显示值定义",
                 $rtn:"[self]",
                 $paras:[
                     "value [必需参数] : Object.",
@@ -16269,11 +16361,11 @@ _.set(linb.Locale,["cn","app"], {
                 ]
             },
             getFC_swfPath:{
-                $desc:"得到 FusionChar 的swf文件路径.",
+                $desc:"得到 FusionChart 的swf文件路径.",
                 $rtn:'String'
             },
             setFC_swfPath:{
-                $desc:"设置 FusionChar 的swf文件路径",
+                $desc:"设置 FusionChart 的swf文件路径",
                 $rtn:"[self]",
                 $paras:[
                     "value [必需参数] : String.",
@@ -16313,6 +16405,7 @@ _.set(linb.Locale,["cn","app"], {
             }
         }
     });
+    
     _.set(linb.Locale,["cn","doc","linb","UI","FusionChart3"], {
         KEY:{$desc:"本类名"},
         $desc:"linb.UI.FusionChart3 类",
