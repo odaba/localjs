@@ -3,23 +3,16 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Style-Type" content="text/css" />
-    <meta name="keywords" content="javascript framework, RIA, SPA, client SOA, linb, jsLinb, RAD, IDE, Web IDE, widgets, javascript OOP, opensource, open-source, Ajax, cross-browser, prototype, web2.0, platform-independent, language-independent" />
-    <meta name="description" content="Web application created by Visual JS, powered by LINB framework" />
-    <meta name="copyright" content="copyright@www.linb.net" />
-    <meta http-equiv="imagetoolbar" content="no" />
     <meta content="IE=EmulateIE7" http-equiv="X-UA-Compatible">
-    <title>Web application powered by LINB framework</title>
+    <title>Desktop Application powered by LocalJS & LINB framework</title>
 </head>
-    <body>
-        <div id='loading'><img src="{libpath}runtime/loading.gif" alt="Loading..." /></div>
-        <script type="text/javascript" src="{libpath}runtime/jsLinb/js/linb-all.js"></script>
-        <script type="text/javascript" src="{libpath}runtime/jsLinb/js/adv-all.js"></script>
-        <script type="text/javascript">
-{content}
-
-//linb.setAppLangKey('app');
-linb.UI.setTheme('{theme}');
-linb.Com.load('{clsName}', function(){linb('loading').remove()}, '{lang}');
-        </script>
+<body scroll="auto">
+	<div id='loading'><img src="../../runtime/loading.gif" alt="Loading..." /></div>
+	<script type="text/javascript" src="../../runtime/jsLinb/js/linb-all.js"></script>
+	<script type="text/javascript" src="../../runtime/jsLinb/js/adv-all.js"></script>
+	<script type="text/javascript" src="../../../localjs/localjs_file.js"></script>
+	<script type="text/javascript" src="../../../localjs/localjs_ui.js"></script>
+	<script type="text/javascript" src="../../../localjs/localjs_webservice.js"></script>
+	<script type="text/javascript" src="../../../localjs/localjs_linb.js"></script>
 </body>
 </html>
