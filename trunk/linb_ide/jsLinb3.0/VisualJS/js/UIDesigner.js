@@ -70,17 +70,13 @@ Class('UIDesigner', 'linb.Com',{
 							var run_js = localjs_linb.callTemplateFile('single.js.tmpl', {'clsName': clsName, 'theme': linb.UI.getTheme(), 'lang': linb.getLang(), 'content': content});
 							localjs_ui.newWindow(localjs_file.normalizeUrl('template/single.html'), 10, 10, 900, 600, localjs_ui.WS_NORMAL, localJS.hostWnd, function(new_window)
 							{
-								/*var html = new_window.document.getElementsByTagName("html")[0];
-								alert(html.scrollWidth);
-								alert(html.offsetWidth);
-
 								var new_doc = new_window.document,
 									new_elHead = new_doc.getElementsByTagName("head")[0],
 									new_js = new_doc.createElement('script');
 
 								new_js.type = 'text/javascript';
 								new_js.text = run_js;
-								new_elHead.appendChild(new_js);*/
+								new_elHead.appendChild(new_js);
 							});
 						}
 						else
