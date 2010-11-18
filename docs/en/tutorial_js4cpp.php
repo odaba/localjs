@@ -36,7 +36,7 @@ Variable Scope</h2>
 <div class="fragment"><pre class="fragment">    var i = 0; <span class="comment">// global variable: defined with var, and not in any function body</span>
     j = 10; <span class="comment">// global variable: variables not defined with var are always global.</span>
 
-    function some_finc()
+    function some_func()
     {
         var k = 8; <span class="comment">// local variable: defined with var in function body</span>
         p = 9; <span class="comment">// global variable: variables not defined with var are always global.</span>
