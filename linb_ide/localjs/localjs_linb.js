@@ -19,12 +19,9 @@
 	var localjs_linb = localjs_namespace.LINB,
 		localjs_file = LOCALJS.FILE;
 
-	localjs_linb.saveTemplateFile = function(template_filename, template_paras, result_file_fullname)
+	localjs_linb.callTemplateFile = function(template_filename, template_paras)
 	{
-		var buildPath = localjs_file.buildPath,
-			exeFolder = localjs_file.getExeFolder(),
-			template_path = buildPath(buildPath(exeFolder, 'template'), template_filename),
-			template_content = localjs_file.readFileUTF8(template_path);
+		var template_content = localjs_file.readUrl(localjs_file.normalizeUrl('template/' + template_filename));
 
 		if (false === template_content)
 			return template_content;
@@ -38,8 +35,16 @@
 		if (template_paras.content)
 			template_content = template_content.replace(/\{content\}/g, template_paras.content);
 
+		return template_content;
+	};
+
+	localjs_linb.saveTemplateFile = function(template_filename, template_paras, result_file_fullname)
+	{
 		try
 		{
+			var template_content = localjs_linb.callTemplateFile(template_filename, template_paras);
+			if (false === template_content)
+				return template_content;
 			localjs_file.writeFileUTF8(result_file_fullname, template_content);
 		}
 		catch (e)
@@ -49,7 +54,7 @@
 
 		return true;
 	};
-	
+
 	localjs_linb.isLocal = function()
 	{
 		return localjs_file.isFileUrl(localjs_file.normalizeUrl());

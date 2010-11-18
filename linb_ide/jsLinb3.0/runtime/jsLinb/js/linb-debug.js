@@ -706,6 +706,7 @@ _.merge(linb,{
         thread:{},
         SC:{},
         hookKey:{},
+        hookKeyUp:{},
         snipScript:{},
 
         //ghost divs
@@ -3097,6 +3098,14 @@ Class('linb.Event',null,{
         keyboardHook:function(key, ctrl, shift, alt, fun,args,scope){
             if(key){
                 var p = linb.$cache.hookKey, k = (key||'').toLowerCase() + ":"  + (ctrl?'1':'') + ":"  +(shift?'1':'')+ ":" + (alt?'1':'');
+                if(typeof fun!='function')delete p[k];
+                else p[k]=[fun,args,scope];
+             }
+            return this;
+        },
+        keyboardHookUp:function(key, ctrl, shift, alt, fun,args,scope){
+            if(key){
+                var p = linb.$cache.hookKeyUp, k = (key||'').toLowerCase() + ":"  + (ctrl?'1':'') + ":"  +(shift?'1':'')+ ":" + (alt?'1':'');
                 if(typeof fun!='function')delete p[k];
                 else p[k]=[fun,args,scope];
              }
@@ -6925,9 +6934,11 @@ type:4
                 ? ['inline-block', 'inline'] 
                 : 'inline-block',
         //hot keys
-        linb.doc.onKeydown(function(p,e){
+        linb.doc.onKeydown(function(p,e,s){
+            linb.Event.$keyboard=linb.Event.getKey(e);
+            
             var event=linb.Event,set,
-                ks=event.$keyboard=event.getKey(e);
+                ks=event.getKey(e);
             if(ks){
                 if(ks[0].length==1)ks[0]=ks[0].toLowerCase();
                 set = linb.$cache.hookKey[ks.join(":")];
@@ -6944,6 +6955,22 @@ type:4
         },"document")
         .onKeyup(function(p,e){
             delete linb.Event.$keyboard;
+
+            var event=linb.Event,set,
+                ks=event.getKey(e);
+            if(ks){
+                if(ks[0].length==1)ks[0]=ks[0].toLowerCase();
+                set = linb.$cache.hookKeyUp[ks.join(":")];
+                //if hot function return false, stop bubble
+                if(set)
+//                    try{
+                        if(_.tryF(set[0],set[1],set[2])===false){
+                            event.stopBubble(e);
+                            return false;
+                        }
+//                    }catch(e){}
+            }
+            return true;
         },"document");
 
         //hook link(<a ...>xxx</a>) click action
@@ -11011,7 +11038,7 @@ Class("linb.UI",  "linb.absObj", {
             });
             return this.constructor.unserialize(arr);
         },
-        refresh:function(){
+        refresh:function(remedy){
             var para,node,b,p,s,$linbid,serialId,fun,box,children,uiv;
             return this.each(function(o){
                 if(!o.renderId)return;
@@ -11021,6 +11048,8 @@ Class("linb.UI",  "linb.absObj", {
                 //save related id
                 $linbid=o.$linbid;
                 serialId=o.serialId;
+
+                var ar=o.$afterRefresh;
 
                 if(typeof o.boxing().getUIValue=='function'){
                     uiv=o.boxing().getUIValue();
@@ -11037,7 +11066,8 @@ Class("linb.UI",  "linb.absObj", {
 
                 //protect children's dom node
                 //no need to trigger layouttrigger here
-                node=linb.$getGhostDiv();
+                //for example: if use getGhostDiv, upload input cant show file name
+                node=remedy?linb.Dom.getEmptyDiv():linb.$getGhostDiv();
                 o.boxing().getChildren().reBoxing().each(function(v){
                     node.appendChild(v);
                 });
@@ -11103,6 +11133,11 @@ Class("linb.UI",  "linb.absObj", {
 
                 if(uiv)
                     o.setUIValue(uiv,true);
+                    
+                if(ar){
+                    o.get(0).$afterRefresh=ar;
+                    ar(o.get(0));
+                }
             });
         },
         append:function(target, subId){
@@ -11375,6 +11410,14 @@ Class("linb.UI",  "linb.absObj", {
                             $dockid:_.arr.indexOf(['width','height','fill','cover'],p.dock)!=-1?self.$linbid:null
                         };
                         switch(p.dock){
+                            case 'middle':
+                                if(o!='height'&&o!='top')return;
+                                args.top=args.height=1;
+                                break;
+                            case 'center':
+                                if(o!='width'&&o!='left')return;
+                                args.left=args.width=1;
+                                break;
                             case 'top':
                                 if(o!='height'&&o!='top')return;
                                 args.width=args.height=1;
@@ -13187,7 +13230,7 @@ Class("linb.UI",  "linb.absObj", {
             for(i in hashIn){
                 if(i.charAt(0)=='$')continue;
                 if(hashIn.hasOwnProperty(i) &&  !hashOut.hasOwnProperty(i))
-                    hashOut[i] = typeof (o=hashIn[i])=='string' ? linb.adjustRes(o,true) : o;
+                    hashOut[i] = typeof (o=hashIn[i])=='string' ? i=='html' ? o : linb.adjustRes(o,true) : o;
             }
 
 
@@ -13550,6 +13593,7 @@ Class("linb.UI",  "linb.absObj", {
 
                                     }
                                 }
+                                
                                 if(obj.later){
                                     _.each(obj.later, function(o){
                                         var profile;
@@ -13561,8 +13605,8 @@ Class("linb.UI",  "linb.absObj", {
                                                 // for no _onresize widget only
                                                 if(!profile.box._onresize && profile.onResize && (o.width!==null||o.height!==null))
                                                     profile.boxing().onResize(profile,o.width,o.height);
-                                                if(profile.onDock)
-                                                    profile.boxing().onDock(profile,o);
+                                                if(profile.onDock)profile.boxing().onDock(profile,o);
+                                                if(profile.$onDock)profile.$onDock(profile,o);
                                             }
                                         }catch(e){
                                             _.asyRun(function(){
@@ -13576,12 +13620,26 @@ Class("linb.UI",  "linb.absObj", {
                                                     // for no _onresize widget only
                                                     if(!profile.box._onresize && profile.onResize && (o.width!==null||o.height!==null))
                                                         profile.boxing().onResize(profile,o.width,o.height);
-                                                    if(profile.onDock)
-                                                        profile.boxing().onDock(profile,o);
+                                                    if(profile.onDock)profile.boxing().onDock(profile,o);
+                                                    if(profile.$onDock)profile.$onDock(profile,o);
                                                 }
                                             })
                                         }
                                     });
+                                }
+                                // for those are not in obj.later
+                                for(k=0;key=arr[k++];){
+                                    target = me[key];
+                                    if(target.length){
+                                        for(i=0;o=target[i++];){
+                                            if(!o.properties.dockIgnore){
+                                                if(!obj.later || !obj.later[o.$linbid]){
+                                                    if(o.onDock)o.boxing().onDock(o);
+                                                    if(o.$onDock)o.$onDock(o);
+                                                }
+                                            }
+                                        }
+                                    }
                                 }
 
                                 //if window resize, keep the timestamp
@@ -15036,7 +15094,7 @@ new function(){
     Static:{
         Templates:{
             tagName:'image',
-            style:'{_style}',
+            style:'cursor:{cursor};{_style}',
             className:'{_className}',
             border:"0",
             width:"{width}",
@@ -15137,9 +15195,192 @@ new function(){
                 }
             },
             alt:{
+                ini:"",
                 action:function(v){
                     this.getRoot().attr('alt',v);
                 }
+            },
+            cursor:{
+                ini:"default",
+                action:function(v){
+                    this.getRoot().css('cursor',v);
+                }
+            }
+        }
+    }
+});Class("linb.UI.Flash", "linb.UI",{
+    Instance:{
+        refreshFlash:function(){
+            var html='', cls=this.constructor;
+            return this.each(function(profile){
+                _.resetRun(profile.domId,function(){
+                    // clear first
+                    cls._clearMemory(profile);
+    
+                    // build and set flash
+                    if(profile.properties.src)
+                        cls._drawSWF(profile);
+                });
+            });
+        },
+        // Return the flash object
+        getFlash:function(){
+            return this.constructor._getSWF(this.get(0));
+        }
+    },
+    Static:{
+        Appearances:{
+            KEY:{
+                'font-size':linb.browser.ie?0:null,
+                'line-height':linb.browser.ie?0:null,
+                overflow:'hidden'
+            },
+            BOX:{
+                position:'absolute',
+                left:0,
+                top:0,
+                'z-index':1
+            },
+            COVER:{
+                position:'absolute',
+                left:'-1px',
+                top:'-1px',
+                width:0,
+                height:0,
+                'z-index':4
+            }
+        },
+        Templates:{
+            tagName:'div',
+            className:'{_className}',
+            style:'{_style}',
+            BOX:{
+                tagName:'div'
+            },
+            COVER:{
+                tagName:'div'
+            }
+        },
+        Behaviors:{
+            onSize:linb.UI.$onSize
+        },
+        DataModel:{
+            width:500,
+            height:300,
+            cover:false,
+            src:{
+                ini:'',
+                action:function(v,o){
+                    this.boxing().refreshFlash();
+                }
+            },
+            parameters:{
+                ini:{},
+                action:function(v,o){
+                    this.boxing().refreshFlash();
+                }
+            },
+            flashvars:{
+                ini:{},
+                action:function(v,o){
+                    this.boxing().refreshFlash();
+                }
+            }
+        },
+        RenderTrigger:function(){
+            this.$beforeDestroy=function(){
+                if(this.box)
+                    this.box._clearMemory(this);
+            }
+            // add swf
+            this.boxing().refreshFlash();
+        },
+        getFlashVersion:function(){
+          if(linb.browser.ie){
+            try {
+              var axo = new ActiveXObject('ShockwaveFlash.ShockwaveFlash.6');
+              try{axo.AllowScriptAccess='always'}catch(e){return '6,0,0'}
+            }catch(e){}finally{
+                try{
+                    return new ActiveXObject('ShockwaveFlash.ShockwaveFlash').GetVariable('$version').replace(/\D+/g, ',').match(/^,?(.+),?$/)[1];
+                }catch(e){}
+            }
+          }else{
+            try {
+              if(navigator.mimeTypes["application/x-shockwave-flash"].enabledPlugin){
+                return (navigator.plugins["Shockwave Flash 2.0"] || navigator.plugins["Shockwave Flash"]).description.replace(/\D+/g, ",").match(/^,?(.+),?$/)[1];
+              }
+            }catch(e){}
+          }
+          return '0,0,0';
+        },
+        _getSWF:function(profile){
+            var id= _.isStr(profile)?profile:(this._idtag + profile.serialId);
+            return (linb.browser.ie ? window[id] : ((document.embeds && document.embeds[id])||window.document[id])) || document.getElementById(id);
+        }, 
+        _clearMemory:function(profile){
+            var id=this._idtag + profile.serialId;
+            var _e=_.fun(), chart = profile.box._getSWF(profile);
+            if(chart){
+                chart.style.display = 'none';
+                if(linb.browser.ie){
+                    for(var x in chart )
+                        if(typeof chart[x]=='function')
+                            chart[x]=_e;                        
+                    if(window[id])
+                        window[id]=undefined;
+                }else{
+                    if(document.embeds && document.embeds[id])
+                        document.embeds[id]=undefined;
+                    if(window.document[id])
+                        window.document[id]=undefined;
+                }
+               chart=_e=null;
+            }
+        }, 
+        _drawSWF:function(profile){
+            var ns=this;
+            var prop=profile.properties,
+                serialId=profile.serialId,
+                src=prop.src,
+                parameters=prop.parameters,
+                options = _.copy(prop.flashvars),
+                xml="";
+
+            options.DOMId = profile.box._idtag + profile.serialId;
+            options.chartWidth=prop.width;
+            options.chartHeight=prop.height;
+
+            if(navigator.plugins&&navigator.mimeTypes&&navigator.mimeTypes.length){
+                xml += '<embed type="application/x-shockwave-flash" src="'+ src +'?'+_.urlEncode(parameters)+'" ';
+                xml += 'width="'+prop.width+'" height="'+prop.height+'" ';
+                xml += 'id="'+ options.DOMId +'" name="'+ options.DOMId +'" ';
+                xml += 'wmode="opaque" ';
+                xml += 'flashvars="'+ _.urlEncode(options) +'" ';
+                xml +=  '/>';
+            }else{
+                xml += '<object id="'+ options.DOMId +'" classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" '
+                xml += 'width="'+prop.width+'" height="'+prop.height+'">';
+                xml += '<param name="movie" value="'+ src +'?'+_.urlEncode(parameters)+'" />';
+                xml += '<param name="wmode" value="opaque" />';
+                xml += '<param name="flashvars" value="'+ _.urlEncode(options) +'" />';
+                xml += '</object>';
+            }
+            profile.getSubNode('BOX').html(xml, false);
+        },
+        _onresize:function(profile,width,height){
+            var size = profile.getSubNode('BOX').cssSize(),prop=profile.properties;
+            if( (width && size.width!=width) || (height && size.height!=height) ){
+                // reset here
+                if(width)prop.width=width;
+                if(height)prop.height=height;
+
+                size={width:width,height:height};
+                profile.getSubNode('BOX').cssSize(size,true);
+                if(profile.$inDesign || prop.cover){
+                    profile.getSubNode('COVER').cssSize(size,true);
+                }
+                profile.boxing().refreshFlash();
             }
         }
     }
@@ -19292,6 +19533,7 @@ Class("linb.UI.ComboInput", "linb.UI.Input",{
                     if(linb.browser.opr)
                         drop.getRoot().css('display','none');
                     _.asyRun(function(){
+                        if(drop.boxing()._clearMouseOver)drop.boxing()._clearMouseOver();
                         profile.getSubNode('POOL').append(drop.getRoot())
                     });
                 }
@@ -19534,7 +19776,11 @@ Class("linb.UI.ComboInput", "linb.UI.Input",{
                 }, null, profile.$linbid);
 
                 //for esc
-                linb.Event.keyboardHook('esc',0,0,0,function(){
+                linb.Event.keyboardHookUp('esc',0,0,0,function(){
+                    profile.$escclosedrop=1;
+                    _.asyRun(function(){
+                        delete profile.$escclosedrop;
+                    });
                     box.activate();
                     //unhook
                     linb.Event.keyboardHook('esc');
@@ -19963,6 +20209,10 @@ Class("linb.UI.ComboInput", "linb.UI.Input",{
 
                     // must be key up event
                     if(key.key=='esc'){
+                        if(profile.$escclosedrop){
+                            return;
+                        }
+                        
                         profile.$_onedit=true;
                         profile.boxing().setUIValue(p.value,true);
                         profile.$_onedit=false;
@@ -20207,7 +20457,7 @@ Class("linb.UI.ComboInput", "linb.UI.Input",{
                     var pro=this;
                     pro.properties.type=value;
                     if(pro.renderId)
-                        pro.boxing().refresh();
+                        pro.boxing().refresh(true);
                 }
             },
             precision:2,
@@ -23204,7 +23454,7 @@ Class("linb.UI.Group", "linb.UI.Div",{
                 if(p.selMode=='single'){
                     var itemId = getI(uiv);
                     if(uiv!==null && itemId)
-                        getN(k,itemId).tagClass('-checked',false);
+                        getN(k,itemId).tagClass('-checked',false).tagClass('-mouseover',false);
 
                     itemId = getI(value);
                     if(itemId)
@@ -23231,13 +23481,18 @@ Class("linb.UI.Group", "linb.UI.Div",{
                     value = value?value.split(';'):[];
                     //check all
                     _.arr.each(uiv,function(o){
-                        getN(k, getI(o)).tagClass('-checked',false)
+                        getN(k, getI(o)).tagClass('-checked',false).tagClass('-mouseover',false);
                     });
                     _.arr.each(value,function(o){
-                        getN(k, getI(o)).tagClass('-checked')
+                        getN(k, getI(o)).tagClass('-checked');
                     });
                 }
             });
+        },
+        _clearMouseOver:function(){
+            var box=this.constructor,
+                item=box._ITEMKEY || 'ITEM';
+            this.getSubNode(item, true).tagClass('-mouseover',false);
         },
         adjustSize:function(){
             return this.each(function(profile){
