@@ -46,7 +46,7 @@ Variable Scope</h2>
 </pre></div><dl class="note"><dt><b>Note:</b></dt><dd>global variables become properties of <a href="http://www.javascriptkit.com/jsref/window.shtml" target="_blank">JavaScript object window</a>, thus can be accessed by <code>window.variable_name</code>.</dd></dl>
 <h2><a class="anchor" id="js4cpp_func_var"></a>
 Functions are Variables</h2>
-<p>We all get used to how a function is declared traditionaly:</p>
+<p>We all get used to how a function is declared traditionally:</p>
 <div class="fragment"><pre class="fragment">    var factor = 10;
 
     function some_func(para1, para2)
@@ -83,7 +83,7 @@ Functions are Variables</h2>
         <span class="keywordflow">return</span> callback(para1, para2);
     }
 
-    var result = some_func(fuction(p1, p2) { <span class="keywordflow">return</span> p1 * p2; }, <span class="comment">// this defines an anonymous fuction</span>
+    var result = some_func(function(p1, p2) { <span class="keywordflow">return</span> p1 * p2; }, <span class="comment">// this defines an anonymous fuction</span>
                            10, 5); <span class="comment">// result is 50</span>
 </pre></div><h2><a class="anchor" id="js4cpp_closure"></a>
 Closure</h2>
