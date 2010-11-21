@@ -8,7 +8,8 @@ set debugPath=\linb-debug.js
 set advAllPath=\adv-all.js
 set advRawPath=\adv-raw.js
 set advDebugPath=\adv-debug.js
-
+set localjsPath=localjs\
+set localjsRoot=..\..\
 
 mkdir %outPath%
 mkdir %outPath%jsLinb
@@ -16,7 +17,7 @@ mkdir %outPath%jsLinb\js
 mkdir %outPath%jsLinb\js\Com
 mkdir %outPath%jsLinb\Locale
 mkdir %outPath%jsLinb\appearance
-
+mkdir %outPath%%localjsPath%
 
 rem ==================
 rem for jsLinb source code
@@ -65,7 +66,12 @@ rem ==================
 java -jar %compressTool% -o  %outPath%jsLinb\js\Coder.js %relPath%jsLinb\js\Coder.js
 copy %relPath%jsLinb\js\Coder.js  %outPath%jsLinb\js\Coder-debug.js
 
+rem ==================
+rem for localjs
+rem ==================
+copy %localjsRoot%%localjsPath%localjs_file.js /b + %localjsRoot%%localjsPath%localjs_localization.js /b + %localjsRoot%%localjsPath%localjs_ui.js /b + %localjsRoot%%localjsPath%localjs_webservice.js /b + %localjsRoot%%localjsPath%localjs_linb.js /b localjs.js
 
+java -jar %compressTool% -o %outPath%%localjsPath%localjs.js  --charset utf-8   localjs.js 
 
 rem =======================
 rem copy to other dir
@@ -82,5 +88,6 @@ rd %outPath% /S /Q
 
 del /q linb.js
 del /q adv.js
+del /q localjs.js
 
 pause

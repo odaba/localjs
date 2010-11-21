@@ -14,7 +14,7 @@
     ja:'日語',
     tw:'中文繁體',
     langTips:'改變語言',
-    
+
     spabuilder:{
         nosavefirst:'打開新的文件意味著放棄當前文件的內容（您是否已經保存了當前編輯的內容？），請確認是否繼續？ ',
         menubar:{
@@ -47,7 +47,7 @@
         st_format:"格式化",
         st_method:"請求方法"
     },
-    
+
     builder:{
         open:'打開',
         openTips:'打開一個jsLinb類文件',
@@ -64,17 +64,20 @@
         nosavefirst:'打開新的文件意味著放棄當前文件的所有更改（您是否已經保存當前文件？），請確認是否繼續？',
 
         savetoserver:'保存文件到伺服器上的原始文件',
-        savetolocal:"保存 jsLinb 類文件(.js)到本地",
+        savetolocal:"保存 jsLinb 類文件(.js)",
         saveashtml:"保存一個可以運行的網頁文件(.html)到本地",
-        saveaszip:"保存可以發佈的文件包(.zip)到本地",
-        
+        saveaszip:"保存應用程序到目錄",
+
+		fail2Save2Before:"存儲為 ",
+		fail2Save2After:" 的時候發生錯誤",
+
         themeDft:'默認界面主題',
         themeAqua:'Aqua 界面主題',
         themeVista:'Vista 界面主題',
-        
+
         noexist:"$0 不存在!"
     },
-    
+
     menu:{
         file:'文件',
         newproject:'新建工程',
@@ -88,7 +91,7 @@
             servicetester:'LINB 服務測試器',
             command:'命令窗口',
             jsoneditor:'JSON 編輯器',
-            
+
             cookbook:'入門指南',
             api:'API 文檔',
             codesnipt:'代碼片段',
@@ -125,7 +128,7 @@
         release:'打包並下載當前程式代碼' ,
         ec: '轉換語言',
         manual:'用戶手冊',
-        api:'API參考',        
+        api:'API參考',
         demo:'示例',
         flash:'Flash 視頻介紹'
     },
@@ -184,7 +187,7 @@
         'replace':'替換',
         searchreplace:'查找/替換',
         replacesearch:'先替換再查找',
-        replacewith:'替換為',        
+        replacewith:'替換為',
         replaceall:'替換所有',
         findnone:'沒找到',
         replaceCount:'共查找并替换了 $0 个',
@@ -206,7 +209,7 @@
     designer:{
         toolsbox:'元件窗口',
         configwnd:'元件配置窗口',
-        
+
         emptyContent:'正在清空內容...',
         prepare:'準備類...',
         createContent:'刷新設計界面...',

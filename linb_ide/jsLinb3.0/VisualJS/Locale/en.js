@@ -14,7 +14,7 @@
     ja:"Japanese",
     tw:'Traditional Chinese',
     langTips:'Switch Locale',
-    
+
     spabuilder:{
         nosavefirst:'You are about to close a file without saving it. Do you want to continue?',
         menubar:{
@@ -47,7 +47,7 @@
         st_format:"Format",
         st_mothod:"Query Method"
     },
-    
+
     builder:{
         open:'Open',
         openTips:'Save or download file.',
@@ -62,19 +62,22 @@
         issave2server:"Do you mean to overwrite the original server file?",
         save2serverOK:'Saved to server successfully',
         nosavefirst:'You are about to close a file without saving it. Do you want to continue?',
-        
+
         savetoserver:'Save original file (in server)',
-        savetolocal:"Save jsLinb Class file(.js) to local disk",
+        savetolocal:"Save jsLinb Class file(.js)",
         saveashtml:"Save a runnable file(.html) to local disk",
-        saveaszip:"Save release package(.zip) to local disk",
-        
+        saveaszip:"Export Application to Folder",
+
+		fail2Save2Before:"Failed to save to ",
+		fail2Save2After:"",
+
         themeDft:'Default Theme',
         themeAqua:'Aqua Theme',
         themeVista:'Vista Theme',
-        
+
         noexist:"$0 doesn't exist!"
     },
-    
+
     menu:{
         file:'Project',
         newproject:'New Project',
@@ -88,7 +91,7 @@
             servicetester:"LINB Service Test",
             command:'Command Window',
             jsoneditor:'JSON Editor',
-            
+
             cookbook:'CookBook',
             api:'API Documentation',
             codesnipt:'Code Snippet',
@@ -124,7 +127,7 @@
         release:'Package and download the Current Project',
         ec:'Translate Language',
         manual:'Visual Builder Manual...',
-        api:'Components API Reference...',              
+        api:'Components API Reference...',
         demo:'Samples',
         flash:'Flash Video Show'
     },
@@ -203,7 +206,7 @@
     designer:{
         toolsbox:'Tools Box',
         configwnd:'Component config',
-        
+
         emptyContent:'Empty Content First...',
         prepare:'Prepare Classes...',
         createContent:'Refresh design content...',

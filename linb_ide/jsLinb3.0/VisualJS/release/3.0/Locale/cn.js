@@ -15,7 +15,7 @@
     ja:'日语',
     tw:'中文繁体',
     langTips:'改变语言',
-    
+
     spabuilder:{
         nosavefirst:'打开新的文件意味着放弃当前文件的内容（您是否已经保存了当前编辑的内容？），请确认是否继续？',
         menubar:{
@@ -48,7 +48,7 @@
         st_format:"格式化",
         st_method:"请求方法"
     },
-    
+
     builder:{
         open:'打开',
         openTips:'打开一个jsLinb类文件',
@@ -65,17 +65,20 @@
         nosavefirst:'打开新的文件意味着放弃当前文件的所有更改（您是否已经保存当前文件？），请确认是否继续？',
 
         savetoserver:'保存文件到服务器上的原始文件',
-        savetolocal:"保存 jsLinb 类文件(.js)到本地",
+        savetolocal:"保存 jsLinb 类文件(.js)",
         saveashtml:"保存一个可以运行的网页文件(.html)到本地",
-        saveaszip:"保存可以发布的文件包(.zip)到本地",
-        
+        saveaszip:"保存应用程序到目录",
+
+		fail2Save2Before:"存储为 ",
+		fail2Save2After:" 的时候发生错误",
+
         themeDft:'默认界面主题',
         themeAqua:'Aqua 界面主题',
         themeVista:'Vista 界面主题',
-        
+
         noexist:"$0 不存在!"
     },
-    
+
     menu:{
         file:'文件',
         newproject:'新建工程',
@@ -89,7 +92,7 @@
             servicetester:'LINB 服务测试器',
             command:'命令窗口',
             jsoneditor:'JSON 编辑器',
-            
+
             cookbook:'入门指南',
             api:'API 文档',
             codesnipt:'代码片段',
@@ -98,7 +101,7 @@
                 csharp:'C# 服务代码',
                 java:'JAVA 服务代码',
 
-        
+
             spy:'控件浏览',
 
         build: '生成',
@@ -128,7 +131,7 @@
         release:'打包并下载当前程序代码' ,
         ec: '转换语言',
         manual:'用户手册',
-        api:'API参考',        
+        api:'API参考',
         demo:'示例',
         flash:'Flash 视频介绍'
     },
@@ -187,7 +190,7 @@
         'replace':'替换',
         searchreplace:'查找/替换',
         replacesearch:'先替换再查找',
-        replacewith:'替换为',        
+        replacewith:'替换为',
         replaceall:'替换所有',
         findnone:'没找到',
         replaceCount:'共查找并替换了 $0 个',
@@ -209,7 +212,7 @@
     designer:{
         toolsbox:'组件窗口',
         configwnd:'组件配置窗口',
-        
+
         emptyContent:'正在清空内容...',
         prepare:'准备类...',
         createContent:'刷新设计界面...',
