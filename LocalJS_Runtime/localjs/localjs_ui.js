@@ -575,9 +575,9 @@
 		};
 
 		// replace default confirm function
-		win.confirm = function(msg)
+		win.confirm = function(msg, default_yes, ok_cancel)
 		{
-			return localjs_ui.confirm(msg);
+			return localjs_ui.confirm(msg, default_yes, ok_cancel);
 		}
 	})();
 
