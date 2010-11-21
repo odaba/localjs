@@ -59,4 +59,9 @@
 	{
 		return localjs_file.isFileUrl(localjs_file.normalizeUrl());
 	};
+
+	localjs_linb.getSingleTemplateUrl = function(release)
+	{
+		return localjs_file.normalizeUrl('template/single' + ((linb.debug && !release) ? 'debug' : '') + '.html');
+	};
 })();

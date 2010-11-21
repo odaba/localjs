@@ -14,7 +14,7 @@
     ja:'日本語',
     tw:'繁体中国語',
     langTips:'表示言語を切り替えます。',
-    
+
     spabuilder: {
        nosavefirst:'ファイルを保存せずに閉じようとしています。よろしいですか?',
        menubar:{
@@ -47,7 +47,7 @@
         st_format:"フォーマット",
         st_mothod:"Queryメソッド"
     },
-    
+
     builder:{
 
         open:'開く',
@@ -63,19 +63,22 @@
         issave2server:"サーバ上のオリジナルファイルを上書きしますか?",
         save2serverOK:'サーバへの保存ができました。',
         nosavefirst:'ファイルを保存せずに閉じようとしています。よろしいですか?',
-        
+
         savetoserver:'サーバに保存する',
         savetolocal:"jsLinbクラスファイル(.js)をローカルディスクに保存",
         saveashtml:"実行可能ファイル(.html)をローカルディスクに保存",
         saveaszip:"リリースパッケージ(.zip)をローカルディスクに保存",
-        
+
+		fail2Save2Before:"Failed to save to ",
+		fail2Save2After:"",
+
         themeDft:'デフォルトのテーマ',
         themeAqua:'Aquaテーマ',
         themeVista:'Vistaテーマ',
-        
+
         noexist:"$0 は存在しません"
     },
-    
+
     menu:{
         file:'プロジェクト',
         newproject:'新規プロジェクト',
@@ -89,7 +92,7 @@
             servicetester:'LINB サービステスター',
             command:'コマンドウインドウ',
             jsoneditor:'JSONのエディタ',
-            
+
             cookbook:'ユーザーズマニュアル',
             api:'API ドキュメント',
             codesnipt:'コードスニペット',
@@ -125,7 +128,7 @@
         release:'現在のプロジェクトをパッケージ化して保存',
         ec:'言語に翻訳',
         manual:'Visual Builderマニュアル',
-        api:'Components APIリファレンス',              
+        api:'Components APIリファレンス',
         demo:'サンプル',
         flash:'ビデオプレゼンテーション'
     },
@@ -204,7 +207,7 @@
     designer:{
         toolsbox:'ツールボックス',
         configwnd:'コンポーネントの設定',
-        
+
         emptyContent:'初期化中',
         prepare:'クラスの準備中',
         createContent:'デザインの更新中',
