@@ -1,0 +1,1 @@
+start visualjs.exe visualjs.debug.html
