@@ -201,10 +201,24 @@
 			return fnGetFso().BuildPath(parent, child);
 		}
 
-		// get parent folder
 		localjs_file.getParentFolder = function(folder)
 		{
 			return fnGetFso().GetParentFolderName(folder);
+		}
+
+		localjs_file.getFileName = function(path)
+		{
+			return fnGetFso().GetFileName(path);
+		}
+
+		localjs_file.getBaseName = function(path)
+		{
+			return fnGetFso().GetBaseName(path);
+		}
+
+		localjs_file.getExtensionName = function(path)
+		{
+			return fnGetFso().GetExtensionName(path);
 		}
 
 		// read utf8 file
@@ -243,7 +257,15 @@
 		// delete file
 		localjs_file.deleteFile = function(filespec, force)
 		{
-			fnGetFso().DeleteFile(filespec, force);
+			try
+			{
+				fnGetFso().DeleteFile(filespec, force);
+				return true;
+			}
+			catch (e)
+			{
+				return false;
+			}
 		}
 
 		// create folder
@@ -256,7 +278,27 @@
 		// delete folder
 		localjs_file.deleteFolder = function(folderspec, force)
 		{
-			fnGetFso().DeleteFolder(folderspec, force);
+			try
+			{
+				fnGetFso().DeleteFolder(folderspec, force);
+				return true;
+			}
+			catch (e)
+			{
+				return false;
+			}
+		}
+
+		// copy file
+		localjs_file.copyFile = function(source, destination, no_overwrite)
+		{
+			fnGetFso().CopyFile(source, destination, !no_overwrite);
+		}
+
+		// copy folder
+		localjs_file.copyFolder = function(source, destination, no_overwrite)
+		{
+			fnGetFso().CopyFolder(source, destination, !no_overwrite);
 		}
 
 		// list files in folder
