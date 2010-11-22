@@ -446,6 +446,9 @@ Class('UIDesigner', 'linb.Com',{
 
 						if ('exe' != localjs_file.getExtensionName(exe_file_name).toLowerCase())
 							exe_file_name = exe_file_name + '.exe';
+							
+						if (localjs_file.fileExists(exe_file_name) && !confirm(exe_file_name + " already exists. Do you want to overwrite?"))
+							return;
 
 						var normalizeUrl = localjs_file.normalizeUrl,
 							urlToPath = localjs_file.urlToPath,
