@@ -469,8 +469,11 @@ Class('UIDesigner', 'linb.Com',{
 
 						if (source_exe_folder != exe_folder)
 						{
-							copyFile(buildPath(source_exe_folder, 'LocalJS.dll'), exe_folder);
-							copyFile(buildPath(source_exe_folder, 'localJS.cfg'), exe_folder);
+							var i, files_to_be_copied = ['LocalJS.dll', 'localJS.cfg'];
+							for (i = 0; i < files_to_be_copied.length; ++i)
+							{
+								copyFile(buildPath(source_exe_folder, files_to_be_copied[i]), buildPath(exe_folder, files_to_be_copied[i]));
+							}
 						}
 
 						if (confirm("Your application has been exported to folder " + exe_folder + ". Do you want to run it now?", true))
