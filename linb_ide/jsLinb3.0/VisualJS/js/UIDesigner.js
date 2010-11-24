@@ -446,7 +446,7 @@ Class('UIDesigner', 'linb.Com',{
 
 						if ('exe' != localjs_file.getExtensionName(exe_file_name).toLowerCase())
 							exe_file_name = exe_file_name + '.exe';
-							
+
 						if (localjs_file.fileExists(exe_file_name) && !confirm(exe_file_name + " already exists. Do you want to overwrite?"))
 							return;
 
@@ -460,7 +460,7 @@ Class('UIDesigner', 'linb.Com',{
 							runtime_folder = buildPath(exe_folder, 'runtime'),
 							source_exe = localjs_file.getExeFilename(),
 							source_exe_folder = getParentFolder(source_exe),
-							app_html_file_name = localjs_file.getBaseName(exe_file_name) + '.html',
+							app_html_file_name = buildPath(exe_folder, localjs_file.getBaseName(exe_file_name) + '.html'),
 
 							run_js = localjs_linb.callTemplateFile('single.js.tmpl', {'clsName': clsName, 'theme': linb.UI.getTheme(), 'lang': linb.getLang(), 'content': content}),
 							html_content = localjs_file.readUrl(localjs_linb.getSingleTemplateUrl(true)).replace(/\.\.\/\.\.\/runtime/g, 'runtime') + '<script type="text/javascript">(function(){var a = LOCALJS.UI;a.centerWindow(1024, 800);a.showTitleBar();})()' + run_js + '</script>';
