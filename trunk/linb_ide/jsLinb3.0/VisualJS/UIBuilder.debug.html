@@ -45,9 +45,21 @@
 		<script type="text/javascript" src="../../localjs/localjs_linb.js"></script>
 
         <script type="text/javascript">
-			var localjs_ui = LOCALJS.UI;
-			localjs_ui.centerWindow(1024, 800); // this function is defined in global_functions.js
+			var localjs_ui = LOCALJS.UI,
+				localjs_file = LOCALJS.FILE,
+				exe_file = localjs_file.getExeFilename(),
+				program_ini_file = localjs_file.buildPath(localjs_file.getParentFolder(exe_file), localjs_file.getBaseName(exe_file) + ".ini"),
+				section_ide_wnd_pos = "IDEWndPos",
+				key_prefix = "SimpleMainWnd";
+
 			localjs_ui.showTitleBar();
+			localjs_ui.loadWindowPosition(program_ini_file, section_ide_wnd_pos, key_prefix);
+
+			localjs_ui.exitCallback = function()
+			{
+				localjs_ui.saveWindowPosition(program_ini_file, section_ide_wnd_pos, key_prefix);
+				return true;
+			}
 
 			linb.debug=true;
 			var lang=(function(){
