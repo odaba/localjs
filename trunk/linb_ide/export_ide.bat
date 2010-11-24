@@ -17,7 +17,6 @@ copy %linb_path%VisualJS\UIBuilder.html %export_path%%linb_path%VisualJS\
 xcopy %linb_path%VisualJS\codemirror %export_path%%linb_path%VisualJS\codemirror /I /Q /S /EXCLUDE:export_ide.exclude
 xcopy %linb_path%VisualJS\css %export_path%%linb_path%VisualJS\css /I /Q /S /EXCLUDE:export_ide.exclude
 xcopy %linb_path%VisualJS\img %export_path%%linb_path%VisualJS\img /I /Q /S /EXCLUDE:export_ide.exclude
-xcopy %linb_path%VisualJS\js %export_path%%linb_path%VisualJS\js /I /Q /S /EXCLUDE:export_ide.exclude
 xcopy %linb_path%VisualJS\Locale %export_path%%linb_path%VisualJS\Locale /I /Q /S /EXCLUDE:export_ide.exclude
 xcopy %linb_path%VisualJS\release %export_path%%linb_path%VisualJS\release /I /Q /S /EXCLUDE:export_ide.exclude
 xcopy %linb_path%VisualJS\template %export_path%%linb_path%VisualJS\template /I /Q /S /EXCLUDE:export_ide.exclude
