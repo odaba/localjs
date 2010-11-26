@@ -183,6 +183,7 @@
 		SWP_NOSIZE = 0x0001,
 
 		SW_SHOWMAXIMIZED = 3,
+		SW_SHOWNORMAL = 1,
 
 		HWND_TOP = 0,
 
@@ -680,7 +681,7 @@
 			if (bottom > scrHeight)
 				bottom = scrHeight;
 
-			placement.showCmd = maximized ? SW_SHOWMAXIMIZED : 0;
+			placement.showCmd = maximized ? SW_SHOWMAXIMIZED : SW_SHOWNORMAL;
 			ptMinPosition.x = ptMinPosition.y = ptMaxPosition.x = ptMaxPosition.y = -1;
 			rcNormalPosition.left = left;
 			rcNormalPosition.top = top;
