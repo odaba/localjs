@@ -271,13 +271,13 @@ Class('UIDesigner', 'linb.Com',{
                 (new linb.UI.MenuBar)
                 .setHost(host,"ctl_menubar1")
                 .setItems([
-                    {id:"backendcode", caption:"$VisualJS.spabuilder.menubar.backendcode",
+                    /*{id:"backendcode", caption:"$VisualJS.spabuilder.menubar.backendcode",
                         sub:[
                             {id:"php", caption:"$VisualJS.spabuilder.menubar.php"},
                             {id:"csharp", caption:"$VisualJS.spabuilder.menubar.csharp"},
                             {id:"java", caption:"$VisualJS.spabuilder.menubar.java"}
                         ]
-                    },{id:"links", caption:"$VisualJS.spabuilder.menubar.links",
+                    },*/{id:"links", caption:"$VisualJS.spabuilder.menubar.links",
                         sub:[
                             {id:"adv", caption:"$VisualJS.spabuilder.menubar.adv"},
                             {type:'split'},
@@ -293,10 +293,10 @@ Class('UIDesigner', 'linb.Com',{
                             {type:'split'},
                             {id:"jsoneditor", caption:"$VisualJS.spabuilder.menubar.jsoneditor"}
                         ]
-                    },
+                    }/*,
                     {id:"servicetester", caption:"<strong>$VisualJS.spabuilder.menubar.servicetester</strong>"},
                     {id:"video", caption:"$VisualJS.spabuilder.menubar.video"},
-                    {id:"about", caption:"$VisualJS.spabuilder.menubar.about"}
+                    {id:"about", caption:"$VisualJS.spabuilder.menubar.about"} */
                 ])
                 .setHandler(false)
                 .setDockFloat(true)
