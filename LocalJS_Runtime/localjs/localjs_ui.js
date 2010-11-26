@@ -22,6 +22,7 @@
 		win = window,
 		scr = screen,
 		localjs_ui = localjs_namespace.UI,
+		localjs_file = localjs_namespace.FILE,
 
 		local_js = localJS,
 		hostWnd = local_js.hostWnd,
@@ -180,6 +181,9 @@
 		SWP_SHOWWINDOW = 0x0040,
 		SWP_NOMOVE = 0x0002,
 		SWP_NOSIZE = 0x0001,
+
+		SW_SHOWMAXIMIZED = 3,
+		SW_SHOWNORMAL = 1,
 
 		HWND_TOP = 0,
 
@@ -635,6 +639,55 @@
 		localjs_ui.setWindowPlacement = function(placement)
 		{
 			setWindowPlacement(hostWnd, placement);
+		}
+
+		localjs_ui.saveWindowPosition = function(ini_file, section_name, key_name_prefix)
+		{
+			var placement = localjs_ui.getWindowPlacement(),
+				rcNormalPosition = placement.rcNormalPosition,
+				iniWrite = localjs_file.iniWrite;
+
+			iniWrite(ini_file, section_name, key_name_prefix + "left", rcNormalPosition.left.asLong);
+			iniWrite(ini_file, section_name, key_name_prefix + "top", rcNormalPosition.top.asLong);
+			iniWrite(ini_file, section_name, key_name_prefix + "right", rcNormalPosition.right.asLong);
+			iniWrite(ini_file, section_name, key_name_prefix + "bottom", rcNormalPosition.bottom.asLong);
+			iniWrite(ini_file, section_name, key_name_prefix + "maximized", SW_SHOWMAXIMIZED == placement.showCmd ? "1" : "0");
+		}
+
+		localjs_ui.loadWindowPosition = function(ini_file, section_name, key_name_prefix)
+		{
+			var iniReadInt = localjs_file.iniReadInt,
+
+				left = iniReadInt(ini_file, section_name, key_name_prefix + "left", 50),
+				top = iniReadInt(ini_file, section_name, key_name_prefix + "top", 50),
+				right = iniReadInt(ini_file, section_name, key_name_prefix + "right", 800),
+				bottom = iniReadInt(ini_file, section_name, key_name_prefix + "bottom", 600),
+				maximized = iniReadInt(ini_file, section_name, key_name_prefix + "maximized", 0),
+
+				scrWidth = scr.availWidth,
+				scrHeight = scr.availHeight,
+
+				placement = fnCreateWindowPlacement(),
+				rcNormalPosition = placement.rcNormalPosition,
+				ptMinPosition = placement.ptMinPosition,
+				ptMaxPosition = placement.ptMaxPosition;
+
+			if (left < 0)
+				left = 0;
+			if (top < 0)
+				top = 0;
+			if (right > scrWidth)
+				right = scrWidth;
+			if (bottom > scrHeight)
+				bottom = scrHeight;
+
+			placement.showCmd = maximized ? SW_SHOWMAXIMIZED : SW_SHOWNORMAL;
+			ptMinPosition.x = ptMinPosition.y = ptMaxPosition.x = ptMaxPosition.y = -1;
+			rcNormalPosition.left = left;
+			rcNormalPosition.top = top;
+			rcNormalPosition.right = right;
+			rcNormalPosition.bottom = bottom;
+			localjs_ui.setWindowPlacement(placement);
 		}
 	})();
 

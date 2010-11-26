@@ -17,7 +17,7 @@
 	localjs_namespace.LINB = localjs_namespace.LINB || {};
 
 	var localjs_linb = localjs_namespace.LINB,
-		localjs_file = LOCALJS.FILE;
+		localjs_file = localjs_namespace.FILE;
 
 	localjs_linb.callTemplateFile = function(template_filename, template_paras)
 	{
