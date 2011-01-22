@@ -91,6 +91,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>enableF5
 : <a class="el" href="interfacelocal_j_s.php#a29a79e553fe87184f3a6ed6a9e0b270f">localJS</a>
 </li>
+<li>ending
+: <a class="el" href="interface_threading.php#aef5e9b75a775657e77890df94dca043a">Threading</a>
+</li>
 <li>exitCallback
 : <a class="el" href="interface_u_i.php#a336a7e8690beb99db79da34c2a1f2810">UI</a>
 </li>
