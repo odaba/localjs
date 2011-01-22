@@ -18,7 +18,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
   <tr class="memlist"><td><a class="el" href="interface_thread.php#aa4c7e8ce5147b0a22d6f2543c017a937">detach</a>()</td><td><a class="el" href="interface_thread.php">Thread</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="interface_thread.php#a61ce2a4d4a93bba3bc16271882996fc4">handle</a></td><td><a class="el" href="interface_thread.php">Thread</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="interface_thread.php#a7350fbd6ad10618f3b750b1f99ca5c3c">id</a></td><td><a class="el" href="interface_thread.php">Thread</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="interface_thread.php#a980d8518a01dac55c30b0fb2fb894eba">kill</a>()</td><td><a class="el" href="interface_thread.php">Thread</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="interface_thread.php#a21571c3d25402f70379cfa4facaf8dfa">kill</a>([optional] long milliseconds)</td><td><a class="el" href="interface_thread.php">Thread</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="interface_thread.php#a2bb58b88ac256b165a95a806ae3b41e5">running</a></td><td><a class="el" href="interface_thread.php">Thread</a></td><td></td></tr>
 </table></div>
 <?php include_once($base_path.'/_include/common_footer.php'); ?>

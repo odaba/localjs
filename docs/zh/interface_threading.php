@@ -36,6 +36,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 属性</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_threading.php#ad28efcee5e8f0b2417a1776dc96365a6">currentThreadID</a><code> [get]</code></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ReadOnly. Returns id of current thread.  <a href="#ad28efcee5e8f0b2417a1776dc96365a6"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_threading.php#aef5e9b75a775657e77890df94dca043a">ending</a><code> [get]</code></td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">ReadOnly. Returns <code>true</code> if current thread is told to end, <code>false</code> otherwise. Provides a chance for thread to end itself as a good citizen.  <a href="#aef5e9b75a775657e77890df94dca043a"></a><br/></td></tr>
 </table>
 <hr/><a name="_details"></a><h2>详细描述</h2>
 <p><a class="el" href="interface_threading.php" title="Threading object exposes methods to create new script thread, sleep, get thread id, etc.">Threading</a> object exposes methods to create new script thread, sleep, get thread id, etc. </p>
@@ -191,6 +193,26 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 
 <p>ReadOnly. Returns id of current thread. </p>
 <dl class="return"><dt><b>返回:</b></dt><dd>ID of current thread. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aef5e9b75a775657e77890df94dca043a"></a><!-- doxytag: member="Threading::ending" ref="aef5e9b75a775657e77890df94dca043a" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean ending<code> [get]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>ReadOnly. Returns <code>true</code> if current thread is told to end, <code>false</code> otherwise. Provides a chance for thread to end itself as a good citizen. </p>
+<dl class="return"><dt><b>返回:</b></dt><dd><code>true</code> if current thread is told to end, <code>false</code> otherwise.</dd></dl>
+<p>The value of <a class="el" href="interface_threading.php#aef5e9b75a775657e77890df94dca043a">ending</a> property is initialized to <code>false</code> when script thread is created. When <a class="el" href="interface_thread.php#a21571c3d25402f70379cfa4facaf8dfa" title="Forcely terminate the thread.">Thread.kill</a> is called, or the <a class="el" href="interface_thread.php" title="Represent a script thread.">Thread</a> object (returned by newThread method) run out of scope, it becomes <code>true</code>.</p>
+<p>If the thread is doing something in a loop, then it can use <a class="el" href="interface_threading.php#aef5e9b75a775657e77890df94dca043a">ending</a> property as a signal to end the loop.</p>
+<dl class="note"><dt><b>注解:</b></dt><dd>Property <a class="el" href="interface_threading.php#aef5e9b75a775657e77890df94dca043a">ending</a> is only available inside a new created script thread. It's not available in the JavaScript run inside browser.</dd></dl>
+<dl class="see"><dt><b>参见:</b></dt><dd><a class="el" href="interface_thread.php#a21571c3d25402f70379cfa4facaf8dfa" title="Forcely terminate the thread.">Thread.kill</a> </dd></dl>
 
 </div>
 </div>

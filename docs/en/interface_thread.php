@@ -30,8 +30,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Methods</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_thread.php#aa4c7e8ce5147b0a22d6f2543c017a937">detach</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Detach the underlying thread apart from the <a class="el" href="interface_thread.php" title="Represent a script thread.">Thread</a> object.  <a href="#aa4c7e8ce5147b0a22d6f2543c017a937"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_thread.php#a980d8518a01dac55c30b0fb2fb894eba">kill</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Force terminate the thread.  <a href="#a980d8518a01dac55c30b0fb2fb894eba"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_thread.php#a21571c3d25402f70379cfa4facaf8dfa">kill</a> ([optional] long milliseconds)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Forcely terminate the thread.  <a href="#a21571c3d25402f70379cfa4facaf8dfa"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="properties"></a>
 Properties</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_thread.php#a61ce2a4d4a93bba3bc16271882996fc4">handle</a><code> [get]</code></td></tr>
@@ -63,31 +63,40 @@ Properties</h2></td></tr>
 <div class="memdoc">
 
 <p>Detach the underlying thread apart from the <a class="el" href="interface_thread.php" title="Represent a script thread.">Thread</a> object. </p>
-<p>After a thread has been detached, accessing its properties generates an error, and call to methods <a class="el" href="interface_thread.php#a980d8518a01dac55c30b0fb2fb894eba">kill</a> and <a class="el" href="interface_thread.php#aa4c7e8ce5147b0a22d6f2543c017a937">detach</a> are ignored without error. The thread will run until script in thread exits (the thread terminates itself), or process ends (which is a forced termination). There is no more control to the underlying thread.</p>
+<p>After a thread has been detached, accessing its properties generates an error, and call to methods <a class="el" href="interface_thread.php#a21571c3d25402f70379cfa4facaf8dfa">kill</a> and <a class="el" href="interface_thread.php#aa4c7e8ce5147b0a22d6f2543c017a937">detach</a> are ignored without error. The thread will run until script in thread exits (the thread terminates itself), or process ends (which is a forced termination). There is no more control to the underlying thread.</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>This method doesn't return a value.</dd></dl>
 <dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_threading.php#ab83b569dcb6b1ed35d6e9f13a8376a64" title="Create new script thread with optional arguments. Returns Thread object represents the new thread...">Threading.newThread</a> </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="a980d8518a01dac55c30b0fb2fb894eba"></a><!-- doxytag: member="Thread::kill" ref="a980d8518a01dac55c30b0fb2fb894eba" args="()" -->
+<a class="anchor" id="a21571c3d25402f70379cfa4facaf8dfa"></a><!-- doxytag: member="Thread::kill" ref="a21571c3d25402f70379cfa4facaf8dfa" args="([optional] long milliseconds)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">kill </td>
           <td>(</td>
-          <td class="paramname">&#160;)</td>
+          <td class="paramtype">[optional] long&#160;</td>
+          <td class="paramname"> <em>milliseconds</em>&#160;)</td>
           <td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Force terminate the thread. </p>
-<p>After a thread has been killed, accessing its properties generates an error, and call to methods <a class="el" href="interface_thread.php#a980d8518a01dac55c30b0fb2fb894eba">kill</a> and <a class="el" href="interface_thread.php#aa4c7e8ce5147b0a22d6f2543c017a937">detach</a> are ignored without error.</p>
+<p>Forcely terminate the thread. </p>
+<dl><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">milliseconds</td><td>Optional. The milliseconds to wait the thread ends. If omitted, the thread is forcely terminated immediately.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Method <a class="el" href="interface_thread.php#a21571c3d25402f70379cfa4facaf8dfa">kill</a> first set <a class="el" href="interface_threading.php#aef5e9b75a775657e77890df94dca043a" title="ReadOnly. Returns true if current thread is told to end, false otherwise. Provides a chance for threa...">Threading.ending</a> to true, and waits for the given milliseconds, then forcely terminates the thread if it hasn't ended by itself. After a thread has been killed, accessing its properties generates an error, and call to methods <a class="el" href="interface_thread.php#a21571c3d25402f70379cfa4facaf8dfa">kill</a> and <a class="el" href="interface_thread.php#aa4c7e8ce5147b0a22d6f2543c017a937">detach</a> are ignored without error.</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>This method doesn't return a value.</dd></dl>
-<dl class="note"><dt><b>Note:</b></dt><dd>Kill a thread may cause resource taken by the thread not freed correctly.</dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_threading.php#ab83b569dcb6b1ed35d6e9f13a8376a64" title="Create new script thread with optional arguments. Returns Thread object represents the new thread...">Threading.newThread</a> </dd></dl>
+<dl class="note"><dt><b>Note:</b></dt><dd>When thread object run out of scope, it internally calls kill(5000). </dd>
+<dd>
+Kill a thread may cause resource taken by the thread not freed correctly.</dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_threading.php#ab83b569dcb6b1ed35d6e9f13a8376a64" title="Create new script thread with optional arguments. Returns Thread object represents the new thread...">Threading.newThread</a> | <a class="el" href="interface_threading.php#aef5e9b75a775657e77890df94dca043a" title="ReadOnly. Returns true if current thread is told to end, false otherwise. Provides a chance for threa...">Threading.ending</a> </dd></dl>
 
 </div>
 </div>
@@ -106,7 +115,7 @@ Properties</h2></td></tr>
 <p>ReadOnly. Returns HANDLE to the thread. </p>
 <p>The handle returned is the return value of <a href="http://msdn.microsoft.com/en-us/library/ms682453(VS.85).aspx" target="_blank">CreateThread Function</a>. Read property <a class="el" href="interface_thread.php#a61ce2a4d4a93bba3bc16271882996fc4">handle</a> after thread has been killed or detached generates an error.</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>HANDLE to the thread.</dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_thread.php#aa4c7e8ce5147b0a22d6f2543c017a937" title="Detach the underlying thread apart from the Thread object.">Thread.detach</a> | <a class="el" href="interface_thread.php#a980d8518a01dac55c30b0fb2fb894eba" title="Force terminate the thread.">Thread.kill</a> | <a href="http://msdn.microsoft.com/en-us/library/ms682453(VS.85).aspx" target="_blank">CreateThread Function</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_thread.php#aa4c7e8ce5147b0a22d6f2543c017a937" title="Detach the underlying thread apart from the Thread object.">Thread.detach</a> | <a class="el" href="interface_thread.php#a21571c3d25402f70379cfa4facaf8dfa" title="Forcely terminate the thread.">Thread.kill</a> | <a href="http://msdn.microsoft.com/en-us/library/ms682453(VS.85).aspx" target="_blank">CreateThread Function</a> </dd></dl>
 
 </div>
 </div>
@@ -124,7 +133,7 @@ Properties</h2></td></tr>
 <p>ReadOnly. Returns ID of the thread. </p>
 <p>Read property <a class="el" href="interface_thread.php#a7350fbd6ad10618f3b750b1f99ca5c3c">id</a> after thread has been killed or detached generates an error.</p>
 <dl class="return"><dt><b>Returns:</b></dt><dd>ID of the thread.</dd></dl>
-<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_thread.php#aa4c7e8ce5147b0a22d6f2543c017a937" title="Detach the underlying thread apart from the Thread object.">Thread.detach</a> | <a class="el" href="interface_thread.php#a980d8518a01dac55c30b0fb2fb894eba" title="Force terminate the thread.">Thread.kill</a> </dd></dl>
+<dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_thread.php#aa4c7e8ce5147b0a22d6f2543c017a937" title="Detach the underlying thread apart from the Thread object.">Thread.detach</a> | <a class="el" href="interface_thread.php#a21571c3d25402f70379cfa4facaf8dfa" title="Forcely terminate the thread.">Thread.kill</a> </dd></dl>
 
 </div>
 </div>
@@ -151,7 +160,7 @@ Properties</h2></td></tr>
             <span class="keywordflow">break</span>;
     }
     <span class="comment">// thread ends.</span>
-</pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_thread.php#aa4c7e8ce5147b0a22d6f2543c017a937" title="Detach the underlying thread apart from the Thread object.">Thread.detach</a> | <a class="el" href="interface_thread.php#a980d8518a01dac55c30b0fb2fb894eba" title="Force terminate the thread.">Thread.kill</a> | <a class="el" href="interface_u_i.php#ad3d9b6673410aa22403cbb513c55ee4a">LOCALJS.UI.doEvents</a> </dd></dl>
+</pre></div><dl class="see"><dt><b>See also:</b></dt><dd><a class="el" href="interface_thread.php#aa4c7e8ce5147b0a22d6f2543c017a937" title="Detach the underlying thread apart from the Thread object.">Thread.detach</a> | <a class="el" href="interface_thread.php#a21571c3d25402f70379cfa4facaf8dfa" title="Forcely terminate the thread.">Thread.kill</a> | <a class="el" href="interface_u_i.php#ad3d9b6673410aa22403cbb513c55ee4a">LOCALJS.UI.doEvents</a> </dd></dl>
 
 </div>
 </div>

@@ -83,7 +83,7 @@ Functions are Variables</h2>
         <span class="keywordflow">return</span> callback(para1, para2);
     }
 
-    var result = some_func(function(p1, p2) { <span class="keywordflow">return</span> p1 * p2; }, <span class="comment">// this defines an anonymous fuction</span>
+    var result = some_func(function(p1, p2) { <span class="keywordflow">return</span> p1 * p2; }, <span class="comment">// this defines an anonymous function</span>
                            10, 5); <span class="comment">// result is 50</span>
 </pre></div><h2><a class="anchor" id="js4cpp_closure"></a>
 Closure</h2>
@@ -96,7 +96,7 @@ Closure</h2>
 <p>It's easier to understand this as long as keep in mind that <a class="el" href="tutorial_js4cpp.php#js4cpp_func_var">Functions are Variables</a>. Suppose we have function <code>some_func</code> defined and get called as below:</p>
 <div class="fragment"><pre class="fragment">    var some_func = function(p1, p2){ <span class="keywordflow">return</span> 1; };
     some_func(v1, v2);
-</pre></div><p>If we replace variable <code>some_func</code> with the fuction statement itself, we need to put the function statement inside a pair of ( and ). This doesn't change any grammar meaning since anonymous functions are simply anonymous variables. so the code becomes:</p>
+</pre></div><p>If we replace variable <code>some_func</code> with the function statement itself, we need to put the function statement inside a pair of ( and ). This doesn't change any grammar meaning since anonymous functions are simply anonymous variables. so the code becomes:</p>
 <div class="fragment"><pre class="fragment">    ( function(p1, p2){ <span class="keywordflow">return</span> 1; } )(v1, v2);
 </pre></div><p>Next if we remove parameters and spaces, it becomes:</p>
 <div class="fragment"><pre class="fragment">    (function(){ <span class="keywordflow">return</span> 1; })();
@@ -203,7 +203,7 @@ Optimize JavaScript for Compressor</h2>
 <li>Merge separated <code>var</code> declarations into one. </li>
 <li>Rename global variables and functions. </li>
 <li>Rename properties and methods of objects. </li>
-<li>Rename everything in the context available to <a href="http://www.javascriptkit.com/jsref/globalfunctions.shtml" target="_blank">JavaScript <code>eval</code> fuction</a>.</li>
+<li>Rename everything in the context available to <a href="http://www.javascriptkit.com/jsref/globalfunctions.shtml" target="_blank">JavaScript <code>eval</code> function</a>.</li>
 </ul>
 <p>So, to optimize for JavaScript compressor:</p>
 <ul>
@@ -212,8 +212,8 @@ Optimize JavaScript for Compressor</h2>
 <li>Define function in way of <code>var func = function(){}</code> so the function name can be renamed. </li>
 <li>Use local variable to refer to global variables and functions, then use the local variable instead. </li>
 <li>Use local variable to refer to properties and methods of objects, then use the local variable instead (not for property set). </li>
-<li>Avoid using <a href="http://www.javascriptkit.com/jsref/globalfunctions.shtml" target="_blank"><code>eval</code> fuction</a>. </li>
-<li>If <a href="http://www.javascriptkit.com/jsref/globalfunctions.shtml" target="_blank"><code>eval</code> fuction</a> has to be used, wrap up the call to <a href="http://www.javascriptkit.com/jsref/globalfunctions.shtml" target="_blank"><code>eval</code> </a>into a function and put it at the beginning of JavaScript source file so the context of the <a href="http://www.javascriptkit.com/jsref/globalfunctions.shtml" target="_blank"><code>eval</code> fuction</a> becomes the smallest.</li>
+<li>Avoid using <a href="http://www.javascriptkit.com/jsref/globalfunctions.shtml" target="_blank"><code>eval</code> function</a>. </li>
+<li>If <a href="http://www.javascriptkit.com/jsref/globalfunctions.shtml" target="_blank"><code>eval</code> function</a> has to be used, wrap up the call to <a href="http://www.javascriptkit.com/jsref/globalfunctions.shtml" target="_blank"><code>eval</code> </a>into a function and put it at the beginning of JavaScript source file so the context of the <a href="http://www.javascriptkit.com/jsref/globalfunctions.shtml" target="_blank"><code>eval</code> function</a> becomes the smallest.</li>
 </ul>
 <p>Demostration:</p>
 <div class="fragment"><pre class="fragment">    <span class="comment">// Put eval statement at the beginning of the file</span>
@@ -221,8 +221,8 @@ Optimize JavaScript for Compressor</h2>
     {
         <span class="keywordflow">return</span> eval(statement_for_eval);
     };
-    <span class="comment">// Will be compressed to: var eval_is_evil=fuction(a){return eval(a)};</span>
-    <span class="comment">// Note that the fuction name belongs to context of eval statement so it cannot be renamed.</span>
+    <span class="comment">// Will be compressed to: var eval_is_evil=function(a){return eval(a)};</span>
+    <span class="comment">// Note that the function name belongs to context of eval statement so it cannot be renamed.</span>
 
     <span class="comment">// define multiple variables in one var statement</span>
     <span class="comment">// refer global variables with local variables</span>

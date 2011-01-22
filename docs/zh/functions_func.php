@@ -244,7 +244,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'搜索');
 
 <h3><a class="anchor" id="index_k"></a>- k -</h3><ul>
 <li>kill()
-: <a class="el" href="interface_thread.php#a980d8518a01dac55c30b0fb2fb894eba">Thread</a>
+: <a class="el" href="interface_thread.php#a21571c3d25402f70379cfa4facaf8dfa">Thread</a>
 </li>
 </ul>
 
